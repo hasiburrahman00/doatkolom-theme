@@ -1,7 +1,6 @@
 <?php
 
 use Doatkolom\AutoLoader;
-use Doatkolom\View;
 
 /**
  * 
@@ -35,7 +34,6 @@ require get_stylesheet_directory() . '/app/AutoLoader.php';
 $loader = new AutoLoader();
 $loader->register();
 $loader->addNamespace( 'Doatkolom', get_stylesheet_directory() . '/app' );
-View::$view_dir = get_stylesheet_directory() . '/templates/views';
 
 remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 

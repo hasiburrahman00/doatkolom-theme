@@ -1,15 +1,3 @@
-<?php 
-	$banner_glob_image = esc_url( DOATKOLOM_IMG . 'home-banner-bg-full.webp' );
-	$banner_main_image = esc_url( DOATKOLOM_IMG . 'home-banner.webp' ); 
-
-	$variables = "
-		:root {
-			--banner_glob_image : url($banner_glob_image);
-			--banner_main_image	: url($banner_main_image);
-		}
-	";
-?>
-
 <!doctype html>
 <html <?php language_attributes(); ?> class="no-js">
 <head>
@@ -50,19 +38,6 @@
 		font-style: normal;
 		font-display: swap;
 		}
-
-		/* Lato Black */
-		/* @font-face {
-		font-family: "Lato";
-		src:
-			local('Lato'), 
-			url('Lato-Black.ttf') format('truetype');
-		font-weight: 900;
-		font-style: normal;
-		font-display: swap;
-		} */
-		body { overflow-x: hidden }
-		<?php echo $variables ?>
 	</style>
 	<?php wp_head() ?>
 </head>
