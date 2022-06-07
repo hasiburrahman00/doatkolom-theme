@@ -21,10 +21,15 @@ module.exports = {
     },
     darkMode: false, // or 'media' or 'class'
     theme: {
-            extend: {
-                fontFamily: {
-                    'lato': ['Lato', 'sans-serif']
-                },
+        extend: {
+            fontFamily: {
+                'lato': ['Lato', 'sans-serif']
             },
+
+            colors: {
+                'primary': '#003646',
+                'secondary': '#16AACA'
+            }
+        },
     },
 }
