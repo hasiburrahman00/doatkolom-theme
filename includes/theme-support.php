@@ -51,10 +51,8 @@ add_image_size( 'doatkolom-small', 320, 200, ['center', 'center'] );
  * Register menu
  */ 
 register_nav_menus([
-    'primary' => esc_html__('Primary/Header Menu', 'doatkolom'),
-    'footermenu_left' => esc_html__('Footer Left', 'doatkolom'),
-    'footermenu_center' => esc_html__('Footer Center', 'doatkolom'),
-    'footermenu_right' => esc_html__('Footer Right', 'doatkolom'),
+    'primary' => esc_html__('Header Menu', 'doatkolom'),
+    'secondary' => esc_html__('Footer Menu', 'doatkolom'),
 ]);
 
 /**

@@ -7,34 +7,28 @@
 	<link rel="shortcut icon" href="<?php echo esc_attr( DOATKOLOM_IMG . 'doatkolom-favicon.png' ) ?>" type="image/x-icon">
 
 	<style>
-		/* Lato Light */
 		@font-face {
-		font-family: "Lato";
-		src:local('Lato'),
-			url("<?php echo DOATKOLOM_FONT ?>Lato-Light.ttf") format('truetype');
-		font-weight: 300;
-		font-style: normal;
-		font-display: swap;
-		}
-
-
-		/* Lato regular */
-		@font-face {
-		font-family: "Lato";
-		src: local('Lato'),
-			url("<?php echo DOATKOLOM_FONT ?>Lato-Regular.ttf") format('truetype');
+		font-family: 'Spectral';
+		src:local('Spectral'),
+			url("<?php echo DOATKOLOM_FONT ?>Spectral-Regular.ttf") format('truetype');
 		font-weight: 400;
 		font-style: normal;
 		font-display: swap;
 		}
 
-
-		/* Lato bold */
 		@font-face {
-		font-family: "Lato";
-		src: local('Lato'),
-			url('<?php echo DOATKOLOM_FONT ?>Lato-Bold.ttf') format('truetype');
+		font-family: 'Spectral';
+		src: local('Spectral'),
+			url("<?php echo DOATKOLOM_FONT ?>Spectral-Bold.ttf") format('truetype');
 		font-weight: 700;
+		font-style: normal;
+		font-display: swap;
+		}
+		@font-face {
+		font-family: 'Abril Fatface';
+		src: local('Abril Fatface'),
+			url('<?php echo DOATKOLOM_FONT ?>AbrilFatface-Regular.ttf') format('truetype');
+		font-weight: 400;
 		font-style: normal;
 		font-display: swap;
 		}

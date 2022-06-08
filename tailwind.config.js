@@ -23,7 +23,8 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                'lato': ['Lato', 'sans-serif']
+                'primary': ['Abril Fatface', 'cursive'],
+                'secondary': ['Spectral', 'serif']
             },
 
             colors: {
