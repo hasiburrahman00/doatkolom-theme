@@ -9,5 +9,18 @@ export default class Helper  {
             });
         }
     }
+    
+    static blockScopeHandler() {
+        window.doatkolomGutenbergInit = callback => {
+            jQuery(function($){
+                callback( $ );
+                $('.doatkolom-block-wrap').each((index, item) => {
+                    const $item = $(item);
+                    const type  = $item.data('type');
+                    $(window).trigger( type, [ $item ] );
+                })
+            })
+        }
+    }
 
 }

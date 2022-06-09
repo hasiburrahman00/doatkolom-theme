@@ -6,16 +6,34 @@ import ExternalLink from "../../Icons/external-link";
 import Style from "./style";
 import {BlockWrapper, BlockWrapperContent, BlockWrapperEditor, BlockWrapperStyle} from "../block-wrapper";
 
-export default function Edit({ attributes, setAttributes, clientId }) {
+export default function Edit({ attributes, setAttributes, clientId, name }) {
 
     const [ isOpen, setOpen ] = useState( false );
     const openModal = ()=> setOpen( true );
     const closeModal = () => setOpen( false );
-
+    /**
+     * 
+     * 
+     * @hook useEffect
+     * all the code inside of this hook are responsive for updating gutenberg third-party script, block name change and block id change
+     * 
+     * @since 1.0.0
+     * @author ashraf
+     * 
+     */ 
     useEffect( () => {
+
         if ( ! attributes.blockId ) {
             setAttributes( { blockId: clientId } );
         }
+
+        if ( ! attributes.blockName ) {
+            setAttributes( { blockName: name } );
+        }
+
+        const $scope = jQuery(`#block-${clientId}`).find(`.doatkolom-block-wrap`).first();
+        jQuery(window).trigger( name, [ $scope ] );
+
     }, [] );
 
     const onChangeHandler = (name, value) => {

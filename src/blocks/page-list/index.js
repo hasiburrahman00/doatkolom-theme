@@ -14,6 +14,10 @@ registerBlockType('doatkolom/page-list', {
             type: 'string',
         },
 
+        blockName: {
+            type: 'string',
+        },
+
         alignment: {
             type: 'string',
             default: 'start',

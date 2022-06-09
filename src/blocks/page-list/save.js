@@ -4,7 +4,6 @@ import ExternalLink from '../../Icons/external-link';
 import Style from './style.js';
 
 export default function Save({ attributes }) {
-
 	return (
         <BlockWrapper attributes={attributes} props={useBlockProps.save()}>
 

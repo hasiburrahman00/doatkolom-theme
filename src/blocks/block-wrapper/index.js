@@ -1,11 +1,11 @@
 const { Children, cloneElement } = wp.element;
-
-export function BlockWrapper({ attributes, children, props }) {
+export function BlockWrapper({ attributes, children, props }) {   
     
     const childrenWithProps = Children.map( children, child => {
         return cloneElement( child, {
             blockId     : attributes.blockId,
             attributes  : attributes,
+            type        : attributes.blockName || '',
         })
     })
 
@@ -26,8 +26,8 @@ export function BlockWrapperStyle( props ) {
 }
 
 export function BlockWrapperContent( props ) {
-    const className = `doatkolom-block-wrap-${props.blockId}`
-    return <div className={className}>{props.children}</div>
+    const className = `doatkolom-block-wrap-${props.blockId} doatkolom-block-wrap`
+    return <div className={className} data-type={props.type}>{props.children}</div>
 }
 
 export function BlockWrapperEditor( props ) {
