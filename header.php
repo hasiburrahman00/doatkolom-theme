@@ -14,4 +14,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly.
 
 // load document head
 get_template_part( 'templates/partials/document-open' );
+get_template_part( 'template-parts/header', 'top');
 get_template_part( 'template-parts/header', 'default');
+get_template_part( 'template-parts/desktop-quick', 'menu');
