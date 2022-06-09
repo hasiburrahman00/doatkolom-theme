@@ -3,7 +3,9 @@
  * Template Name: Doatkolom App
  * 
  */
-get_header();?>
+get_header();
+the_content();
+?>
 
 <div id="root"></div>
 
