@@ -36,6 +36,22 @@ registerBlockType('doatkolom/banner-1', {
         description: {
             type: 'string',
             default: "The school was established on a small scale on 19th April, 1959 at the initiative of some personalities who are passionate about women's education in the area. Dakkhin Para, Savar, Dhaka.1340-School Code: 1517 EIIN: 108409"
+        },
+        history_title:{
+            type: "string",
+            default: "History"
+        },
+        history_description:{
+            type: "string",
+            default: "The school was established on a small scale on 19th April, 1959 at the initiative of some personalities.The school was established on a small scale on 19th April, 1959 at the initiative of some personalities.The school was established"
+        },
+        show_history_readmore_button:{
+            type: "boolean",
+            default: true
+        },
+        readmore_button_link:{
+            type: "string",
+            default: "#"
         }
         
     },
