@@ -11,6 +11,44 @@
     padding: 0;
     margin: 0;
 }
+
+.doatkolom-editor-tab {
+    .components-tab-panel__tabs {
+        position: absolute;
+        top: 84px;
+        left: 16px;
+        width: 160px;
+    }
+
+    .components-tab-panel__tab-content {
+        padding-left: 24px;
+        margin-left: 160px !important;
+    }
+
+    .components-tab-panel__tabs-item {
+        box-shadow: none !important;
+
+        &.is-active {
+            background: #f0f0f0;
+            box-shadow: none;
+            font-weight: 500;
+            border-radius: 2px;
+        }
+
+        &.is-active::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 1px;
+            right: 0;
+            left: 0;
+            border-bottom: 4px solid transparent;
+        }
+    }
+}
+
+
+
 // gutenberg style end
 
 // header nav menu css

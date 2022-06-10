@@ -10,11 +10,11 @@ registerBlockType('doatkolom/page-list', {
     category    : 'widgets',
     icon        : 'screenoptions',
     attributes  : {
-        blockId : {
+        block_id : {
             type: 'string',
         },
 
-        blockName: {
+        block_name: {
             type: 'string',
         },
 

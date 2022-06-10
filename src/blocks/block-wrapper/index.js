@@ -3,9 +3,9 @@ export function BlockWrapper({ attributes, children, props }) {
     
     const childrenWithProps = Children.map( children, child => {
         return cloneElement( child, {
-            blockId     : attributes.blockId,
+            block_id     : attributes.block_id,
             attributes  : attributes,
-            type        : attributes.blockName || '',
+            type        : attributes.block_name || '',
         })
     })
 
@@ -13,8 +13,8 @@ export function BlockWrapper({ attributes, children, props }) {
 }
 
 export function BlockWrapperStyle( props ) {
-    const sheet = `doatkolom-stylesheet-${props.blockId}`;
-    const block = `.doatkolom-block-wrap-${props.blockId}`
+    const sheet = `doatkolom-stylesheet-${props.block_id}`;
+    const block = `.doatkolom-block-wrap-${props.block_id}`
 
     return Children.map( props.children, child => {
         return cloneElement( child, {
@@ -26,7 +26,7 @@ export function BlockWrapperStyle( props ) {
 }
 
 export function BlockWrapperContent( props ) {
-    const className = `doatkolom-block-wrap-${props.blockId} doatkolom-block-wrap`
+    const className = `doatkolom-block-wrap-${props.block_id} doatkolom-block-wrap`
     return <div className={className} data-type={props.type}>{props.children}</div>
 }
 

@@ -15,11 +15,11 @@ registerBlockType('doatkolom/banner-1', {
         };
     },
     attributes  : {
-        blockId : {
+        block_id : {
             type: 'string',
         },
 
-        blockName: {
+        block_name: {
             type: 'string',
         },
 
@@ -37,6 +37,25 @@ registerBlockType('doatkolom/banner-1', {
             type: 'string',
             default: "The school was established on a small scale on 19th April, 1959 at the initiative of some personalities who are passionate about women's education in the area. Dakkhin Para, Savar, Dhaka.1340-School Code: 1517 EIIN: 108409"
         },
+
+        primary_btn: {
+            type: 'object',
+            default: {
+                text: 'Know More About Us',
+                url: '#',
+                visible: true
+            }
+        },
+
+        secondary_btn: {
+            type: 'object',
+            default: {
+                text: 'Latest Update',
+                url: '#',
+                visible: true
+            }
+        },
+
         history_title:{
             type: "string",
             default: "History"
@@ -45,14 +64,31 @@ registerBlockType('doatkolom/banner-1', {
             type: "string",
             default: "The school was established on a small scale on 19th April, 1959 at the initiative of some personalities.The school was established on a small scale on 19th April, 1959 at the initiative of some personalities.The school was established"
         },
-        show_history_readmore_button:{
-            type: "boolean",
-            default: true
+
+        history_read_more_btn: {
+            type: "object",
+            default: {
+                text: 'Read More',
+                url: '#',
+                visible: true,
+            }
         },
-        readmore_button_link:{
+        
+        notice_url: {
             type: "string",
-            default: "#"
+            default: '#'
+        },
+
+        notice_title: {
+            type: "string",
+            default: "Notice Board"
+        },
+
+        notice_description: {
+            type: 'string',
+            default: 'Admission, Events, Exam, Etc.'
         }
+        
         
     },
 	edit        : Edit,
