@@ -53,9 +53,11 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
 
                             <div className="flex items-baseline justify-between mt-16">
                                 <div className="w-1/2">
-                                    <h2>History</h2>
-                                    <p>The school was established on a small scale on 19th April, 1959 at the initiative of some personalities.The school was established on a small scale on 19th April, 1959 at the initiative of some personalities.The school was established
-                                        <a href="#">Read More</a>
+                                    <h2 className="font-primary text-primary text-3xl">{attributes.history_title}</h2>
+                                    <p>
+                                        {attributes.history_description}
+                                        {attributes.show_history_readmore_button && <a className="inline-block text-secondary ml-1 no-underline hover:underline" href="#">Read More</a>}
+                                        
                                     </p>
                                 </div>
 
