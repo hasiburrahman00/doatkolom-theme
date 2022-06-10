@@ -10,10 +10,10 @@ $seperator = '>';
     <div class="bg-primary/80 text-white py-10 sm:py-16 md:py-24">
         <div class="max-w-screen-xl mx-auto px-5 space-y-3">
 
-            <div class="grid <?php echo has_post_thumbnail() ? 'grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 text-left' : 'grid-cols-1 text-center' ?>">
+            <div class="grid <?php echo (has_post_thumbnail() && is_single()) ? 'grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 text-left' : 'grid-cols-1 text-center' ?>">
                 
                 <?php 
-                    if ( has_post_thumbnail() ) {
+                    if ( has_post_thumbnail() && is_single() ) {
                         $breadcrumb_image = get_the_post_thumbnail_url(get_the_ID(), 'full');
                         ?>
                             <div>
@@ -26,7 +26,7 @@ $seperator = '>';
                 ?>
 
                 <div>
-                    <h1 class="font-normal mb-3 capitalize text-2xl <?php echo is_single() ? 'md:leading-12 font-secondary md:text-3xl' : 'sm:text-4xl font-primary lg:text-6xl' ?>">
+                    <h1 class="font-normal mb-3 capitalize <?php echo is_single() ? 'text-2xl md:leading-12 font-secondary' : 'text-3xl sm:text-4xl font-primary lg:text-6xl' ?>">
                         <?php 
                             if( is_page() ) {
                                 the_title();
@@ -43,10 +43,10 @@ $seperator = '>';
                         ?>
                     </h1>
 
-                    <ol class="flex flex-wrap <?php echo has_post_thumbnail() ? 'justify-start' : 'justify-center' ?> text-lg sm:text-xl space-x-2 font-secondary list-none">
+                    <ol class="flex flex-wrap <?php echo has_post_thumbnail() ? 'justify-start' : 'justify-center' ?> text-lg sm:text-xl gap-x-2 font-secondary list-none">
                         <?php 
                         if ( !is_home() ) {
-                            echo '<li class="mr-2"><a class="text-white no-underline hover:text-secondary" href="';
+                            echo '<li class="mr-2"><a class="text-white no-underline font-bold hover:text-secondary" href="';
                             echo esc_url( get_home_url( '/' ) );
                             echo '">';
                             echo esc_html__( 'Home', 'doatkolom' );
