@@ -45,7 +45,7 @@ if( !is_front_page() ) {
                             ?>
                         </h1>
     
-                        <ol class="flex flex-wrap <?php echo has_post_thumbnail() ? 'justify-start' : 'justify-center' ?> text-lg sm:text-xl gap-x-2 font-secondary list-none">
+                        <ol class="flex flex-wrap <?php echo has_post_thumbnail() && is_single() ? 'justify-start' : 'justify-center' ?> text-lg sm:text-xl gap-x-2 font-secondary list-none">
                             <?php 
                             if ( !is_home() ) {
                                 echo '<li class="mr-2"><a class="text-white no-underline font-bold hover:text-secondary" href="';
