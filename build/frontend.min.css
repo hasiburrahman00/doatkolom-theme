@@ -144,8 +144,14 @@
 .list-none {
   list-style-type: none;
 }
+.grid-flow-col {
+  grid-auto-flow: column;
+}
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.grid-rows-4 {
+  grid-template-rows: repeat(4, minmax(0, 1fr));
 }
 .flex-col {
   flex-direction: column;
@@ -368,6 +374,10 @@
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 .font-normal {
   font-weight: 400;

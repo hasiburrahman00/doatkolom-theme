@@ -51,6 +51,8 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
                                 <a className="bg-white font-secondary text-lg rounded-full py-4 px-9 text-primary no-underline hover:text-white hover:bg-primary" href="#">Latest Update</a>
                             </div>
 
+                             
+
                             <div className="flex items-baseline justify-between mt-16">
                                 <div className="w-1/2">
                                     <h2 className="font-primary text-primary text-3xl">{attributes.history_title}</h2>
