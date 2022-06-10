@@ -24,12 +24,18 @@ module.exports = {
         extend: {
             fontFamily: {
                 'primary': ['Abril Fatface', 'cursive'],
-                'secondary': ['Spectral', 'serif']
+                'secondary': ['Spectral', 'serif'],
             },
 
             colors: {
                 'primary': '#003646',
-                'secondary': '#16AACA'
+                'secondary': '#16AACA',
+                'doatkolom-gray': '#e6e6e6',
+            },
+            
+            lineHeight: {
+                '12': '48px',
+                '14': '56px',
             }
         },
     },

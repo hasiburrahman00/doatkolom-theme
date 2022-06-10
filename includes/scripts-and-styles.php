@@ -2,8 +2,8 @@
 
 add_action( 'wp_enqueue_scripts', function () {
 
-	wp_enqueue_style('doatkolom-frontend', DOATKOLOM_BUILD . 'frontend.min.css', [], null, false);
-	wp_enqueue_script('doatkolom-frontend', DOATKOLOM_BUILD . 'frontend.min.js', ['jquery'], null, false);
+	wp_enqueue_style('doatkolom-frontend', DOATKOLOM_BUILD . 'frontend.min.css', [], DOATKOLOM_VERSION, false);
+	wp_enqueue_script('doatkolom-frontend', DOATKOLOM_BUILD . 'frontend.min.js', ['jquery'], DOATKOLOM_VERSION, false);
 	/**
 	 * 
 	 * 
@@ -11,16 +11,42 @@ add_action( 'wp_enqueue_scripts', function () {
 	 * 
 	 */
 	if( is_page_template('templates/doatkolom-app.php') ) {		
-		wp_enqueue_script('doatkolom-app', 'http://103.110.113.196/doatkolom/wp-content/themes/institution-website/build/home.min.js', ['jquery'], null, false);
+		wp_enqueue_script('doatkolom-app', 'http://103.110.113.196/doatkolom/wp-content/themes/institution-website/build/home.min.js', ['jquery'], DOATKOLOM_VERSION, false);
 	}
 
 	if( is_page_template('templates/doatkolom-teachers.php') ) {		
-		wp_enqueue_script('doatkolom-teacher', 'http://103.110.113.196/doatkolom/wp-content/themes/institution-website/build/teachers.min.js', ['jquery'], null, false);
+		wp_enqueue_script('doatkolom-teacher', 'http://103.110.113.196/doatkolom/wp-content/themes/institution-website/build/teachers.min.js', ['jquery'], DOATKOLOM_VERSION, false);
 	}
 
 	/**
 	 * 
+	 * 
+	 * 
+	 * 
+	 * adding dynamic css as internal file. This css get loads into theme head part
+	 * 
+	 */
+	$breadcrumb_image = DOATKOLOM_IMG . 'breadcrumb-background.webp';
+
+	if ( has_post_thumbnail() ) {
+		$breadcrumb_image = get_the_post_thumbnail_url(get_the_ID(), 'full');
+	}
+
+	$breadcrumb_css = "
+		#doatkolom-breadcrumb {
+			background-image: url('$breadcrumb_image');
+		}
+	";
+	wp_add_inline_style( 'doatkolom-frontend', $breadcrumb_css ); 
+
+	/**
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
 	 * add difer keyword into js file 
+	 * 
 	 * 
 	 */ 
 	function defer_parsing_of_js(  $tag, $handle, $src  ) {

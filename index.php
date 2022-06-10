@@ -1,8 +1,5 @@
 <?php
 
 get_header();
-
-?>
-    <h1>Hello World</h1>
-<?php 
+get_template_part( 'template-parts/breadcrumb');
 get_footer();

@@ -1,5 +1,7 @@
+import './lib/lazysizes';
 import Header from "./modules/header";
 import Helper from './utils/Helper';
+
 
 jQuery(function() {
     'use strict';
