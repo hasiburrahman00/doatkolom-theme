@@ -6,6 +6,13 @@
     @apply m-0 p-0 box-border;
 }
 
+// gutenberg style start
+.editor-styles-wrapper {
+    padding: 0;
+    margin: 0;
+}
+// gutenberg style end
+
 // header nav menu css
 
 @media ( min-width: 1024px ) {

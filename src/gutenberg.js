@@ -1,1 +1,2 @@
-import './blocks/page-list/index';
+import './blocks/page-list';
+import './blocks/banner-1'

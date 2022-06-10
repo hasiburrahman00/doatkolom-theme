@@ -8,7 +8,7 @@ registerBlockType('doatkolom/page-list', {
     description : __( 'The block displays custom page list with anchor tag' ),
     keywords    : [ __( 'doatkolom' ), __( 'page list' ), __( 'page' ), __( 'list' ) ],
     category    : 'widgets',
-    icon        : 'list-view',
+    icon        : 'screenoptions',
     attributes  : {
         blockId : {
             type: 'string',
