@@ -23,12 +23,12 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
      */ 
     useEffect( () => {
 
-        if ( ! attributes.blockId ) {
-            setAttributes( { blockId: clientId } );
+        if ( ! attributes.block_id ) {
+            setAttributes( { block_id: clientId } );
         }
 
-        if ( ! attributes.blockName ) {
-            setAttributes( { blockName: name } );
+        if ( ! attributes.block_name ) {
+            setAttributes( { block_name: name } );
         }
 
         const $scope = jQuery(`#block-${clientId}`).find(`.doatkolom-block-wrap`).first();
