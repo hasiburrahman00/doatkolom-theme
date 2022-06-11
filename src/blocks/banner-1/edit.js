@@ -1,14 +1,14 @@
-const { useEffect, useState } = wp.element;
-const { useBlockProps , BlockControls } = wp.blockEditor
-const { Button, Modal, TabPanel, TextControl, ToggleControl } = wp.components;
-import { Megaphone, ArrowRight } from "./icons";
-
-import Style from "./style";
 import {BlockWrapper, BlockWrapperContent, BlockWrapperEditor, BlockWrapperStyle} from "../block-wrapper";
+import { Megaphone, ArrowRight } from "./icons";
+import GeneralControls from "./general-controls";
+import HistoryControls from "./history-controls";
+import NoticeControls from "./notice-controls";
+import Style from "./style";
+
+const { useEffect } = wp.element;
+const { useBlockProps } = wp.blockEditor
 
 export default function Edit({ attributes, setAttributes, clientId, name }) {
-
-    const [ modalVisible, setModalVisible ] = useState(false)
 
     /**
      * 
@@ -38,7 +38,7 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
 
 
 	return (
-		<BlockWrapper attributes={attributes} props={useBlockProps()}>
+		<BlockWrapper attributes={attributes} setAttributes={setAttributes} props={useBlockProps()}>
             
             <BlockWrapperStyle>
                 <Style/>
@@ -87,7 +87,7 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
                                         <Megaphone/>
                                     </div>
                                     <a className="inline-block text-primary no-underline group cursor-pointer" href="#">
-                                        <h2 className="m-0 font-primary font-normal text-2xl sm:text-4xl inline-flex space-x-2 group-hover:text-primary group-hover:underline">
+                                        <h2 className="m-0 font-primary font-normal text-2xl sm:text-4xl inline-flex items-center space-x-2 group-hover:text-primary group-hover:underline">
                                             {attributes.notice_title}
                                             <ArrowRight/>
                                         </h2>
@@ -102,35 +102,9 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
             </BlockWrapperContent>
 
             <BlockWrapperEditor>
-                <BlockControls>
-                    <Button onClick={() => setModalVisible(true)} className="is-primary ml-2 mt-1.5"> <span className="dashicons dashicons-admin-generic mr-2"></span> Edit Section</Button>
-                </BlockControls>
-                {
-                    modalVisible &&
-                    <Modal style={{width: '100%', maxWidth: '900px', minHeight: '600px'}} title="Section Preferences" onRequestClose={ () => setModalVisible(false) }>
-                        <TabPanel
-                            className="flex doatkolom-editor-tab"
-                            activeClass="is-active"
-                            orientation="vertical"
-                            tabs={ [
-                                {
-                                    name: 'tab1',
-                                    title: 'General',
-                                },
-                                {
-                                    name: 'tab3',
-                                    title: 'History',
-                                },
-                                {
-                                    name: 'tab4',
-                                    title: 'Notice',
-                                },
-                            ] }
-                        >
-                            { ( tab ) => <p>{ tab.title }</p> }
-                        </TabPanel>
-                    </Modal>
-                }
+                <GeneralControls label="General"/>
+                <HistoryControls label="History"/>
+                <NoticeControls label="Notice"/>
             </BlockWrapperEditor>
         </BlockWrapper>
 	);

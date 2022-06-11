@@ -55,7 +55,7 @@ export default function Save({ attributes }) {
                                         <Megaphone/>
                                     </div>
                                     <a className="inline-block text-primary no-underline group cursor-pointer" href={attributes.notice_url}>
-                                        <h2 className="m-0 font-primary font-normal text-2xl sm:text-4xl inline-flex space-x-2 group-hover:text-primary group-hover:underline">
+                                        <h2 className="m-0 font-primary font-normal text-2xl sm:text-4xl inline-flex items-center space-x-2 group-hover:text-primary group-hover:underline">
                                             {attributes.notice_title}
                                             <ArrowRight/>
                                         </h2>
