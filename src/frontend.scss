@@ -51,7 +51,69 @@
     }
 }
 
+.doatkolom-repeater {
+    .components-panel__body-title {
+        .components-button {
+            padding-left: 50px;
+            &:focus {
+                border: 0;
+                outline: 0;
+                box-shadow: none !important;
+            }
 
+            .components-panel__arrow {
+                left: 16px;
+            }
+        }
+    }
+    
+    .is-opened .components-panel__body-title .components-button {
+        background: #eee;;
+    }
+    
+    .header-container {
+        position: absolute;
+        right: 0;
+        height: 47px;
+        top: 0;
+        z-index: 10;
+        
+        button {
+            height: 100%;
+            background: rgb(229,242,251);
+            color: rgba(0,81,154,0.79);
+            border: 0;
+            border-left: 1px solid #ddd;
+            width: 50px;
+            
+            &.remove-button {
+                background-color: rgba(254,231,231);
+                color: red;
+                cursor: pointer;
+                
+                &:hover {
+                    background-color: rgba(255,120,120);
+                    color: white;
+                }
+            }
+            
+            &.draggable-button {
+                cursor: grab;
+                &:hover {
+                    background-color: rgba(10,121,178);
+                    color: white; 
+                }
+            }
+        }
+    }
+    
+    footer {
+        .components-button {
+            font-weight: 600;
+            font-size: 15px;
+        }
+    }
+}
 
 // gutenberg style end
 
