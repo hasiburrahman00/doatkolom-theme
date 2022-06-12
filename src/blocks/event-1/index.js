@@ -27,17 +27,30 @@ registerBlockType('doatkolom/event-1', {
             type: 'string',
             default: [
                 {
-                    event_name: "Event 1",
-                    guest: 20
+                    event_date: '15',
+                    event_month: 'june',
+                    event_name: "Biggest Int'l Education Expo 2022 - Dhaka",
+                    event_details: "The school was established on a small scale on 19th April, 1959 at the initiative of some personalities.",
+                    reademore_link: '#'
+                   
                 },
                 {
-                    event_name: "Event 2",
-                    guest: 50
+                    event_date: '15',
+                    event_month: 'june',
+                    event_name: "Biggest Int'l Education Expo 2022 - Dhaka",
+                    event_details: "The school was established on a small scale on 19th April, 1959 at the initiative of some personalities.",
+                    reademore_link: '#'
+                   
                 },
                 {
-                    event_name: "Event 3",
-                    guest: 30
-                }
+                    event_date: '15',
+                    event_month: 'june',
+                    event_name: "Biggest Int'l Education Expo 2022 - Dhaka",
+                    event_details: "The school was established on a small scale on 19th April, 1959 at the initiative of some personalities.",
+                    reademore_link: '#'
+                },
+                
+                
             ]
         }
 
