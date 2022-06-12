@@ -3,10 +3,10 @@ const { __ } = wp.i18n;
 import Edit from './edit';
 import Save from './save';
 
-registerBlockType('doatkolom/section-title-1', {
-    title       : __( 'Doatkolom Section Title 1' ),
-    description : __( 'For page section title' ),
-    keywords    : [ 'section', 'section title', 'doatkolom', 'title', 'section heading' ],
+registerBlockType('doatkolom/section-header-1', {
+    title       : __( 'Doatkolom Section Header 1' ),
+    description : __( 'For section header' ),
+    keywords    : [ 'header', 'section header', 'doatkolom', 'title' ],
     category    : 'widgets',
     icon        : 'screenoptions',
     getEditWrapperProps() {
@@ -15,33 +15,42 @@ registerBlockType('doatkolom/section-title-1', {
         };
     },
     attributes  : {
-        blockId : {
+        block_id : {
             type: 'string',
         },
 
-        blockName: {
+        block_name: {
             type: 'string',
         },
 
-        heading:{
+        alignment:{
             type: 'string',
-            default: 'Upcoming School Events',
+            default: 'text-center'
         },
-        heading_details:{
+
+        title:{
+            type: 'string',
+            default: 'Upcoming School Events'
+        },
+
+        sub_title:{
             type: 'string',
             default: 'The school was established on a small scale on 19th April, 1959 at the initiative of some personalities.'
         },
-        heading_details_width:{
+
+        sub_title_width:{
             type: 'number',
-            default: '469'
+            default: 496
         },
-        show_heading:{
-            type: 'boolean',
-            default: true
+
+        container_width:{
+            type: 'number',
+            default: 600
         },
-        show_heading_details:{
-            type: 'boolean',
-            default: true
+
+        alignment:{
+            type: 'string',
+            default: 'center'
         }
         
     },

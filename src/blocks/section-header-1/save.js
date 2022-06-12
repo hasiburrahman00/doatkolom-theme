@@ -1,6 +1,6 @@
 const { useBlockProps } = wp.blockEditor
 import { BlockWrapper, BlockWrapperContent, BlockWrapperStyle } from '../block-wrapper/index.js';
-import ExternalLink from '../../Icons/external-link';
+
 import Style from './style.js';
 
 export default function Save({ attributes }) {
@@ -12,9 +12,9 @@ export default function Save({ attributes }) {
             </BlockWrapperStyle>
 
             <BlockWrapperContent>
-                <div className="text-center">
-                    {attributes.show_heading && <h1 className="font-primary text-primary text-5xl font-normal">{attributes.heading}</h1>}
-                    {attributes.show_heading_details && <p className="font-secondary text-lg para-width text-primary">{attributes.heading_details}</p>}  
+            <div className="alignment max-w-screen-xl mx-auto">
+                    <h3 className="m-0 font-primary text-5xl font-normal text-primary mb-3 header">{attributes.title}</h3>
+                    <p className="m-0 font-secondary text-lg text-primary font-normal para-width">{attributes.sub_title}</p>
                 </div>
             </BlockWrapperContent>
             
