@@ -2,9 +2,61 @@ export default function Style({attributes, wrapper, sheet}){
     return (
         <style id={sheet}>
             {`  
-                ${wrapper} .school-image {
-                    width: 560px;
-                    min-width: 560px;
+                @media (min-width: 600px){
+                    ${wrapper} .school-image {
+                        width: 560px;
+                        min-width: 560px;
+                    }
+
+                    ${wrapper} .achivement-wrapper:not(:first-child,:last-child) {
+                        padding: 0 27px;
+                        border-width: 0 1px 0 1px;
+                        border-style: solid;
+                        border-color: #d1d5db;
+                        margin: 0 -1px;
+                    }
+                    
+                    ${wrapper} .achivement-wrapper:first-child {
+                        padding-right: 27px;
+                    }
+
+                    ${wrapper} .achivement-wrapper:last-child {
+                        padding-left: 27px;
+                    }
+                    
+                    ${wrapper} .achivement-wrapper {
+                        width: 208px;
+                    }
+
+                }
+
+                @media (max-width: 599px){
+                    ${wrapper} .school-image img {
+                        width: calc(100% - 32px);
+                        min-width: 280px;
+                        border-radius: 10px;
+                    }
+
+                    ${wrapper} .achivement-wrapper:not(:first-child,:last-child) {
+                        padding: 28px 0px;
+                        border-width: 1px 0px 1px 0px;
+                        border-style: solid;
+                        border-color: #d1d5db;
+                        margin: -1px 0px;
+                    }
+
+                    ${wrapper} .achivement-wrapper:first-child {
+                        padding-bottom: 28px;
+                    }
+
+                    ${wrapper} .achivement-wrapper:last-child {
+                        padding-top: 28px;
+                    }
+                    
+                }
+                
+                ${wrapper} .school-image img {
+                    border-radius: 10px;
                 }
 
                 ${wrapper} .achivment-icons {
@@ -12,17 +64,9 @@ export default function Style({attributes, wrapper, sheet}){
                     height: 50px !important;
                 }
 
-                ${wrapper} .achivement-wrapper {
-                    border-right: 1px solid #d1d5db;
-                }
-                ${wrapper} .achivement-wrapper:nth-child(2) {
-                    padding-left: 28px;
-                }
-                ${wrapper} .achivement-wrapper:nth-child(3) {
-                    padding-left: 28px;
-                    border: none;
-                }
+                
             `}
+
         </style>
     )
 }

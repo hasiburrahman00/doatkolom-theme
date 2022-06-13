@@ -75,6 +75,9 @@
 .mr-2 {
   margin-right: 0.5rem;
 }
+.mt-20 {
+  margin-top: 5rem;
+}
 .mt-0 {
   margin-top: 0px;
 }
@@ -84,17 +87,14 @@
 .mb-7 {
   margin-bottom: 1.75rem;
 }
-.mt-2 {
-  margin-top: 0.5rem;
+.mt-1 {
+  margin-top: 0.25rem;
 }
 .mb-6 {
   margin-bottom: 1.5rem;
 }
 .mt-8 {
   margin-top: 2rem;
-}
-.mt-20 {
-  margin-top: 5rem;
 }
 .mb-5 {
   margin-bottom: 1.25rem;
@@ -110,9 +110,6 @@
 }
 .mt-1\.5 {
   margin-top: 0.375rem;
-}
-.mt-1 {
-  margin-top: 0.25rem;
 }
 .mb-1 {
   margin-bottom: 0.25rem;
@@ -201,9 +198,6 @@
 .flex-wrap {
   flex-wrap: wrap;
 }
-.items-start {
-  align-items: flex-start;
-}
 .items-center {
   align-items: center;
 }
@@ -236,15 +230,15 @@
   margin-right: calc(1.5rem * var(--tw-space-x-reverse));
   margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
-.space-x-24 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(6rem * var(--tw-space-x-reverse));
-  margin-left: calc(6rem * calc(1 - var(--tw-space-x-reverse)));
-}
 .space-y-5 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+}
+.space-x-24 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(6rem * var(--tw-space-x-reverse));
+  margin-left: calc(6rem * calc(1 - var(--tw-space-x-reverse)));
 }
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
@@ -407,6 +401,10 @@
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
+.py-11 {
+  padding-top: 2.75rem;
+  padding-bottom: 2.75rem;
+}
 .px-9 {
   padding-left: 2.25rem;
   padding-right: 2.25rem;
@@ -417,9 +415,6 @@
 }
 .pl-5 {
   padding-left: 1.25rem;
-}
-.pr-7 {
-  padding-right: 1.75rem;
 }
 .pt-24 {
   padding-top: 6rem;
@@ -469,9 +464,9 @@
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 .text-4xl {
   font-size: 2.25rem;
@@ -777,11 +772,17 @@
 }
 
 @media (min-width: 768px) {
+  .md\:mt-16 {
+    margin-top: 4rem;
+  }
   .md\:mt-0 {
     margin-top: 0px;
   }
   .md\:block {
     display: block;
+  }
+  .md\:flex {
+    display: flex;
   }
   .md\:w-1\/2 {
     width: 50%;
@@ -791,6 +792,9 @@
   }
   .md\:flex-row {
     flex-direction: row;
+  }
+  .md\:flex-wrap {
+    flex-wrap: wrap;
   }
   .md\:gap-8 {
     gap: 2rem;
@@ -808,6 +812,14 @@
   .md\:pt-40 {
     padding-top: 10rem;
   }
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
   .md\:leading-12 {
     line-height: 48px;
   }
@@ -821,8 +833,14 @@
     margin-top: 0px;
     margin-bottom: 0px;
   }
+  .lg\:mt-0 {
+    margin-top: 0px;
+  }
   .lg\:block {
     display: block;
+  }
+  .lg\:flex {
+    display: flex;
   }
   .lg\:inline-flex {
     display: inline-flex;
@@ -836,15 +854,26 @@
   .lg\:w-48 {
     width: 12rem;
   }
+  .lg\:flex-auto {
+    flex: 1 1 auto;
+  }
   .lg\:flex-row {
     flex-direction: row;
   }
   .lg\:flex-wrap {
     flex-wrap: wrap;
   }
+  .lg\:items-start {
+    align-items: flex-start;
+  }
   .lg\:gap-x-8 {
     -moz-column-gap: 2rem;
          column-gap: 2rem;
+  }
+  .lg\:space-x-24 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(6rem * var(--tw-space-x-reverse));
+    margin-left: calc(6rem * calc(1 - var(--tw-space-x-reverse)));
   }
   .lg\:rounded-xl {
     border-radius: 0.75rem;
@@ -870,6 +899,10 @@
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
+  .lg\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
   .lg\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
@@ -877,6 +910,14 @@
   .lg\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .lg\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
   .lg\:text-primary {
     --tw-text-opacity: 1;
