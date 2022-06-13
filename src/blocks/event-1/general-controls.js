@@ -64,7 +64,7 @@ export default function GeneralControls({attributes, setAttributes}) {
                 />   
                  <TextControl
                     className="w-full"
-                    label="Event Name"
+                    label="Event Remore Link"
                     value={ item.reademore_link }
                     onChange={ ( value ) => onEventUpdate(value,index,'reademore_link') }
                 />
