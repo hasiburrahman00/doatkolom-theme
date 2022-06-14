@@ -8,7 +8,7 @@ export default function StyleControls({attributes, setAttributes}) {
 
     return (
         <div className="space-y-5">
-                <Aligment handleAlignmentChancge={handleAlignmentChancge} alignment={attributes.alignment}/>
+            <Aligment handleAlignmentChancge={handleAlignmentChancge} alignment={attributes.alignment}/>
 
             <RangeControl
                 className="w-full"
@@ -27,10 +27,7 @@ export default function StyleControls({attributes, setAttributes}) {
                 min={ 320 }
                 max={ 900 }
             />
-
-
             
-
         </div>
     )
 }

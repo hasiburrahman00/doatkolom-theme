@@ -2,12 +2,6 @@ export default function Style({attributes, wrapper, sheet}){
     return (
         <style id={sheet}>
             {`  
-                ${wrapper} {
-                    --primary-color: #6EC1E4;
-                    --secondary-color: #54595f;
-                    --hover-color: #3907bb;
-                }
-
                 ${wrapper} .alignment{
                     text-align: ${attributes.alignment}
                 }
@@ -22,6 +16,7 @@ export default function Style({attributes, wrapper, sheet}){
                     max-width: ${attributes.sub_title_width}px;
                     margin: ${attributes.alignment == 'start'?'0':attributes.alignment == 'center'?'0 auto':attributes.alignment == 'end'&&'0 0 0 auto'};
                 }
+
             `}
         </style>
     )

@@ -32,11 +32,7 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
         jQuery(window).trigger( name, [ $scope ] );
 
     }, [] );
-
-
-   
-
-
+    
 	return (
 		<BlockWrapper attributes={attributes} setAttributes={setAttributes} props={useBlockProps()}>
             

@@ -17,9 +17,7 @@ export default function GeneralControls({attributes, setAttributes}) {
                 value={ attributes.sub_title }
                 onChange={ ( value ) => setAttributes({sub_title: value}) }
             />
-
-
-
+            
         </div>
     )
 }
