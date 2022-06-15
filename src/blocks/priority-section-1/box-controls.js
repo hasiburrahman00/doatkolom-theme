@@ -10,7 +10,11 @@ export default function BoxControls({attributes, setAttributes}) {
                 title: "New Title",
                 description: "Enter New Description",
                 icon: doatkolom_object.img + 'icons/readmorearrow.svg',
-                more: "Read More"
+                button: {
+                    text: "Read More",
+                    visible: true,
+                    url: "#" 
+                }
             }
         ]})
     }
@@ -27,6 +31,15 @@ export default function BoxControls({attributes, setAttributes}) {
          setAttributes({
             priority_box: [
                  ...attributes.priority_box
+             ]
+         })
+     }
+
+     const handleButtonChange = (val,index,type)=>{
+         attributes.priority_box.button[index][type] = val
+         setAttributes({
+            priority_box: [
+                 ...attributes.priority_box.button
              ]
          })
      }
@@ -58,13 +71,13 @@ export default function BoxControls({attributes, setAttributes}) {
                             label="Show Button"
                             checked={ item.button.visible }
                             onChange={ () => {
-                                const value = {
-                                    ...item.button,
-                                    visible:!item.button.visible
+                                    item.button = {
+                                        ...item.button,
+                                        visible: !item.button.visible
+                                    }
+                                   setAttributes(item)
                                 }
-                                console.log(value);
-                                setAttributes({button: value})
-                            } }
+                            }
                         />
 
                         { 
@@ -74,12 +87,27 @@ export default function BoxControls({attributes, setAttributes}) {
                                 <TextControl
                                     className="w-full"
                                     label="Button Label"
-                                    value={ item.button.text }
-                                    // onChange={ text => {
-                                    //     const value = { ...item.button, text }
-                                    //     setAttributes({button: value})
-                                    // } }
+                                    value={item.button.text}  
+                                    onChange={ text => {
+                                        item.button.text = text
+                                        const value = {...item.button.text, text }
+                                        setAttributes({button: value})
+                                    } 
+                                    } 
+                                    
                                  />
+
+                                <TextControl
+                                    className="w-full"
+                                    label="Button URL"
+                                    value={ item.button.url }
+                                    onChange={ url => {
+                                        item.button.url = url
+                                        const value = { ...item.button.url, url }
+                                        setAttributes({button: value})
+                                    } 
+                                }
+                                />
                             </div>
                         }
 
