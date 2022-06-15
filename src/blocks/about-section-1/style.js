@@ -58,7 +58,7 @@ export default function Style({attributes, wrapper, sheet}){
                 ${wrapper} .school-image img {
                     border-radius: 10px;
                 }
-
+                
                 ${wrapper} .achivment-icons {
                     width: 50px !important;
                     height: 50px !important;
