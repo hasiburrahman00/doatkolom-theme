@@ -1,7 +1,7 @@
 import {BlockWrapper, BlockWrapperContent, BlockWrapperEditor, BlockWrapperStyle} from "../block-wrapper";
 import Style from "./style";
-// import GeneralControls from "./general-controls";
-// import { RightArrow } from "./icons";
+import GeneralControls from "./general-controls";
+import HeaderControls from "./header-controls";
 const { useEffect } = wp.element;
 const { useBlockProps } = wp.blockEditor
 import { Routine, ClassRoutine, ExamRoutine, Syllabus, NoticeBoard, Events } from "./icons";
@@ -48,46 +48,44 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
                         <p className="m-0 font-secondary text-lg text-primary font-normal para-width">{attributes.sub_title}</p>
                     </div>
                     <div class="max-w-screen-xl mx-auto md:w-full sm:w-full px-5 mt-9">
-                        <div class="md:flex sm:w-full lg:w-full">
-                                <div class=" border border-solid border-gray-200 mt-5 md:mt-0 md:mr-5 md:w-2/6 sm:w-full py-6 px-3.5 bg-white rounded-lg text-center font-secondary md:text-lg lg:text-3xl">
+                        <div class="grid md:grid-cols-3 gap-4">
+                                <div class="py-6 px-3.5 bg-white rounded-lg text-center font-secondary md:text-lg lg:text-3xl">
                                     <Routine/>
-                                    <a href="#" className="text-primary hover:text-secondary no-underline">
-                                        <h3 className="m-0 mt-2">Result</h3>
+                                    <a href={attributes.result_title_link} className="text-primary hover:text-secondary no-underline">
+                                        <h3 className="m-0 mt-2">{attributes.result_title}</h3>
                                     </a>
                                 </div>               
-                                <div class=" border border-solid border-gray-200 mt-5 md:mt-0 md:mr-5 md:w-2/6 sm:w-full py-6 px-3.5 bg-white rounded-lg text-center font-secondary md:text-lg lg:text-3xl">
+                                <div class="py-6 px-3.5 bg-white rounded-lg text-center font-secondary md:text-lg lg:text-3xl">
                                     <ClassRoutine/>
-                                    <a href="#" className="text-primary hover:text-secondary no-underline">
-                                        <h3 className="m-0 mt-2">Class Routine</h3>
+                                    <a href={attributes.class_routine_link} className="text-primary hover:text-secondary no-underline">
+                                        <h3 className="m-0 mt-2">{attributes.class_routine}</h3>
                                     </a>
                                 </div>               
-                                <div class=" border border-solid border-gray-200 mt-5 md:mt-0 md:w-2/6 sm:w-full py-6 px-3.5 bg-white rounded-lg text-center font-secondary md:text-lg lg:text-3xl">
+                                <div class="py-6 px-3.5 bg-white rounded-lg text-center font-secondary md:text-lg lg:text-3xl">
                                     <ExamRoutine/>
-                                    <a href="#" className="text-primary hover:text-secondary no-underline">
-                                        <h3 className="m-0 mt-2">Exam Routine</h3>
+                                    <a href={attributes.exam_routine_link} className="text-primary hover:text-secondary no-underline">
+                                        <h3 className="m-0 mt-2">{attributes.exam_routine}</h3>
                                     </a>
-                                </div>          
-                        </div>
-                        <div class="md:flex sm:w-full lg:w-full md:mt-7">
-                                <div class=" border border-solid border-gray-200 mt-5 md:mt-0 md:mr-5 md:w-2/6 sm:w-full py-6 px-3.5 bg-white rounded-lg text-center font-secondary md:text-lg lg:text-3xl">
+                                </div>  
+                                <div class="py-6 px-3.5 bg-white rounded-lg text-center font-secondary md:text-lg lg:text-3xl">
                                     <Syllabus/>
-                                    <a href="#" className="text-primary hover:text-secondary no-underline">
-                                        <h3 className="m-0 mt-2">Syllabus</h3>
+                                    <a href={attributes.syllabus_link} className="text-primary hover:text-secondary no-underline">
+                                        <h3 className="m-0 mt-2">{attributes.syllabus}</h3>
                                     </a>
                                 </div>               
-                                <div class=" border border-solid border-gray-200 mt-5 md:mt-0 md:mr-5 md:w-2/6 sm:w-full py-6 px-3.5 bg-white rounded-lg text-center font-secondary md:text-lg lg:text-3xl">
+                                <div class="py-6 px-3.5 bg-white rounded-lg text-center font-secondary md:text-lg lg:text-3xl">
                                     <NoticeBoard/>
-                                    <a href="#" className="text-primary hover:text-secondary no-underline">
-                                        <h3 className="m-0 mt-2">Notice Board</h3>
+                                    <a href={attributes.notice_board_link} className="text-primary hover:text-secondary no-underline">
+                                        <h3 className="m-0 mt-2">{attributes.notice_board}</h3>
                                     </a>
                                     
                                 </div>               
-                                <div class=" border border-solid border-gray-200 mt-5 md:mt-0 md:w-2/6 sm:w-full py-6 px-3.5 bg-white rounded-lg text-center font-secondary md:text-lg lg:text-3xl">
+                                <div class="py-6 px-3.5 bg-white rounded-lg text-center font-secondary md:text-lg lg:text-3xl">
                                     <Events/>
-                                    <a href="#" className="text-primary hover:text-secondary no-underline">
-                                        <h3 className="m-0 mt-2">Events</h3>
+                                    <a href={attributes.event_link} className="text-primary hover:text-secondary no-underline">
+                                        <h3 className="m-0 mt-2">{attributes.event}</h3>
                                     </a>
-                                </div>          
+                                </div>    
                         </div>
                     </div>
                 </div>
@@ -95,7 +93,8 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
             </BlockWrapperContent>
 
             <BlockWrapperEditor>
-                    {/* <GeneralControls label="General"/> */}
+                    <GeneralControls label="General"/>
+                    <HeaderControls label="Header"/>
             </BlockWrapperEditor>
         </BlockWrapper>
 	);
