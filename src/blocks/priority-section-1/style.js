@@ -7,8 +7,8 @@ export default function Style({attributes, wrapper, sheet}){
                     background-image: url(${attributes.background});
                 }
 
-                ${wrapper} .sub-header {
-                    width: ${attributes.sub_heading_width}px;
+                ${wrapper} .header {
+                    max-width: ${attributes.header_width}px;
                     margin: 0 auto;
                 }
                 

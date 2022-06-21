@@ -29,7 +29,7 @@ export default function GeneralControls({attributes, setAttributes}) {
             <RangeControl
                 label="Sub Heading Width"
                 value={ attributes.sub_heading_width }
-                onChange={ ( value ) => setAttributes({sub_heading_width: value}) }
+                onChange={ ( value ) => setAttributes({header_width: value}) }
                 min={ 409 }
                 max={ 680 }
             />

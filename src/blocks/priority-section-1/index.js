@@ -38,9 +38,9 @@ registerBlockType('doatkolom/priority-section-1', {
             default: 'The school was established on a small scale on 19th April, 1959 at the initiative of some personalities.'
         },
 
-        sub_heading_width: {
+        header_width: {
             type: 'number',
-            default: 409
+            default: 410
         },
 
         priority_box: {
@@ -49,7 +49,6 @@ registerBlockType('doatkolom/priority-section-1', {
                 {
                     title: 'Madical Health Care Center',
                     description: 'The school was established on a small scale on 19th April, 1959 at the initiative of some.',
-                    icon: doatkolom_object.img + 'icons/readmorearrow.svg',
                     button: {
                         text: "Read More",
                         visible: true,
@@ -59,7 +58,6 @@ registerBlockType('doatkolom/priority-section-1', {
                 {
                     title: 'Madical Health Care Center',
                     description: 'The school was established on a small scale on 19th April, 1959 at the initiative of some.',
-                    icon: doatkolom_object.img + 'icons/readmorearrow.svg',
                     button: {
                         text: "Read More",
                         visible: true,
@@ -69,7 +67,6 @@ registerBlockType('doatkolom/priority-section-1', {
                 {
                     title: 'Madical Health Care Center',
                     description: 'The school was established on a small scale on 19th April, 1959 at the initiative of some.',
-                    icon: doatkolom_object.img + 'icons/readmorearrow.svg',
                     button: {
                         text: "Read More",
                         visible: true,
@@ -79,7 +76,6 @@ registerBlockType('doatkolom/priority-section-1', {
                 {
                     title: 'Madical Health Care Center',
                     description: 'The school was established on a small scale on 19th April, 1959 at the initiative of some.',
-                    icon: doatkolom_object.img + 'icons/readmorearrow.svg',
                     button: {
                         text: "Read More",
                         visible: true,

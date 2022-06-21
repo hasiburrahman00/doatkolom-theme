@@ -14,7 +14,7 @@ export default function Save({ attributes }) {
 
             <BlockWrapperContent>
 
-            <div className="max-w-screen-xl lg:px-0 px-5 mx-auto py-11">
+            <div className="max-w-screen-xl lg:px-0 px-5 mx-auto py-32">
                     <div className="lg:flex lg:space-x-24 lg:items-start">
 
                         {/* About image */}

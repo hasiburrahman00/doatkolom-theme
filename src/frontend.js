@@ -1,6 +1,7 @@
 import './lib/lazysizes';
 import Header from "./modules/header";
 import Helper from './utils/Helper';
+import honorableTeachers1 from './blocks/honorable-teachers-1/script'
 
 
 jQuery(function() {
@@ -37,7 +38,9 @@ jQuery(function() {
         const blockScriptList = {
             'doatkolom/page-list' : function( $scope ) {
                 console.log($scope)
-            }
+            },
+
+            'doatkolom/honorable-teachers-1' : honorableTeachers1
         }
 
         // connect script with the gutenberg block

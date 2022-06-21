@@ -44,7 +44,7 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
             </BlockWrapperStyle>
 
             <BlockWrapperContent>
-                <div className="max-w-screen-xl lg:px-0 px-5 mx-auto py-11">
+                <div className="max-w-screen-xl lg:px-0 px-5 mx-auto py-32">
                     <div className="lg:flex lg:space-x-24 lg:items-start">
 
                         {/* About image */}
@@ -93,8 +93,6 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
                 <GeneralControls label="General"/>
                 <DescriptionControls label = "Description"/>
                 <AchivementControls label = "Achivement"/>
-                {/* <HistoryControls label="History"/>
-                <NoticeControls label="Notice"/> */}
             </BlockWrapperEditor>
         </BlockWrapper>
 	);
