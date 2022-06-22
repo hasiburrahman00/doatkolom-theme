@@ -22,7 +22,7 @@ export default function Save({ attributes }) {
                         <div className="school-image flex-auto">
                             <div className="relative z-0 before:content-[''] before:absolute before:left-0 before:top-8 before:rounded-xl before:w-full before:h-full before:bg-gray-200">
                                 <picture>
-                                    <img width= "560" height= "560" className="lazyload relative z-10 w-full left-8" data-src={attributes.school_image} alt="school-image"/>
+                                    <img width= "560" height= "560" className="lazyload relative z-10 w-full h-auto left-8 object-cover" data-src={attributes.school_image} alt="school-image"/>
                                 </picture>
                             </div>
                         </div>

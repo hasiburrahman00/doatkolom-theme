@@ -27,10 +27,6 @@ export default function GeneralControls({attributes, setAttributes}) {
                 value={ attributes.map_iframe_link }
                 onChange={ ( value ) => setAttributes({map_iframe_link: value}) }
             />
-
-
-
-            
         </div>
     )
 }

@@ -34,16 +34,6 @@ export default function BoxControls({attributes, setAttributes}) {
              ]
          })
      }
-
-     const handleButtonChange = (val,index,type)=>{
-         attributes.priority_box.button[index][type] = val
-         setAttributes({
-            priority_box: [
-                 ...attributes.priority_box.button
-             ]
-         })
-     }
-
  
 
     return (

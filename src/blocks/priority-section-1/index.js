@@ -55,6 +55,7 @@ registerBlockType('doatkolom/priority-section-1', {
                         url: "#" 
                     }
                 },
+
                 {
                     title: 'Madical Health Care Center',
                     description: 'The school was established on a small scale on 19th April, 1959 at the initiative of some.',
@@ -64,6 +65,7 @@ registerBlockType('doatkolom/priority-section-1', {
                         url: "#" 
                     }
                 },
+
                 {
                     title: 'Madical Health Care Center',
                     description: 'The school was established on a small scale on 19th April, 1959 at the initiative of some.',
@@ -73,6 +75,7 @@ registerBlockType('doatkolom/priority-section-1', {
                         url: "#" 
                     }
                 },
+                
                 {
                     title: 'Madical Health Care Center',
                     description: 'The school was established on a small scale on 19th April, 1959 at the initiative of some.',

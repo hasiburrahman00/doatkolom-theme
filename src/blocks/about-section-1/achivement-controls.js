@@ -9,9 +9,9 @@ export default function AchivementControls({attributes, setAttributes}) {
         setAttributes({achivments:[
             ...attributes.achivments,
             {
-                icon: "Enter Image",
-                number: 0,
-                description: "Enter Description"
+                icon: doatkolom_object.img + 'icons/running-years.svg',
+                number: '200+',
+                description: "Professional Awards"
                 
             }
         ]})
@@ -85,10 +85,6 @@ export default function AchivementControls({attributes, setAttributes}) {
 
                 }
             </Repeater>
-
-            
-            
-
         </div>
     )
 }

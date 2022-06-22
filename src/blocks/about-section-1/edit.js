@@ -52,7 +52,7 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
                         <div className="school-image flex-auto">
                             <div className="relative z-0 before:content-[''] before:absolute before:left-0 before:top-8 before:rounded-xl before:w-full before:h-full before:bg-gray-200">
                                 <picture>
-                                    <img className="relative z-10 w-full left-8" src={attributes.school_image} alt="school-image"/>
+                                    <img className="relative z-10 w-full h-auto left-8" src={attributes.school_image} alt="school-image"/>
                                 </picture>
                             </div>
                         </div>
@@ -76,7 +76,7 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
                                     attributes.achivments.map((item,index)=>(
                                         <div className="achivement-wrapper" key={index}>
                                             <picture>
-                                                <img className="achivment-icons" src= {item.icon} alt="achivements" />
+                                                <img className="achivment-icons object-cover" src= {item.icon} alt="achivements" />
                                             </picture>
                                             <h3 className="m-0 mt-3 font-primary font-normal text-primary text-2xl">{item.number}</h3>
                                             <p className="m-0 mt-1 font-secondary font-normal text-primary text-xl leading-4">{item.description}</p>

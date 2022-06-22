@@ -63,7 +63,6 @@ export default function Style({attributes, wrapper, sheet}){
                     width: 50px !important;
                     height: 50px !important;
                 }
-
                 
             `}
 
