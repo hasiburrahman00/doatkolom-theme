@@ -1,0 +1,14 @@
+{
+	"name": "awp/custom-block",
+	"title": "AWP Custom Block",
+	"description": "Example of custom block with block.json",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "wide"
+		},
+		"title" : {
+			"type": "string"
+		}
+	}
+}
