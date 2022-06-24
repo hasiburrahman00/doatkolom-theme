@@ -1,6 +1,3 @@
-const { registerBlockType } = wp.blocks;
-const { useEffect } = wp.element;
-
 export default class RegisterBlock {
 
     constructor( config ) {  
@@ -19,9 +16,10 @@ export default class RegisterBlock {
         self.EditComponent = EditComponent;
         self.SaveComponent = SaveComponent;
         self.StyleComponent= StyleComponent;
+        self.controls      = controls || [];
 
         const blockSettings= Object.assign(self.config, {
-            apiVersion  : 2,
+            // apiVersion  : 2,
             category    : 'widgets',
             icon        : 'tide',
             textdomain  : 'doatkolom',
@@ -53,7 +51,42 @@ export default class RegisterBlock {
             }
         })
 
-        registerBlockType(self.name, blockSettings)
+        wp.blocks.registerBlockType(self.name, blockSettings)
+    }
+
+    BlockWrapperEditor(props) {
+
+        const { Button, Modal, TabPanel } = wp.components;
+        const { BlockControls } = wp.blockEditor;
+        const { Fragment } = wp.element;
+        const [ modalVisible, setModalVisible ] = wp.element.useState(false);
+        const header = props.self.controls.map( item => {
+            return {
+                ...item,
+                name: item.component.name
+            }
+        } )
+
+        return(
+            <Fragment>
+                <BlockControls>
+                    <Button onClick={() => setModalVisible(true)} className="is-primary ml-2 mt-1.5"> <span className="dashicons dashicons-admin-generic mr-2"></span> Edit Section</Button>
+                </BlockControls>
+                {
+                    modalVisible &&
+                    <Modal style={{width: '100%', maxWidth: '900px', minHeight: '600px'}} title="Section Preferences" shouldCloseOnClickOutside={false} onRequestClose={ () => setModalVisible(false) }>
+                        <TabPanel
+                            className="flex doatkolom-editor-tab"
+                            activeClass="is-active"
+                            orientation="vertical"
+                            tabs={ header }
+                        >
+                            {tab => <tab.component attributes={props.attributes} setAttributes={props.setAttributes}/>}
+                        </TabPanel>
+                    </Modal>
+                }
+            </Fragment>
+        )
     }
 
     BlockWrapper({attributes, children, self}) {
@@ -97,9 +130,9 @@ export default class RegisterBlock {
         const self = this;
         const BlockWrapper  = self.BlockWrapper;
         const EditComponent = self.EditComponent;
+        const BlockWrapperEditor = self.BlockWrapperEditor;
 
-
-        useEffect( () => {
+        wp.element.useEffect( () => {
             if ( ! attributes._doatkolom_block_id ) {
                 setAttributes( { _doatkolom_block_id: clientId } );
             }
@@ -110,9 +143,12 @@ export default class RegisterBlock {
         }, [] );
 
         return (
-            <BlockWrapper attributes={attributes} self={self}>
-                <EditComponent attributes={attributes} setAttributes={setAttributes}/>
-            </BlockWrapper>
+            <>
+                <BlockWrapper attributes={attributes} self={self}>
+                    <EditComponent attributes={attributes} setAttributes={setAttributes}/>
+                </BlockWrapper>
+                <BlockWrapperEditor attributes={attributes} setAttributes={setAttributes} self={self}/>
+            </>
         )
     }
 

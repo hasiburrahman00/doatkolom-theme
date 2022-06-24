@@ -1,14 +1,74 @@
 {
-	"name": "awp/custom-block",
-	"title": "AWP Custom Block",
-	"description": "Example of custom block with block.json",
+	"name": "doatkolom/banner-1",
+	"title": "Doatkolom Banner 1",
+	"description": "For page banner section",
+	"keywords": [ "banner", "page banner", "doatkolom", "hero", "hero area" ],
 	"attributes": {
-		"align": {
-			"type": "string",
-			"default": "wide"
-		},
-		"title" : {
-			"type": "string"
-		}
+
+        "background": {
+            "type": "string"
+        },
+
+        "institution_name": {
+            "type": "string",
+            "default": "Savar Girls High School"
+        },
+        
+        "description": {
+            "type": "string",
+            "default": "The school was established on a small scale on 19th April, 1959 at the initiative of some personalities who are passionate about women's education in the area. Dakkhin Para, Savar, Dhaka.1340-School Code: 1517 EIIN: 108409"
+        },
+
+        "primary_btn": {
+            "type": "object",
+            "default": {
+                "text": "Know More About Us",
+                "url": "#",
+                "visible": true
+            }
+        },
+
+        "secondary_btn": {
+            "type": "object",
+            "default": {
+                "text": "Latest Update",
+                "url": "#",
+                "visible": true
+            }
+        },
+
+        "history_title":{
+            "type": "string",
+            "default": "History"
+        },
+
+        "history_description":{
+            "type": "string",
+            "default": "The school was established on a small scale on 19th April, 1959 at the initiative of some personalities.The school was established on a small scale on 19th April, 1959 at the initiative of some personalities.The school was established"
+        },
+
+        "history_read_more_btn": {
+            "type": "object",
+            "default": {
+                "text": "Read More",
+                "url": "#",
+                "visible": true
+            }
+        },
+        
+        "notice_url": {
+            "type": "string",
+            "default": "#"
+        },
+
+        "notice_title": {
+            "type": "string",
+            "default": "Notice Board"
+        },
+
+        "notice_description": {
+            "type": "string",
+            "default": "Admission, Events, Exam, Etc."
+        }
 	}
 }
