@@ -30,8 +30,37 @@ registerBlockType('doatkolom/honorable-teachers-1', {
 
         heading: {
             type: 'string',
-            default: 'Our Priorities'
+            default: 'Honorable Teachers'
         },
+
+        sub_heading: {
+            type: 'string',
+            default: 'We have 20 teachers teaching out studentls with care'
+        },
+
+        honorable_teacher: {
+            type: 'array',
+            default: [
+                {
+                    names: 'Mohammad Rafiquzzaman',
+                    position: 'Head Teacher of the School',
+                    speach: 'The school was established on a small scale on 19th April, 1959 at the initiative of some personalities.The school was established on a small scale on 19th April, 1959 at the initiative of some personalities.'
+                },
+
+                {
+                    names: 'Mohammad Rafiquzzaman',
+                    position: 'Head Teacher of the School',
+                    speach: 'The school was established on a small scale on 19th April, 1959 at the initiative of some personalities.The school was established on a small scale on 19th April, 1959 at the initiative of some personalities.'
+                },
+
+                {
+                    names: 'Mohammad Rafiquzzaman',
+                    position: 'Head Teacher of the School',
+                    speach: 'The school was established on a small scale on 19th April, 1959 at the initiative of some personalities.The school was established on a small scale on 19th April, 1959 at the initiative of some personalities.'
+                }
+            ]
+        }
+
 
        
 

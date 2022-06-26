@@ -9,7 +9,7 @@ export default function honorableTeachers1($scope){
     // })
 
     const selectors = {
-        contentSlide: '.content-slide-wrapper',
+        contentSlide: '.honorable-teacher-wrapper',
         imageSlide  : '.testimonial-slides',
         dotWrapper  : '.slider-dots',
         nextBtn     : '.slick-next-btn',
@@ -33,6 +33,7 @@ export default function honorableTeachers1($scope){
         slidesToShow    : 1,
         slidesToScroll  : 1,
         dots            : true,
+        autoplay        : true,
         appendDots      : dotWrapper,
         nextArrow       : nextBtn,
         prevArrow       : prevBtn,

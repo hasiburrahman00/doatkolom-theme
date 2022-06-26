@@ -43,11 +43,27 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
 
             <BlockWrapperContent>
                     <div className="max-w-screen-xl lg:px-0 px-5 mx-auto">
+                        <div className="grid grid-cols-2 gap-4">
+                            <div>
+                                <h2 className="m-0 font-primary text-primary font-normal text-5xl mb-3">{attributes.heading}</h2>
+                                <p className="m-0 font-secondary text-primary font-normal text-lg">{attributes.sub_heading}</p>
 
-                        <div className="wrapper-main">
-                            <div className="item w-20 h-20 bg-red-500"></div>
-                            <div className="item w-20 h-20 bg-black"></div>
-                            <div className="item w-20 h-20 bg-gray-800"></div>
+                                <div className="honorable-teacher-wrapper mt-8">
+                                    {
+                                        attributes.honorable_teacher.map((item,index)=>(
+                                            <div key={index} className = "pr-10">
+                                                <h3 className="m-0 font-primary text-2xl font-normal text-primary">{item.names}</h3>
+                                                <h4 className="m-0 mb-3 font-secondary text-lg font-normal text-primary">{item.position}</h4>
+                                                <p className="m-0 font-secondary text-lg font-normal text-primary">{item.speach}</p>
+                                            </div>
+                                        ))
+                                    }
+                                </div>
+
+                                <div className="flex items-center">
+                                    <div className="slider-dots"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
             </BlockWrapperContent>
