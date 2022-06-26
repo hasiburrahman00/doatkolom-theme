@@ -7,7 +7,7 @@ function gutenberg_enqueue() {
     wp_localize_script( 'doatkolom-blocks', 'doatkolom_object',
         array( 
             'ajaxurl'   => admin_url( 'admin-ajax.php' ),
-            'img'       => DOATKOLOM_IMG,
+            'blocks'    => DOATKOLOM_BLOCKS,
         )
     );
 

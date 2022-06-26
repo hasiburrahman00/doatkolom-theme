@@ -109,6 +109,7 @@ export default function GeneralControls({attributes, setAttributes}) {
                     />
                 </div>
             }
+            
         </div>
     )
 }

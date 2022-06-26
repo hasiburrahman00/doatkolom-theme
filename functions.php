@@ -15,6 +15,7 @@ define( 'DOATKOLOM_THEME_URI', get_template_directory_uri() );
 define( 'DOATKOLOM_THEME_DIR', get_template_directory() );
 define( 'DOATKOLOM_INCLUDE_DIR', DOATKOLOM_THEME_DIR . '/includes/' );
 define( 'DOATKOLOM_IMG', DOATKOLOM_THEME_URI . '/assets/img/' );
+define( 'DOATKOLOM_BLOCKS', DOATKOLOM_THEME_URI . '/blocks/' );
 define( 'DOATKOLOM_BUILD', DOATKOLOM_THEME_URI . '/build/' );
 define( 'DOATKOLOM_FONT', DOATKOLOM_THEME_URI . '/assets/fonts/' );
 define( 'DOATKOLOM_VERSION', '1.0.0' );

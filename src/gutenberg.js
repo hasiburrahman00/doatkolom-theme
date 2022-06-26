@@ -1,9 +1,9 @@
 import './blocks/banner-1';
-import './blocks/about-section-1';
-import './blocks/priority-section-1';
-import './blocks/section-header-1';
-import './blocks/event-1';
-import './blocks/gallery-1';
-import './blocks/about-2';
-import './blocks/location-section-1';
-import './blocks/honorable-teachers-1';
+// import './blocks/about-section-1';
+// import './blocks/priority-section-1';
+// import './blocks/section-header-1';
+// import './blocks/event-1';
+// import './blocks/gallery-1';
+// import './blocks/about-2';
+// import './blocks/location-section-1';
+// import './blocks/honorable-teachers-1';

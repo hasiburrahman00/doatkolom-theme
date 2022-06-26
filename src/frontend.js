@@ -1,7 +1,7 @@
 import './lib/lazysizes';
 import Header from "./modules/header";
 import Helper from './utils/Helper';
-import honorableTeachers1 from './blocks/honorable-teachers-1/script'
+// import honorableTeachers1 from './blocks/honorable-teachers-1/script'
 
 
 jQuery(function() {
@@ -36,16 +36,19 @@ jQuery(function() {
     window.doatkolomGutenbergInit(function( $ ) {
         // scripts for gutenberg block
         const blockScriptList = {
-            'doatkolom/page-list' : function( $scope ) {
+            'doatkolom/banner-1' : function( $scope, settings ) {
                 console.log($scope)
+                console.log(settings)
             },
 
-            'doatkolom/honorable-teachers-1' : honorableTeachers1
+            // 'doatkolom/honorable-teachers-1' : honorableTeachers1
         }
 
         // connect script with the gutenberg block
         $.each(blockScriptList, (name, callback) => {
-            $(window).on(name, (ev, $scope) => callback($scope))
+            $(window).on(name, (ev, $scope) => {
+                callback($scope, $scope.data('settings'))
+            })
         })
     })
 
