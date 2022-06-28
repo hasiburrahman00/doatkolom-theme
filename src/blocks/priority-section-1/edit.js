@@ -1,51 +1,15 @@
-import {BlockWrapper, BlockWrapperContent, BlockWrapperEditor, BlockWrapperStyle} from "../block-wrapper";
 import { ArrowRight } from "./icons";
-import BoxControls from "./box-controls";
-import GeneralControls from "./general-controls";
-import Style from "./style";
-
-
-const { useEffect } = wp.element;
-const { useBlockProps } = wp.blockEditor
 
 export default function Edit({ attributes, setAttributes, clientId, name }) {
 
-    /**
-     * 
-     * 
-     * @hook useEffect
-     * all the code inside of this hook are responsive for updating gutenberg third-party script, block name change and block id change
-     * 
-     * @since 1.0.0
-     * @author ashraf
-     * 
-     */ 
-    useEffect( () => {
-
-        if ( ! attributes.block_id ) {
-            setAttributes( { block_id: clientId } );
+    wp.element.useEffect(()=>{
+        if( !attributes.background ) {
+            setAttributes({background: doatkolom_object.blocks + 'priority-section-1/img/prioritybackground.webp'})
         }
-
-        if ( ! attributes.block_name ) {
-            setAttributes( { block_name: name } );
-        }
-
-        const $scope = jQuery(`#block-${clientId}`).find(`.doatkolom-block-wrap`).first();
-        jQuery(window).trigger( name, [ $scope ] );
-
-    }, [] );
-
-
+    },[])
 
 	return (
-		<BlockWrapper attributes={attributes} setAttributes={setAttributes} props={useBlockProps()}>
-            
-            <BlockWrapperStyle>
-                <Style/>
-            </BlockWrapperStyle>
-
-            <BlockWrapperContent>
-                <div className="banner-wrapper bg-cover bg-no-repeat">
+		<div className="banner-wrapper bg-cover bg-no-repeat">
                     <div className="bg-white/90 py-16 md:py-24">
                         <div className="max-w-screen-xl lg:px-0 px-5 mx-auto">
 
@@ -78,12 +42,5 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
                         </div>
                     </div>
                 </div>
-            </BlockWrapperContent>
-
-            <BlockWrapperEditor>
-                <GeneralControls label="General"/>
-                <BoxControls label = "Details"/>
-            </BlockWrapperEditor>
-        </BlockWrapper>
 	);
 }

@@ -1,4 +1,4 @@
-const { TextControl, TextareaControl, ToggleControl,RangeControl } = wp.components
+const { TextControl, TextareaControl,RangeControl } = wp.components
 import ImagePicker from "../../components/image-picker"
 
 export default function GeneralControls({attributes, setAttributes}) {
@@ -28,7 +28,7 @@ export default function GeneralControls({attributes, setAttributes}) {
 
             <RangeControl
                 label="Sub Heading Width"
-                value={ attributes.sub_heading_width }
+                value={ attributes.header_width}
                 onChange={ ( value ) => setAttributes({header_width: value}) }
                 min={ 409 }
                 max={ 680 }

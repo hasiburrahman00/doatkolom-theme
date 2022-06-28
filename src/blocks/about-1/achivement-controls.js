@@ -9,7 +9,7 @@ export default function AchivementControls({attributes, setAttributes}) {
         setAttributes({achivments:[
             ...attributes.achivments,
             {
-                icon: doatkolom_object.img + 'icons/running-years.svg',
+                icon: doatkolom_object.blocks + 'about-1/img/running-years.svg',
                 number: '200+',
                 description: "Professional Awards"
                 

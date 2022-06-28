@@ -1,4 +1,3 @@
-const { TextControl, TextareaControl, ToggleControl,RangeControl } = wp.components
 import ImagePicker from "../../components/image-picker"
 import Repeater from "../../components/repeater"
 
@@ -8,7 +7,7 @@ export default function LocationImageControls({attributes, setAttributes}) {
         setAttributes({background: [
             ...attributes.background,
             {
-                image: "Upload Image",
+                image: doatkolom_object.blocks + 'location-section-1/img/locationone.webp',
             }
         ]})
     }

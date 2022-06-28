@@ -1,3 +1,4 @@
+import honorableTeachers1 from './blocks/honorable-teachers-1/script';
 import './lib/lazysizes';
 import Header from "./modules/header";
 import Helper from './utils/Helper';
@@ -32,14 +33,20 @@ jQuery(function() {
      * @author ashraf
      * 
      */
+
+    
     
     window.doatkolomGutenbergInit(function( $ ) {
+        
         // scripts for gutenberg block
         const blockScriptList = {
             'doatkolom/banner-1' : function( $scope, settings ) {
                 console.log($scope)
                 console.log(settings)
             },
+            
+            'doatkolom/honorable-teachers-1' : honorableTeachers1
+
 
             // 'doatkolom/honorable-teachers-1' : honorableTeachers1
         }

@@ -2,14 +2,9 @@ import slick from "slick-carousel";
 const $ = window.jQuery;
 
 export default function honorableTeachers1($scope){
-    // const $wrapper = $scope.find('.wrapper-main')
-    // $wrapper.slick({
-    //     slidesToShow: 2,
-    //     infinite: true
-    // })
 
     const selectors = {
-        contentSlide: '.honorable-teacher-wrapper',
+        contentSlide: '.honorable-teacher-slider',
         imageSlide  : '.testimonial-slides',
         dotWrapper  : '.slider-dots',
         nextBtn     : '.slick-next-btn',

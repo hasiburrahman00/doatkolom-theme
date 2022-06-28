@@ -7,8 +7,8 @@ export default function BoxControls({attributes, setAttributes}) {
         setAttributes({priority_box: [
             ...attributes.priority_box,
             {
-                title: "New Title",
-                description: "Enter New Description",
+                title: "Madical Health Care Center",
+                description: "The school was established on a small scale on 19th April, 1959 at the initiative of some.",
                 icon: doatkolom_object.img + 'icons/readmorearrow.svg',
                 button: {
                     text: "Read More",
