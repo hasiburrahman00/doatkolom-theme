@@ -1,7 +1,6 @@
-const { TextControl, TextareaControl, ToggleControl } = wp.components
+const { TextControl, TextareaControl } = wp.components
 import Repeater from "../../components/repeater"
 import ImagePicker from "../../components/image-picker"
-
 
 export default function AchivementControls({attributes, setAttributes}) {
 
@@ -12,7 +11,6 @@ export default function AchivementControls({attributes, setAttributes}) {
                 icon: doatkolom_object.blocks + 'about-1/img/running-years.svg',
                 number: '200+',
                 description: "Professional Awards"
-                
             }
         ]})
     }
@@ -82,7 +80,6 @@ export default function AchivementControls({attributes, setAttributes}) {
 
                         </Repeater.Item>
                     ))
-
                 }
             </Repeater>
         </div>
