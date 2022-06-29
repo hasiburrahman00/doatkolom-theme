@@ -41,8 +41,8 @@ jQuery(function() {
         // scripts for gutenberg block
         const blockScriptList = {
             'doatkolom/banner-1' : function( $scope, settings ) {
-                console.log($scope)
-                console.log(settings)
+                // console.log($scope)
+                // console.log(settings)
             },
             
             'doatkolom/honorable-teachers-1' : honorableTeachers1

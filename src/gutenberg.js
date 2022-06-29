@@ -7,3 +7,4 @@ import './blocks/honorable-teachers-1';
 // import './blocks/event-1';
 // import './blocks/gallery-1';
 // import './blocks/about-2';
+import './blocks/timeline-tab-1';
