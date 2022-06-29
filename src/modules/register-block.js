@@ -1,3 +1,6 @@
+// wp.data.dispatch('core/edit-post').__experimentalSetPreviewDeviceType('Tablet');
+// wp.data.select('core/edit-post').__experimentalGetPreviewDeviceType();
+
 export default class RegisterBlock {
 
     constructor( config ) {  
@@ -137,8 +140,15 @@ export default class RegisterBlock {
                 setAttributes( { _doatkolom_block_id: clientId } );
             }
 
-            const $scope = jQuery(`#block-${clientId}`).find('.doatkolom-block-wrap').first();
-            jQuery(window).trigger(self.name, [$scope]);
+            const device = wp.data.select('core/edit-post').__experimentalGetPreviewDeviceType();
+            if( device === 'Desktop' ) {
+                const $scope = jQuery(`#block-${clientId}`).find('.doatkolom-block-wrap').first();
+                jQuery(window).trigger(self.name, [$scope]);
+            } else {
+                const frame = jQuery('iframe[name="editor-canvas"]').contents();
+                const $scope = frame.find(`#block-${clientId}`).find('.doatkolom-block-wrap').first();
+                jQuery(window).trigger(self.name, [$scope]);
+            }
 
         }, [] );
 
