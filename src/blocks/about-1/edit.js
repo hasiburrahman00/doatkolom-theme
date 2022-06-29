@@ -1,50 +1,35 @@
-import {BlockWrapper, BlockWrapperContent, BlockWrapperEditor, BlockWrapperStyle} from "../block-wrapper";
-import AchivementControls from "./achivement-controls";
-import DescriptionControls from "./description-controls";
-import GeneralControls from "./general-controls";
-import Style from "./style";
+export default function Edit({ attributes, setAttributes}) {
 
-const { useEffect } = wp.element;
-const { useBlockProps } = wp.blockEditor
-
-export default function Edit({ attributes, setAttributes, clientId, name }) {
-
-    /**
-     * 
-     * 
-     * @hook useEffect
-     * all the code inside of this hook are responsive for updating gutenberg third-party script, block name change and block id change
-     * 
-     * @since 1.0.0
-     * @author ashraf
-     * 
-     */ 
-    useEffect( () => {
-
-        if ( ! attributes.block_id ) {
-            setAttributes( { block_id: clientId } );
+    wp.element.useEffect(()=>{
+        if( !attributes.school_image ) {
+            setAttributes({school_image: doatkolom_object.blocks + 'about-1/img/school-image.webp' })
         }
-
-        if ( ! attributes.block_name ) {
-            setAttributes( { block_name: name } );
+        if( !attributes.achivments) {
+            setAttributes({achivments:  [
+                {
+                  icon: doatkolom_object.blocks + 'about-1/img/running-years.svg',
+                  number: "60+",
+                  description: "Years of Running"
+                },
+        
+                {
+                  icon: doatkolom_object.blocks + 'about-1/img/students.svg',
+                  number: "100k+",
+                  description: "Happy Students"
+                },
+        
+                {
+                  icon: doatkolom_object.blocks + 'about-1/img/awards.svg',
+                  number: "100+",
+                  description: "Professional Awards"
+                }
+              ]})
         }
-
-        const $scope = jQuery(`#block-${clientId}`).find(`.doatkolom-block-wrap`).first();
-        jQuery(window).trigger( name, [ $scope ] );
-
-    }, [] );
-
+    },[])
 
 
 	return (
-		<BlockWrapper attributes={attributes} setAttributes={setAttributes} props={useBlockProps()}>
-            
-            <BlockWrapperStyle>
-                <Style/>
-            </BlockWrapperStyle>
-
-            <BlockWrapperContent>
-                <div className="max-w-screen-xl lg:px-0 px-5 mx-auto py-32">
+		<div className="max-w-screen-xl lg:px-0 px-5 mx-auto py-32">
                     <div className="lg:flex lg:space-x-24 lg:items-start">
 
                         {/* About image */}
@@ -52,7 +37,7 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
                         <div className="school-image flex-auto">
                             <div className="relative z-0 before:content-[''] before:absolute before:left-0 before:top-8 before:rounded-xl before:w-full before:h-full before:bg-gray-200">
                                 <picture>
-                                    <img className="relative z-10 w-full left-8" src={attributes.school_image} alt="school-image"/>
+                                    <img className="relative z-10 w-full h-auto left-8" src={attributes.school_image} alt="school-image"/>
                                 </picture>
                             </div>
                         </div>
@@ -73,10 +58,10 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
 
                             <div className="md:flex md:flex-wrap">
                                 {
-                                    attributes.achivments.map((item,index)=>(
+                                    attributes.achivments?.map((item,index)=>(
                                         <div className="achivement-wrapper" key={index}>
                                             <picture>
-                                                <img className="achivment-icons" src= {item.icon} alt="achivements" />
+                                                <img className="achivment-icons object-cover" src= {item.icon} alt="achivements" />
                                             </picture>
                                             <h3 className="m-0 mt-3 font-primary font-normal text-primary text-2xl">{item.number}</h3>
                                             <p className="m-0 mt-1 font-secondary font-normal text-primary text-xl leading-4">{item.description}</p>
@@ -87,13 +72,5 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
                         </div>
                     </div>
                 </div>
-            </BlockWrapperContent>
-
-            <BlockWrapperEditor>
-                <GeneralControls label="General"/>
-                <DescriptionControls label = "Description"/>
-                <AchivementControls label = "Achivement"/>
-            </BlockWrapperEditor>
-        </BlockWrapper>
 	);
 }

@@ -18,10 +18,6 @@ export default function GeneralControls({attributes, setAttributes}) {
                 value={ attributes.heading }
                 onChange={ ( value ) => setAttributes({heading: value}) }
             />
-
-            
-            
-
         </div>
     )
 }

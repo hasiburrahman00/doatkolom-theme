@@ -1,43 +1,28 @@
-const { registerBlockType } = wp.blocks;
-const { __ } = wp.i18n;
+import config from '../../../blocks/honorable-teachers-1/block.json';
+import RegisterBlock from '../../modules/register-block';
 import Edit from './edit';
 import Save from './save';
+import Style from './style';
+// import GeneralControls from './general-controls';
+// import LocationControls from './location-controls'
+// import LocationImageControls from './location-image';
 
-registerBlockType('doatkolom/honorable-teachers-1', {
-    title       : __( 'Doatkolom Honorable Teachers 1' ),
-    description : __( 'For honorable teachers 1' ),
-    keywords    : [ 'teachers', 'honorable', 'doatkolom', 'honorable teachers' ],
-    category    : 'widgets',
-    icon        : 'screenoptions',
-    getEditWrapperProps() {
-        return {
-            'data-align': 'full'
-        };
-    },
-    attributes  : {
-        block_id : {
-            type: 'string',
-        },
-
-        block_name: {
-            type: 'string',
-        },
-        
-        background: {
-            type: 'string',
-            default: doatkolom_object.img + 'blocks/prioritybackground.webp'
-        },
-
-        heading: {
-            type: 'string',
-            default: 'Our Priorities'
-        },
-
-       
-
-        
-
-    },
-	edit        : Edit,
-	save        : Save,
-});
+new RegisterBlock(config).setup({
+    edit: Edit,
+    save: Save,
+    style: Style,
+    controls: [
+        // {
+        //     title: 'General',
+        //     component: GeneralControls
+        // },
+        // {
+        //     title: 'Location',
+        //     component: LocationControls
+        // },
+        // {
+        //     title: 'Image',
+        //     component: LocationImageControls
+        // }
+    ]
+})

@@ -1,5 +1,4 @@
 const { TextControl, TextareaControl } = wp.components
-import ImagePicker from "../../components/image-picker"
 
 export default function GeneralControls({attributes, setAttributes}) {
     return (
@@ -27,10 +26,6 @@ export default function GeneralControls({attributes, setAttributes}) {
                 value={ attributes.map_iframe_link }
                 onChange={ ( value ) => setAttributes({map_iframe_link: value}) }
             />
-
-
-
-            
         </div>
     )
 }
