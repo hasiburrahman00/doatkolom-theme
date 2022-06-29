@@ -11,29 +11,55 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
                 doatkolom_object.blocks + 'honorable-teachers-1/img/Ellipse 62.webp'
             ] })
         }
+        
+        if( !attributes.honorable_teacher ) {
+            setAttributes({honorable_teacher:[
+                {
+                  image: doatkolom_object.blocks + 'honorable-teachers-1/img/teacher1.webp',
+                  names: "Mohammad Rafiquzzaman",
+                  position: "Head Teacher of the School",
+                  speach: "The school was established on a small scale on 19th April, 1959 at the initiative of some personalities.The school was established on a small scale on 19th April, 1959 at the initiative of some personalities."
+                },
+        
+                {
+                  image: doatkolom_object.blocks + 'honorable-teachers-1/img/teacher2.webp',
+                  names: "Mohammad Rafiquzzaman",
+                  position: "Head Teacher of the School",
+                  speach: "The school was established on a small scale on 19th April, 1959 at the initiative of some personalities.The school was established on a small scale on 19th April, 1959 at the initiative of some personalities."
+                },
+        
+                {
+                  image: doatkolom_object.blocks + 'honorable-teachers-1/img/teacher3.webp',
+                  names: "Mohammad Rafiquzzaman",
+                  position: "Head Teacher of the School",
+                  speach: "The school was established on a small scale on 19th April, 1959 at the initiative of some personalities.The school was established on a small scale on 19th April, 1959 at the initiative of some personalities."
+                }
+              ] })
+        }
 
         if( !attributes.testimonial ) {
             setAttributes({testimonial: doatkolom_object.blocks + 'honorable-teachers-1/img/testiminial-bg.webp',})
         }
+
     },[])
 
 	return (
 		    <div className="max-w-screen-xl lg:px-0 px-5 mx-auto py-20">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                         <div>
                             <h2 className="m-0 font-primary text-primary font-normal text-5xl mb-3">{attributes.heading}</h2>
                                 <p className="m-0 font-secondary text-primary font-normal text-lg">{attributes.sub_heading}</p>
 
                                 <div className="honorable-teacher-slider mt-8">
                                     {
-                                        attributes.honorable_teacher.map((item,index)=>(
+                                        attributes.honorable_teacher?.map((item,index)=>(
                                             <div key={index} className = "pr-0 md:pr-10">
                                                 <div className="flex items-center">
-                                                    <picture className="block md:hidden">
+                                                    <picture className="block lg:hidden">
                                                         <img className="object-cover w-28 h-28 rounded-full overflow-hidden" src={item.image} alt="teacher-image" />
                                                     </picture>
                                                    
-                                                    <div className="ml-5 md:ml-0">
+                                                    <div className="ml-5 lg:ml-0">
                                                         <h3 className="m-0 font-primary text-2xl font-normal text-primary">{item.names}</h3>
                                                         <h4 className="m-0 mb-3 font-secondary text-lg font-normal text-primary">{item.position}</h4>        
                                                     </div>
@@ -58,7 +84,7 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
                                         
                                     </div>
 
-                                    <div className="flex ml-3 md:ml-8 mt-6 md:mt-0">
+                                    <div className="flex ml-3 lg:ml-8 lg:mt-0">
                                         {
                                             attributes.teachers_image?.map((item,index)=>(
                                                 <div key={index} className="teachers">
@@ -76,10 +102,21 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
                                 </div>    
                         </div>
 
-                        <div className="text-center md:block hidden">
+                        <div className="testimonial relative text-center lg:block hidden">
                             <picture>
                                 <img className="object-cover" src={attributes.testimonial} alt="testimonial-bg" />
-                            </picture>                                
+                            </picture>
+                            <div className="testimonial-slides">
+                                {
+                                    attributes.honorable_teacher?.map((item,index)=>(
+                                        <div key={index}>
+                                            <picture>
+                                                <img  className="w-32 h-32 rounded-full object-cover transition ease-linear duration-300" src={item.image} alt="top-teachers" />
+                                            </picture>
+                                        </div>
+                                    ))
+                                }
+                            </div>                                
                         </div>
                 </div>        
             </div>

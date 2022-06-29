@@ -15,29 +15,7 @@
     },
 
     "honorable_teacher": {
-      "type": "array",
-      "default": [
-        {
-          "image": "doatkolom_object.blocks + 'honorable-teachers-1/img/teacher1.webp'",
-          "names": "Mohammad Rafiquzzaman",
-          "position": "Head Teacher of the School",
-          "speach": "The school was established on a small scale on 19th April, 1959 at the initiative of some personalities.The school was established on a small scale on 19th April, 1959 at the initiative of some personalities."
-        },
-
-        {
-          "image": "doatkolom_object.blocks + 'honorable-teachers-1/img/teacher2.webp'",
-          "names": "Mohammad Rafiquzzaman",
-          "position": "Head Teacher of the School",
-          "speach": "The school was established on a small scale on 19th April, 1959 at the initiative of some personalities.The school was established on a small scale on 19th April, 1959 at the initiative of some personalities."
-        },
-
-        {
-          "image": "doatkolom_object.blocks + 'honorable-teachers-1/img/teacher3.webp'",
-          "names": "Mohammad Rafiquzzaman",
-          "position": "Head Teacher of the School",
-          "speach": "The school was established on a small scale on 19th April, 1959 at the initiative of some personalities.The school was established on a small scale on 19th April, 1959 at the initiative of some personalities."
-        }
-      ]
+      "type": "array"
     },
 
     "teachers_image": {
@@ -59,10 +37,6 @@
 
     "testimonial": {
       "type": "string"
-    },
-
-    "top_teachers": {
-      "type": "array"
     }
   }
 }

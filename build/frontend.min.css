@@ -137,14 +137,17 @@
 .mt-5 {
   margin-top: 1.25rem;
 }
-.ml-8 {
-  margin-left: 2rem;
-}
 .ml-5 {
   margin-left: 1.25rem;
 }
+.ml-8 {
+  margin-left: 2rem;
+}
 .mr-8 {
   margin-right: 2rem;
+}
+.ml-3 {
+  margin-left: 0.75rem;
 }
 .mt-14 {
   margin-top: 3.5rem;
@@ -163,12 +166,6 @@
 }
 .mb-1 {
   margin-bottom: 0.25rem;
-}
-.mt-6 {
-  margin-top: 1.5rem;
-}
-.ml-3 {
-  margin-left: 0.75rem;
 }
 .block {
   display: block;
@@ -200,17 +197,17 @@
 .h-auto {
   height: auto;
 }
+.h-28 {
+  height: 7rem;
+}
+.h-32 {
+  height: 8rem;
+}
 .h-40 {
   height: 10rem;
 }
 .h-full {
   height: 100%;
-}
-.h-10 {
-  height: 2.5rem;
-}
-.h-28 {
-  height: 7rem;
 }
 .max-h-72 {
   max-height: 18rem;
@@ -227,17 +224,17 @@
 .w-20 {
   width: 5rem;
 }
+.w-28 {
+  width: 7rem;
+}
+.w-32 {
+  width: 8rem;
+}
 .w-72 {
   width: 18rem;
 }
 .w-1\/2 {
   width: 50%;
-}
-.w-10 {
-  width: 2.5rem;
-}
-.w-28 {
-  width: 7rem;
 }
 .max-w-screen-xl {
   max-width: 1280px;
@@ -262,9 +259,6 @@
 }
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .flex-col {
   flex-direction: column;
@@ -542,9 +536,6 @@
 .pt-10 {
   padding-top: 2.5rem;
 }
-.pr-10 {
-  padding-right: 2.5rem;
-}
 .pr-0 {
   padding-right: 0px;
 }
@@ -553,9 +544,6 @@
 }
 .text-center {
   text-align: center;
-}
-.text-right {
-  text-align: right;
 }
 .font-secondary {
   font-family: Spectral, serif;
@@ -669,6 +657,9 @@
 }
 .duration-200 {
   transition-duration: 200ms;
+}
+.duration-300 {
+  transition-duration: 300ms;
 }
 .ease-linear {
   transition-timing-function: linear;
@@ -1038,20 +1029,11 @@
   .md\:mt-11 {
     margin-top: 2.75rem;
   }
-  .md\:ml-0 {
-    margin-left: 0px;
-  }
-  .md\:ml-8 {
-    margin-left: 2rem;
-  }
   .md\:block {
     display: block;
   }
   .md\:flex {
     display: flex;
-  }
-  .md\:hidden {
-    display: none;
   }
   .md\:w-1\/2 {
     width: 50%;
@@ -1099,11 +1081,11 @@
   .md\:pt-40 {
     padding-top: 10rem;
   }
-  .md\:pr-0 {
-    padding-right: 0px;
-  }
   .md\:pr-10 {
     padding-right: 2.5rem;
+  }
+  .md\:pr-0 {
+    padding-right: 0px;
   }
   .md\:text-5xl {
     font-size: 3rem;
@@ -1132,6 +1114,12 @@
   .lg\:mt-0 {
     margin-top: 0px;
   }
+  .lg\:ml-0 {
+    margin-left: 0px;
+  }
+  .lg\:ml-8 {
+    margin-left: 2rem;
+  }
   .lg\:block {
     display: block;
   }
@@ -1140,6 +1128,9 @@
   }
   .lg\:inline-flex {
     display: inline-flex;
+  }
+  .lg\:hidden {
+    display: none;
   }
   .lg\:h-20 {
     height: 5rem;
@@ -1155,6 +1146,9 @@
   }
   .lg\:flex-auto {
     flex: 1 1 auto;
+  }
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
