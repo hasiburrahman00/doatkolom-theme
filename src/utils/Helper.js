@@ -23,4 +23,23 @@ export default class Helper  {
         }
     }
 
+    static buildThresholdList( numSteps = 20 ) {
+        let thresholds = [];
+
+        for (let i=1.0; i<=numSteps; i++) {
+          let ratio = i/numSteps;
+          thresholds.push(ratio);
+        }
+      
+        thresholds.push(0);
+        return thresholds;
+    }
+
+    static onScroll( fn ) {
+        const dom = document.querySelector('.interface-interface-skeleton__content') || document;
+        dom.addEventListener('scroll', (ev) => {
+            fn( ev.target.scrollTop || scrollY )
+        })
+    }
+
 }
