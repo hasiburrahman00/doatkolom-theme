@@ -10,12 +10,12 @@ export default function Edit({ attributes, setAttributes }) {
                 {
                     title: "Computer lab",
                     description: "The school was established on a small scale on 19th April, 1959 at the initiative of some personalities. The school was established on a small scale on 19th April, 1959 at the initiative of some personalities. ",
-                    img: doatkolom_object.blocks + 'banner-1/img/banner-1-background.webp'
+                    img: doatkolom_object.blocks + 'timeline-tab-1/img/timeline-tab-1.webp'
                 },
                 {
                     title: "Science lab",
                     description: "The school was established on a small scale on 19th April, 1959 at the initiative of some personalities. The school was established on a small scale on 19th April, 1959 at the initiative of some personalities. ",
-                    img: doatkolom_object.blocks + 'banner-1/img/banner-1-background.webp'
+                    img: doatkolom_object.blocks + 'timeline-tab-1/img/timeline-tab-1.webp'
                 }
             ]})
         }
@@ -35,11 +35,11 @@ export default function Edit({ attributes, setAttributes }) {
                                 <div className="pl-8 space-y-10">
                                     {
                                         attributes?.content?.map((item, index) => (
-                                            <div key={index} className="tab-item" data-index={index}>
+                                            <div key={index} className={`tab-item opacity-50 cursor-pointer group duration-200 transition ease-in text-white tab-item-index-${index}`} data-index={index}>
                                                 <picture>
                                                     <img className="w-full hidden" src={item.img}/>
                                                 </picture>
-                                                <h2 className="m-0 p-0 text-2xl font-primary font-normal">{item.title}</h2>
+                                                <h2 className="m-0 p-0 text-2xl font-primary group-hover:underline font-normal mb-3">{item.title}</h2>
                                                 <p className="m-0 p-0 text-base font-secondary">{item.description}</p>
                                             </div>
                                         ))
@@ -52,9 +52,9 @@ export default function Edit({ attributes, setAttributes }) {
                         <div className="doatkolom-image-tab">
                             {
                                 attributes?.content?.map((item, index) => (
-                                    <div key={index} className="image-tab-item min-h-[calc(100vh_-_200px)] flex items-center flex-col justify-center" data-index={index}>
+                                    <div key={index} className="image-tab-item min-h-[calc(100vh_-_100px)] flex items-center flex-col justify-center">
                                         <picture>
-                                            <img className="w-full" src={item.img}/>
+                                            <img className="w-full" src={item.img} data-index={index} id={`tab-image-index-${index}`}/>
                                         </picture>
                                     </div>
                                 ))
