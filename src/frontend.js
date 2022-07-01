@@ -1,7 +1,8 @@
-import honorableTeachers1 from './blocks/honorable-teachers-1/script';
 import './lib/lazysizes';
 import Header from "./modules/header";
 import Helper from './utils/Helper';
+import honorableTeachers1 from './blocks/honorable-teachers-1/script';
+import timelineTab1 from './blocks/timeline-tab-1/script';
 // import honorableTeachers1 from './blocks/honorable-teachers-1/script'
 
 
@@ -40,13 +41,8 @@ jQuery(function() {
         
         // scripts for gutenberg block
         const blockScriptList = {
-            'doatkolom/banner-1' : function( $scope, settings ) {
-                // console.log($scope)
-                // console.log(settings)
-            },
-            
-            'doatkolom/honorable-teachers-1' : honorableTeachers1
-
+            'doatkolom/honorable-teachers-1' : honorableTeachers1,
+            'doatkolom/timeline-tab-1': timelineTab1,
 
             // 'doatkolom/honorable-teachers-1' : honorableTeachers1
         }
