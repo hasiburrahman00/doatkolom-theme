@@ -230,12 +230,6 @@
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
 .flex-col {
   flex-direction: column;
 }
@@ -854,15 +848,6 @@
   .md\:w-1\/6 {
     width: 16.666667%;
   }
-  .md\:w-2\/12 {
-    width: 16.666667%;
-  }
-  .md\:w-3\/12 {
-    width: 25%;
-  }
-  .md\:w-4\/12 {
-    width: 33.333333%;
-  }
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -874,12 +859,6 @@
   }
   .md\:flex-wrap {
     flex-wrap: wrap;
-  }
-  .md\:justify-around {
-    justify-content: space-around;
-  }
-  .md\:justify-evenly {
-    justify-content: space-evenly;
   }
   .md\:gap-8 {
     gap: 2rem;
