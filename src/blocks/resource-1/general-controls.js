@@ -135,9 +135,6 @@ export default function GeneralControls({attributes, setAttributes}) {
                     onChange={ ( value ) => setAttributes({event_link: value}) }
                 />
 
-
-           
-
         </div>
     )
 }

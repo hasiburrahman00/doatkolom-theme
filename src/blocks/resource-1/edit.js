@@ -1,6 +1,7 @@
 import {BlockWrapper, BlockWrapperContent, BlockWrapperEditor, BlockWrapperStyle} from "../block-wrapper";
 import Style from "./style";
 import GeneralControls from "./general-controls";
+import HeaderControls from "./header-controls";
 const { useEffect } = wp.element;
 const { useBlockProps } = wp.blockEditor
 import { Routine, ClassRoutine, ExamRoutine, Syllabus, NoticeBoard, Events } from "./icons";
@@ -108,6 +109,7 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
             </BlockWrapperContent>
 
             <BlockWrapperEditor>
+                    <HeaderControls label="Header"/>
                     <GeneralControls label="General"/>
             </BlockWrapperEditor>
         </BlockWrapper>
