@@ -1,6 +1,6 @@
 const { useBlockProps } = wp.blockEditor
 import { BlockWrapper, BlockWrapperContent, BlockWrapperStyle } from '../block-wrapper/index.js';
-import { Routine } from "./icons";
+import { Routine, ClassRoutine, ExamRoutine, Syllabus, NoticeBoard, Events } from "./icons";
 import Style from './style.js';
 export default function Save({ attributes }) {
 	return (
@@ -12,7 +12,7 @@ export default function Save({ attributes }) {
 
             <BlockWrapperContent>
 
-                <div className="bg-gray-200 py-28">
+            <div className="bg-gray-200 py-28">
                     <div className="alignment max-w-screen-xl mx-auto px-5">
                         <h3 className="m-0 font-primary text-3xl sm:text-5xl font-normal text-primary mb-3 header">{attributes.title}</h3>
                         <p className="m-0 font-secondary text-lg text-primary font-normal para-width">{attributes.sub_title}</p>
@@ -75,7 +75,7 @@ export default function Save({ attributes }) {
                         </div>
                     </div>
                 </div>
-                
+
             </BlockWrapperContent>
             
         </BlockWrapper>
