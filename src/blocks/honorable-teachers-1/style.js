@@ -63,8 +63,11 @@ export default function Style({attributes, wrapper, sheet}){
         }
 
         ${wrapper} .testimonial-slides .slick-slide:first-child {
-            right: 44px;
+            right: 87px;
             top: 257px;
+            width: 140px !important;
+            height: 140px;
+            border-radius: 50%;
         }
 
         ${wrapper} .testimonial-slides .slick-slide:first-child:before {
@@ -85,8 +88,11 @@ export default function Style({attributes, wrapper, sheet}){
         }
 
         ${wrapper} .testimonial-slides .slick-slide:nth-child(2) {
-            right: 65px;
+            right: 105px;
             top: 13px;
+            width: 140px !important;
+            height: 140px;
+            border-radius: 50%;
         }
 
         ${wrapper} .testimonial-slides .slick-slide:nth-child(2):before {
@@ -107,8 +113,11 @@ export default function Style({attributes, wrapper, sheet}){
         }
 
         ${wrapper} .testimonial-slides .slick-slide:nth-child(3) {
-            left: 67px;
-            top: 188px;
+            left: 59px;
+            top: 153px;
+            width: 220px !important;
+            height: 220px;
+            border-radius: 50%;
         }
 
         ${wrapper} .testimonial-slides .slick-slide:nth-child(3):before {
@@ -118,7 +127,7 @@ export default function Style({attributes, wrapper, sheet}){
             opacity: 0;
             pointer-events: none;
             position: absolute;
-            transform: translate(-127px,-21px);
+            transform: translate(-127px,-18px);
             width: 250px;
             height: 250px;
             transition: all ease .2s

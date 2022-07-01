@@ -112,7 +112,7 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
                                     attributes.honorable_teacher?.map((item,index)=>(
                                         <div className="text-center" key={index}>
                                             <picture>
-                                                <img className="object-cover" src={item.image} alt="top-teachers" />
+                                                <img className="object-cover w-full h-full" src={item.image} alt="top-teachers" />
                                             </picture>
                                         </div>
                                     ))
