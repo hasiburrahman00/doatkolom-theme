@@ -258,9 +258,6 @@
 .w-1\/2 {
   width: 50%;
 }
-.w-2\/4 {
-  width: 50%;
-}
 .max-w-screen-xl {
   max-width: 1280px;
 }
@@ -320,9 +317,6 @@
 }
 .gap-10 {
   gap: 2.5rem;
-}
-.gap-20 {
-  gap: 5rem;
 }
 .gap-x-2 {
   -moz-column-gap: 0.5rem;
@@ -1035,9 +1029,6 @@
     margin-top: 0.75rem;
     margin-bottom: 0.75rem;
   }
-  .sm\:flex {
-    display: flex;
-  }
   .sm\:w-full {
     width: 100%;
   }
@@ -1046,9 +1037,6 @@
   }
   .sm\:flex-row {
     flex-direction: row;
-  }
-  .sm\:flex-wrap {
-    flex-wrap: wrap;
   }
   .sm\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
@@ -1206,9 +1194,6 @@
   .lg\:inline-flex {
     display: inline-flex;
   }
-  .lg\:grid {
-    display: grid;
-  }
   .lg\:hidden {
     display: none;
   }
@@ -1223,9 +1208,6 @@
   }
   .lg\:w-full {
     width: 100%;
-  }
-  .lg\:w-2\/4 {
-    width: 50%;
   }
   .lg\:flex-auto {
     flex: 1 1 auto;

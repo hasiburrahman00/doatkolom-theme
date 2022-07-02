@@ -31,7 +31,7 @@ export default function Edit({ attributes, setAttributes }) {
                     <div>
                         <div className="tab-content sticky top-28 mt-20">
                             <div className="relative">
-                                <span className="vertical-line absolute left-0 top-0 w-1.5 bg-[#C1F1FF] rounded-full h-full"></span>
+                                <span className="vertical-line hidden md:block absolute left-0 top-0 w-1.5 bg-[#C1F1FF] rounded-full h-full"></span>
                                 <div className="pl-8 space-y-10">
                                     {
                                         attributes?.content?.map((item, index) => (
