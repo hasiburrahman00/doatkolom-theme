@@ -1,6 +1,9 @@
 import './lib/lazysizes';
 import Header from "./modules/header";
 import Helper from './utils/Helper';
+import honorableTeachers1 from './blocks/honorable-teachers-1/script';
+import timelineTab1 from './blocks/timeline-tab-1/script';
+// import honorableTeachers1 from './blocks/honorable-teachers-1/script'
 
 
 jQuery(function() {
@@ -31,18 +34,24 @@ jQuery(function() {
      * @author ashraf
      * 
      */
+
+    
     
     window.doatkolomGutenbergInit(function( $ ) {
+        
         // scripts for gutenberg block
         const blockScriptList = {
-            'doatkolom/page-list' : function( $scope ) {
-                console.log($scope)
-            }
+            'doatkolom/honorable-teachers-1' : honorableTeachers1,
+            'doatkolom/timeline-tab-1': timelineTab1,
+
+            // 'doatkolom/honorable-teachers-1' : honorableTeachers1
         }
 
         // connect script with the gutenberg block
         $.each(blockScriptList, (name, callback) => {
-            $(window).on(name, (ev, $scope) => callback($scope))
+            $(window).on(name, (ev, $scope) => {
+                callback($scope, $scope.data('settings'))
+            })
         })
     })
 

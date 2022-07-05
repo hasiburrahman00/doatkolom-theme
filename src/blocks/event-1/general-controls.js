@@ -69,10 +69,7 @@ export default function GeneralControls({attributes, setAttributes}) {
                     onChange={ ( value ) => onEventUpdate(value,index,'reademore_link') }
                 />
                </Repeater.Item> 
-            ))}
-            
-
-            
+            ))} 
 
         </Repeater>
     )
