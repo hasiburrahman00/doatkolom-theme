@@ -12,7 +12,7 @@ export default function Save({ attributes }) {
             </BlockWrapperStyle>
 
             <BlockWrapperContent>
-                <div class="max-w-screen-xl mx-auto md:w-full sm:w-full">
+                <div class="max-w-screen-xl mx-auto md:w-full sm:w-full px-5">
                     <div class="md:flex md:flex-wrap sm:w-full lg:w-full">
                         { attributes.event_list.map((item,index)=>(
                             <div class=" border border-solid border-gray-200 md:w-2/6 sm:w-full py-6 px-3.5">
