@@ -26,7 +26,7 @@ export default function Save({ attributes }) {
                     <div className="md:flex md:flex-wrap">
                         {
                             attributes.achivments?.map((item,index)=>(
-                                <div className="achivement-wrapper" key={index}>
+                                <div className="achivement-wrapper sm:mt-7 lg:mt-11" key={index}>
                                     <picture>
                                         <img width= "50" height= "50" className="lazyload achivment-icons" data-src={item.icon} alt="achivements" />
                                     </picture>

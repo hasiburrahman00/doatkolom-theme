@@ -10,37 +10,14 @@ export default function Style({attributes, wrapper}){
                 width: 560px;
                 min-width: 560px;
             }
-            
+           
             ${wrapper} .achivement-wrapper:first-child {
+                padding-right: 27px;
                 position: relative;
-            }
-
-            ${wrapper} .achivement-wrapper:nth-child(2) {
-                position: relative;
-            }
-
-            ${wrapper} .achivement-wrapper:first-child:after {
-                content: "";
-                position: absolute;
-                right: 22px;
-                top: 0;
-                width: 1px;
-                height: 100%;
-                background-color: #d1d5db;
-            }
-
-            ${wrapper} .achivement-wrapper:nth-child(2):after {
-                content: "";
-                position: absolute;
-                right: 22px;
-                top: 0;
-                width: 1px;
-                height: 100%;
-                background-color: #d1d5db;
             }
             
             ${wrapper} .achivement-wrapper {
-                width: 200px;
+                width: 208px;
             }
 
         }
@@ -50,14 +27,6 @@ export default function Style({attributes, wrapper}){
                 width: calc(100% - 32px);
                 min-width: 280px;
                 border-radius: 10px;
-            }
-
-            ${wrapper} .achivement-wrapper:not(:first-child,:last-child) {
-                padding: 28px 0px;
-                border-width: 1px 0px 1px 0px;
-                border-style: solid;
-                border-color: #d1d5db;
-                margin: -1px 0px;
             }
 
             ${wrapper} .achivement-wrapper:first-child {
