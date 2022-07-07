@@ -2,6 +2,14 @@ const $ = jQuery;
 import Helper from "../utils/Helper";
 
 $.fn.extend({
+    /**
+     * 
+     * 
+     * @description dropdown menu position
+     * @since 1.0.0
+     * @author ashraf
+     * 
+     */ 
     menuPosition() {
         const $parent = this.parent();
         const width   = this.width();
@@ -31,7 +39,14 @@ $.fn.extend({
         
         return this;
     },
-
+    /**
+     * 
+     * 
+     * @description for desktop version manage quickview menu position
+     * @since 1.0.0
+     * @author ashraf
+     * 
+     */ 
     quickMenuPosition( button ) {
         let { top, left } = $(button).offset();
         let right = $(window).width() - left;
@@ -39,7 +54,8 @@ $.fn.extend({
         this.css({
             position: 'fixed',
             top: top + $(button).outerHeight() + 16 + 'px',
-            right: right - $(button).outerWidth() + 'px'
+            right: right - $(button).outerWidth() + 'px',
+            zIndex: 999
         })
 
         return this;
@@ -61,15 +77,25 @@ export default class Header extends Helper{
             quickMenu       : '#doatkolom-quick-menu',
             hamburger       : '#doatkolom-menu-button',
             navmenu         : '.doatkolom-main-nav',
+            $headerTop      : $('.nav-menu-top'),
+            $header         : $('.doatkolom-primary-header')
         }, config)
 
         this.matchMediaView( this.settings.breakpoint, {
             before  : this.beforeBreakpoint.bind(this),
             after   : this.afterBreakpoint.bind(this)
         });
+
+        this.stickyHandler();
+        Helper.onScroll( this.stickyHandler.bind(this) );
     }
 
-
+    /**
+     * 
+     * 
+     * dropdown menu for mobile and desktop
+     * 
+     */ 
     beforeBreakpoint() {
         
         const self = this;
@@ -87,7 +113,7 @@ export default class Header extends Helper{
                 .find(self.settings.dropdownMenu).first()
                 .dropdownValidate()
                 .removeClass('hidden')
-                .addClass('flex flex-col')
+                .addClass('flex flex-col z-10')
             },
 
             out() {
@@ -102,7 +128,12 @@ export default class Header extends Helper{
         $(self.settings.dropdownToggle).parent().hover( handler.in, handler.out )
         $(self.settings.hamburger).on('click', handler.mobileMenuToggle)
     }
-
+    /**
+     * 
+     * 
+     * dropdown menu for laptop and bigger screen
+     * 
+     */
     afterBreakpoint() {
         const self = this;
         $(self.settings.navmenu).removeClass('fixed top-0 left-0 w-full h-screen bg-primary overflow-y-scroll')
@@ -140,6 +171,48 @@ export default class Header extends Helper{
             }
             $(self.settings.quickMenu).addClass('hidden')
         })
+    }
+    /**
+     * 
+     * 
+     * header sticky position
+     */ 
+    stickyHandler() {
+        if( innerWidth >= 768 ) {
+
+            const self = this;
+            const { $headerTop, $header } = self.settings;
+    
+            if( $headerTop && scrollY > $headerTop.outerHeight() && $header.attr('data-show') == 0 ) {
+                
+                // extra: variable will have the height equal to wordpress admin bar
+                const extra = $('#wpadminbar').length ? $('#wpadminbar').outerHeight() : 0;
+                
+                // change header logo width when header become sticky 
+                $header.find('.doatkolom-nav-logo')
+                       .removeClass('lg:w-20 lg:h-20')
+                       .addClass('lg:w-14 lg:h-14');
+
+                // add styles to header to make it sticky
+                $header.attr('data-show', 1)
+                       .css('top', extra + 'px')
+                       .addClass('fixed w-full left-0 z-10')
+                       .next().next().css('margin-top', `${$header.outerHeight()}px`);
+            }
+    
+            if( scrollY <= $headerTop.outerHeight() && $header.attr('data-show') == 1 ) {
+                
+                // change header logo width when header is not sticky 
+                $header.find('.doatkolom-nav-logo')
+                       .removeClass('lg:w-14 lg:h-14')
+                       .addClass('lg:w-20 lg:h-20');
+                       
+                // remove some style form header to make it static
+                $header.attr('data-show', 0)
+                       .removeClass('fixed left-0 z-10')
+                       .next().next().css('margin-top', 0);
+            }
+        }
     }
 
 }

@@ -12,8 +12,18 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly.
 
-// load document head
-get_template_part( 'templates/partials/document-open' );
+get_template_part( 'templates/partials/document-open' ); 
+/**
+ * 
+ * website header top: it contains email, login button and notice board button, this part remain visible after 768px screen
+ * 
+ */
 get_template_part( 'template-parts/header', 'top');
+/**
+ * 
+ * 
+ * this is for the primary navigation menu 
+ * NOTE: make sure 'desktop-quick' must is visible and remains right after the 'header-default' template
+ */
 get_template_part( 'template-parts/header', 'default');
 get_template_part( 'template-parts/desktop-quick', 'menu');

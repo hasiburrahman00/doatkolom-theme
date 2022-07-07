@@ -1,4 +1,4 @@
-<section class="bg-primary text-white font-secondary text-base hidden md:block">
+<section class="bg-primary text-white font-secondary text-base hidden md:block nav-menu-top">
     <div class="max-w-screen-xl mx-auto px-5 flex justify-between items-center">
         <div>
             <a class="text-white font-secondary no-underline hover:text-secondary" href="mailto:support@sghs.com">support@sghs.com</a> |
