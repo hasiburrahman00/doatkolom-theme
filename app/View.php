@@ -207,7 +207,7 @@ class View {
 		}
 	}
 
-	public static function getPremioPostViews( $postID ){
+	public static function getPostViews( $postID ){
 		$count_key = 'post_views_count';
 		$count = get_post_meta($postID, $count_key, true);
 		if( $count == '' ) {
@@ -218,7 +218,7 @@ class View {
 		return $count.' Views';
 	}
 
-	public static function setPremioPostViews($postID) {
+	public static function setPostViews($postID) {
 		$count_key = 'post_views_count';
 		$count = get_post_meta($postID, $count_key, true);
 		if($count==''){
