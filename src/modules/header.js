@@ -14,7 +14,7 @@ $.fn.extend({
         const $parent = this.parent();
         const width   = this.width();
 
-        let { left, top } = $parent.offset();
+        let { left, top } = $parent.position();
         let right         = $(window).width() - left - this.outerWidth(true);
 
         // check right side spacing
@@ -50,6 +50,7 @@ $.fn.extend({
     quickMenuPosition( button ) {
         let { top, left } = $(button).offset();
         let right = $(window).width() - left;
+        top -= scrollY;
 
         this.css({
             position: 'fixed',
@@ -78,7 +79,8 @@ export default class Header extends Helper{
             hamburger       : '#doatkolom-menu-button',
             navmenu         : '.doatkolom-main-nav',
             $headerTop      : $('.nav-menu-top'),
-            $header         : $('.doatkolom-primary-header')
+            $header         : $('.doatkolom-primary-header'),
+            defaultLogoWidth: innerWidth >= 768 ? '80px' : '60px',
         }, config)
 
         this.matchMediaView( this.settings.breakpoint, {
@@ -86,6 +88,11 @@ export default class Header extends Helper{
             after   : this.afterBreakpoint.bind(this)
         });
 
+        // header related js
+        this.settings.$header.find('.doatkolom-nav-logo').animate({
+            width: this.settings.defaultLogoWidth,
+            height: this.settings.defaultLogoWidth
+        })
         this.stickyHandler();
         Helper.onScroll( this.stickyHandler.bind(this) );
     }
@@ -175,43 +182,47 @@ export default class Header extends Helper{
     /**
      * 
      * 
-     * header sticky position
+     * header sticky position and logo width handler
+     * 
      */ 
     stickyHandler() {
-        if( innerWidth >= 768 ) {
+        const self = this;
+        const { $headerTop, $header } = self.settings;
 
-            const self = this;
-            const { $headerTop, $header } = self.settings;
-    
-            if( $headerTop && scrollY > $headerTop.outerHeight() && $header.attr('data-show') == 0 ) {
-                
-                // extra: variable will have the height equal to wordpress admin bar
-                const extra = $('#wpadminbar').length ? $('#wpadminbar').outerHeight() : 0;
-                
-                // change header logo width when header become sticky 
-                $header.find('.doatkolom-nav-logo')
-                       .removeClass('lg:w-20 lg:h-20')
-                       .addClass('lg:w-14 lg:h-14');
+        if( $headerTop && scrollY > $headerTop.outerHeight() && $header.attr('data-show') == 0 ) {
+            
+            // extra: variable will have the height equal to wordpress admin bar
+            const extra = $('#wpadminbar').length ? $('#wpadminbar').outerHeight() : 0;
 
-                // add styles to header to make it sticky
-                $header.attr('data-show', 1)
-                       .css('top', extra + 'px')
-                       .addClass('fixed w-full left-0 z-10')
-                       .next().next().css('margin-top', `${$header.outerHeight()}px`);
-            }
-    
-            if( scrollY <= $headerTop.outerHeight() && $header.attr('data-show') == 1 ) {
-                
-                // change header logo width when header is not sticky 
-                $header.find('.doatkolom-nav-logo')
-                       .removeClass('lg:w-14 lg:h-14')
-                       .addClass('lg:w-20 lg:h-20');
-                       
-                // remove some style form header to make it static
-                $header.attr('data-show', 0)
-                       .removeClass('fixed left-0 z-10')
-                       .next().next().css('margin-top', 0);
-            }
+            // add styles to header to make it sticky
+            $header.attr('data-show', 1)
+                    .css('top', extra + 'px')
+                    .addClass('fixed w-full left-0 z-10 shadow-lg')
+                    .next().next().css({
+                        marginTop: `${$header.outerHeight()}px`
+                    });
+
+            // change header logo width when header become sticky 
+            $header.find('.doatkolom-nav-logo').animate({
+                width: '50px',
+                height: '50px'
+            })
+        }
+
+        if( scrollY <= $headerTop.outerHeight() && $header.attr('data-show') == 1 ) {
+            
+            // change header logo width when header is not sticky 
+            $header.find('.doatkolom-nav-logo').animate({
+                width: self.settings.defaultLogoWidth,
+                height: self.settings.defaultLogoWidth
+            })
+                    
+            // remove some style form header to make it static
+            $header.attr('data-show', 0)
+                    .removeClass('fixed left-0 z-10 shadow-lg')
+                    .next().next().css({
+                        marginTop: 0
+                    });
         }
     }
 
