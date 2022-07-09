@@ -14,8 +14,9 @@ $.fn.extend({
         const $parent = this.parent();
         const width   = this.width();
 
-        let { left, top } = $parent.position();
+        let { left, top } = $parent.offset();
         let right         = $(window).width() - left - this.outerWidth(true);
+        top -= scrollY
 
         // check right side spacing
         if( right < 70 ) {

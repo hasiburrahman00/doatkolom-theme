@@ -72,12 +72,6 @@
 .left-1 {
   left: 0.25rem;
 }
-.top-28 {
-  top: 7rem;
-}
-.top-32 {
-  top: 8rem;
-}
 .top-36 {
   top: 9rem;
 }
@@ -275,9 +269,6 @@
 }
 .min-h-\[calc\(100vh_-_100px\)\] {
   min-height: calc(100vh - 100px);
-}
-.min-h-\[calc\(100vh_-_200px\)\] {
-  min-height: calc(100vh - 200px);
 }
 .w-16 {
   width: 4rem;
@@ -1393,8 +1384,8 @@ body::-webkit-scrollbar-thumb:hover {
   .lg\:hidden {
     display: none;
   }
-  .lg\:w-48 {
-    width: 12rem;
+  .lg\:w-60 {
+    width: 15rem;
   }
   .lg\:w-full {
     width: 100%;
