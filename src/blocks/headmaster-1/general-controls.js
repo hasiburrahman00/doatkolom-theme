@@ -1,57 +1,69 @@
-const { TextControl, TextareaControl, ToggleControl } = wp.components
+const { TextControl, TextareaControl } = wp.components
 import ImagePicker from "../../components/image-picker"
 
 export default function GeneralControls({attributes, setAttributes}) {
+
+    const onTeacherImageChange = (url, index) => {
+        const   
+            images = attributes.teachers_image;
+            images[index] = url;
+        setAttributes({teachers_image: [...images]})
+    }
+
     return (
         <div className="space-y-5">
             
             <ImagePicker
                 label="Select Headmaster Image"
-                value={attributes.headmaster_image}
-                onChange={ ( url ) => setAttributes({headmaster_image: url}) }
+                value={attributes.image}
+                onChange={ ( url ) => setAttributes({image: url}) }
             />
 
             <TextareaControl
                 className="w-full"
                 label="Headmaster Quotes"
-                value={ attributes.headmaster_quotes }
-                onChange={ ( value ) => setAttributes({headmaster_quotes: value}) }
+                value={ attributes.speech }
+                onChange={ ( value ) => setAttributes({speech: value}) }
             />
 
             <TextControl
                 className="w-full"
                 label="Headmaster Name"
-                value={ attributes.headmaster_name }
-                onChange={ ( value ) => setAttributes({headmaster_name: value}) }
+                value={ attributes.name }
+                onChange={ ( value ) => setAttributes({name: value}) }
             />
-
+            
             <TextareaControl
                 className="w-full"
                 label="Headmaster Designation"
-                value={ attributes.headmaster_designation }
-                onChange={ ( value ) => setAttributes({headmaster_designation: value}) }
+                value={ attributes.designation }
+                onChange={ ( value ) => setAttributes({designation: value}) }
             />
 
             <ImagePicker
                 label="Select Teacher Image 1"
-                value={attributes.teacher_image_one}
-                onChange={ ( url ) => setAttributes({teacher_image_one: url}) }
+                value={attributes.teachers_image[0]}
+                onChange={ url => onTeacherImageChange(url, 0) }
             />
 
             <ImagePicker
                 label="Select Teacher Image 2"
-                value={attributes.teacher_image_two}
-                onChange={ ( url ) => setAttributes({teacher_image_two: url}) }
+                value={attributes.teachers_image[1]}
+                onChange={ url => onTeacherImageChange(url, 1) }
             />
 
             <ImagePicker
                 label="Select Teacher Image 3"
-                value={attributes.teacher_image_three}
-                onChange={ ( url ) => setAttributes({teacher_image_three: url}) }
+                value={attributes.teachers_image[2]}
+                onChange={ url => onTeacherImageChange(url, 2) }
             />
-
-           
-
+            
+            <TextControl
+                className="w-full"
+                label="Teachers Page URL"
+                value={ attributes.teachers_page_link }
+                onChange={ ( value ) => setAttributes({teachers_page_link: value}) }
+            />
         </div>
     )
 }

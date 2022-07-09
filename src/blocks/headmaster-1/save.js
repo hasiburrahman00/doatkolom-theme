@@ -1,59 +1,43 @@
-const { useBlockProps } = wp.blockEditor
-import { BlockWrapper, BlockWrapperContent, BlockWrapperStyle } from '../block-wrapper/index.js';
 import {Quotes,RightArrow} from './icon'
-import Style from './style.js';
+
 export default function Save({ attributes }) {
 	return (
-        <BlockWrapper attributes={attributes} props={useBlockProps.save()}>
-
-            <BlockWrapperStyle>
-                <Style/>
-            </BlockWrapperStyle>
-
-            <BlockWrapperContent>
-            <div class="max-w-screen-xl mx-auto md:w-full sm:w-full px-5">
-                <div class="md:flex md:flex-wrap sm:w-full lg:w-full lg:flex-nowrap">
-                    <div class="w-5/5 md:w-5/5 lg:w-2/5  md:mr-24 relative z-10 headmaster-image">
-                        <div className="hidden md:hidden lg:block img-bg-shape absolute top-0 left-0 -z-10"></div>
-                            <picture>
-                                <img className="lg:ml-6 lg:-mt-6 w-full h-full lazyload" data-src={attributes.headmaster_image}/>        
-                            </picture>
-                        </div>
-                        <div class="w-5/5 md:w-5/5 lg:w-3/5 sm:w-full mt-10 ">
-                            <h3 className="font-secondary text-4xl font-medium text-primary m-0 relative">
-                                <div className="absolute -top-8 left-1 md:-top-8 md:-left-4 md:-top-8 md:-left-6">
-                                    <Quotes />
-                                </div>
-                                {attributes.headmaster_quotes}
-                            </h3>  
-
-                            <h2 className="m-0 mt-8 font-primary text-lg font-normal text-primary">{attributes.headmaster_name}</h2> 
-
-                            <p className="m-0 text-lg font-secondary font-light text-primary mt-3.5">{attributes.headmaster_designation}</p> 
-
-                            <a href="#" className="flex  md:flex-row flex-wrap items-center  font-secondary text-lg font-normal text-primary no-underline mt-10">
-                                <span className="inline-block w-12 h-12 rounded-full bg-gray-100">
-                                    <picture>
-                                        <img className="teacher-image lazyload" data-src={attributes.teacher_image_one}/>
-                                    </picture>
-                                </span>
-                                <span className="inline-block w-12 h-12 rounded-full bg-gray-100 -ml-1.5">
-                                    <picture>
-                                        <img className="teacher-image lazyload" data-src={attributes.teacher_image_two}/>
-                                    </picture>
-                                </span>
-                                <span className="inline-block w-12 h-12 rounded-full bg-gray-100 mr-9 -ml-1.5">
-                                    <picture>
-                                        <img className="teacher-image lazyload" data-src={attributes.teacher_image_three}/>
-                                    </picture>
-                                </span>
-                                <span className="inline-block w-12 h-12 rounded-full bg-gray-100 flex justify-center items-center mr-4"><RightArrow/></span> See our honoroble teachers
-                            </a>    
-                        </div>
-                    </div>
+        <div className="max-w-screen-xl mx-auto px-5 py-10 md:py-20">
+            <div className="lg:flex items-center">
+                <div className="relative mx-5 lg:mx-0 inline-block">
+                    <img className="relative z-10 rounded-lg overflow-hidden w-full sm:w-auto sm:max-w-[470px_!important] lazyload" data-src={attributes.image}/>        
+                    <div className="absolute top-5 -left-5 z-0 bg-[#E9E9E9] rounded-lg w-full h-full"></div>
                 </div>
-            </BlockWrapperContent>
-            
-        </BlockWrapper>
+                <div className="pt-20 lg:pt-0 lg:pl-20">
+                    <h3 className="font-secondary text-xl sm:text-4xl font-medium text-primary m-0 relative">
+                        <div className="absolute -top-8 left-1 md:-top-8 md:-left-4 opacity-50">
+                            <Quotes />
+                        </div>
+                        {attributes.speech}
+                    </h3>  
+
+                    <h2 className="m-0 mt-8 font-primary text-lg font-normal text-primary">{attributes.name}</h2> 
+                    <p className="m-0 text-lg font-secondary font-light text-primary mt-3.5">{attributes.designation}</p> 
+
+                    <a href={attributes.teachers_page_link} className="inline-block sm:inline-flex group items-center font-secondary text-lg font-normal text-primary no-underline mt-5 md:mt-10 sm:space-x-5">
+                        <div className="flex items-center space-x-2 md:-space-x-4">
+                            {
+                                attributes.teachers_image.map( (item, index) => (
+                                    <span className="w-12 h-12 rounded-full overflow-hidden border border-solid border-white bg-gray-100" key={index}>
+                                        <picture>
+                                            <img className="teacher-image lazyload" data-src={item}/>
+                                        </picture>
+                                    </span>
+                                ) )
+                            }
+                        </div>
+                        <span className="hidden sm:flex w-12 h-12 transition-all duration-200 ease-linear rounded-full bg-gray-100 group-hover:bg-primary group-hover:text-white justify-center items-center mr-4">
+                            <RightArrow/>
+                        </span>
+                        <span className="ml-1 group-hover:underline">See our honoroble teachers</span>
+                    </a>    
+                </div>
+            </div>
+        </div>
 	);
 }

@@ -198,7 +198,7 @@ export default class Header extends Helper{
             // add styles to header to make it sticky
             $header.attr('data-show', 1)
                     .css('top', extra + 'px')
-                    .addClass('fixed w-full left-0 z-10 shadow-lg')
+                    .addClass('fixed w-full left-0 z-20 shadow-lg')
                     .next().next().css({
                         marginTop: `${$header.outerHeight()}px`
                     });
@@ -220,7 +220,7 @@ export default class Header extends Helper{
                     
             // remove some style form header to make it static
             $header.attr('data-show', 0)
-                    .removeClass('fixed left-0 z-10 shadow-lg')
+                    .removeClass('fixed left-0 z-20 shadow-lg')
                     .next().next().css({
                         marginTop: 0
                     });
