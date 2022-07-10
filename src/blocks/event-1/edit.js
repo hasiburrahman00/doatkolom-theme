@@ -49,7 +49,7 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
                                 <div className="font-secondary text-6xl text-primary font-bold w-20 text-center">{item.event_date} <p className="text-lg font-normal m-0 -mt-2">{item.event_month}</p></div>
                                 <h3 className="font-secondary text-3xl text-primary font-bold m-0 my-3.5">{item.event_name}</h3>
                                 <p className="font-secondary text-lg text-primary font-normal m-0 mb-9">{item.event_details}</p>
-                                <a href="#" className="flex items-center font-secondary text-lg font-normal text-primary no-underline"><span className="inline-block w-12 h-12 rounded-full bg-gray-100 flex justify-center items-center mr-4"><RightArrow/></span> Read More</a>
+                                <a href="#" className="flex items-center font-secondary text-lg font-normal text-primary no-underline"><span className="w-12 h-12 rounded-full bg-gray-100 flex justify-center items-center mr-4"><RightArrow/></span> Read More</a>
                             </div>               
                         ))}
                     </div>
