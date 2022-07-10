@@ -1,109 +1,110 @@
 // gutenberg style start
 .editor-styles-wrapper {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.doatkolom-editor-tab {
+  .components-tab-panel__tabs {
+    position: absolute;
+    top: 84px;
+    left: 16px;
+    width: 160px;
   }
-  
-  .doatkolom-editor-tab {
-    .components-tab-panel__tabs {
-      position: absolute;
-      top: 84px;
-      left: 16px;
-      width: 160px;
-    }
-  
-    .components-tab-panel__tab-content {
-      padding-left: 24px;
-      margin-left: 160px !important;
-    }
-  
-    .components-tab-panel__tabs-item {
-      box-shadow: none !important;
-  
-      &.is-active {
-        background: #f0f0f0;
-        box-shadow: none;
-        font-weight: 500;
-        border-radius: 2px;
-      }
-  
-      &.is-active::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 1px;
-        right: 0;
-        left: 0;
-        border-bottom: 4px solid transparent;
-      }
-    }
-  
-    .components-tab-panel__tab-content {
-      width: 100%;
-    }
+
+  .components-tab-panel__tab-content {
+    padding-left: 24px;
+    margin-left: 160px !important;
   }
-  
-  .doatkolom-repeater {
-    .components-panel__body-title {
-      .components-button {
-        padding-left: 50px;
-        &:focus {
-          border: 0;
-          outline: 0;
-          box-shadow: none !important;
-        }
-  
-        .components-panel__arrow {
-          left: 16px;
-        }
-      }
+
+  .components-tab-panel__tabs-item {
+    box-shadow: none !important;
+
+    &.is-active {
+      background: #f0f0f0;
+      box-shadow: none;
+      font-weight: 500;
+      border-radius: 2px;
     }
-  
-    .is-opened .components-panel__body-title .components-button {
-      background: #eee;
-    }
-  
-    .header-container {
+
+    &.is-active::before {
+      content: "";
       position: absolute;
-      right: 0;
-      height: 47px;
       top: 0;
-      z-index: 10;
-  
-      button {
-        height: 100%;
-        background: rgb(229, 242, 251);
-        color: rgba(0, 81, 154, 0.79);
-        border: 0;
-        border-left: 1px solid #ddd;
-        width: 50px;
-  
-        &.remove-button {
-          background-color: rgba(254, 231, 231);
-          color: red;
-          cursor: pointer;
-  
-          &:hover {
-            background-color: rgba(255, 120, 120);
-            color: white;
-          }
-        }
-  
-        &.draggable-button {
-          cursor: grab;
-          &:hover {
-            background-color: rgba(10, 121, 178);
-            color: white;
-          }
-        }
-      }
+      bottom: 1px;
+      right: 0;
+      left: 0;
+      border-bottom: 4px solid transparent;
     }
-  
-    footer {
-      .components-button {
-        font-weight: 600;
-        font-size: 15px;
+  }
+
+  .components-tab-panel__tab-content {
+    width: 100%;
+  }
+}
+
+.doatkolom-repeater {
+  .components-panel__body-title {
+    .components-button {
+      padding-left: 50px;
+
+      &:focus {
+        border: 0;
+        outline: 0;
+        box-shadow: none !important;
+      }
+
+      .components-panel__arrow {
+        left: 16px;
       }
     }
   }
-  
+
+  .is-opened .components-panel__body-title .components-button {
+    background: #eee;
+  }
+
+  .header-container {
+    position: absolute;
+    right: 0;
+    height: 48px;
+    top: 0;
+    z-index: 10;
+
+    button {
+      height: 100%;
+      background: rgb(229, 242, 251);
+      color: rgba(0, 81, 154, 0.79);
+      border: 0;
+      border-left: 1px solid #ddd;
+      width: 50px;
+
+      &.remove-button {
+        background-color: rgba(254, 231, 231);
+        color: red;
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgba(255, 120, 120);
+          color: white;
+        }
+      }
+
+      &.draggable-button {
+        cursor: grab;
+
+        &:hover {
+          background-color: rgba(10, 121, 178);
+          color: white;
+        }
+      }
+    }
+  }
+
+  footer {
+    .components-button {
+      font-weight: 600;
+      font-size: 15px;
+    }
+  }
+}
