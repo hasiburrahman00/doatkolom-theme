@@ -1,6 +1,6 @@
 import './blocks/banner-1';
 import './blocks/headmaster-1';
-// import './blocks/resource-1'
+import './blocks/features-1'
 // import './blocks/about-1';
 // import './blocks/priority-section-1';
 // import './blocks/location-section-1';

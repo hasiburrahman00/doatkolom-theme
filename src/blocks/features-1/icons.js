@@ -507,8 +507,5 @@ export function Events(){
         </clipPath>
         </defs>
     </svg>
-
-
-
     )
 }
