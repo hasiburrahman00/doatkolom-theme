@@ -1,8 +1,7 @@
-const { TextControl, TextareaControl, ToggleControl } = wp.components
+const { TextControl, TextareaControl } = wp.components
 import Repeater from '../../components/repeater'
 
 export default function GeneralControls({attributes, setAttributes}) {
-    console.log(attributes.event_list)
 
     let onEventUpdate = (val,index,type)=>{
         attributes.event_list[index][type] = val
@@ -31,7 +30,6 @@ export default function GeneralControls({attributes, setAttributes}) {
         setAttributes({
             event_list:[...attributes.event_list]
         })
-
     }
 
     return (

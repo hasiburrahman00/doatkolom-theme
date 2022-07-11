@@ -259,6 +259,9 @@
 .h-full {
   height: 100%;
 }
+.h-\[100\%_\!important\] {
+  height: 100% !important;
+}
 .h-28 {
   height: 7rem;
 }
@@ -297,6 +300,9 @@
 }
 .w-5 {
   width: 1.25rem;
+}
+.w-\[100\%_\!important\] {
+  width: 100% !important;
 }
 .w-28 {
   width: 7rem;
@@ -731,6 +737,12 @@
 }
 .pb-10 {
   padding-bottom: 2.5rem;
+}
+.pl-1\.5 {
+  padding-left: 0.375rem;
+}
+.pl-1 {
+  padding-left: 0.25rem;
 }
 .text-left {
   text-align: left;
@@ -1364,6 +1376,9 @@ body::-webkit-scrollbar-thumb:hover {
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
   .md\:flex-row {
     flex-direction: row;
   }
@@ -1429,6 +1444,10 @@ body::-webkit-scrollbar-thumb:hover {
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+  .md\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
   }
   .md\:leading-12 {
     line-height: 48px;

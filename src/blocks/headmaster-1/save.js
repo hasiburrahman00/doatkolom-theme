@@ -25,7 +25,7 @@ export default function Save({ attributes }) {
                                 attributes.teachers_image?.map( (item, index) => (
                                     <span className="w-12 h-12 rounded-full overflow-hidden border border-solid border-white bg-gray-100" key={index}>
                                         <picture>
-                                            <img className="teacher-image lazyload w-full h-full object-cover" data-src={item}/>
+                                            <img className="teacher-image w-[100%_!important] h-[100%_!important] object-cover lazyload" data-src={item}/>
                                         </picture>
                                     </span>
                                 ) )

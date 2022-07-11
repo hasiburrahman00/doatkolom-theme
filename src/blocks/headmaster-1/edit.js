@@ -40,7 +40,7 @@ export default function Edit({ attributes, setAttributes }) {
                                 attributes.teachers_image?.map( (item, index) => (
                                     <span className="w-12 h-12 rounded-full overflow-hidden border border-solid border-white bg-gray-100" key={index}>
                                         <picture>
-                                            <img className="teacher-image w-full h-full object-cover" src={item}/>
+                                            <img className="w-[100%_!important] h-[100%_!important] object-cover teacher-image" src={item}/>
                                         </picture>
                                     </span>
                                 ) )
