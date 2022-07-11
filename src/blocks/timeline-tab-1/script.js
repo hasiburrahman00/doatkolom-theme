@@ -29,7 +29,7 @@ export default function timelineTab1( $scope ) {
 
         const percentage = Math.ceil(innerScroll / height * 100) // get the percentage of scrolling 
         
-        if( scroll > offset.top - 200 && scroll < to + 200 && innerWidth >= 1024 ) {
+        if( scroll > offset.top - 200 && scroll < to + 200 && innerWidth >= 600 ) {
             $line.css('height', percentage + '%');
         }
     }
@@ -44,8 +44,8 @@ export default function timelineTab1( $scope ) {
      */ 
     function activeTabHandler( target = 0 ) {
         if( innerWidth <= 1024 ) return;
-        $scope.find('.tab-item').addClass('opacity-50');
-        $scope.find(`.tab-item-index-${target}`).removeClass('opacity-50');
+        $scope.find('.tab-item').addClass('md:opacity-50');
+        $scope.find(`.tab-item-index-${target}`).removeClass('md:opacity-50');
     }
     let options = {
         root: null,
