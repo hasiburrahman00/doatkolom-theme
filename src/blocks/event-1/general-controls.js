@@ -15,11 +15,11 @@ export default function GeneralControls({attributes, setAttributes}) {
             event_list:[
                 ...attributes.event_list,
                 {
-                    event_date: 'Date',
-                    event_Month: 'Month',
-                    event_name: 'Event Name',
-                    event_details: 'Event Details',
-                    guest: 20
+                    event_date: 15,
+                    event_month: "june",
+                    event_name: "Biggest Int'l Education Expo 2022 - Dhaka",
+                    event_details: "The school was established on a small scale on 19th April, 1959 at the initiative of some personalities.",
+                    reademore_link: "#"
                 }
             ]
         })
