@@ -217,6 +217,9 @@
 .mt-4 {
   margin-top: 1rem;
 }
+.mb-8 {
+  margin-bottom: 2rem;
+}
 .block {
   display: block;
 }
@@ -753,6 +756,9 @@
 }
 .pr-0 {
   padding-right: 0px;
+}
+.pb-10 {
+  padding-bottom: 2.5rem;
 }
 .text-left {
   text-align: left;
@@ -1340,11 +1346,18 @@ body::-webkit-scrollbar-thumb:hover {
   }
 }
 @media (min-width: 768px) {
+  .md\:sticky {
+    position: -webkit-sticky;
+    position: sticky;
+  }
   .md\:-top-8 {
     top: -2rem;
   }
   .md\:-left-4 {
     left: -1rem;
+  }
+  .md\:top-36 {
+    top: 9rem;
   }
   .md\:mt-0 {
     margin-top: 0px;
@@ -1364,11 +1377,20 @@ body::-webkit-scrollbar-thumb:hover {
   .md\:mt-11 {
     margin-top: 2.75rem;
   }
+  .md\:mt-20 {
+    margin-top: 5rem;
+  }
   .md\:block {
     display: block;
   }
+  .md\:inline-block {
+    display: inline-block;
+  }
   .md\:flex {
     display: flex;
+  }
+  .md\:hidden {
+    display: none;
   }
   .md\:w-1\/2 {
     width: 50%;
@@ -1414,6 +1436,9 @@ body::-webkit-scrollbar-thumb:hover {
   .md\:via-primary\/60 {
     --tw-gradient-stops: var(--tw-gradient-from), rgb(0 54 70 / 0.6), var(--tw-gradient-to, rgb(0 54 70 / 0));
   }
+  .md\:p-0 {
+    padding: 0px;
+  }
   .md\:py-24 {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -1442,6 +1467,9 @@ body::-webkit-scrollbar-thumb:hover {
   .md\:pr-0 {
     padding-right: 0px;
   }
+  .md\:pl-8 {
+    padding-left: 2rem;
+  }
   .md\:text-5xl {
     font-size: 3rem;
     line-height: 1;
@@ -1459,6 +1487,12 @@ body::-webkit-scrollbar-thumb:hover {
   }
   .md\:leading-10 {
     line-height: 2.5rem;
+  }
+  .md\:leading-14 {
+    line-height: 56px;
+  }
+  .md\:opacity-50 {
+    opacity: 0.5;
   }
 }
 @media (min-width: 1024px) {
