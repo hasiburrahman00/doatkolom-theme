@@ -1,4 +1,4 @@
-const { TextControl, TextareaControl, ToggleControl } = wp.components
+const { TextControl, TextareaControl} = wp.components
 import Repeater from '../../components/repeater'
 
 export default function DescriptionControls({attributes, setAttributes}) {

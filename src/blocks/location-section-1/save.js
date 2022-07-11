@@ -33,7 +33,7 @@ export default function Save({ attributes }) {
                 attributes.background?.map((item,index)=>(
                     <div key={index} className="rounded-md overflow-hidden">
                             <picture>
-                                <img className="block lazyload" data-src={item.image} alt="location-image" />
+                                <img className="block lazyload" data-src={item} alt="location-image" />
                             </picture>
                         </div>
                 ))

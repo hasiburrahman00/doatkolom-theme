@@ -6,20 +6,14 @@ export default function Style({attributes, wrapper}){
                 min-width: 560px;
             }
 
-            ${wrapper} .achivement-wrapper:not(:first-child,:last-child) {
-                padding: 0 27px;
-                border-width: 0 1px 0 1px;
-                border-style: solid;
-                border-color: #d1d5db;
-                margin: 0 -1px;
+            ${wrapper} .school-image {
+                width: 560px;
+                min-width: 560px;
             }
-            
+           
             ${wrapper} .achivement-wrapper:first-child {
                 padding-right: 27px;
-            }
-
-            ${wrapper} .achivement-wrapper:last-child {
-                padding-left: 27px;
+                position: relative;
             }
             
             ${wrapper} .achivement-wrapper {
@@ -33,14 +27,6 @@ export default function Style({attributes, wrapper}){
                 width: calc(100% - 32px);
                 min-width: 280px;
                 border-radius: 10px;
-            }
-
-            ${wrapper} .achivement-wrapper:not(:first-child,:last-child) {
-                padding: 28px 0px;
-                border-width: 1px 0px 1px 0px;
-                border-style: solid;
-                border-color: #d1d5db;
-                margin: -1px 0px;
             }
 
             ${wrapper} .achivement-wrapper:first-child {
@@ -64,3 +50,5 @@ export default function Style({attributes, wrapper}){
         
     `
 }
+
+
