@@ -1,4 +1,4 @@
-const { TextControl, TextareaControl, ToggleControl } = wp.components
+const { TextControl, TextareaControl } = wp.components
 
 export default function GeneralControls({attributes, setAttributes}) {
     return (
@@ -7,15 +7,15 @@ export default function GeneralControls({attributes, setAttributes}) {
             <TextControl
                 className="w-full"
                 label="Title"
-                value={ attributes.title }
-                onChange={ ( value ) => setAttributes({title: value}) }
+                value={ attributes.heading }
+                onChange={ heading => setAttributes({heading}) }
             />
 
             <TextareaControl
                 className="w-full"
                 label="Sub Title"
-                value={ attributes.sub_title }
-                onChange={ ( value ) => setAttributes({sub_title: value}) }
+                value={ attributes.description }
+                onChange={ description => setAttributes({description}) }
             />
             
         </div>

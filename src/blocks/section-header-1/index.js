@@ -1,59 +1,23 @@
-const { registerBlockType } = wp.blocks;
-const { __ } = wp.i18n;
+import config from './../../../blocks/section-header-1/block.json';
+import RegisterBlock from '../../modules/register-block';
 import Edit from './edit';
 import Save from './save';
+import Style from './style';
+import GeneralControls from './general-controls';
+import StyleControls from './style-controls';
 
-registerBlockType('doatkolom/section-header-1', {
-    title       : __( 'Doatkolom Section Header 1' ),
-    description : __( 'For section header' ),
-    keywords    : [ 'header', 'section header', 'doatkolom', 'title' ],
-    category    : 'widgets',
-    icon        : 'screenoptions',
-    getEditWrapperProps() {
-        return {
-            'data-align': 'full'
-        };
-    },
-    attributes  : {
-        block_id : {
-            type: 'string',
-        },
-
-        block_name: {
-            type: 'string',
-        },
-
-        alignment:{
-            type: 'string',
-            default: 'text-center'
-        },
-
-        title:{
-            type: 'string',
-            default: 'Upcoming School Events'
-        },
-
-        sub_title:{
-            type: 'string',
-            default: 'The school was established on a small scale on 19th April, 1959 at the initiative of some personalities.'
-        },
-
-        sub_title_width:{
-            type: 'number',
-            default: 496
-        },
-
-        container_width:{
-            type: 'number',
-            default: 600
-        },
-
-        alignment:{
-            type: 'string',
-            default: 'center'
+new RegisterBlock(config).setup({
+    edit: Edit,
+    save: Save,
+    style: Style,
+    controls: [
+        {
+            title: 'General',
+            component: GeneralControls
+        }, 
+        {
+            title: 'Style',
+            component: StyleControls
         }
-        
-    },
-	edit        : Edit,
-	save        : Save,
-});
+    ]
+})

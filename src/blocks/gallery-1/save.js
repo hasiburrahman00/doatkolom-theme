@@ -3,7 +3,7 @@ import { ArrowRight } from "./icon";
 export default function Save({ attributes }) {
 	useAttributes(attributes)
 	return (
-        <div className="max-w-screen-xl mx-auto py-10 px-5">
+        <div className="max-w-screen-xl mx-auto py-2 px-5">
             <div className="grid grid-cols-5 gap-2 sm:gap-4 mb-2 sm:mb-4">
                 <picture className="col-span-2">
                     <img className="w-full object-cover h-[150px_!important] sm:h-[300px_!important] lazyload" width="315px" height="380"  data-src={image(0)}/>
