@@ -4,14 +4,6 @@ const { useEffect } = wp.element;
 export default function Edit({ attributes, setAttributes, clientId, name }) {
 
     wp.element.useEffect(()=>{
-        if( !attributes.teachers_image ) {
-            setAttributes({teachers_image: [
-                doatkolom_object.blocks + 'honorable-teachers-1/img/teachers1.webp',
-                doatkolom_object.blocks + 'honorable-teachers-1/img/teachers2.webp',
-                doatkolom_object.blocks + 'honorable-teachers-1/img/teachers3.webp'
-            ] })
-        }
-        
         if( !attributes.honorable_teacher ) {
             setAttributes({honorable_teacher:[
                 {
@@ -35,6 +27,14 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
                   speach: "The school was established on a small scale on 19th April, 1959 at the initiative of some personalities.The school was established on a small scale on 19th April, 1959 at the initiative of some personalities."
                 }
               ] })
+        }
+        
+        if( !attributes.teachers_image ) {
+            setAttributes({teachers_image: [
+                doatkolom_object.blocks + 'honorable-teachers-1/img/teachers1.webp',
+                doatkolom_object.blocks + 'honorable-teachers-1/img/teachers2.webp',
+                doatkolom_object.blocks + 'honorable-teachers-1/img/teachers3.webp'
+            ] })
         }
 
         if( !attributes.testimonial ) {

@@ -27,7 +27,7 @@ export default function Edit({ attributes, setAttributes }) {
                 <div>
                     <h2 className="font-primary text-5xl font-normal m-0 p-0 text-[#C1F1FF] max-w-[662px] leading-14">{attributes.heading}</h2>
                 </div>
-                <div className="grid grid-cols-2 gap-10">
+                <div className="grid lg:grid-cols-2 gap-10">
                     <div>
                         <div className="tab-content sticky top-36 mt-20">
                             <div className="relative">
@@ -52,7 +52,7 @@ export default function Edit({ attributes, setAttributes }) {
                         <div className="doatkolom-image-tab">
                             {
                                 attributes?.content?.map((item, index) => (
-                                    <div key={index} className="image-tab-item min-h-[calc(100vh_-_100px)] flex items-center flex-col justify-center">
+                                    <div key={index} className="image-tab-item lg:min-h-[calc(100vh_-_100px)] flex items-center flex-col justify-center">
                                         <picture>
                                             <img className="w-full hidden lg:block" src={item.img} data-index={index} id={`tab-image-index-${index}`}/>
                                         </picture>
