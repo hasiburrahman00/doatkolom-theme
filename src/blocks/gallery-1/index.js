@@ -1,54 +1,32 @@
-const { registerBlockType } = wp.blocks;
-const { __ } = wp.i18n;
+import config from './../../../blocks/gallery-1/block.json';
+import RegisterBlock from '../../modules/register-block';
 import Edit from './edit';
 import Save from './save';
+import Style from './style';
+import GeneralControls from './general-controls';
 
-registerBlockType('doatkolom/gallery-1', {
-    title       : __( 'Doatkolom Gallery 1' ),
-    description : __( 'For gallery section' ),
-    keywords    : [ 'gallery', 'gallery section', 'doatkolom', 'picture', 'image', 'image list' ],
-    category    : 'widgets',
-    icon        : 'screenoptions',
-    getEditWrapperProps() {
-        return {
-            'data-align': 'full'
-        };
-    },
-    attributes  : {
-        block_id : {
-            type: 'string',
-        },
+new RegisterBlock(config).setup({
+    edit: Edit,
+    save: Save,
+    style: Style,
+    controls: [
+        {
+            title: 'General',
+            component: GeneralControls
+        }
+    ]
+})
 
-        block_name: {
-            type: 'string',
-        },
+let attributes;
 
-        image_one: {
-            type: 'string',
-            default: doatkolom_object.img + 'blocks/gallery-image-one.webp'
-        },
+export function useAttributes(attr) {
+    attributes = attr;
+}
 
-        image_two: {
-            type: 'string',
-            default: doatkolom_object.img + 'blocks/gallery-image-two.webp'
-        },
+export function image(index = 0) {
+    if( attributes.images && attributes.images[index] ) {
+        return attributes.images[index]
+    }
 
-        image_three: {
-            type: 'string',
-            default: doatkolom_object.img + 'blocks/gallery-image-three.webp'
-        },
-
-        image_four: {
-            type: 'string',
-            default: doatkolom_object.img + 'blocks/gallery-image-four.webp'
-        },
-
-        image_five: {
-            type: 'string',
-            default: doatkolom_object.img + 'blocks/gallery-image-five.webp'
-        },
-
-    },
-	edit        : Edit,
-	save        : Save,
-});
+    return '';
+}

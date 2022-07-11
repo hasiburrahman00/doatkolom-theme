@@ -1,49 +1,34 @@
-const { useBlockProps } = wp.blockEditor
-import { BlockWrapper, BlockWrapperContent, BlockWrapperStyle } from '../block-wrapper/index.js';
-
-import Style from './style.js';
+import { useAttributes, image } from "./index";
+import { ArrowRight } from "./icon";
 export default function Save({ attributes }) {
+	useAttributes(attributes)
 	return (
-        <BlockWrapper attributes={attributes} props={useBlockProps.save()}>
-
-            <BlockWrapperStyle>
-                <Style/>
-            </BlockWrapperStyle>
-
-            <BlockWrapperContent>
-                <div className="max-w-screen-xl mx-auto md:w-full sm:w-full px-5">
-                    <div className="md:flex  justify-between sm:w-full lg:w-full">
-                        <div className="md:w-1/4 sm:w-full  md:mr-5 ">
-                            <picture>
-                                <img className="lazyload" width="315px" height="380"  data-src={attributes.image_one}/>
-                            </picture>
-                        </div>               
-                        <div className="md:w-3/4 sm:w-full mt-5 md:mt-0">
-                            <picture>
-                                <img className="lazyload" width="945" height="380" data-src={attributes.image_two}/>
-                            </picture>
-                        </div>                            
-                    </div>
-                    <div className="md:flex  justify-between sm:w-full lg:w-full md:mt-5">
-                        <div className="md:w-3/6 sm:w-full md:mr-5 mt-5 md:mt-0">
-                            <picture>
-                                <img className="lazyload" width="620" height="380" data-src={attributes.image_three}/>
-                            </picture>
-                        </div>               
-                        <div className="md:w-1/6 sm:w-full md:mr-5 mt-5 md:mt-0">
-                            <picture>
-                                <img className="lazyload" width="207" height="380" data-src={attributes.image_four}/>
-                            </picture>
-                        </div>                            
-                        <div className="md:w-2/6 sm:w-full mt-5 md:mt-0">
-                            <picture>
-                                <img className="lazyload" width="413" height="380" data-src={attributes.image_five}/>
-                            </picture>
-                        </div>                            
-                    </div>
-                </div>
-            </BlockWrapperContent>
-            
-        </BlockWrapper>
+        <div className="max-w-screen-xl mx-auto py-10 px-5">
+            <div className="grid grid-cols-5 gap-2 sm:gap-4 mb-2 sm:mb-4">
+                <picture className="col-span-2">
+                    <img className="w-full object-cover h-[150px_!important] sm:h-[300px_!important] lazyload" width="315px" height="380"  data-src={image(0)}/>
+                </picture>               
+                <picture className="col-span-3">
+                    <img className="w-full object-cover h-[150px_!important] sm:h-[300px_!important] lazyload" width="945" height="380" data-src={image(1)}/>
+                </picture>                            
+            </div>
+            <div className="grid grid-cols-3 gap-2 sm:gap-4">
+                <picture>
+                    <img className="w-full object-cover h-[150px_!important] sm:h-[300px_!important] lazyload" width="620" height="380" data-src={image(2)}/>
+                </picture>
+                <picture>
+                    <img className="w-full object-cover h-[150px_!important] sm:h-[300px_!important] lazyload" width="207" height="380" data-src={image(3)}/>
+                </picture>
+                <picture>
+                    <img className="w-full object-cover h-[150px_!important] sm:h-[300px_!important] lazyload" width="413" height="380" data-src={image(4)}/>
+                </picture>                           
+            </div>
+            <div className="text-center sm:text-right mt-4">
+                <a className="inline-flex items-center space-x-2 text-xl sm:text-2xl md:text-3xl font-primary text-primary underline transition duration-200 ease-linear hover:text-secondary" href={attributes.gallery_page_url}>
+                    <span>See More Photos</span>
+                    <ArrowRight/>
+                </a>
+            </div>
+        </div>
 	);
 }

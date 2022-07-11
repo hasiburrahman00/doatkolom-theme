@@ -1,0 +1,16 @@
+{
+    "name": "doatkolom/section-header-1",
+    "title": "Doatkolom Section Header 1",
+    "description": "For adding heading and description to section",
+    "keywords": ["heading", "description", "section heading", "section", "doatkolom"],
+    "attributes": {
+        "heading": {
+            "type": "string",
+            "default": "Our Photo Gallery"
+        },
+        "description": {
+            "type": "string",
+            "default": "The school was established on a small scale on 19th April, 1959 at the initiative of some personalities."
+        }
+    }
+}
