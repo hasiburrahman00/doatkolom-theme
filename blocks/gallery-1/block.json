@@ -1,0 +1,15 @@
+{
+    "name": "doatkolom/gallery-1",
+    "title": "Doatkolom Gallery 1",
+    "description": "Show 5 differnet images as an overview of the gallery page",
+    "keywords": ["image", "gallery", "photo", "grid", "photo gallery", "events photo", "students", "doatkolom"],
+    "attributes": {
+        "gallery_page_url": {
+            "type": "string",
+            "default": "#"
+        },
+        "images": {
+            "type": "array"
+        }
+    }
+}

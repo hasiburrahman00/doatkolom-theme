@@ -1,20 +1,22 @@
-const { TextControl, TextareaControl, ToggleControl, RangeControl } = wp.components
+const { RangeControl } = wp.components
 import Aligment from '../../components/alignment'
 
 export default function StyleControls({attributes, setAttributes}) {
-    let handleAlignmentChancge = (position)=>{
-        setAttributes({alignment: position})
-    }
-
+    
     return (
         <div className="space-y-5">
-            <Aligment handleAlignmentChancge={handleAlignmentChancge} alignment={attributes.alignment}/>
+
+            <Aligment 
+                label="Alignment"
+                onChange={ alignment => setAttributes({alignment}) } 
+                value={attributes.alignment}
+            />
 
             <RangeControl
                 className="w-full"
                 label="Header Width"
                 value={ attributes.container_width }
-                onChange={ ( value ) => setAttributes({container_width: value}) }
+                onChange={ container_width => setAttributes({container_width}) }
                 min={ 320 }
                 max={ 900 }
             />
@@ -22,8 +24,8 @@ export default function StyleControls({attributes, setAttributes}) {
             <RangeControl
                 className="w-full"
                 label="Sub Title Width"
-                value={ attributes.sub_title_width }
-                onChange={ ( value ) => setAttributes({sub_title_width: value}) }
+                value={ attributes.description_width }
+                onChange={ description_width => setAttributes({description_width}) }
                 min={ 320 }
                 max={ 900 }
             />

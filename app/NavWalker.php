@@ -10,7 +10,7 @@ class NavWalker extends \Walker_Nav_Menu {
         $indent     = str_repeat("\t", $depth);
         $submenu    = ($depth > 0) ? 'sub-menu' : '';
         // dropdown menu ul
-        $output    .= "\n$indent<ul class=\"dropdown-menu hidden z-10 lg:fixed list-none lg:bg-white pl-5 py-3 border-l-3 border-t-0 border-r-0 border-b-0 border-solid border-secondary lg:p-2 lg:w-48 lg:shadow-md lg:rounded-sm $submenu depth_$depth\">\n";
+        $output    .= "\n$indent<ul class=\"dropdown-menu hidden z-10 lg:fixed list-none lg:bg-white pl-5 py-3 border-l-3 border-t-0 border-r-0 border-b-0 border-solid border-secondary lg:p-2 lg:w-60 lg:shadow-md lg:rounded-sm $submenu depth_$depth\">\n";
     }
 
     function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {

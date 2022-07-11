@@ -26,14 +26,14 @@ export default function BoxControls({attributes, setAttributes}) {
          ]})
      }
  
-     const handleTitleChange = (val,index,type)=>{
+    const handleTitleChange = (val,index,type)=>{
          attributes.priority_box[index][type] = val
          setAttributes({
             priority_box: [
                  ...attributes.priority_box
              ]
          })
-     }
+    }
  
 
     return (

@@ -4,6 +4,7 @@ import Helper from './utils/Helper';
 import honorableTeachers1 from './blocks/honorable-teachers-1/script';
 import timelineTab1 from './blocks/timeline-tab-1/script';
 // import honorableTeachers1 from './blocks/honorable-teachers-1/script'
+import InfiniteScroll from './modules/infinite-scroll';
 
 
 jQuery(function() {
@@ -18,6 +19,11 @@ jQuery(function() {
     new Header({
         breakpoint: 1024
     });
+
+    // for photo gallery infinite scroll
+    new InfiniteScroll();
+    
+
 
 
     /**
@@ -35,16 +41,12 @@ jQuery(function() {
      * 
      */
 
-    
-    
     window.doatkolomGutenbergInit(function( $ ) {
         
         // scripts for gutenberg block
         const blockScriptList = {
             'doatkolom/honorable-teachers-1' : honorableTeachers1,
             'doatkolom/timeline-tab-1': timelineTab1,
-
-            // 'doatkolom/honorable-teachers-1' : honorableTeachers1
         }
 
         // connect script with the gutenberg block

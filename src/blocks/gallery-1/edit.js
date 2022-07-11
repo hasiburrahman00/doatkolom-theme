@@ -1,82 +1,48 @@
-import {BlockWrapper, BlockWrapperContent, BlockWrapperEditor, BlockWrapperStyle} from "../block-wrapper";
-import Style from "./style";
-import GeneralControls from "./general-controls";
-const { useEffect } = wp.element;
-const { useBlockProps } = wp.blockEditor
+import { useAttributes, image } from "./index";
+import { ArrowRight } from "./icon";
+export default function Edit({ attributes, setAttributes }) {
 
-
-export default function Edit({ attributes, setAttributes, clientId, name }) {
-
-    /**
-     * 
-     * 
-     * @hook useEffect
-     * all the code inside of this hook are responsive for updating gutenberg third-party script, block name change and block id change
-     * 
-     * @since 1.0.0
-     * @author ashraf
-     * 
-     */ 
-    useEffect( () => {
-
-        if ( ! attributes.block_id ) {
-            setAttributes( { block_id: clientId } );
+    wp.element.useEffect( () => {
+        if( !attributes.images ) {
+            setAttributes({images: [
+                doatkolom_object.blocks + 'gallery-1/img/gallery-image-one.webp',
+                doatkolom_object.blocks + 'gallery-1/img/gallery-image-two.webp',
+                doatkolom_object.blocks + 'gallery-1/img/gallery-image-three.webp',
+                doatkolom_object.blocks + 'gallery-1/img/gallery-image-four.webp',
+                doatkolom_object.blocks + 'gallery-1/img/gallery-image-five.webp',
+            ]})
         }
-
-        if ( ! attributes.block_name ) {
-            setAttributes( { block_name: name } );
-        }
-
-        const $scope = jQuery(`#block-${clientId}`).find(`.doatkolom-block-wrap`).first();
-        jQuery(window).trigger( name, [ $scope ] );
-
     }, [] );
 
+    useAttributes(attributes)
+
 	return (
-		<BlockWrapper attributes={attributes} setAttributes={setAttributes} props={useBlockProps()}>
-            
-            <BlockWrapperStyle>
-                <Style/>
-            </BlockWrapperStyle>
-
-            <BlockWrapperContent>
-                <div className="max-w-screen-xl mx-auto md:w-full sm:w-full px-5">
-                    <div className="md:flex  justify-between sm:w-full lg:w-full">
-                        <div className="md:w-1/4 sm:w-full  md:mr-5 ">
-                            <picture>
-                                <img width="315px" height="380"  src={attributes.image_one}/>
-                            </picture>
-                        </div>               
-                        <div className="md:w-3/4 sm:w-full mt-5 md:mt-0">
-                            <picture>
-                                <img width="945" height="380" src={attributes.image_two}/>
-                            </picture>
-                        </div>                            
-                    </div>
-                    <div className="md:flex  justify-between sm:w-full lg:w-full md:mt-5">
-                        <div className="md:w-3/6 sm:w-full md:mr-5 mt-5 md:mt-0">
-                            <picture>
-                                <img width="620" height="380" src={attributes.image_three}/>
-                            </picture>
-                        </div>               
-                        <div className="md:w-1/6 sm:w-full md:mr-5 mt-5 md:mt-0">
-                            <picture>
-                                <img width="207" height="380" src={attributes.image_four}/>
-                            </picture>
-                        </div>                            
-                        <div className="md:w-2/6 sm:w-full mt-5 md:mt-0">
-                            <picture>
-                                <img width="413" height="380" src={attributes.image_five}/>
-                            </picture>
-                        </div>                            
-                    </div>
-                </div>
-                
-            </BlockWrapperContent>
-
-            <BlockWrapperEditor>
-                <GeneralControls label="General"/>
-            </BlockWrapperEditor>
-        </BlockWrapper>
+		<div className="max-w-screen-xl mx-auto py-2 px-5">
+            <div className="grid grid-cols-5 gap-2 sm:gap-4 mb-2 sm:mb-4">
+                <picture className="col-span-2">
+                    <img className="w-full object-cover h-[150px_!important] sm:h-[300px_!important]" width="315px" height="380"  src={image(0)}/>
+                </picture>               
+                <picture className="col-span-3">
+                    <img className="w-full object-cover h-[150px_!important] sm:h-[300px_!important]" width="945" height="380" src={image(1)}/>
+                </picture>                            
+            </div>
+            <div className="grid grid-cols-3 gap-2 sm:gap-4">
+                <picture>
+                    <img className="w-full object-cover h-[150px_!important] sm:h-[300px_!important]" width="620" height="380" src={image(2)}/>
+                </picture>
+                <picture>
+                    <img className="w-full object-cover h-[150px_!important] sm:h-[300px_!important]" width="207" height="380" src={image(3)}/>
+                </picture>
+                <picture>
+                    <img className="w-full object-cover h-[150px_!important] sm:h-[300px_!important]" width="413" height="380" src={image(4)}/>
+                </picture>                           
+            </div>
+            <div className="text-center sm:text-right mt-4">
+                <a className="inline-flex items-center space-x-2 text-xl sm:text-2xl md:text-3xl font-primary text-primary underline transition duration-200 ease-linear hover:text-secondary" href="#">
+                    <span>See More Photos</span>
+                    <ArrowRight/>
+                </a>
+            </div>
+        </div>
 	);
 }

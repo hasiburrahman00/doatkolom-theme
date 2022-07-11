@@ -1,11 +1,11 @@
 <?php 
     use DoatKolom\NavWalker;
 ?>
-<header class="py-1 lg:py-2 bg-white">
+<header class="py-1 lg:py-2 bg-white doatkolom-primary-header" data-show="0">
     <nav class="max-w-screen-xl mx-auto px-5 flex justify-between items-center">
         <a href="<?php echo esc_url( DOATKOLOM_HOME_URL ); ?>" class="bg-white lg:shadow-md lg:px-2 lg:rounded-xl inline-block">
             <picture>
-                <img class="w-16 h-16 lg:w-20 lg:h-20 object-contain object-center" width="80" height="80" src="<?php echo esc_url( DOATKOLOM_LOGO ) ?>" alt="main logo"/>
+                <img class="object-contain object-center doatkolom-nav-logo" width="80" height="80" src="<?php echo esc_url( DOATKOLOM_LOGO ) ?>" alt="main logo"/>
             </picture>
         </a>
 

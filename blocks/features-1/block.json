@@ -1,0 +1,19 @@
+{
+    "name": "doatkolom/features-1",
+    "title": "Doatkolom Features 1",
+    "description": "For showing some importat portal like result, syllabus, routine etc in the section",
+    "keywords": ["portal", "result", "routine", "features", "syllabus", "exam", "support", "doatkolom"],
+    "attributes": {
+      "heading": {
+        "type": "string",
+        "default": "Here's what you need"
+      },
+      "description": {
+        "type": "string",
+        "default": "The school was established on a small scale on 19th April, 1959 at the initiative of some personalities."
+      },
+      "features": {
+        "type": "array"
+      }
+    }
+}

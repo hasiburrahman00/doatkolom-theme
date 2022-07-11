@@ -29,7 +29,7 @@ export default function Edit({ attributes, setAttributes }) {
                 </div>
                 <div className="grid grid-cols-2 gap-10">
                     <div>
-                        <div className="tab-content sticky top-28 mt-20">
+                        <div className="tab-content sticky top-36 mt-20">
                             <div className="relative">
                                 <span className="vertical-line hidden lg:block absolute left-0 top-0 w-1.5 bg-[#C1F1FF] rounded-full h-full"></span>
                                 <div className="pl-8 space-y-10">
