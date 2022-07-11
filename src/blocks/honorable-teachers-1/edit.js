@@ -1,7 +1,7 @@
 import { NextArrow ,PrevArrow} from "./icons";
 const { useEffect } = wp.element;
 
-export default function Edit({ attributes, setAttributes, clientId, name }) {
+export default function Edit({ attributes, setAttributes}) {
 
     wp.element.useEffect(()=>{
         if( !attributes.honorable_teacher ) {

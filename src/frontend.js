@@ -3,7 +3,7 @@ import Header from "./modules/header";
 import Helper from './utils/Helper';
 import honorableTeachers1 from './blocks/honorable-teachers-1/script';
 import timelineTab1 from './blocks/timeline-tab-1/script';
-// import honorableTeachers1 from './blocks/honorable-teachers-1/script'
+import imagesSlider from './blocks/images-slider/script';
 import InfiniteScroll from './modules/infinite-scroll';
 
 
@@ -46,6 +46,7 @@ jQuery(function() {
         // scripts for gutenberg block
         const blockScriptList = {
             'doatkolom/honorable-teachers-1' : honorableTeachers1,
+            'doatkolom/images-slider' : imagesSlider,
             'doatkolom/timeline-tab-1': timelineTab1,
         }
 
