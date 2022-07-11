@@ -37,10 +37,10 @@ export default function Edit({ attributes, setAttributes }) {
                     <a href="#" className="inline-block sm:inline-flex group items-center font-secondary text-lg font-normal text-primary no-underline mt-5 md:mt-10 sm:space-x-5">
                         <div className="flex items-center space-x-2 md:-space-x-4">
                             {
-                                attributes.teachers_image.map( (item, index) => (
+                                attributes.teachers_image?.map( (item, index) => (
                                     <span className="w-12 h-12 rounded-full overflow-hidden border border-solid border-white bg-gray-100" key={index}>
                                         <picture>
-                                            <img className="teacher-image" src={item}/>
+                                            <img className="teacher-image w-full h-full object-cover" src={item}/>
                                         </picture>
                                     </span>
                                 ) )
