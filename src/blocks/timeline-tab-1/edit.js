@@ -31,13 +31,13 @@ export default function Edit({ attributes, setAttributes }) {
                     <div>
                         <div className="tab-content sticky top-28 mt-20">
                             <div className="relative">
-                                <span className="vertical-line hidden md:block absolute left-0 top-0 w-1.5 bg-[#C1F1FF] rounded-full h-full"></span>
+                                <span className="vertical-line hidden lg:block absolute left-0 top-0 w-1.5 bg-[#C1F1FF] rounded-full h-full"></span>
                                 <div className="pl-8 space-y-10">
                                     {
                                         attributes?.content?.map((item, index) => (
                                             <div key={index} className={`tab-item opacity-50 cursor-pointer group duration-200 transition ease-in text-white tab-item-index-${index}`} data-index={index}>
                                                 <picture>
-                                                    <img className="w-full hidden" src={item.img}/>
+                                                    <img className="w-full lg:hidden" src={item.img}/>
                                                 </picture>
                                                 <h2 className="m-0 p-0 text-2xl font-primary group-hover:underline font-normal mb-3">{item.title}</h2>
                                                 <p className="m-0 p-0 text-base font-secondary">{item.description}</p>
@@ -54,7 +54,7 @@ export default function Edit({ attributes, setAttributes }) {
                                 attributes?.content?.map((item, index) => (
                                     <div key={index} className="image-tab-item min-h-[calc(100vh_-_100px)] flex items-center flex-col justify-center">
                                         <picture>
-                                            <img className="w-full" src={item.img} data-index={index} id={`tab-image-index-${index}`}/>
+                                            <img className="w-full hidden lg:block" src={item.img} data-index={index} id={`tab-image-index-${index}`}/>
                                         </picture>
                                     </div>
                                 ))
