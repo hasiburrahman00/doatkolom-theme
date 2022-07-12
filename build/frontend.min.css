@@ -1046,7 +1046,7 @@
 .doatkolom-repeater .header-container {
   position: absolute;
   right: 0;
-  height: 48px;
+  height: 49px;
   top: 0;
   z-index: 10;
 }
@@ -1219,13 +1219,13 @@ body::-webkit-scrollbar-thumb:hover {
   --tw-text-opacity: 1;
   color: rgb(0 54 70 / var(--tw-text-opacity));
 }
-.group:hover .group-hover\:text-secondary {
-  --tw-text-opacity: 1;
-  color: rgb(22 170 202 / var(--tw-text-opacity));
-}
 .group:hover .group-hover\:text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.group:hover .group-hover\:text-secondary {
+  --tw-text-opacity: 1;
+  color: rgb(22 170 202 / var(--tw-text-opacity));
 }
 .group:hover .group-hover\:underline {
   -webkit-text-decoration-line: underline;

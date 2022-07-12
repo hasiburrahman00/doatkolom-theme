@@ -59,8 +59,8 @@ export default class RegisterBlock {
 
     BlockWrapperEditor(props) {
 
-        const { Button, Modal, TabPanel } = wp.components;
-        const { BlockControls } = wp.blockEditor;
+        const { Button, Modal, TabPanel, ToolbarButton, ToolbarGroup } = wp.components;
+        const { BlockControls} = wp.blockEditor;
         const { Fragment } = wp.element;
         const [ modalVisible, setModalVisible ] = wp.element.useState(false);
         const header = props.self.controls.map( item => {
@@ -73,7 +73,9 @@ export default class RegisterBlock {
         return(
             <Fragment>
                 <BlockControls>
-                    <Button onClick={() => setModalVisible(true)} className="is-primary ml-2 mt-1.5"> <span className="dashicons dashicons-admin-generic mr-2"></span> Edit Section</Button>
+                    <ToolbarGroup>
+                        <ToolbarButton onClick={() => setModalVisible(true)}> <span className="dashicons dashicons-admin-generic mr-2"></span> Edit Section</ToolbarButton>
+                    </ToolbarGroup>
                 </BlockControls>
                 {
                     modalVisible &&
