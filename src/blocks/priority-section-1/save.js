@@ -3,7 +3,7 @@ import { ArrowRight } from './icons.js';
 export default function Save({ attributes }) {
 	return (
             <div className="banner-wrapper bg-cover bg-no-repeat">
-                    <div className="bg-white/90 py-16 md:py-24">
+                    <div className="bg-white-90 py-16 md:py-24">
                         <div className="max-w-screen-xl lg:px-0 px-5 mx-auto">
 
                             <div className="header text-center">

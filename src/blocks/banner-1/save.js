@@ -2,7 +2,7 @@ import { Megaphone, ArrowRight } from "./icons";
 export default function Save({ attributes }) {
 	return (
         <div className="banner-wrapper bg-cover bg-no-repeat">
-            <div className="bg-gradient-to-b from-primary/80 md:via-primary/60 to-white pt-24 md:pt-40 pb-8 px-5">
+            <div className="bg-gradient-to-b from-primary-80 md:via-primary-60 to-white pt-24 md:pt-40 pb-8 px-5">
                 <div className="max-w-screen-xl mx-auto">
                     <h1 className="font-primary text-white mt-0 mb-6 text-center font-normal text-4xl sm:text-5xl lg:text-6xl">{attributes.institution_name}</h1>
                     <p className="max-w-3xl text-white text-center font-secondary text-base sm:text-lg mx-auto m-0 leading-7">{attributes.description}</p>
