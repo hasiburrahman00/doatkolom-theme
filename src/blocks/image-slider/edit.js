@@ -4,24 +4,24 @@ const { useEffect } = wp.element;
 export default function Edit({ attributes, setAttributes}) {
 
     wp.element.useEffect(()=>{
-        if(!attributes.slider){
-            setAttributes({slider: [
-                doatkolom_object.blocks + 'images-slider/img/slider1.webp',
-                doatkolom_object.blocks + 'images-slider/img/slider2.webp',
-                doatkolom_object.blocks + 'images-slider/img/slider3.webp',
-                doatkolom_object.blocks + 'images-slider/img/slider4.webp',
-                doatkolom_object.blocks + 'images-slider/img/slider5.webp',
-                doatkolom_object.blocks + 'images-slider/img/slider6.webp',
+        if(!attributes.images){
+            setAttributes({images: [
+                doatkolom_object.blocks + 'image-slider/img/slider1.webp',
+                doatkolom_object.blocks + 'image-slider/img/slider2.webp',
+                doatkolom_object.blocks + 'image-slider/img/slider3.webp',
+                doatkolom_object.blocks + 'image-slider/img/slider4.webp',
+                doatkolom_object.blocks + 'image-slider/img/slider5.webp',
+                doatkolom_object.blocks + 'image-slider/img/slider6.webp',
             ]})
         }
 
     },[])
 
 	return (
-		    <div className="max-w-screen-xl lg:px-0 px-2 mx-auto py-5 md:py-6">
-                <div className="image-slider">
+		    <div className="max-w-screen-xl lg:px-0 px-2 mx-auto">
+                <div className="image-slider overflow-hidden">
                     {
-                        attributes.slider?.map((item,index)=>(
+                        attributes.images?.map((item,index)=>(
                             <div key={index}>
                                 <div>
                                     <picture>
@@ -33,19 +33,21 @@ export default function Edit({ attributes, setAttributes}) {
                     }
                 </div>
                 <div className="main-images relative">
-                    <div className="bottom-image-wrapper mt-4">
-                        {
-                            attributes.slider?.map((item,index)=>(
-                                <div key={index}>
-                                    <div className="overflow-hidde relative mx-1">
-                                        <picture>
-                                            <img className="w-full h-full object-cover block" src={item}/>
-                                        </picture>
-                                        <div className="overlay absolute top-0 left-0 w-full h-full bg-white/40"></div>
+                    <div className="h-36 overflow-hidden">
+                        <div className="bottom-image-wrapper mt-4">
+                            {
+                                attributes.images?.map((item,index)=>(
+                                    <div key={index}>
+                                        <div className="overflow-hidde relative mx-1">
+                                            <picture>
+                                                <img className="w-full h-full object-cover" src={item}/>
+                                            </picture>
+                                            <div className="overlay absolute top-0 left-0 w-full h-full bg-white/40"></div>
+                                        </div>
                                     </div>
-                                </div>
-                            ))
-                        }
+                                ))
+                            }
+                        </div>
                     </div>
 
                    <div className="hidden lg:block">

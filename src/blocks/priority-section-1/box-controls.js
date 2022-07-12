@@ -84,7 +84,6 @@ export default function BoxControls({attributes, setAttributes}) {
                                         setAttributes({button: value})
                                     } 
                                     } 
-                                    
                                  />
 
                                 <TextControl

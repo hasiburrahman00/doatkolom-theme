@@ -44,7 +44,7 @@ export default function Edit({ attributes, setAttributes}) {
     },[])
 
 	return (
-		    <div className="max-w-screen-xl lg:px-0 px-5 mx-auto py-12 md:py-20">
+		    <div className="max-w-screen-xl lg:px-8 px-5 mx-auto py-12 md:py-20">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                     <div>
                         <h2 className="m-0 font-primary text-primary font-normal text-4xl md:text-5xl mb-3">{attributes.heading}</h2>

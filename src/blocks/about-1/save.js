@@ -14,11 +14,11 @@ export default function Save({ attributes }) {
                 <div className="lg:flex-auto lg:mt-0 md:mt-16 mt-20">
                     <h2 className="font-primary text-3xl md:text-5xl text-primary font-normal mt-0 mb-10">{attributes.heading}</h2>
 
-                    <div>
+                    <div className="sm:mb-5 md:mb-7">
                         {attributes.paragraphs.map((item,index)=>(
                             <div key={index}>
                                 <h3 className="font-primary m-0  font-normal text-primary  lg:text-2xl md:text-2xl leading-9">{item.title}</h3>
-                                <p className="font-secondary font-normal text-primary text-sm lg:text-lg m-0 mt-3 mb-7 text-justify">{item.description}</p>
+                                <p className="font-secondary font-normal text-primary text-sm lg:text-lg m-0 mt-3 mb-8 text-justify">{item.description}</p>
                             </div>
                         ))}
                     </div>
@@ -28,7 +28,7 @@ export default function Save({ attributes }) {
                             attributes.achivments?.map((item,index)=>(
                                 <div className="achivement-wrapper sm:mt-7 lg:mt-11" key={index}>
                                     <picture>
-                                        <img width= "50" height= "50" className="lazyload achivment-icons" data-src={item.icon} alt="achivements" />
+                                        <img width= "50" height= "50" className="lazyload achivment-icons object-contain" data-src={item.icon} alt="achivements" />
                                     </picture>
                                     <h3 className="m-0 mt-3 font-primary font-normal text-primary text-2xl">{item.number}</h3>
                                     <p className="m-0 mt-1 font-secondary font-normal text-primary text-xl leading-4">{item.description}</p>

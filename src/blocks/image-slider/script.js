@@ -1,7 +1,7 @@
 import slick from "slick-carousel";
 const $ = window.jQuery;
 
-export default function imagesSlider($scope){
+export default function imageSlider($scope){
 
     const selectors = {
         contentSlide: '.image-slider',
@@ -30,7 +30,7 @@ export default function imagesSlider($scope){
     contentSlide.slick({
         slidesToShow    : 1,
         slidesToScroll  : 1,
-        autoplay        : true,
+        autoplay        : false,
         fade            : true,
         appendDots      : dotWrapper,
         nextArrow       : nextBtn,

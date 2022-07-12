@@ -1,4 +1,4 @@
-export default function Style({attributes, wrapper, sheet}){
+export default function Style({wrapper}){
     return `
 
         @media (min-width: 1196px) {
@@ -22,6 +22,7 @@ export default function Style({attributes, wrapper, sheet}){
                 color: transparent;
                 width: 15px;
                 height: 15px;
+                line-height: 26px;
                 background-color: #003646;
                 border: none;
                 border-radius: 50%;
@@ -162,6 +163,7 @@ export default function Style({attributes, wrapper, sheet}){
                 color: transparent;
                 width: 15px;
                 height: 15px;
+                line-height: 26px;
                 background-color: #003646;
                 border: none;
                 border-radius: 50%;

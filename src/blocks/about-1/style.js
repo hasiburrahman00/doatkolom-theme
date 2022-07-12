@@ -1,4 +1,4 @@
-export default function Style({attributes, wrapper}){
+export default function Style({wrapper}){
     return  `  
         @media (min-width: 600px){
             ${wrapper} .school-image {

@@ -42,7 +42,7 @@ export default function Save({ attributes }) {
 								
 						</div>
 
-						<div className="flex ml-3 lg:ml-8 mt-5 md:mt-0">
+						<div className="flex ml-3 lg:ml-8 mt-0">
 							{
 								attributes.teachers_image?.map((item,index)=>(
 									<div key={index} className="teachers w-10 h-10 rounded-full overflow-hidden">

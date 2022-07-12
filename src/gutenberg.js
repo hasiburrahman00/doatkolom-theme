@@ -9,4 +9,4 @@ import './blocks/about-1';
 import './blocks/priority-section-1';
 import './blocks/location-section-1';
 import './blocks/honorable-teachers-1';
-import './blocks/images-slider';
+import './blocks/image-slider';
