@@ -41,7 +41,7 @@ export default function BoxControls({attributes, setAttributes}) {
 
             <Repeater label = "Priority" addNewRequest ={addNewRequest}>
                 {attributes.priority_box.map((item,index)=>(
-                    <Repeater.Item key={index} title = "Priority Details" deleteRequest = {()=>requestDelete(index)}>
+                    <Repeater.Item key={index} title = {item.title} deleteRequest = {()=>requestDelete(index)}>
                         <TextControl
                                 className="w-full"
                                 label="Title"

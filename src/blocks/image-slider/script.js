@@ -24,7 +24,32 @@ export default function imageSlider($scope){
         arrows          : false,
         slidesToScroll  : 1,
         asNavFor        : contentSlide[0],
-        focusOnSelect   : true
+        focusOnSelect   : true,
+        responsive: [
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 576,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+              }
+            }
+        ]
     });
 
     contentSlide.slick({

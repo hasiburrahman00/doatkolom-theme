@@ -39,7 +39,7 @@ export default function Style({wrapper}){
             }
     
             ${wrapper} .testimonial {
-                top: -80px;
+                top: -18px;
             }
     
             ${wrapper} .testimonial-slides {
@@ -180,7 +180,7 @@ export default function Style({wrapper}){
             }
     
             ${wrapper} .testimonial {
-                top: -80px;
+                top: -18px;
             }
     
             ${wrapper} .testimonial-slides {

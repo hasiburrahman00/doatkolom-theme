@@ -1,5 +1,7 @@
-export default function Style({attributes, wrapper, sheet}){
+export default function Style({wrapper}){
     return `
-    
+        ${wrapper} .images{
+            max-height: 350px;
+        }
     `
 }

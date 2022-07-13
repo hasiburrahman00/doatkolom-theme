@@ -4,6 +4,18 @@ export default function Style({wrapper}){
             max-height: 630px;
          }
 
+         ${wrapper} .left-arrow{
+            top: 50% !important;
+            left: 4px !important;
+            transform: translateY(-50%);
+         }
+
+         ${wrapper} .right-arrow{
+            top: 50% !important;
+            right: 4px !important;
+            transform: translateY(-50%);
+         }
+
         ${wrapper} .bottom-image-wrapper .slick-slide.slick-center .overlay{
            background-color: transparent;
         }
