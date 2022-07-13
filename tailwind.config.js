@@ -14,8 +14,7 @@ module.exports = {
             './templates/**/*.php',
             './template-parts/**/*.php',
             './app/**/*.php',
-            './src/**/*.js',
-            './tailwind-purge-safelist.txt',
+            './src/**/*.js'
         ]
     },
 
