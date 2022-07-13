@@ -1,7 +1,7 @@
 import { NextArrow ,PrevArrow} from "./icons";
 const { useEffect } = wp.element;
 
-export default function Edit({ attributes, setAttributes, clientId, name }) {
+export default function Edit({ attributes, setAttributes}) {
 
     wp.element.useEffect(()=>{
         if( !attributes.honorable_teacher ) {
@@ -44,7 +44,7 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
     },[])
 
 	return (
-		    <div className="max-w-screen-xl lg:px-0 px-5 mx-auto py-12 md:py-20">
+		    <div className="max-w-screen-xl lg:px-8 px-5 mx-auto py-12 md:py-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                     <div>
                         <h2 className="m-0 font-primary text-primary font-normal text-4xl md:text-5xl mb-3">{attributes.heading}</h2>
@@ -54,7 +54,7 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
                                 {
                                     attributes.honorable_teacher?.map((item,index)=>(
                                         <div key={index} className = "pr-0 md:pr-10">
-                                            <div className="flex items-center">
+                                            <div className="flex items-center mb-5 lg:mb-0">
                                                 <picture className="block lg:hidden w-28 h-28 overflow-hidden">
                                                     <img className="object-cover w-full h-full" src={item.image} alt="teacher-image" />
                                                 </picture>
@@ -84,13 +84,13 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
                                         
                                 </div>
 
-                                <div className="flex ml-3 lg:ml-8 mt-5 md:mt-0">
+                                <div className="flex ml-3 lg:ml-8 mt-5 sm:mt-0">
                                     {
                                         attributes.teachers_image?.map((item,index)=>(
                                             <div key={index} className="teachers w-10 h-10 rounded-full overflow-hidden">
-                                                <a href={attributes.image_link}>
+                                                <a href="#">
                                                     <picture>
-                                                        <img className="object-cover w-full h-full" src={item} alt="teacher-image" />
+                                                        <img width="50" height="50" className="object-cover w-full h-full" src={item} alt="teacher-image" />
                                                     </picture>
                                                 </a>
                                             </div>
@@ -98,7 +98,8 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
                                     }
                                 </div>        
 
-                                <a className="inline-block ml-5 capitalize font-secondary text-primary font-regular text-lg" href={attributes.more_info.link}>{attributes.more_info.text}</a>          
+                                <a className="inline-block ml-5 capitalize font-secondary text-primary font-regular text-lg" href="#">
+                                    {attributes.more_info.text}</a>          
                             </div>    
                     </div>     
 

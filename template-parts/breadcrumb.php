@@ -9,7 +9,7 @@ if( !is_front_page() ) {
     ?>
     
     <section class="bg-cover bg-no-repeat bg-center" id="doatkolom-breadcrumb">
-        <div class="bg-primary-80 text-white py-10 sm:py-16 md:py-24">
+        <div class="bg-primary/80 text-white py-10 sm:py-16 md:py-24">
             <div class="max-w-screen-xl mx-auto px-5 space-y-3">
     
                 <div class="grid <?php echo (has_post_thumbnail() && is_single()) ? 'grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 text-left' : 'grid-cols-1 text-center' ?>">

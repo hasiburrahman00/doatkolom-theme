@@ -34,19 +34,19 @@ export default function Edit({ attributes, setAttributes}) {
                 <div className="school-image flex-auto">
                     <div className="relative z-0 before:content-[''] before:absolute before:left-0 before:top-8 before:rounded-xl before:w-full before:h-full before:bg-gray-200">
                         <picture>
-                            <img className="relative z-10 w-full h-auto left-8" src={attributes.school_image} alt="school-image"/>
+                            <img width="496" height="496" className="relative z-10 w-full h-auto left-8" src={attributes.school_image} alt="school-image"/>
                         </picture>
                     </div>
                 </div>
 
                 <div className="lg:flex-auto lg:mt-0 md:mt-16 mt-20">
-                    <h2 className="font-primary text-3xl md:text-5xl text-primary font-normal mt-0">{attributes.heading}</h2>
+                    <h2 className="font-primary text-3xl md:text-5xl text-primary font-normal m-0 mb-8">{attributes.heading}</h2>
 
-                    <div>
+                    <div className="sm:mb-5 md:mb-7">
                         {attributes.paragraphs.map((item,index)=>(
                             <div key={index}>
                                 <h3 className="font-primary m-0 font-normal text-primary  lg:text-2xl md:text-2xl leading-9">{item.title}</h3>
-                                <p className="font-secondary font-normal text-primary text-sm lg:text-lg m-0 mt-3 text-justify">{item.description}</p>
+                                <p className="font-secondary font-normal text-primary text-sm lg:text-lg m-0 mt-3 mb-7">{item.description}</p>
                             </div>
                         ))}
                     </div>
@@ -54,9 +54,9 @@ export default function Edit({ attributes, setAttributes}) {
                     <div className="md:flex md:flex-wrap">
                         {
                             attributes.achivments?.map((item,index)=>(
-                                <div className="achivement-wrapper sm:mt-5 md:mt-7" key={index}>
+                                <div className="achivement-wrapper lg:mt-3 mt-7" key={index}>
                                     <picture>
-                                        <img className="achivment-icons object-cover" src= {item.icon} alt="achivements" />
+                                        <img width="50" height="50" className="achivment-icons object-contain" src= {item.icon} alt="achivements" />
                                     </picture>
                                     <h3 className="m-0 mt-3 font-primary font-normal text-primary text-2xl">{item.number}</h3>
                                     <p className="m-0 mt-1 font-secondary font-normal text-primary text-xl leading-4">{item.description}</p>

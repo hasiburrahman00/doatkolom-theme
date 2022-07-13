@@ -1,0 +1,11 @@
+{
+  "name": "doatkolom/image-slider",
+  "title": "Doatkolom Image Slider",
+  "description": "For image slider",
+  "keywords": ["slider", "images", "doatkolom", "image slider"],
+  "attributes": {
+    "images": {
+      "type": "array"
+    }
+  }
+}
