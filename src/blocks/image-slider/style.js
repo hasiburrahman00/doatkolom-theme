@@ -16,8 +16,8 @@ export default function Style({wrapper}){
             transform: translateY(-50%);
          }
 
-        ${wrapper} .bottom-image-wrapper .slick-slide.slick-center .overlay{
-           background-color: transparent;
+        ${wrapper} .bottom-image-wrapper .slick-slide.slick-center img{
+           opacity: 1;
         }
 
         ${wrapper} .slick-prev-btn {

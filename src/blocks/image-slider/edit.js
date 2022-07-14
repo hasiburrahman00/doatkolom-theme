@@ -50,11 +50,10 @@ export default function Edit({ attributes, setAttributes}) {
                             {
                                 attributes.images?.map((item,index)=>(
                                     <div key={index}>
-                                        <div className="overflow-hidde relative mx-1">
+                                        <div className="overflow-hidden relative mx-1">
                                             <picture>
-                                                <img className="object-cover" width="248" height="134" src={item}/>
+                                                <img className="object-cover opacity-50 transition ease-linear duration-300" width="248" height="134" src={item}/>
                                             </picture>
-                                            <div className="overlay absolute top-0 left-0 w-full h-full bg-white/40"></div>
                                         </div>
                                     </div>
                                 ))

@@ -7,15 +7,13 @@ export default function GoogleMap (props){
     const parser = new DOMParser();
 
     const doc = parser.parseFromString(props.embed, "text/html");
-    
-    
+
     const Component = cloneElement(Embed,{
         width: "100%",
         height: "430",
         style: {border:"0"},
         className: "block",
-        src: doc.querySelector("iframe").getAttribute("src")
-
+        src: doc.querySelector("iframe")?.getAttribute("src")
     })
 
     return Component

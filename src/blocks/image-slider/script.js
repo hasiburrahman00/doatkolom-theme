@@ -55,7 +55,7 @@ export default function imageSlider($scope){
     contentSlide.slick({
         slidesToShow    : 1,
         slidesToScroll  : 1,
-        autoplay        : false,
+        autoplay        : true,
         fade            : true,
         appendDots      : dotWrapper,
         nextArrow       : nextBtn,
