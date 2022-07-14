@@ -34,7 +34,7 @@ export default function DescriptionControls({attributes, setAttributes}) {
             
             <Repeater label = "Paragraphs" addNewRequest ={addNewRequest}>
                 {attributes.paragraphs.map((item,index)=>(
-                    <Repeater.Item key={index} title = "About Title" deleteRequest = {()=>requestDelete(index)}>
+                    <Repeater.Item key={index} title = {item.title} deleteRequest = {()=>requestDelete(index)}>
                         <TextControl
                                 className="w-full"
                                 label="Title"
