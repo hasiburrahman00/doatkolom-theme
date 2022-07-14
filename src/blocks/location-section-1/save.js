@@ -28,12 +28,12 @@ export default function Save({ attributes }) {
                 {
                     attributes.images?.map((item,index)=>(
                         <div key={index}>
-                                <div className="images rounded-md overflow-hidden">
-                                    <picture>
-                                        <img className="block" width="630" height="350" src={item} alt="location-image" />
-                                    </picture>
-                                </div>
+                            <div className="images rounded-md overflow-hidden">
+                                <picture>
+                                    <img className="block object-cover lazyload" width="630" height="350" data-src={item} alt="location-image" />
+                                </picture>
                             </div>
+                        </div>
                     ))
                 }
             </div>
