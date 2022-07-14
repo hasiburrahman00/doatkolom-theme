@@ -1,4 +1,3 @@
-const { TextControl, TextareaControl } = wp.components
 import ImagePicker from "../../components/image-picker"
 
 export default function TeachersControls({attributes, setAttributes}) {

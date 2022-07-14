@@ -1,4 +1,4 @@
-export default function Style({attributes, wrapper}){
+export default function Style({wrapper}){
     return  `  
         @media (min-width: 600px){
             ${wrapper} .school-image {
@@ -12,7 +12,7 @@ export default function Style({attributes, wrapper}){
             }
            
             ${wrapper} .achivement-wrapper:first-child {
-                padding-right: 27px;
+               
                 position: relative;
             }
             
@@ -28,14 +28,6 @@ export default function Style({attributes, wrapper}){
                 min-width: 280px;
                 border-radius: 10px;
             }
-
-            ${wrapper} .achivement-wrapper:first-child {
-                padding-bottom: 28px;
-            }
-
-            ${wrapper} .achivement-wrapper:last-child {
-                padding-top: 28px;
-            }
             
         }
     
@@ -47,8 +39,5 @@ export default function Style({attributes, wrapper}){
             width: 50px !important;
             height: 50px !important;
         }
-        
     `
 }
-
-

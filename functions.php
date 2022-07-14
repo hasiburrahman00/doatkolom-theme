@@ -22,30 +22,6 @@ define( 'DOATKOLOM_FONT', DOATKOLOM_THEME_URI . '/assets/fonts/' );
 define( 'DOATKOLOM_VERSION', '1.0.0' );
 define( 'DOATKOLOM_MINWP_VERSION', '5.0' );
 
-define( 'CSS_VARIABLES', "
-    :root {
-        --doatkolom-primary-color: #003646;
-        --doatkolom-primary-color-80: #003646cc;
-        --doatkolom-primary-color-60: #00364699;
-        --doatkolom-primary-color-20: #00364633;
-        --doatkolom-primary-color-10: #0036461a;
-        --doatkolom-secondary-color: #16AACA;
-        --doatkolom-white-color: #ffffff;
-        --doatkolom-white-color-90: #ffffffe6;
-        --doatkolom-gray-200-color: #e5e7eb;
-        --doatkolom-gray-300-color: #d1d5db;
-        --doatkolom-gray-400-color: #9ca3af;
-        --doatkolom-slate-300-color: #cbd5e1;
-        --doatkolom-slate-100-color: #f1f5f9;
-        --doatkolom-teal-100-color: #E7F4F6;
-        --doatkolom-blue-600-color: #2563eb;
-        --doatkolom-green-600-color: #16a34a;
-        --doatkolom-red-600-color: #dc2626;
-        --doatkolom-paste-green-color: #035769;
-        --doatkolom-paste-green-400-color: #C1F1FF;
-    }
-");
-
 /**
  * 
  * 
@@ -81,4 +57,3 @@ remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 require get_stylesheet_directory() . '/includes/theme-support.php';
 require get_stylesheet_directory() . '/includes/scripts-and-styles.php';
 require get_stylesheet_directory() . '/includes/block-scripts.php';
-require get_stylesheet_directory() . '/includes/admin-menu.php';

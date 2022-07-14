@@ -22,10 +22,10 @@ export default function Edit({ attributes, setAttributes }) {
     },[])
 
 	return (
-		<div className="py-16 md:py-28 bg-paste-green px-5">
+		<div className="py-16 md:py-28 bg-[#035769] px-5">
             <div className="max-w-screen-xl mx-auto">
                 <div>
-                    <h2 className="font-primary text-3xl md:text-5xl font-normal m-0 pb-10 md:p-0 text-paste-green-400 max-w-[662px] md:leading-14">{attributes.heading}</h2>
+                    <h2 className="font-primary text-3xl md:text-5xl font-normal m-0 pb-10 md:p-0 text-[#C1F1FF] max-w-[662px] md:leading-14">{attributes.heading}</h2>
                 </div>
                 <div className="grid md:grid-cols-2 gap-10">
                     <div>

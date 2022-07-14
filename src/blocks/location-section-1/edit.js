@@ -4,17 +4,13 @@ import GoogleMap from "../../components/google-map";
 export default function Edit({ attributes, setAttributes}) {
     
     wp.element.useEffect(()=>{
-        if( !attributes.background ) {
-            setAttributes({background: [
+        if( !attributes.images ) {
+            setAttributes({images: [
                 doatkolom_object.blocks + 'location-section-1/img/locationone.webp',
                 doatkolom_object.blocks + 'location-section-1/img/locationtwo.webp'
             ] })
         }
     },[])
-
-
-
-
 
 	return (
         <div className="max-w-screen-xl lg:px-0 px-5 mx-auto py-20">
@@ -27,33 +23,30 @@ export default function Edit({ attributes, setAttributes}) {
                     <p className="m-0 mt-3 text-primary font-normal font-secondary text-lg">{attributes.location}</p>                 
                     <p className="m-0 text-primary font-normal font-secondary text-lg">{attributes.city}</p>
 
-                    <a href={attributes.map_link.url} className="flex items-center bg-primary rounded-md justify-center mt-8 no-underline ">
-
+                    <a href= "#" className="flex items-center bg-primary rounded-md justify-center mt-8 no-underline text-white hover:text-white">
                         <LocationArrow/>
-
                         <span className="text-white font-medium font-secondary px-2 py-3">{attributes.map_link.text}</span>
                     </a>                 
                 </div>
-
                 <div className="col-span-2 rounded-md overflow-hidden shadow-xl border-8 border-solid border-white mt-10 md:mt-11 lg:mt-0">
-                    
                     <GoogleMap embed={attributes.map_iframe_link}/>
-                    
                 </div>
             </div>
        
-       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-14">
-           {
-               attributes.background?.map((item,index)=>(
-                   <div key={index} className="rounded-md overflow-hidden">
-                        <picture>
-                            <img className="block" src={item} alt="location-image" />
-                        </picture>
-                    </div>
-               ))
-           }
-       </div>
-    </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-14">
+                {
+                    attributes.images?.map((item,index)=>(
+                        <div key={index}>
+                                <div className="images rounded-md overflow-hidden">
+                                    <picture>
+                                        <img className="block" width="630" height="350" src={item} alt="location-image" />
+                                    </picture>
+                                </div>
+                            </div>
+                    ))
+                }
+            </div>
+        </div>
     
 	);
 }

@@ -22,11 +22,6 @@
       "type": "array"
     },
 
-    "image_link": {
-      "type": "string",
-      "default": "#"
-    },
-
     "more_info": {
       "type": "object",
       "default": {
