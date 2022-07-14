@@ -1,6 +1,6 @@
 export default function Save({ attributes }) {
 	return (
-        <div className="max-w-screen-xl lg:px-0 px-5 py-5 mx-auto md:py-32">
+        <div className="max-w-screen-xl px-5 py-14 mx-auto md:py-28">
             <div className="lg:flex lg:space-x-24 lg:items-start">
                 <div className="school-image flex-auto">
                     <div className="relative z-0 before:content-[''] before:absolute before:left-0 before:top-8 before:rounded-xl before:w-full before:h-full before:bg-gray-200">
