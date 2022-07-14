@@ -1,5 +1,5 @@
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 /**
  * 
@@ -13,9 +13,9 @@ export default function ReactTemplateMount(Component, element = 'root') {
     const domElement = document.getElementById(element);
     if( domElement ) {
       createRoot(domElement).render(
-        <BrowserRouter>
+        <HashRouter>
           <Component/>
-        </BrowserRouter>
+        </HashRouter>
       );
     }
   })
