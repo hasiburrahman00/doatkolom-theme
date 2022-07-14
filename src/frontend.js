@@ -5,6 +5,7 @@ import honorableTeachers1 from './blocks/honorable-teachers-1/script';
 import timelineTab1 from './blocks/timeline-tab-1/script';
 import imageSlider from './blocks/image-slider/script';
 import InfiniteScroll from './modules/infinite-scroll';
+import labSection1 from './blocks/lab-section-1/script';
 
 
 jQuery(function() {
@@ -48,6 +49,7 @@ jQuery(function() {
             'doatkolom/honorable-teachers-1' : honorableTeachers1,
             'doatkolom/image-slider' : imageSlider,
             'doatkolom/timeline-tab-1': timelineTab1,
+            'doatkolom/lab-section-1': labSection1,
         }
 
         // connect script with the gutenberg block

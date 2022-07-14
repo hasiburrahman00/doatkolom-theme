@@ -10,3 +10,4 @@ import './blocks/priority-section-1';
 import './blocks/location-section-1';
 import './blocks/honorable-teachers-1';
 import './blocks/image-slider';
+import './blocks/lab-section-1';
