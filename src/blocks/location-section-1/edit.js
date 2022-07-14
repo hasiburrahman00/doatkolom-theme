@@ -39,7 +39,7 @@ export default function Edit({ attributes, setAttributes}) {
                         <div key={index}>
                                 <div className="images rounded-md overflow-hidden">
                                     <picture>
-                                        <img className="block" width="630" height="350" src={item} alt="location-image" />
+                                        <img className="block object-cover" width="630" height="350" src={item} alt="location-image" />
                                     </picture>
                                 </div>
                             </div>
