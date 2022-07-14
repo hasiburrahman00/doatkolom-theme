@@ -2,7 +2,7 @@ import { NextArrow ,PrevArrow} from "./icons";
 
 export default function Save({ attributes }) {
 	return (
-		<div className="max-w-screen-xl lg:px-0 px-2 mx-auto">
+		<div className="max-w-screen-xl px-5 py-8 mx-auto">
             <div className="relative h-[172px_!important] md:h-[630px_!important] overflow-hidden">
                 <div className="image-slider relative">
                     {

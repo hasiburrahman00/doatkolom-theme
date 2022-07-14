@@ -18,7 +18,7 @@ export default function Edit({ attributes, setAttributes}) {
     },[])
 
 	return (
-		    <div className="max-w-screen-xl lg:px-0 px-2 mx-auto">
+		    <div className="max-w-screen-xl px-5 mx-auto py-8">
                 <div className="relative h-[172px_!important] md:h-[630px_!important] overflow-hidden">
                     <div className="image-slider relative">
                         {

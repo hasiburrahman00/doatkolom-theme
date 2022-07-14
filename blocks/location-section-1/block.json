@@ -2,7 +2,7 @@
   "name": "doatkolom/location-section-1",
   "title": "Doatkolom Location Section 1",
   "description": "For location section 1",
-  "keywords": ["location", "location page", "doatkolom", "location section"],
+  "keywords": ["location", "location", "doatkolom", "location section", "map", "google", "google map", "address"],
   "attributes": {
     "heading": {
       "type": "string",
