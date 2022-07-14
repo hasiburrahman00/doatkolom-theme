@@ -814,18 +814,6 @@
 .opacity-50 {
   opacity: 0.5;
 }
-.opacity-20 {
-  opacity: 0.2;
-}
-.opacity-30 {
-  opacity: 0.3;
-}
-.opacity-40 {
-  opacity: 0.4;
-}
-.opacity-60 {
-  opacity: 0.6;
-}
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);

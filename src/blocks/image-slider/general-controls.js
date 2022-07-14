@@ -30,7 +30,7 @@ export default function GeneralControls({attributes, setAttributes}) {
         <div className="space-y-5">
             <Repeater label="Image Slider" addNewRequest={addNewRequest}>
                 {attributes.images.map((item,index)=>(
-                    <Repeater.Item key={index} title="images" deleteRequest={()=>requestDelete(index)}>
+                    <Repeater.Item key={index} title={`${index + 1}# Image`} deleteRequest={()=>requestDelete(index)}>
                         <ImagePicker
                             label="Select Image"
                             value={item}
