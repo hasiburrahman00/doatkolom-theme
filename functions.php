@@ -9,6 +9,7 @@ use DoatKolom\AutoLoader;
  * 
  * @since 1.0.0
  */ 
+
 define( 'DOATKOLOM_HOME_URL', home_url('/'));
 define( 'DOATKOLOM_SITE_URL', get_site_url() . '/' );
 define( 'DOATKOLOM_THEME_URI', get_template_directory_uri() );
