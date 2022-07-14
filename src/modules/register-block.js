@@ -59,7 +59,7 @@ export default class RegisterBlock {
 
     BlockWrapperEditor(props) {
 
-        const { Button, Modal, TabPanel, ToolbarButton, ToolbarGroup } = wp.components;
+        const { Modal, TabPanel, ToolbarButton, ToolbarGroup } = wp.components;
         const { BlockControls} = wp.blockEditor;
         const { Fragment } = wp.element;
         const [ modalVisible, setModalVisible ] = wp.element.useState(false);
@@ -142,15 +142,17 @@ export default class RegisterBlock {
                 setAttributes( { _doatkolom_block_id: clientId } );
             }
 
-            const device = wp.data.select('core/edit-post').__experimentalGetPreviewDeviceType();
-            if( device === 'Desktop' ) {
-                const $scope = jQuery(`#block-${clientId}`).find('.doatkolom-block-wrap').first();
-                jQuery(window).trigger(self.name, [$scope]);
-            } else {
-                const frame = jQuery('iframe[name="editor-canvas"]').contents();
-                const $scope = frame.find(`#block-${clientId}`).find('.doatkolom-block-wrap').first();
-                jQuery(window).trigger(self.name, [$scope]);
-            }
+            setTimeout(() => {
+                const device = wp.data.select('core/edit-post').__experimentalGetPreviewDeviceType();
+                if( device === 'Desktop' ) {
+                    const $scope = jQuery(`#block-${clientId}`).find('.doatkolom-block-wrap').first();
+                    jQuery(window).trigger(self.name, [$scope]);
+                } else {
+                    const frame = jQuery('iframe[name="editor-canvas"]').contents();
+                    const $scope = frame.find(`#block-${clientId}`).find('.doatkolom-block-wrap').first();
+                    jQuery(window).trigger(self.name, [$scope]);
+                }
+            }, 500)
 
         }, [] );
 
