@@ -41,7 +41,7 @@
         ]
     );
 ?>
-<sidebar id="doatkolom-quick-menu" class="hidden bg-white rounded-md border border-solid border-primary-10 shadow-xl" style="width: 600px;">
+<sidebar id="doatkolom-quick-menu" class="hidden bg-white rounded-md border border-solid border-primary/10 shadow-xl" style="width: 600px;">
     <div class="hidden lg:block px-5 py-10">
         <ul class="grid grid-cols-3 gap-10 list-none">
             <?php foreach( $data as $item ): ?>

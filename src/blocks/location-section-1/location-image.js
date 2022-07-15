@@ -1,53 +1,25 @@
 import ImagePicker from "../../components/image-picker"
-import Repeater from "../../components/repeater"
-
 export default function LocationImageControls({attributes, setAttributes}) {
-
-    const addNewRequest = ()=>{
-        setAttributes({background: [
-            ...attributes.background,
-            {
-                image: doatkolom_object.blocks + 'location-section-1/img/locationone.webp',
-            }
-        ]})
-    }
-
-    const requestDelete = (index)=>{
-       attributes.background.splice(index,1)
-        setAttributes({background : [
-            ...attributes.background
-        ]})
-    }
-
-
-    const handleImageUpload = (val,index,bg)=>{
-        attributes.background[index][bg] = val
+    const handleImageUpload = (val,index)=>{
+        attributes.images[index]= val
         setAttributes({
-            background: [
-                ...attributes.background
+            images: [
+                ...attributes.images
             ]
         })
     }
 
     return (
         <div className="space-y-5">
-
-            <Repeater label = "Images" addNewRequest = {addNewRequest}>
-                {
-                    attributes.background.map((item,index)=>(
-                        <Repeater.Item key={index} title = "Location Images" deleteRequest = {()=>requestDelete(index)}>
-
-                             <ImagePicker
-                                label="Select Image"
-                                value={item.image}
-                                onChange={ ( url ) => handleImageUpload(url,index,'image') }
-                            />
-
-                        </Repeater.Item>
-                    ))
-
-                }
-            </Repeater>
+           {
+             attributes.images.map((item,index)=>(
+                <ImagePicker
+                   label="Select Image"
+                   value={item}
+                   onChange={ ( url ) => handleImageUpload(url,index) }
+               />
+            ))
+           }
         </div>
     )
 }

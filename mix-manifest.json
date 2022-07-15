@@ -1,7 +1,6 @@
 {
     "/build/gutenberg.min.js": "/build/gutenberg.min.js",
     "/build/admin.min.js": "/build/admin.min.js",
-    "/build/home.min.js": "/build/home.min.js",
     "/build/teachers.min.js": "/build/teachers.min.js",
     "/build/frontend.min.js": "/build/frontend.min.js",
     "/build/frontend.min.css": "/build/frontend.min.css"

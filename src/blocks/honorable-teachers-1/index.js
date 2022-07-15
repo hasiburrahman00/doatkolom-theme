@@ -7,6 +7,7 @@ import GeneralControls from './general-controls';
 import TeacherDetailsControls from './teachersdetails-controls'
 import TeacherImagesControls from './teacherimages-controls';
 import TeachersControls from './teachers-controls';
+import LinkControls from './link-controls';
 
 new RegisterBlock(config).setup({
     edit: Edit,
@@ -31,6 +32,11 @@ new RegisterBlock(config).setup({
         {
             title: 'Image',
             component: TeacherImagesControls
+        },
+
+        {
+            title: 'Link',
+            component: LinkControls
         }
     ]
 })

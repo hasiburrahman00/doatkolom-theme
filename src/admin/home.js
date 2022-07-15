@@ -24,7 +24,7 @@ const stateHandler = (state, action) => {
     return state
 }
 
-export default function Information() {
+export default function Home() {
 
     const [ attribute, setAttribute ] = useReducer(stateHandler, initialState)
 

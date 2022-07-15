@@ -14,6 +14,7 @@ export default class Helper  {
         window.doatkolomGutenbergInit = callback => {
             jQuery(function($){
                 callback( $ );
+                if( window.wp && window.wp.element ) return;
                 $('.doatkolom-block-wrap').each((index, item) => {
                     const $item = $(item);
                     const type  = $item.data('type');
