@@ -1,9 +1,13 @@
 import { useReducer } from "react"
 import MenuButton from "./components/Button";
+import ElelmentBox from "./components/ElelmentBox";
+import ImageUpload from "./components/ImageUpload";
+import InputBox from "./components/InputBox";
 import SectionTip from "./components/SectionTip";
 
 const initialState = {
     logo: doatkolom_object.img + 'doatkolom-logo.webp',
+    uploaded_img: doatkolom_object.img + 'doatkolom-logo.webp',
     site_name: "Savar Girls High School"
 }
 
@@ -45,7 +49,85 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+
             <SectionTip title="Site Settings"/>
+            
+            <ElelmentBox>
+                <div className="flex justify-between flex-wrap">
+                    <div className="w-[431px] flex justify-between">
+                        <div className="w-[151px]">
+                            <ImageUpload/>
+                        </div>
+                        <div className="w-[151px]">
+                            <ImageUpload/>
+                        </div>
+                    </div>
+                    <div className="w-[424px]">
+                        <InputBox title="Site Title"/>
+                        <InputBox title="Site Description"/>
+                        <InputBox title="Site Keywords"/>
+                    </div>
+                </div>
+            </ElelmentBox>
+
+            <SectionTip title="Information"/>
+            
+            <ElelmentBox>
+                <div className="flex justify-between flex-wrap">
+                    <div className="w-[470px]">
+                        <InputBox title="Institution Type"/>
+                    </div>
+                    <div className="w-[470px]">
+                        <InputBox title="Institution Code"/>
+                    </div>
+                    <div className="w-[470px]">
+                        <InputBox title="Official Email Address"/>
+                    </div>
+                    <div className="w-[470px]">
+                        <InputBox title="EIIN Code"/>
+                    </div>
+                    <div className="w-[470px]">
+                        <InputBox title="Official Phone Number"/>
+                    </div>
+                    <div className="w-[470px]">
+                        <InputBox title="Full Address"/>
+                    </div>
+                </div>
+            </ElelmentBox>
+
+            <SectionTip title="Quick Menu URL"/>
+
+            <ElelmentBox>
+                <div className="flex justify-between flex-wrap">
+                    <div className="w-[470px]">
+                        <InputBox title="Notice Board"/>
+                    </div>
+                    <div className="w-[470px]">
+                        <InputBox title="Upcoming Events"/>
+                    </div>
+                    <div className="w-[470px]">
+                        <InputBox title="Exam Result"/>
+                    </div>
+                    <div className="w-[470px]">
+                        <InputBox title="Syllabus"/>
+                    </div>
+                    <div className="w-[470px]">
+                        <InputBox title="Class Routine"/>
+                    </div>
+                    <div className="w-[470px]">
+                        <InputBox title="Exam Routine"/>
+                    </div>
+                    <div className="w-[470px]">
+                        <InputBox title="Photo Gallery"/>
+                    </div>
+                    <div className="w-[470px]">
+                        <InputBox title="Applicationn/Support"/>
+                    </div>
+                    <div className="w-[470px]">
+                        <InputBox title="Our Teachers"/>
+                    </div>
+                </div>
+            </ElelmentBox>
         </div>
     )
 }

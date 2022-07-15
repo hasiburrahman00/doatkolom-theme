@@ -3,7 +3,7 @@ import { Button } from "@mui/material";
 
 const MenuButton = (props) => {
   return (
-    <Button variant={props.variant}>{props.text}</Button>
+    <Button className='bg-[#DFE9F1]' variant={props.variant}>{props.text}</Button>
   )
 }
 
