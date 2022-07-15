@@ -45,6 +45,8 @@ define( 'CSS_VARIABLES', "
         --doatkolom-red-600-color: #dc2626;
         --doatkolom-paste-green-color: #035769;
         --doatkolom-paste-green-400-color: #C1F1FF;
+        --doatkolom-paste-blue-400-color: #3EB9D3;
+        --doatkolom-paste-blue-100-color: #F8FEFF;
     }
 ");
 

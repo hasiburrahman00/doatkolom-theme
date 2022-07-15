@@ -41,6 +41,8 @@ module.exports = {
             'red-600'       : "var(--doatkolom-red-600-color)",
             'paste-green'   : "var(--doatkolom-paste-green-color)",
             'paste-green-400': "var(--doatkolom-paste-green-400-color)",
+            'paste-blue-400': "var(--doatkolom-paste-blue-400-color)",
+            'paste-blue-100': "var(--doatkolom-paste-blue-100-color)",
         },
 
         fontFamily: {

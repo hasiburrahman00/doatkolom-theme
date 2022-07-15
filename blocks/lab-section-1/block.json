@@ -1,0 +1,57 @@
+{
+  "name": "doatkolom/lab-section-1",
+  "title": "Doatkolom Lab Section 1",
+  "description": "For lab section 1",
+  "keywords": ["lab part", "lab", "doatkolom", "lab section"],
+  "attributes": {
+    "card": {
+      "type": "array",
+      "default": [
+        {
+          "title": "library",
+          "firstnumber": {
+            "number": "2,000 +",
+            "text": "Books are available",
+            "visible": true
+          },
+          "lastnumber": {
+            "number": "100 +",
+            "text": "Nobels",
+            "visible": true
+          },
+          "description": "The school was established on a small scale on 19th April, 1959 at the initiative of some.The school was established on a small scale on 19th April, 1959 at the initiative of some. The school was established on a small scale on 19th April, 1959 at the initiative of some."
+        },
+
+        {
+          "title": "Computer lab",
+          "firstnumber": {
+            "number": "200 +",
+            "text": "Computer available",
+            "visible": true
+          },
+          "lastnumber": {
+            "number": "400 +",
+            "text": "Laptops",
+            "visible": true
+          },
+          "description": "The school was established on a small scale on 19th April, 1959 at the initiative of some.The school was established on a small scale on 19th April, 1959 at the initiative of some. The school was established on a small scale on 19th April, 1959 at the initiative of some."
+        },
+
+        {
+          "title": "Science lab",
+          "firstnumber": {
+            "number": "200 +",
+            "text": "Chemical available",
+            "visible": true
+          },
+          "lastnumber": {
+            "number": "100 +",
+            "text": "Research there",
+            "visible": true
+          },
+          "description": "The school was established on a small scale on 19th April, 1959 at the initiative of some.The school was established on a small scale on 19th April, 1959 at the initiative of some. The school was established on a small scale on 19th April, 1959 at the initiative of some."
+        }
+      ]
+    }
+  }
+}
