@@ -1,9 +1,23 @@
 import React from 'react'
+import { styled } from '@mui/material/styles';
 import { Button } from "@mui/material";
 
+
+
 const MenuButton = (props) => {
+
+  const ColorButton = styled(Button)(({ theme }) => ({
+    color: theme.palette.getContrastText(props.bg),
+    backgroundColor: props.bg,
+    boxShadow: '0 0 0',
+    color: props.textcolor,
+    '&:hover': {
+      backgroundColor: props.bg,
+    },
+  }));
+
   return (
-    <Button className='bg-[#DFE9F1]' variant={props.variant}>{props.text}</Button>
+    <ColorButton variant={props.variant}>{props.text}</ColorButton>
   )
 }
 

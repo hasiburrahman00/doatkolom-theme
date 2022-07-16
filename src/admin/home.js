@@ -7,7 +7,7 @@ import SectionTip from "./components/SectionTip";
 
 const initialState = {
     logo: doatkolom_object.img + 'doatkolom-logo.webp',
-    uploaded_img: doatkolom_object.img + 'doatkolom-logo.webp',
+    uploaded_img: doatkolom_object.img + 'logo.webp',
     site_name: "Savar Girls High School"
 }
 
@@ -41,10 +41,10 @@ export default function Home() {
                     </div>
                     <div className="w-4/6 flex justify-end items-center">
                         <div>
-                            <MenuButton variant="outlined" text="Get Support" />
+                            <MenuButton variant="contained" text="Get Support" bg="#DFE9F1" textcolor="#0E1F36" />
                         </div>
                         <div className="ml-5">
-                            <MenuButton variant="contained" text="Get Support"/>
+                            <MenuButton variant="contained" text="Get Support" bg="#1879C7" textcolor="#fff"/>
                         </div>
                     </div>
                 </div>
@@ -56,10 +56,10 @@ export default function Home() {
                 <div className="flex justify-between flex-wrap">
                     <div className="w-[431px] flex justify-between">
                         <div className="w-[151px]">
-                            <ImageUpload/>
+                            <ImageUpload img={attribute.uploaded_img}/>
                         </div>
                         <div className="w-[151px]">
-                            <ImageUpload/>
+                            <ImageUpload img={attribute.uploaded_img}/>
                         </div>
                     </div>
                     <div className="w-[424px]">
