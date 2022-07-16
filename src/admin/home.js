@@ -1,4 +1,5 @@
 import { useReducer } from "react"
+import { Link } from 'react-router-dom';
 import MenuButton from "./components/Button";
 import ElelmentBox from "./components/ElelmentBox";
 import ImageUpload from "./components/ImageUpload";
@@ -40,6 +41,9 @@ export default function Home() {
                         <img src={attribute.logo}/>
                     </div>
                     <div className="w-4/6 flex justify-end items-center">
+                        <Link className="text-primary inline-block mr-7 text-lg font-medium" to="/">Home</Link>
+                        <Link className="text-primary inline-block mr-7 text-lg font-medium" to="/gallery">Photo Gallery</Link>
+                        <Link className="text-primary inline-block mr-7 text-lg font-medium" to="/gallery">Developer Option</Link>
                         <div>
                             <MenuButton variant="contained" text="Get Support" bg="#DFE9F1" textcolor="#0E1F36" />
                         </div>
