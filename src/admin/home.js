@@ -58,11 +58,13 @@ export default function Home() {
             
             <ElelmentBox>
                 <div className="flex justify-between flex-wrap">
-                    <div className="w-[431px] flex justify-between">
-                        <div className="w-[151px]">
-                            <ImageUpload img={attribute.uploaded_img}/>
+                    <div className="w-[500px] flex justify-between">
+                        <div className="w-[191px]">
+                            <div className="pl-12">
+                                <ImageUpload img={attribute.uploaded_img}/>
+                            </div>
                         </div>
-                        <div className="w-[151px]">
+                        <div className="w-[191px]">
                             <ImageUpload img={attribute.uploaded_img}/>
                         </div>
                     </div>

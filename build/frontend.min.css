@@ -362,6 +362,12 @@
 .w-1\/2 {
   width: 50%;
 }
+.w-\[500px\] {
+  width: 500px;
+}
+.w-\[191px\] {
+  width: 191px;
+}
 .max-w-screen-lg {
   max-width: 1024px;
 }
@@ -792,6 +798,12 @@
 }
 .pb-10 {
   padding-bottom: 2.5rem;
+}
+.pr-12 {
+  padding-right: 3rem;
+}
+.pl-12 {
+  padding-left: 3rem;
 }
 .text-left {
   text-align: left;
