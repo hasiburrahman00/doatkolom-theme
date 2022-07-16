@@ -1,6 +1,5 @@
 const $ = jQuery;
 import Helper from "../utils/Helper";
-
 $.fn.extend({
     /**
      * 
@@ -65,6 +64,10 @@ $.fn.extend({
 
     dropdownValidate() {
         return this;
+    },
+
+    toggleHamburger() {
+        this.toggleClass('bg-transparent lg:bg-slate-200 bg-primary text-white');
     }
 
 })
@@ -107,13 +110,15 @@ export default class Header extends Helper{
     beforeBreakpoint() {
         
         const self = this;
+
         const handler = {
             mobileMenuToggle() {
-                $(this).toggleClass('fixed right-5 top-5 z-10 border border-solid border-white')
+   
+                $(this).toggleHamburger();
 
-                $(self.settings.navmenu)
-                .addClass('fixed hidden top-0 left-0 w-full h-screen bg-primary overflow-y-scroll')
-                .slideToggle()
+                // $(self.settings.navmenu)
+                // .addClass('fixed hidden top-0 left-0 w-full h-screen bg-primary overflow-y-scroll')
+                // .slideToggle()
             },
 
             in() {
@@ -133,7 +138,7 @@ export default class Header extends Helper{
             },
         }
 
-        $(self.settings.dropdownToggle).parent().hover( handler.in, handler.out )
+        // $(self.settings.dropdownToggle).parent().hover( handler.in, handler.out )
         $(self.settings.hamburger).on('click', handler.mobileMenuToggle)
     }
     /**
@@ -164,6 +169,8 @@ export default class Header extends Helper{
             },
 
             quickMenuToggle() {
+
+                $(this).toggleHamburger();
                 $(self.settings.quickMenu)
                 .quickMenuPosition(this) // this keyword refers to the hamburger button
                 .toggleClass('hidden');

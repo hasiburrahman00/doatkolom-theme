@@ -13,11 +13,7 @@ add_action( 'wp_enqueue_scripts', function () {
 	 * 
 	 */
 	if( is_page_template('templates/doatkolom-app.php') ) {		
-		wp_enqueue_script('doatkolom-app', 'http://103.110.113.196/doatkolom/wp-content/themes/institution-website/build/home.min.js', ['jquery'], DOATKOLOM_VERSION, false);
-	}
-
-	if( is_page_template('templates/doatkolom-teachers.php') ) {		
-		wp_enqueue_script('doatkolom-teacher', 'http://103.110.113.196/doatkolom/wp-content/themes/institution-website/build/teachers.min.js', ['jquery'], DOATKOLOM_VERSION, false);
+		wp_enqueue_script('doatkolom-app', DOATKOLOM_BUILD . 'app.min.js', ['jquery'], DOATKOLOM_VERSION, false);
 	}
 
 	/**
