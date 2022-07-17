@@ -37,7 +37,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className="m-5">
+        <div className="my-5">
             <div className="bg-white py-3 px-6">
                 <div className="flex">
                     <div className="w-2/6">
