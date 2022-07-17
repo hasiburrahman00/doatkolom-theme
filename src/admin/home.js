@@ -1,15 +1,15 @@
+import { set } from "lodash";
 import { useReducer } from "react"
-import { Link } from 'react-router-dom';
 import MenuButton from "./components/Button";
 import ElelmentBox from "./components/ElelmentBox";
 import ImageUpload from "./components/ImageUpload";
 import InputBox from "./components/InputBox";
+import Navbar from "./components/Navbar";
 import SectionTip from "./components/SectionTip";
 
 const initialState = {
-    logo: doatkolom_object.img + 'doatkolom-logo.webp',
     uploaded_img: doatkolom_object.img + 'logo.webp',
-    site_name: "Savar Girls High School"
+    site_name: "Savar Girls High School",
 }
 
 const stateHandler = (state, action) => {
@@ -32,31 +32,12 @@ const stateHandler = (state, action) => {
 export default function Home() {
 
     const [ attribute, setAttribute ] = useReducer(stateHandler, initialState)
-
+    
     return (
-        <div className="m-5">
-            <div className="bg-white py-3 px-6">
-                <div className="flex">
-                    <div className="w-2/6">
-                        <img src={attribute.logo}/>
-                    </div>
-                    <div className="w-4/6 flex justify-end items-center">
-                        <Link className="text-primary inline-block mr-7 text-lg font-medium" to="/">Home</Link>
-                        <Link className="text-primary inline-block mr-7 text-lg font-medium" to="/gallery">Photo Gallery</Link>
-                        <Link className="text-primary inline-block mr-7 text-lg font-medium" to="/gallery">Developer Option</Link>
-                        <div>
-                            <MenuButton variant="contained" text="Get Support" bg="#DFE9F1" textcolor="#0E1F36" />
-                        </div>
-                        <div className="ml-5">
-                            <MenuButton variant="contained" text="Get Support" bg="#1879C7" textcolor="#fff"/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+        <>
             <SectionTip title="Site Settings"/>
             
-            <ElelmentBox>
+            <ElelmentBox size="lg">
                 <div className="flex justify-between flex-wrap">
                     <div className="w-[500px] flex justify-between">
                         <div className="w-[191px]">
@@ -78,7 +59,7 @@ export default function Home() {
 
             <SectionTip title="Information"/>
             
-            <ElelmentBox>
+            <ElelmentBox size="lg">
                 <div className="flex justify-between flex-wrap">
                     <div className="w-[470px]">
                         <InputBox title="Institution Type"/>
@@ -103,7 +84,7 @@ export default function Home() {
 
             <SectionTip title="Quick Menu URL"/>
 
-            <ElelmentBox>
+            <ElelmentBox size="lg">
                 <div className="flex justify-between flex-wrap">
                     <div className="w-[470px]">
                         <InputBox title="Notice Board"/>
@@ -134,6 +115,6 @@ export default function Home() {
                     </div>
                 </div>
             </ElelmentBox>
-        </div>
+        </>
     )
 }

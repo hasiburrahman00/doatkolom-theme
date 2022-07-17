@@ -1,11 +1,10 @@
 import React from 'react'
 import { styled } from '@mui/material/styles';
-import { Button } from "@mui/material";
+import { Button} from "@mui/material";
 
 
 
 const MenuButton = (props) => {
-
   const ColorButton = styled(Button)(({ theme }) => ({
     color: theme.palette.getContrastText(props.bg),
     backgroundColor: props.bg,
@@ -17,7 +16,7 @@ const MenuButton = (props) => {
   }));
 
   return (
-    <ColorButton variant={props.variant}>{props.text}</ColorButton>
+    <ColorButton onClick={props.handleSaveSetting} variant={props.variant}>{props.text}</ColorButton>
   )
 }
 

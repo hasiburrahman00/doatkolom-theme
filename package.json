@@ -8,6 +8,9 @@
     "production": "mix --production"
   },
   "dependencies": {
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/lab": "^5.0.0-alpha.90",
     "laravel-mix": "^6.0.48",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
