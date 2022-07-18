@@ -312,5 +312,11 @@ export default function Style({wrapper}){
             }
 
         }
+
+        @media (min-width: 454px) {
+            ${wrapper} .others-teacher {
+                margin-top: 0px;
+            }
+        }
     `
 }
