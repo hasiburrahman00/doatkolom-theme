@@ -46,7 +46,7 @@ const Navbar = () => {
                     <div className="w-4/6 flex justify-end items-center">
                         <Link className="text-primary inline-block mr-7 text-lg font-medium" to="/">Home</Link>
                         <Link className="text-primary inline-block mr-7 text-lg font-medium" to="/gallery">Photo Gallery</Link>
-                        <Link className="text-primary inline-block mr-7 text-lg font-medium" to="/gallery">Developer Option</Link>
+                        <Link className="text-primary inline-block mr-7 text-lg font-medium" to="/developer">Developer Option</Link>
                         <div>
                             <MenuButton variant="contained" text="Get Support" bg="#DFE9F1" textcolor="#0E1F36" />
                         </div>

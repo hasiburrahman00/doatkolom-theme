@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { Fragment } from 'react';
 import Home from './home';
 import Gallery from './gallery';
+import Developer from './developer';
 import Navbar from './components/Navbar';
 
 ReactTemplateMount(()=>{
@@ -10,8 +11,9 @@ ReactTemplateMount(()=>{
         <Fragment>
             <Navbar/>
             <Routes>
-                <Route path="/" element={<Gallery/>} />
-                <Route path="/gallery" element={<Home/>} />
+                <Route path="/" element={<Home/>} />
+                <Route path="/gallery" element={<Gallery/>} />
+                <Route path="/developer" element={<Developer/>} />
             </Routes>
         </Fragment>
     )
