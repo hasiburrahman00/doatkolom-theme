@@ -40,22 +40,23 @@ export default function Save({ attributes }) {
 								</button>
                         	</div>
 
-                        <div className="flex ml-3 lg:ml-8 mt-5 sm:mt-0">
-                            {
-                                attributes.teachers_image?.map((item,index)=>(
-                                    <div key={index} className="teachers w-10 h-10 rounded-full overflow-hidden">
-                                        <a href={attributes.more_info.link}>
-                                            <picture>
-                                                <img width="50" height="50" className="object-cover w-full h-full lazyload" data-src={item} alt="teacher-image" />
-                                            </picture>
-                                        </a>
-                                    </div>
-                                ))
-                            }
-                        </div>        
-
-                        <a className="inline-block ml-5 capitalize font-secondary text-primary font-regular text-lg" href={attributes.more_info.link}>
-                        {attributes.more_info.text}</a>          
+                            <div className="others-teacher flex items-center ml-3 lg:ml-8 mt-5 sm:mt-0">
+                                {
+                                    attributes.teachers_image?.map((item,index)=>(
+                                        <div key={index} className="teachers w-10 h-10 rounded-full overflow-hidden">
+                                            <a href={attributes.more_info.link}>
+                                                <picture>
+                                                    <img width="50" height="50" className="object-cover w-full h-full" src={item} alt="teacher-image" />
+                                                </picture>
+                                            </a>
+                                        </div>
+                                    ))
+                                }
+                                <div>
+                                <a className="inline-block ml-5 capitalize font-secondary text-primary font-regular text-lg" href={attributes.more_info.link}>
+                                    {attributes.more_info.text}</a>   
+                                </div>
+                            </div>           
                     </div>    
                     </div>
                     <div className="testimonial relative text-center lg:block hidden">
