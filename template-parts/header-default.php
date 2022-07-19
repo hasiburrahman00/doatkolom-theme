@@ -27,5 +27,9 @@
             <?php Icons::gridDots() ?>
         </button>
 
+        <button id="nav-close-btn" class="hidden fixed top-4 right-5 text-white-90 hover:text-white w-10 h-10 z-50 bg-transparent border-0">
+            <?php Icons::remove() ?>
+        </button>
+
     </nav>
 </header>

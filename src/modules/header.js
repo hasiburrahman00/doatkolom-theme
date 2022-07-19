@@ -68,6 +68,7 @@ $.fn.extend({
 
     toggleHamburger() {
         this.toggleClass('bg-transparent lg:bg-slate-200 bg-primary text-white');
+        $('#nav-close-btn').removeClass('hidden');
     }
 
 })
@@ -148,6 +149,12 @@ export default class Header extends Helper{
                 $(self.settings.navmenu)
                 .removeClass('fixed hidden top-0 left-0 w-full h-screen bg-primary overflow-y-scroll z-20').slideUp(0)
             }
+        })
+        // close navmenu by clicking the navbar
+        $('#nav-close-btn').on('click', function () {
+            $(self.settings.hamburger).toggleHamburger();
+            $(self.settings.navmenu).removeClass('fixed hidden top-0 left-0 w-full h-screen bg-primary overflow-y-scroll z-20').slideUp(0)
+            $(this).addClass('hidden');
         })
 
     }
