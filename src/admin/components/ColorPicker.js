@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const ColorPicker = (props) => {
-    let [selectedColor,setColor] = useState(props.selectedColor)
+    let [selectedColor,setColor] = useState("#000")
 
     let handleColorChange = (e) => {
         setColor(e.target.value)
@@ -10,10 +10,11 @@ const ColorPicker = (props) => {
 
   return (
     <div>
-        <h1>{selectedColor}</h1>
-        <label for={props.selector} className={`relative after:w-[40px] after:h-[40px] after:bg-[${selectedColor}] after:rounded-full after:content-[""] after:absolute after:top-[-20px] after:left-0 after:border-1 after:border-solid after:border-white`}></label>
+        <label for={props.selector} className="relative">
+          <div style={{background:`${selectedColor}`}} className='w-[40px] h-[40px] rounded-full content-[""] absolute top-[-20px] left-0  border-1 border-solid border-white'></div>
+        </label>
         <input onChange={handleColorChange} id={props.selector} type="color" className='opacity-0 my-4'/>
-        <div ></div>
+        
     </div>
   )
 }

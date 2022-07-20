@@ -42,7 +42,7 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
 const InputBox = (props) => {
   return (
     <>
-        <h3 className='text-base font-medium'>{props.title}</h3>
+        <h3 className='text-base font-medium mb-2'>{props.title}</h3>
         <BootstrapInput fullWidth id="fullWidth"/>
     </>
   )

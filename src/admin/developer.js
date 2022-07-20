@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { styled } from '@mui/material/styles';
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import MuiAccordion from '@mui/material/Accordion';
@@ -48,10 +48,19 @@ const Accordion = styled((props) => (
   
   export default function developer() {
     const [expanded, setExpanded] = React.useState('panel1');
+    const [authentication,setAuthentication] = React.useState(false)
   
     const handleChange = (panel) => (event, newExpanded) => {
       setExpanded(newExpanded ? panel : false);
     };
+
+    const handleAuthentication = () => {
+      setAuthentication(true)
+    }
+
+    const handleRemove = () => {
+      setAuthentication(false)
+    }
   
     return (
       <div className='max-w-screen-lg mx-auto'>
@@ -82,42 +91,86 @@ const Accordion = styled((props) => (
 
             <h4 className='text-base mt-7'>Theme Colors</h4>
             <div className='bg-gray-200 w-full border border-gray-100 border-solid py-5 px-8 flex flex-wrap justify-between'>
-                <div className='w-[24%]'>
-                    <ColorPicker selectedColor="#000" selector="color1"/>
+                <div className='w-[24%] flex'>
+                    <ColorPicker selector="color1"/>
+                    <p className="font-medium text-sm">Primary</p>
                 </div>
-                <div className='w-[24%]'>
-                    <ColorPicker selectedColor="#000" selector="color2"/>
+                <div className='w-[24%] flex'>
+                    <ColorPicker selector="color2"/>
+                    <p className="font-medium text-sm">Primary</p>
                 </div>
-                <div className='w-[24%]'>
-                    <ColorPicker selectedColor="#000" selector="color3"/>
+                <div className='w-[24%] flex'>
+                    <ColorPicker selector="color3"/>
+                    <p className="font-medium text-sm">Primary</p>
                 </div>
-                <div className='w-[24%]'>
-                    <ColorPicker selectedColor="#000" selector="color3"/>
+                <div className='w-[24%] flex'>
+                    <ColorPicker selector="color3"/>
+                    <p className="font-medium text-sm">Primary</p>
                 </div>
-                <div className='w-[24%]'>
-                    <ColorPicker selectedColor="#000" selector="color4"/>
+                <div className='w-[24%] flex'>
+                    <ColorPicker selector="color4"/>
+                    <p className="font-medium text-sm">Secondary</p>
                 </div>
-                <div className='w-[24%]'>
-                    <ColorPicker selectedColor="#000" selector="color5"/>
+                <div className='w-[24%] flex'>
+                    <ColorPicker selector="color5"/>
+                    <p className="font-medium text-sm">Secondary</p>
                 </div>
-                <div className='w-[24%]'>
-                    <ColorPicker selectedColor="#000" selector="color6"/>
+                <div className='w-[24%] flex'>
+                    <ColorPicker selector="color6"/>
+                    <p className="font-medium text-sm">Secondary</p>
                 </div>
-                <div className='w-[24%]'>
-                    <ColorPicker selectedColor="#000" selector="color7"/>
+                <div className='w-[24%] flex'>
+                    <ColorPicker selector="color7"/>
+                    <p className="font-medium text-sm">Secondary</p>
                 </div>
-                <div className='w-[24%]'>
-                    <ColorPicker selectedColor="#000" selector="color8"/>
+                <div className='w-[24%] flex'>
+                    <ColorPicker selector="color8"/>
+                    <p className="font-medium text-sm">Secondary 80</p>
                 </div>
-                <div className='w-[24%]'>
-                    <ColorPicker selectedColor="#000" selector="color9"/>
+                <div className='w-[24%] flex'>
+                    <ColorPicker selector="color9"/>
+                    <p className="font-medium text-sm">Secondary 80</p>
                 </div>
-                <div className='w-[24%]'>
-                    <ColorPicker selectedColor="#000" selector="color10"/>
+                <div className='w-[24%] flex'>
+                    <ColorPicker selector="color10"/>
+                    <p className="font-medium text-sm">Secondary 80</p>
                 </div>
-                <div className='w-[24%]'>
-                    <ColorPicker selectedColor="#000" selector="color11"/>
+                <div className='w-[24%] flex'>
+                    <ColorPicker selector="color11"/>
+                    <p className="font-medium text-sm">Secondary 80</p>
                 </div>
+                <div className='w-[24%] flex'>
+                    <ColorPicker selector="color7"/>
+                    <p className="font-medium text-sm">Secondary 60</p>
+                </div>
+                <div className='w-[24%] flex'>
+                    <ColorPicker selector="color8"/>
+                    <p className="font-medium text-sm">Secondary 60</p>
+                </div>
+                <div className='w-[24%] flex'>
+                    <ColorPicker selector="color9"/>
+                    <p className="font-medium text-sm">Secondary 60</p>
+                </div>
+                <div className='w-[24%] flex'>
+                    <ColorPicker selector="color10"/>
+                    <p className="font-medium text-sm">Secondary 60</p>
+                </div>
+            </div>
+
+            <h4 className='text-base mt-7'>Authentication Token</h4>
+            <div className=' w-full flex justify-between'>
+              <div className='w-9/12'>
+                <InputBox/>
+              </div>
+              <div className='mt-4'>
+                {authentication
+                  ?
+                  <button onClick={handleRemove} className='py-3.5 px-8 border-0 bg-secondary text-white font-semibold text-base box-border rounded'>Remove</button>
+                  :
+                  <button onClick={handleAuthentication} className='py-3.5 px-8 border-0 bg-primary text-white font-semibold text-base box-border rounded'>Authenticate</button>
+                }
+                
+              </div>
             </div>
           </AccordionDetails>
         </Accordion>
