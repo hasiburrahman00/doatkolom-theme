@@ -84,7 +84,7 @@ export default function Edit({ attributes, setAttributes}) {
                                         
                                 </div>
 
-                                <div className="flex ml-3 lg:ml-8 mt-5 sm:mt-0">
+                                <div className="others-teacher flex items-center ml-3 lg:ml-8 mt-5 sm:mt-0">
                                     {
                                         attributes.teachers_image?.map((item,index)=>(
                                             <div key={index} className="teachers w-10 h-10 rounded-full overflow-hidden">
@@ -96,10 +96,11 @@ export default function Edit({ attributes, setAttributes}) {
                                             </div>
                                         ))
                                     }
-                                </div>        
-
-                                <a className="inline-block ml-5 capitalize font-secondary text-primary font-regular text-lg" href="#">
-                                    {attributes.more_info.text}</a>          
+                                   <div>
+                                    <a className="inline-block ml-5 capitalize font-secondary text-primary font-regular text-lg" href="#">
+                                        {attributes.more_info.text}</a>   
+                                   </div>
+                                </div>          
                             </div>    
                     </div>     
 

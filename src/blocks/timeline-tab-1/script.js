@@ -43,7 +43,7 @@ export default function timelineTab1( $scope ) {
      * @author ashraf
      */ 
     function activeTabHandler( target = 0 ) {
-        if( innerWidth <= 1024 ) return;
+        if( innerWidth <= 768 ) return;
         $scope.find('.tab-item').addClass('md:opacity-50');
         $scope.find(`.tab-item-index-${target}`).removeClass('md:opacity-50');
     }
@@ -54,7 +54,7 @@ export default function timelineTab1( $scope ) {
     }
 
     function obcallback(payload) {
-        if( payload[0].isIntersecting && innerWidth > 1024 ) {
+        if( payload[0].isIntersecting && innerWidth > 167 ) {
             activeTabHandler(payload[0].target.dataset.index)
         }
     }

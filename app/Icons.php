@@ -13,6 +13,14 @@ class Icons {
         <?php
     }
 
+    public static function remove() {
+        ?>
+        <svg style="width: inherit; height: inherit;" viewBox="0 0 1792 1792">
+            <path d="M1490 1322q0 40-28 68l-136 136q-28 28-68 28t-68-28l-294-294-294 294q-28 28-68 28t-68-28l-136-136q-28-28-28-68t28-68l294-294-294-294q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 294 294-294q28-28 68-28t68 28l136 136q28 28 28 68t-28 68l-294 294 294 294q28 28 28 68z" fill="currentColor"/>
+        </svg>
+        <?php
+    }
+
     public static function whatsapp() {
         ?>
             <svg viewBox="0 0 1792 1792" style="width: inherit; height: inherit;">
@@ -42,6 +50,24 @@ class Icons {
             </clipPath>
             </defs>
         </svg>
+        <?php 
+    }
+
+    public static function gridDots() {
+        ?>
+            <svg version="1.1" width="22" height="22" x="0px" y="0px" viewBox="0 0 56 56">
+                <g>
+                    <path fill="currentColor" d="M8,40c-4.411,0-8,3.589-8,8s3.589,8,8,8s8-3.589,8-8S12.411,40,8,40z"/>
+                    <path fill="currentColor" d="M28,40c-4.411,0-8,3.589-8,8s3.589,8,8,8s8-3.589,8-8S32.411,40,28,40z"/>
+                    <path fill="currentColor" d="M48,40c-4.411,0-8,3.589-8,8s3.589,8,8,8s8-3.589,8-8S52.411,40,48,40z"/>
+                    <path fill="currentColor" d="M8,20c-4.411,0-8,3.589-8,8s3.589,8,8,8s8-3.589,8-8S12.411,20,8,20z"/>
+                    <path fill="currentColor" d="M28,20c-4.411,0-8,3.589-8,8s3.589,8,8,8s8-3.589,8-8S32.411,20,28,20z"/>
+                    <path fill="currentColor" d="M48,20c-4.411,0-8,3.589-8,8s3.589,8,8,8s8-3.589,8-8S52.411,20,48,20z"/>
+                    <path fill="currentColor" d="M8,0C3.589,0,0,3.589,0,8s3.589,8,8,8s8-3.589,8-8S12.411,0,8,0z"/>
+                    <path fill="currentColor" d="M28,0c-4.411,0-8,3.589-8,8s3.589,8,8,8s8-3.589,8-8S32.411,0,28,0z"/>
+                    <path fill="currentColor" d="M48,16c4.411,0,8-3.589,8-8s-3.589-8-8-8s-8,3.589-8,8S43.589,16,48,16z"/>
+                </g>
+            </svg>
         <?php 
     }
 

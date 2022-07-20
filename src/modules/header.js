@@ -1,6 +1,5 @@
 const $ = jQuery;
 import Helper from "../utils/Helper";
-
 $.fn.extend({
     /**
      * 
@@ -23,13 +22,13 @@ $.fn.extend({
             left = (left + right) - 20;
 
             if( this.hasClass('sub-menu') ) {
-                left -= width/3
+                left -= width/8
             }
 
         } else {
 
             if( this.hasClass('sub-menu') ) {
-                left += width/3
+                left += width/8
             }
         }
 
@@ -65,6 +64,11 @@ $.fn.extend({
 
     dropdownValidate() {
         return this;
+    },
+
+    toggleHamburger() {
+        this.toggleClass('bg-transparent lg:bg-slate-200 bg-primary text-white');
+        $('#nav-close-btn').removeClass('hidden');
     }
 
 })
@@ -107,13 +111,13 @@ export default class Header extends Helper{
     beforeBreakpoint() {
         
         const self = this;
+
         const handler = {
             mobileMenuToggle() {
-                $(this).toggleClass('fixed right-5 top-5 z-10 border border-solid border-white')
-
+                $(this).toggleHamburger();
                 $(self.settings.navmenu)
-                .addClass('fixed hidden top-0 left-0 w-full h-screen bg-primary overflow-y-scroll')
-                .slideToggle()
+                .addClass('fixed hidden top-0 left-0 w-full h-screen bg-primary overflow-y-scroll z-20')
+                .slideDown()
             },
 
             in() {
@@ -133,8 +137,26 @@ export default class Header extends Helper{
             },
         }
 
-        $(self.settings.dropdownToggle).parent().hover( handler.in, handler.out )
-        $(self.settings.hamburger).on('click', handler.mobileMenuToggle)
+        $(self.settings.dropdownToggle).parent()
+        .on('mouseenter', handler.in)
+        .on('mouseleave', handler.out);
+        $(self.settings.hamburger).on('click', handler.mobileMenuToggle);
+
+        //check if it is a hash link
+        $(self.settings.navmenu).find('a').on('click', function() {
+            if( this.href.includes('#') ) {
+                $(this).toggleHamburger();
+                $(self.settings.navmenu)
+                .removeClass('fixed hidden top-0 left-0 w-full h-screen bg-primary overflow-y-scroll z-20').slideUp(0)
+            }
+        })
+        // close navmenu by clicking the navbar
+        $('#nav-close-btn').on('click', function () {
+            $(self.settings.hamburger).toggleHamburger();
+            $(self.settings.navmenu).removeClass('fixed hidden top-0 left-0 w-full h-screen bg-primary overflow-y-scroll z-20').slideUp(0)
+            $(this).addClass('hidden');
+        })
+
     }
     /**
      * 
@@ -164,13 +186,18 @@ export default class Header extends Helper{
             },
 
             quickMenuToggle() {
+
+                $(this).toggleHamburger();
                 $(self.settings.quickMenu)
                 .quickMenuPosition(this) // this keyword refers to the hamburger button
                 .toggleClass('hidden');
             }
         }
         
-        $(self.settings.dropdownToggle).parent().hover( handler.in, handler.out )
+        $(self.settings.dropdownToggle).parent()
+        .on('mouseenter', handler.in)
+        .on('mouseleave', handler.out)
+
         $(self.settings.hamburger).on('click', handler.quickMenuToggle)
 
         $(document).on('click', ev => {  
@@ -193,7 +220,7 @@ export default class Header extends Helper{
         if( $headerTop && scrollY > $headerTop.outerHeight() && $header.attr('data-show') == 0 ) {
             
             // extra: variable will have the height equal to wordpress admin bar
-            const extra = $('#wpadminbar').length ? $('#wpadminbar').outerHeight() : 0;
+            const extra = $('#wpadminbar').length && innerWidth > 600 ? $('#wpadminbar').outerHeight() : 0;
 
             // add styles to header to make it sticky
             $header.attr('data-show', 1)
