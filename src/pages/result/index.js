@@ -2,7 +2,7 @@ import updateBreadcrumb from "../../utils/breadcrumb"
 export default function Result() {
     updateBreadcrumb('Result');
     return(
-        <div className="max-w-screen-xl px-5 py-28 mx-auto">
+        <div className="max-w-screen-xl px-5 py-16 mx-auto">
             <div className="max-w-[785px] m-auto p-7 md:p-14 box-border bg-gray-100 rounded-md">
                 <form>
                     <div>
