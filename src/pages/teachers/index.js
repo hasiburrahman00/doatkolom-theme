@@ -1,8 +1,22 @@
+import { useContext, useEffect } from 'react';
+import { FrontendContext } from '../../context';
 import updateBreadcrumb from '../../utils/breadcrumb';
 import Teacher from '../../components/teacher';
 
 export default function Teaches(){
     updateBreadcrumb('Teachers')
+
+    const { attribute, setAttribute } = useContext(FrontendContext)
+
+    useEffect(()=>{
+        if( !attribute.teachers ) {
+            //call api
+            setAttribute({
+                teachers: ['one','two']
+            })
+        }
+    },[])
+
     return (
         <div className="max-w-screen-xl px-5 py-28 mx-auto">
             <Teacher className="grid-cols-1 md:grid-cols-2">
