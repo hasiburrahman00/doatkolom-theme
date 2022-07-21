@@ -25,6 +25,16 @@ export default function Navbar() {
         }
     `
 
+    const loadingButtonStyle = {
+        boxShadow: 'none',
+        textTransform: 'capitalize',
+        fontSize: '16px',
+        borderRadius: '8px',
+        '&:hover': { 
+            boxShadow: 'none'
+        }
+    }
+
     const HeaderComponent = styled('header')`
         left: ${attribute.header_css.left};
         top: ${attribute.header_css.top};
@@ -46,15 +56,7 @@ export default function Navbar() {
                     <div className="flex items-center space-x-5">
                         <SupportButton size="large">Get Support</SupportButton>
                         <LoadingButton 
-                            sx={{
-                                boxShadow: 'none',
-                                textTransform: 'capitalize',
-                                fontSize: '16px',
-                                borderRadius: '8px',
-                                '&:hover': { 
-                                    boxShadow: 'none'
-                                }
-                            }} 
+                            sx={loadingButtonStyle} 
                             variant="contained" size="large" 
                             onClick={handleSaveSetting}
                             loading={attribute.save_setting_loader}>
