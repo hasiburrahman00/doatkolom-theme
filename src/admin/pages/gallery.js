@@ -1,7 +1,7 @@
 import React from "react";
 import { useReducer } from "react"
-import ElementBox from './components/ElelmentBox'
-import Pagination from './components/Pagination'
+import ElementBox from './../components/ElelmentBox'
+import Pagination from './../components/Pagination'
 
 const initialState = {
     gallery_img: doatkolom_object.img + 'gallery-img.webp',

@@ -2,21 +2,19 @@ import React from 'react'
 import { styled } from '@mui/material/styles';
 import { Button} from "@mui/material";
 
-
-
 const MenuButton = (props) => {
   const ColorButton = styled(Button)(({ theme }) => ({
-    color: theme.palette.getContrastText(props.bg),
-    backgroundColor: props.bg,
+    color: theme.palette.getContrastText('#DFE9F1'),
+    backgroundColor: '#DFE9F1',
     boxShadow: '0 0 0',
-    color: props.textcolor,
+    color: '#0E1F36',
     '&:hover': {
-      backgroundColor: props.bg,
+      backgroundColor: '#DFE9F1',
     },
   }));
 
   return (
-    <ColorButton onClick={props.handleSaveSetting} variant={props.variant}>{props.text}</ColorButton>
+    <ColorButton size="large" variant="contained" onClick={props.handleSaveSetting}>{props.children}</ColorButton>
   )
 }
 

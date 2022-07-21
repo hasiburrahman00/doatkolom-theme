@@ -1,11 +1,11 @@
 import { set } from "lodash";
 import { useReducer } from "react"
-import MenuButton from "./components/Button";
-import ElelmentBox from "./components/ElelmentBox";
-import ImageUpload from "./components/ImageUpload";
-import InputBox from "./components/InputBox";
-import Navbar from "./components/Navbar";
-import SectionTip from "./components/SectionTip";
+import MenuButton from "./../components/Button";
+import ElelmentBox from "./../components/ElelmentBox";
+import ImageUpload from "./../components/ImageUpload";
+import InputBox from "./../components/InputBox";
+import Navbar from "./../components/Navbar";
+import SectionTip from "./../components/SectionTip";
 
 const initialState = {
     uploaded_img: doatkolom_object.img + 'logo.webp',

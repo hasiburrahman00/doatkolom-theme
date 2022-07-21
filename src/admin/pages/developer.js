@@ -5,8 +5,8 @@ import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
-import InputBox from './components/InputBox';
-import ColorPicker from './components/ColorPicker';
+import InputBox from './../components/InputBox';
+import ColorPicker from './../components/ColorPicker';
 
 const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
