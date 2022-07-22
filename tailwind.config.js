@@ -28,6 +28,7 @@ module.exports = {
             'secondary'     : 'var(--doatkolom-secondary-color)',
             'white'         : "var(--doatkolom-white-color)",
             'white-90'      : "var(--doatkolom-white-color-90)",
+            'black-90'      : "var(--doatkolom-black-color-90)",
             'gray-100'      : "var(--doatkolom-gray-100-color)",
             'gray-200'      : "var(--doatkolom-gray-200-color)",
             'gray-300'      : "var(--doatkolom-gray-300-color)",
