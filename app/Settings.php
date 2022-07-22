@@ -8,6 +8,7 @@ use DoatKolom\Core\Singleton;
 class Settings extends Api
 {
     const SETTINGS_KEY = 'doatkolom_settings';
+    const GALLERY_KEY  = 'doatkolom_gallery';
 
     use Singleton;
 
@@ -109,5 +110,147 @@ class Settings extends Api
             }
         }
         return false;
+    }
+
+    public function post_add_gallery()
+    {
+        try {
+            $data        = $this->request->get_params();
+            $image_id    = $data['image_id'];
+            $gallery_ids = get_option( self::GALLERY_KEY );
+            if ( !$gallery_ids ) {
+                $gallery_ids = [];
+            } else {
+                $gallery_ids = unserialize( $gallery_ids );
+            }
+            $gallery_ids[] = $image_id;
+            update_option( self::GALLERY_KEY, serialize( $gallery_ids ) );
+
+            return [
+                'message' => esc_html__( 'Gallery item added successfully!', 'doatkolom' ),
+                'status'  => 'success'
+            ];
+        } catch ( \Exception $e ) {
+            return [
+                'message' => esc_html__( 'Something has wrong', 'doatkolom' ),
+                'status'  => 'failed'
+            ];
+        }
+    }
+
+    public function post_update_gallery()
+    {
+        try {
+
+            $data      = $this->request->get_params();
+            $image_id  = $data['image_id'];
+            $image_key = $data['image_key'];
+
+            $gallery_ids = get_option( self::GALLERY_KEY );
+            if ( !$gallery_ids ) {
+                $gallery_ids = [];
+            } else {
+                $gallery_ids = unserialize( $gallery_ids );
+            }
+            $gallery_ids[$image_key] = $image_id;
+            update_option( self::GALLERY_KEY, serialize( $gallery_ids ) );
+
+            return [
+                'message' => esc_html__( 'Gallery item updated successfully!', 'doatkolom' ),
+                'status'  => 'success'
+            ];
+        } catch ( \Exception $e ) {
+            return [
+                'message' => esc_html__( 'Something has wrong', 'doatkolom' ),
+                'status'  => 'failed'
+            ];
+        }
+    }
+
+    /**
+     * @return mixed
+     */
+    public function get_galleries()
+    {
+        $data = $this->request->get_params();
+
+        if ( isset( $data['page'] ) ) {
+            $page = $data['page'];
+        } else {
+            $page = 1;
+        }
+
+        if ( isset( $data['per_page'] ) ) {
+            $perpage = intval( $data['per_page'] );
+            if ( $perpage > 100 ) {
+                $perpage = 100;
+            }
+        } else {
+            $perpage = 20;
+        }
+
+        $offset = ( $page - 1 ) * $perpage;
+
+        $gallery_ids = get_option( self::GALLERY_KEY );
+        if ( !$gallery_ids ) {
+            $gallery_ids = [];
+        } else {
+            $gallery_ids = unserialize( $gallery_ids );
+        }
+
+        $total       = count( $gallery_ids );
+        $gallery_ids = array_slice( $gallery_ids, $offset, $perpage );
+
+        $gallery_items = [];
+
+        foreach ( $gallery_ids as $key => $gallery_id ) {
+
+            $gallery = [
+                'image_key' => $offset + $key,
+                'image_id'  => $gallery_id,
+                'image_url' => ''
+            ];
+            $attachment = wp_get_attachment_image_src( $gallery_id, 'full' );
+
+            if ( isset( $attachment[0] ) ) {
+                $gallery['image_url'] = $attachment[0];
+            }
+
+            $gallery_items[] = $gallery;
+
+        }
+        return [
+            'data' => [
+                'items' => $gallery_items,
+                'total' => $total
+            ]
+        ];
+    }
+
+    public function post_delete_gallery()
+    {
+        $data = $this->request->get_params();
+        try {
+            $image_key = $data['image_key'];
+
+            $gallery_ids = get_option( self::GALLERY_KEY );
+            if ( !$gallery_ids ) {
+                $gallery_ids = [];
+            } else {
+                $gallery_ids = unserialize( $gallery_ids );
+            }
+            unset( $gallery_ids[$image_key] );
+            update_option( self::GALLERY_KEY, serialize( array_values( $gallery_ids ) ) );
+
+            return [
+                'message' => esc_html__( 'Gallery item deleted successfully!', 'doatkolom' ),
+                'status'  => 'success'
+            ];
+        } catch ( \Exception $e ) {
+            return [
+                'message' => esc_html__( 'Something has wrong', 'doatkolom' ),
+                'status'  => 'failed'
+            ];
+        }
     }
 }
