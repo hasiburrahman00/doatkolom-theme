@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+const path = require('path');
 
 mix.options({ 
     processCssUrls: false,
@@ -10,23 +11,14 @@ mix.js('src/gutenberg.js', 'build/gutenberg.min.js').react();
 mix.js('src/admin/index.js', 'build/admin.min.js').react();
 mix.js('src/app.js', 'build/app.min.js').react();
 
+console.log(path.resolve(__dirname, './'))
+
 mix.webpackConfig({
     externals: {
         "jquery": "jQuery"
     },
     output: {
-        chunkFilename: "build/chunk/[name].js"
-    },  
-    module: {
-        rules: [
-            {
-                test: /\.tsx?$/,
-                loader: "ts-loader",
-                exclude: /node_modules/
-            }
-        ]
-    },
-    resolve: {
-        extensions: ["*", ".js", ".jsx", ".vue", ".ts", ".tsx"]
+        path: path.resolve(__dirname, './'),
+        chunkFilename: 'build/chunk/[name].js',
     }
 })
