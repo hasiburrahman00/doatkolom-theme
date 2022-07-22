@@ -36,6 +36,7 @@ define( 'CSS_VARIABLES', "
         --doatkolom-gray-200-color: #e5e7eb;
         --doatkolom-gray-300-color: #d1d5db;
         --doatkolom-gray-400-color: #9ca3af;
+        --doatkolom-gray-500-color: #E6EBED;
         --doatkolom-slate-300-color: #cbd5e1;
         --doatkolom-slate-200-color: #e2e8f0;
         --doatkolom-slate-100-color: #f1f5f9;
@@ -47,6 +48,7 @@ define( 'CSS_VARIABLES', "
         --doatkolom-paste-green-400-color: #C1F1FF;
         --doatkolom-paste-blue-400-color: #3EB9D3;
         --doatkolom-paste-blue-100-color: #F8FEFF;
+        --doatkolom-primary-blue-100-color: #F3FDFF;
     }
 ");
 
