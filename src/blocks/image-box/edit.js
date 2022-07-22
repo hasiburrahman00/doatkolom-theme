@@ -37,7 +37,7 @@ export default function Edit({ attributes, setAttributes}) {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
                 {
                     attributes.image_box?.map((item,index)=>(
-                        <div key={index} className="mb-3 text-center odd:bg-pink-100 even:bg-blue-100 rounded-lg p-4">
+                        <div key={index} className="mb-1 text-center odd:bg-pink-100 even:bg-blue-100 rounded-lg p-4">
                             <picture>
                                 <img width="80" height="80" className="object-cover" src={item.image} alt="service-image" />
                             </picture>
