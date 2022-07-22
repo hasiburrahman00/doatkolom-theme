@@ -1,12 +1,10 @@
 import './../lib/lazysizes';
-import ReactTemplateMount from '../config';
-
-import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { AdminContextProvider } from './context';
-import Navbar from './components/Navbar';
 
-// const Home = React.lazy(() => import('./pages/home')) 
+import Navbar from './components/Navbar';
+import ReactTemplateMount from '../config';
+
 import Home from './pages/home';
 import Gallery from './pages/gallery';
 import Developer from './pages/developer';
@@ -37,14 +35,10 @@ const menu = [
 ReactTemplateMount(()=>{
     return (
         <AdminContextProvider>
-            <Navbar/>
+            <Navbar menu={menu}/>
             <main className="mt-28">
                 <Routes>
-                    { menu.map( Item => <Route key={Item.name} path={Item.path} element={
-                        <Suspense fallback={<h2>Loading</h2>}>
-                            <Item.Component/>
-                        </Suspense>
-                    } /> ) }
+                    { menu.map( Item => <Route key={Item.name} path={Item.path} element={<Item.Component/>}/> ) }
                 </Routes>
             </main>
         </AdminContextProvider>
