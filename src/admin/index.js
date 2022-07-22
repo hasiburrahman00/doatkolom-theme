@@ -6,7 +6,10 @@ import { Routes, Route } from 'react-router-dom';
 import { AdminContextProvider } from './context';
 import Navbar from './components/Navbar';
 
-const Home = React.lazy(() => import('./pages/home')) 
+// const Home = React.lazy(() => import('./pages/home')) 
+import Home from './pages/home';
+import Gallery from './pages/gallery';
+import Developer from './pages/developer';
 
 const menu = [
     {
@@ -17,17 +20,17 @@ const menu = [
     {
         name: 'Photo Gallery',
         path: '/gallery',
-        Component: React.lazy(() => import('./pages/gallery'))
+        Component: Gallery
     },
     {
         name: 'Success Story',
         path: '/success',
-        Component: React.lazy(() => import('./pages/gallery'))
+        Component: Developer
     },
     {
         name: 'Developer Option',
         path: '/developer',
-        Component: React.lazy(() => import('./pages/developer'))
+        Component: Developer
     }
 ]
 
@@ -39,7 +42,7 @@ ReactTemplateMount(()=>{
                 <Routes>
                     { menu.map( Item => <Route key={Item.name} path={Item.path} element={
                         <Suspense fallback={<h2>Loading</h2>}>
-                            <Home/>
+                            <Item.Component/>
                         </Suspense>
                     } /> ) }
                 </Routes>
