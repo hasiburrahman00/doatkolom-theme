@@ -1,6 +1,5 @@
 import ReactTemplateMount from './config';
 import { Routes, Route } from 'react-router-dom';
-import { Fragment } from 'react';
 import { FrontendContextProvider } from './context';
 import Home from './pages/home';
 import Teaches from './pages/teachers';

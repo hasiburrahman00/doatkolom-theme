@@ -10,9 +10,9 @@ export function AdminContextProvider(props) {
 
     // Global state
     const [ attribute, setAttribute ] = useStore({
-        name    : 'DoatKolom',
-        version : '1.0.0',
-        logo    : doatkolom_object.img + 'doatkolom-logo.webp',
+        site_name   : 'DoatKolom',
+        version     : '1.0.0',
+        logo        : doatkolom_object.img + 'logo.webp',
         save_setting_loader: false,
         header_css: {},
     })

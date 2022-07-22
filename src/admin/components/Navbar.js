@@ -35,17 +35,16 @@ export default function Navbar() {
         }
     }
 
-    const HeaderComponent = styled('header')`
-        left: ${attribute.header_css.left};
-        top: ${attribute.header_css.top};
-        width: ${attribute.header_css.width};
-    `
+    const HeaderComponent = styled('header')(attribute.header_css)
 
     return (
         <HeaderComponent className="bg-white py-1 px-7 w-full fixed z-20 top-0 left-0 border-t-0 border-x-0 border-b border-solid border-gray-200">
             <div className="flex">
-                <div className="w-2/6">
-                    <img src={attribute.logo}/>
+                <div className="w-2/6 flex items-center space-x-2 text-3xl font-bold text-[#1879C7]">
+                    <picture>
+                        <img width="50" height="50" className="lazyload" data-src={attribute.logo}/>
+                    </picture>
+                    <span>{attribute.site_name}</span>
                 </div>
                 <div className="w-4/6 flex justify-end items-center">
                     
