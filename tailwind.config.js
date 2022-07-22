@@ -37,6 +37,7 @@ module.exports = {
             'slate-200'     : "var(--doatkolom-slate-200-color)",
             'slate-100'     : "var(--doatkolom-slate-100-color)",
             'teal-100'      : "var(--doatkolom-teal-100-color)",
+            'blue-100'      : "var(--doatkolom-blue-100-color)",
             'blue-600'      : "var(--doatkolom-blue-600-color)",
             'green-600'     : "var(--doatkolom-green-600-color)",
             'red-600'       : "var(--doatkolom-red-600-color)",
@@ -45,6 +46,7 @@ module.exports = {
             'paste-blue-400': "var(--doatkolom-paste-blue-400-color)",
             'paste-blue-100': "var(--doatkolom-paste-blue-100-color)",
             'primary-blue-100': "var(--doatkolom-primary-blue-100-color)",
+            'pink-100'        : "var(--doatkolom-pink-100-color)",
         },
 
         fontFamily: {
