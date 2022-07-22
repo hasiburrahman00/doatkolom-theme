@@ -253,12 +253,7 @@
 .mt-12 {
   margin-top: 3rem;
 }
-.mt-6 {
-  margin-top: 1.5rem;
-}
-.ml-2 {
-  margin-left: 0.5rem;
-}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -418,9 +413,7 @@
 .w-52 {
   width: 13rem;
 }
-.w-\[400px\] {
-  width: 400px;
-}
+
 .max-w-screen-lg {
   max-width: 1024px;
 }
@@ -752,9 +745,7 @@
 .p-0 {
   padding: 0px;
 }
-.p-9 {
-  padding: 2.25rem;
-}
+
 .p-7 {
   padding: 1.75rem;
 }
@@ -854,14 +845,7 @@
   padding-top: 7rem;
   padding-bottom: 7rem;
 }
-.py-9 {
-  padding-top: 2.25rem;
-  padding-bottom: 2.25rem;
-}
-.py-7 {
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
-}
+
 .pb-8 {
   padding-bottom: 2rem;
 }
