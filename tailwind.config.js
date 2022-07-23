@@ -41,6 +41,8 @@ module.exports = {
             'blue-100'      : "var(--doatkolom-blue-100-color)",
             'blue-600'      : "var(--doatkolom-blue-600-color)",
             'green-600'     : "var(--doatkolom-green-600-color)",
+            'red-100'       : "var(--doatkolom-red-100-color)",
+            'red-500'       : "var(--doatkolom-red-500-color)",
             'red-600'       : "var(--doatkolom-red-600-color)",
             'paste-green'   : "var(--doatkolom-paste-green-color)",
             'paste-green-400': "var(--doatkolom-paste-green-400-color)",
