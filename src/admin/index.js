@@ -2,9 +2,7 @@ import './../lib/lazysizes';
 import { Routes, Route } from 'react-router-dom';
 import { AdminContextProvider } from './context';
 
-import Navbar from './components/Navbar';
 import ReactTemplateMount from '../config';
-
 import Home from './pages/home';
 import Gallery from './pages/gallery';
 import Developer from './pages/developer';
@@ -35,13 +33,10 @@ const menu = [
 
 ReactTemplateMount(()=>{
     return (
-        <AdminContextProvider>
-            <Navbar menu={menu}/>
-            <main className="mt-28">
-                <Routes>
-                    { menu.map( Item => <Route key={Item.name} path={Item.path} element={<Item.Component/>}/> ) }
-                </Routes>
-            </main>
+        <AdminContextProvider menu={menu}>
+            <Routes>
+                { menu.map( Item => <Route key={Item.name} path={Item.path} element={<Item.Component/>}/> ) }
+            </Routes>
         </AdminContextProvider>
     )
 }, 'doatkolom-admin-root')

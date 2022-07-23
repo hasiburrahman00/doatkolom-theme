@@ -1,19 +1,16 @@
 import PageWrapper from "../layouts/page-wrapper";
 import Panel from './../layouts/panel';
 import SiteSettings from "../layouts/site-settings";
-import { useEffect } from "react";
-import API from "../api";
+import { useContext } from "react";
+import { AdminContext } from "../context";
 
 export default function Home() {
 
-    useEffect(()=>{
-        API.setting_fields().then(res => {
-            console.log(res)
-        })
-    },[])
+    const { attribute, setAttribute } = useContext(AdminContext);
 
     return (
         <PageWrapper>
+            {console.log(attribute.setting_fields)}
             <Panel>
                 <Panel.VideoHeader url="https://www.youtube.com/embed/D0UnqGm_miA">Site Settings</Panel.VideoHeader>
                 <Panel.Body>
@@ -27,8 +24,7 @@ export default function Home() {
                     <h2>Hello world</h2>
                 </Panel.Body>
             </Panel>
-            
-            
+    
         </PageWrapper>
     )
 }

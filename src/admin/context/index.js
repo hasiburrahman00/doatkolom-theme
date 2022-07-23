@@ -1,11 +1,14 @@
-
-import useStore from "./../../utils/store";
 import { createContext, useEffect } from "react"; 
 import { SnackbarProvider } from 'notistack';
+
+import AdminPageSkeleton from "../../skeleton/admin-page";
+import useStore from "./../../utils/store";
+import API from './../api';
+import Navbar from "../components/Navbar";
+
 const $ = window.jQuery;
 
 export const AdminContext = createContext(null);
-
 export function AdminContextProvider(props) {
 
     // Global state
@@ -18,7 +21,15 @@ export function AdminContextProvider(props) {
     })
 
     useEffect(()=>{
+
         $(document).trigger( 'wp-window-resized' );
+
+        if( !attribute.setting_fields ) {
+            API.setting_fields().then(res => {
+                setAttribute({ setting_fields: res })
+            })
+        }
+
     },[])
 
     $(document).on( 'wp-menu-state-set wp-collapse-menu', function( event, eventData ) {
@@ -48,7 +59,10 @@ export function AdminContextProvider(props) {
     return(
         <AdminContext.Provider value={{attribute, setAttribute}}>
             <SnackbarProvider maxSnack={10}>
-                {props.children}
+                <Navbar menu={props.menu}/>
+                <main className="mt-28">
+                    { attribute.setting_fields ? props.children : <AdminPageSkeleton/> }
+                </main>
             </SnackbarProvider>
         </AdminContext.Provider>
     )
