@@ -2,7 +2,7 @@ export default function Edit({ attributes, setAttributes }) {
 
     wp.element.useEffect(()=>{
         if( !attributes.background ) {
-            setAttributes({background: doatkolom_object.blocks + 'call-to-action/img/call-to-action-background.webp' })
+            setAttributes({background: doatkolom_object.blocks + 'cta-1/img/call-to-action-background.webp' })
         }
     },[])
 

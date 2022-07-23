@@ -1,4 +1,4 @@
-import config from './../../../blocks/call-to-action/block.json';
+import config from '../../../blocks/image-box-1/block.json';
 import RegisterBlock from '../../modules/register-block';
 import Edit from './edit';
 import Save from './save';

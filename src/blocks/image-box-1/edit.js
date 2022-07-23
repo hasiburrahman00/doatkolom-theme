@@ -1,30 +1,28 @@
-const { useEffect } = wp.element;
-
 export default function Edit({ attributes, setAttributes}) {
 
     wp.element.useEffect(()=>{
         if( !attributes.image_box ) {
             setAttributes({image_box:[
                 {
-                  image: doatkolom_object.blocks + 'image-box/img/money.webp',
+                  image: doatkolom_object.blocks + 'image-box-1/img/money.webp',
                   title: "Affordable fees",
                   description: "This is an important thing that every parent looks at when paying fees. You must always expect the fees to be low so that more people can benefit.",
                 },
         
                 {
-                  image: doatkolom_object.blocks + 'image-box/img/class.webp',
+                  image: doatkolom_object.blocks + 'image-box-1/img/class.webp',
                   title: "Regular class",
                   description: "This is an important thing that every parent looks at when paying fees. You must always expect the fees to be low so that more people can benefit.",
                 },
 
                 {
-                  image: doatkolom_object.blocks + 'image-box/img/exam.webp',
+                  image: doatkolom_object.blocks + 'image-box-1/img/exam.webp',
                   title: "class test",
                   description: "This is an important thing that every parent looks at when paying fees. You must always expect the fees to be low so that more people can benefit.",
                 },
 
                 {
-                  image: doatkolom_object.blocks + 'image-box/img/phases.webp',
+                  image: doatkolom_object.blocks + 'image-box-1/img/phases.webp',
                   title: "Attendance Management",
                   description: "This is an important thing that every parent looks at when paying fees. You must always expect the fees to be low so that more people can benefit.",
                 }

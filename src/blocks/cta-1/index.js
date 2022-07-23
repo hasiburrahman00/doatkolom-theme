@@ -1,4 +1,4 @@
-import config from '../../../blocks/image-slider/block.json';
+import config from './../../../blocks/cta-1/block.json';
 import RegisterBlock from '../../modules/register-block';
 import Edit from './edit';
 import Save from './save';
@@ -13,6 +13,6 @@ new RegisterBlock(config).setup({
         {
             title: 'General',
             component: GeneralControls
-        }
+        },
     ]
 })

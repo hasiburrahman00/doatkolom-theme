@@ -1,8 +1,8 @@
 {
-  "name": "doatkolom/call-to-action",
-  "title": "Doatkolom Call To Action",
+  "name": "doatkolom/call-to-action-1",
+  "title": "Doatkolom Call To Action 1",
   "description": "For call to action",
-  "keywords": ["call", "call to action", "doatkolom", "action"],
+  "keywords": ["call", "cta", "banner", "call to action", "doatkolom", "action"],
   "attributes": {
     "background": {
       "type": "string"

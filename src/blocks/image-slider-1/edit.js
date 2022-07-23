@@ -1,17 +1,16 @@
 import { NextArrow ,PrevArrow} from "./icons";
-const { useEffect } = wp.element;
 
 export default function Edit({ attributes, setAttributes}) {
 
     wp.element.useEffect(()=>{
         if(!attributes.images){
             setAttributes({images: [
-                doatkolom_object.blocks + 'image-slider/img/slider1.webp',
-                doatkolom_object.blocks + 'image-slider/img/slider2.webp',
-                doatkolom_object.blocks + 'image-slider/img/slider3.webp',
-                doatkolom_object.blocks + 'image-slider/img/slider4.webp',
-                doatkolom_object.blocks + 'image-slider/img/slider5.webp',
-                doatkolom_object.blocks + 'image-slider/img/slider6.webp',
+                doatkolom_object.blocks + 'image-slider-1/img/slider1.webp',
+                doatkolom_object.blocks + 'image-slider-1/img/slider2.webp',
+                doatkolom_object.blocks + 'image-slider-1/img/slider3.webp',
+                doatkolom_object.blocks + 'image-slider-1/img/slider4.webp',
+                doatkolom_object.blocks + 'image-slider-1/img/slider5.webp',
+                doatkolom_object.blocks + 'image-slider-1/img/slider6.webp',
             ]})
         }
 
