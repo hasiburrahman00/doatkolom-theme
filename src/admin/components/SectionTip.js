@@ -1,5 +1,5 @@
 import React from 'react'
-import { Play } from '../icons'
+import { Play } from '../icons/play'
 const SectionTip = (props) => {
   return (
     <div className="max-w-screen-lg bg-teal-100 mx-auto p-5 mt-8 flex">

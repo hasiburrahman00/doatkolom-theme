@@ -1,12 +1,13 @@
 import { useContext } from "react"
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { AdminContext } from "../context";
 import { Button, styled } from "@mui/material";
 import LoadingButton from '@mui/lab/LoadingButton';
 
-export default function Navbar() {
+export default function Navbar(props) {
 
-    const {attribute, setAttribute} = useContext(AdminContext)
+    const {attribute, setAttribute} = useContext(AdminContext);
+    const location = useLocation();
 
     const handleSaveSetting = () => {
         setAttribute({save_setting_loader: true})
@@ -40,17 +41,19 @@ export default function Navbar() {
     return (
         <HeaderComponent className="bg-white py-1 px-7 w-full fixed z-20 top-0 left-0 border-t-0 border-x-0 border-b border-solid border-gray-200">
             <div className="flex">
-                <div className="w-2/6 flex items-center space-x-2 text-3xl font-bold text-[#1879C7]">
+                <div className="w-2/6 flex items-center space-x-2 text-2xl font-bold text-[#1879C7]">
                     <picture>
                         <img width="50" height="50" className="lazyload" data-src={attribute.logo}/>
                     </picture>
                     <span>{attribute.site_name}</span>
                 </div>
                 <div className="w-4/6 flex justify-end items-center">
-                    
-                    <Link className="text-primary no-underline inline-block mr-7 text-base hover:text-secondary focus:shadow-none font-medium" to="/">Home</Link>
-                    <Link className="text-primary no-underline inline-block mr-7 text-base hover:text-secondary focus:shadow-none font-medium" to="/gallery">Photo Gallery</Link>
-                    <Link className="text-primary no-underline inline-block mr-7 text-base hover:text-secondary focus:shadow-none font-medium" to="/developer">Developer Option</Link>
+                    { props.menu.map( item => (
+                        <Link 
+                            key={item.name}
+                            className={`${ location.pathname === item.path ? 'text-secondary' : 'text-primary' } no-underline inline-block mr-7 text-base hover:text-secondary focus:shadow-none font-medium`} 
+                            to={item.path}>{item.name}</Link>
+                    ) ) }
                     
                     <div className="flex items-center space-x-5">
                         <SupportButton size="large">Get Support</SupportButton>
@@ -60,7 +63,7 @@ export default function Navbar() {
                             onClick={handleSaveSetting}
                             loading={attribute.save_setting_loader}>
                                 Submit Now
-                            </LoadingButton>
+                        </LoadingButton>
                     </div>
                 </div>
             </div>

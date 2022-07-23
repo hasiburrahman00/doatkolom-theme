@@ -30,7 +30,7 @@ export default function Gallery() {
 
     return (
         <ElementBox>
-            <div class="grid grid-cols-5 gap-5">
+            <div className="grid grid-cols-5 gap-5">
                 <div className="max-w-1/5 max-h-1/5 bg-primary">
                     <picture>
                         <img className="w-full block" src={attribute.gallery_img}/>

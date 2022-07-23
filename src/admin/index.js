@@ -8,6 +8,7 @@ import ReactTemplateMount from '../config';
 import Home from './pages/home';
 import Gallery from './pages/gallery';
 import Developer from './pages/developer';
+import SuccessStory from './pages/success-story';
 
 const menu = [
     {
@@ -23,7 +24,7 @@ const menu = [
     {
         name: 'Success Story',
         path: '/success',
-        Component: Developer
+        Component: SuccessStory
     },
     {
         name: 'Developer Option',
