@@ -6,6 +6,7 @@ import timelineTab1 from './blocks/timeline-tab-1/script';
 import imageSlider1 from './blocks/image-slider-1/script';
 import InfiniteScroll from './modules/infinite-scroll';
 import labSection1 from './blocks/lab-section-1/script';
+import TeachersSlider1 from './blocks/teachers-slider-1/script';
 
 
 jQuery(function() {
@@ -48,6 +49,7 @@ jQuery(function() {
         const blockScriptList = {
             'doatkolom/honorable-teachers-1' : honorableTeachers1,
             'doatkolom/image-slider-1' : imageSlider1,
+            'doatkolom/teachers-slider-1': TeachersSlider1,
             'doatkolom/timeline-tab-1': timelineTab1,
             'doatkolom/lab-section-1': labSection1,
         }
