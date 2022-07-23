@@ -29,10 +29,7 @@ class Settings extends Api
         $this->settings = $settings;
 
         return [
-            [
-                'title' => 'Settings Page',
-                'tabs'  => $this->settings_page_tabs( $settings )
-            ]
+            "home" => $this->settings_page_tabs( $settings )
         ];
     }
 
@@ -42,40 +39,115 @@ class Settings extends Api
     private function settings_page_tabs( $settings )
     {
         return [
-            [
+            'site_settings' => [
                 'title'         => esc_html__( 'Site Settings', 'doatkolom' ),
-                'tutorial_link' => '',
+                'tutorial_link' => 'https://www.youtube.com/embed/D0UnqGm_miA',
                 'fields'        => [
-                    [
-                        'id'        => 'institution_logo',
+                    'institution_logo' => [
                         'type'      => 'media',
                         'label'     => esc_html__( 'Institution Logo', 'doatkolom' ),
                         'default'   => isset( $settings['institution_logo'] ) ? $settings['institution_logo'] : '',
                         'media_url' => $this->get_attachment_url( 'institution_logo' )
+                    ],
+                    'website_favicon' => [
+                        'type'      => 'media',
+                        'label'     => esc_html__( 'Website Favicon', 'doatkolom' ),
+                        'default'   => isset( $settings['website_favicon'] ) ? $settings['website_favicon'] : '',
+                        'media_url' => $this->get_attachment_url( 'website_favicon' )
                     ]
                 ]
             ],
-            [
+            'information' => [
                 'title'         => esc_html__( 'Information', 'doatkolom' ),
-                'tutorial_link' => '',
+                'tutorial_link' => 'https://www.youtube.com/embed/D0UnqGm_miA',
                 'fields'        => [
-                    [
-                        'id'      => 'institution_type',
-                        'type'    => 'text',
+                    'institution_type' => [
+                        'type'    => 'select',
                         'label'   => esc_html__( 'Institution Type', 'doatkolom' ),
-                        'default' => isset( $settings['institution_type'] ) ? $settings['institution_type'] : ''
-                    ]
+                        'default' => isset( $settings['institution_type'] ) ? $settings['institution_type'] : '',
+                        'options' => [
+                            [ 'label' => 'School', 'value' => 'school'],
+                            [ 'label' => 'College', 'value' => 'college'],
+                            [ 'label' => 'University', 'value' => 'university'],
+                            [ 'label' => 'Coaching', 'value' => 'coaching'],
+                            [ 'label' => 'Agency', 'value' => 'agency'],
+                            [ 'label' => 'Madrasha', 'value' => 'madrasha'],
+                            [ 'label' => 'Personal/Small Business', 'value' => 'personal'],
+                            [ 'label' => 'NGO', 'value' => 'ngo'],
+                            [ 'label' => 'DoatKolom', 'value' => 'doatkolom'],
+                            [ 'label' => 'Others', 'value' => 'others'],
+                        ]
+                    ],
+                    'institution_code' => [
+                        'type'    => 'text',
+                        'label'   => esc_html__( 'Institution Code', 'doatkolom' ),
+                        'default' => isset( $settings['institution_code'] ) ? $settings['institution_code'] : ''
+                    ],
+                    'official_email' => [
+                        'type'    => 'text',
+                        'label'   => esc_html__( 'Official Email Address', 'doatkolom' ),
+                        'default' => isset( $settings['official_email'] ) ? $settings['official_email'] : ''
+                    ],
+                    'eiin_code' => [
+                        'type'    => 'text',
+                        'label'   => esc_html__( 'EIIN Code', 'doatkolom' ),
+                        'default' => isset( $settings['eiin_code'] ) ? $settings['eiin_code'] : ''
+                    ],
+                    'official_phone' => [
+                        'type'    => 'text',
+                        'label'   => esc_html__( 'Official Phone Number', 'doatkolom' ),
+                        'default' => isset( $settings['official_phone'] ) ? $settings['official_phone'] : ''
+                    ],
+                    'full_address' => [
+                        'type'    => 'textarea',
+                        'label'   => esc_html__( 'Full Address', 'doatkolom' ),
+                        'default' => isset( $settings['full_address'] ) ? $settings['full_address'] : ''
+                    ],
                 ]
             ],
-            [
+            'quick_url' => [
                 'title'         => esc_html__( 'Quick Menu URL', 'doatkolom' ),
-                'tutorial_link' => '',
+                'tutorial_link' => 'https://www.youtube.com/embed/D0UnqGm_miA',
                 'fields'        => [
-                    [
-                        'id'      => 'notice_board',
+                    'doatkolom_app_template' => [
                         'type'    => 'text',
-                        'label'   => esc_html__( 'Notice Board', 'doatkolom' ),
-                        'default' => isset( $settings['notice_board'] ) ? $settings['notice_board'] : ''
+                        'label'   => esc_html__( 'DoatKolom App Template', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_app_template'] ) ? $settings['doatkolom_app_template'] : ''
+                    ],
+                    'login_page' => [
+                        'type'    => 'text',
+                        'label'   => esc_html__( 'Login Page', 'doatkolom' ),
+                        'default' => isset( $settings['login_page'] ) ? $settings['login_page'] : ''
+                    ],
+                    'registration_page' => [
+                        'type'    => 'text',
+                        'label'   => esc_html__( 'Registration Page', 'doatkolom' ),
+                        'default' => isset( $settings['registration_page'] ) ? $settings['registration_page'] : ''
+                    ],
+                    'facebook' => [
+                        'type'    => 'text',
+                        'label'   => esc_html__( 'Facebook', 'doatkolom' ),
+                        'default' => isset( $settings['facebook'] ) ? $settings['facebook'] : ''
+                    ],
+                    'linkedin' => [
+                        'type'    => 'text',
+                        'label'   => esc_html__( 'LinkedIn', 'doatkolom' ),
+                        'default' => isset( $settings['linkedin'] ) ? $settings['linkedin'] : ''
+                    ],
+                    'youtube' => [
+                        'type'    => 'text',
+                        'label'   => esc_html__( 'Youtube', 'doatkolom' ),
+                        'default' => isset( $settings['youtube'] ) ? $settings['youtube'] : ''
+                    ],
+                    'whatsapp' => [
+                        'type'    => 'text',
+                        'label'   => esc_html__( 'WhatsApp', 'doatkolom' ),
+                        'default' => isset( $settings['whatsapp'] ) ? $settings['whatsapp'] : ''
+                    ],
+                    'custom_contact_page' => [
+                        'type'    => 'text',
+                        'label'   => esc_html__( 'Custom Contact Page', 'doatkolom' ),
+                        'default' => isset( $settings['custom_contact_page'] ) ? $settings['custom_contact_page'] : ''
                     ]
                 ]
             ]

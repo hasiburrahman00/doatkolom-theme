@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button } from '@mui/material'
+
 const ImageUpload = (props) => {
 
   const value = props.value || doatkolom_object.img + 'institution-logo.webp';
