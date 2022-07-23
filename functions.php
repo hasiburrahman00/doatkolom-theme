@@ -31,6 +31,7 @@ define( 'CSS_VARIABLES', "
         --doatkolom-secondary-color: #16AACA;
         --doatkolom-white-color: #ffffff;
         --doatkolom-white-color-90: #ffffffe6;
+        --doatkolom-black-color-90: #202020;
         --doatkolom-gray-100-color: #f3f4f6;
         --doatkolom-gray-200-color: #e5e7eb;
         --doatkolom-gray-300-color: #d1d5db;

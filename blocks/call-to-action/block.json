@@ -1,0 +1,39 @@
+{
+  "name": "doatkolom/call-to-action",
+  "title": "Doatkolom Call To Action",
+  "description": "For call to action",
+  "keywords": ["call", "call to action", "doatkolom", "action"],
+  "attributes": {
+    "background": {
+      "type": "string"
+    },
+
+    "title": {
+      "type": "string",
+      "default": "উপসংহার ১০ বছরের উল্লেখযোগ্য অর্জনের সাথে জড়িত"
+    },
+
+    "description": {
+      "type": "string",
+      "default": "অভিজ্ঞ মেন্টর আর আপডেটেড কারিকুলাম নিয়ে ক্রিয়েটিভ আইটি ইনস্টিটিউট প্রস্তুত আপনার ক্যারিয়ার গড়ার অগ্রযাত্রায়। আমাদের ৩০টিরও বেশি ট্রেন্ডি কোর্স থেকে আজই বেছে নিন আপনার পছন্দের"
+    },
+
+    "primary_button": {
+      "type": "object",
+      "default": {
+        "text": "এখনি কল করুন",
+        "url": "#",
+        "visible": true
+      }
+    },
+
+    "secondary_button": {
+      "type": "object",
+      "default": {
+        "text": "জয়েন ফ্রী সেমিনার",
+        "url": "#",
+        "visible": true
+      }
+    }
+  }
+}
