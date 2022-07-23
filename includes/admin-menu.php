@@ -36,9 +36,13 @@ function admin_enqueue_script_fn( $hook ) {
         wp_add_inline_style( 'doatkolom-frontend', CSS_VARIABLES );
         wp_localize_script( 'doatkolom-admin', 'doatkolom_object',
             array( 
-                'ajaxurl'   => admin_url( 'admin-ajax.php' ),
-                'blocks'    => DOATKOLOM_BLOCKS,
-                'img'       => DOATKOLOM_IMG
+                'ajaxurl'       => admin_url( 'admin-ajax.php' ),
+                'blocks'        => DOATKOLOM_BLOCKS,
+                'img'           => DOATKOLOM_IMG,
+                'wp_json'       => get_rest_url( '', '' ),
+                'api_version'   => 'v1',
+                'prefix'        => DOATKOLOM_POST_TYPE,
+                'nonce'         => wp_create_nonce( 'wp_rest' ),
             )
         );
     }

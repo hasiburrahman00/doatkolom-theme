@@ -1,8 +1,16 @@
 import PageWrapper from "../layouts/page-wrapper";
 import Panel from './../layouts/panel';
 import SiteSettings from "../layouts/site-settings";
+import { useEffect } from "react";
+import API from "../api";
 
 export default function Home() {
+
+    useEffect(()=>{
+        API.setting_fields().then(res => {
+            console.log(res)
+        })
+    },[])
 
     return (
         <PageWrapper>
