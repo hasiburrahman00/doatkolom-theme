@@ -166,9 +166,6 @@
 .mt-8 {
   margin-top: 2rem;
 }
-.mt-28 {
-  margin-top: 7rem;
-}
 .mr-7 {
   margin-right: 1.75rem;
 }
@@ -177,6 +174,9 @@
 }
 .mt-1 {
   margin-top: 0.25rem;
+}
+.mt-28 {
+  margin-top: 7rem;
 }
 .-mb-2 {
   margin-bottom: -0.5rem;
@@ -967,23 +967,11 @@
 .capitalize {
   text-transform: capitalize;
 }
-.leading-\[60px\] {
-  line-height: 60px;
-}
-.leading-\[10px\] {
-  line-height: 10px;
-}
-.leading-\[20px\] {
-  line-height: 20px;
-}
-.leading-\[26px\] {
-  line-height: 26px;
-}
-.leading-\[30px\] {
-  line-height: 30px;
-}
 .leading-\[40px\] {
   line-height: 40px;
+}
+.leading-\[60px\] {
+  line-height: 60px;
 }
 .text-primary {
   color: var(--doatkolom-primary-color);
@@ -1009,15 +997,15 @@
   --tw-text-opacity: 1;
   color: rgb(16 16 16 / var(--tw-text-opacity));
 }
+.text-black-90 {
+  color: var(--doatkolom-black-color-90);
+}
 .text-slate-200 {
   color: var(--doatkolom-slate-200-color);
 }
 .text-\[\#C1F1FF\] {
   --tw-text-opacity: 1;
   color: rgb(193 241 255 / var(--tw-text-opacity));
-}
-.text-black-90 {
-  color: var(--doatkolom-black-color-90);
 }
 .underline {
   -webkit-text-decoration-line: underline;
@@ -1417,14 +1405,14 @@ body::-webkit-scrollbar-thumb:hover {
 .hover\:bg-white:hover {
   background-color: var(--doatkolom-white-color);
 }
+.hover\:bg-transparent:hover {
+  background-color: transparent;
+}
 .hover\:bg-secondary:hover {
   background-color: var(--doatkolom-secondary-color);
 }
 .hover\:bg-primary-blue-100:hover {
   background-color: var(--doatkolom-primary-blue-100-color);
-}
-.hover\:bg-transparent:hover {
-  background-color: transparent;
 }
 .hover\:text-secondary:hover {
   color: var(--doatkolom-secondary-color);
