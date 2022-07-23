@@ -17,7 +17,8 @@ function doatkolom_theme_dashboard_menu() {
         'edit_posts', 
         'doatkolom-theme-settings', 
         'page_callback_function', 
-        $logo 
+        $logo,
+        '58.7'
     );
 }
 

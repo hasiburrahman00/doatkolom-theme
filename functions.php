@@ -1,16 +1,15 @@
 <?php
+
 use DoatKolom\AutoLoader;
 
 /**
- * 
- * 
- * 
- * GLOBAL Constant for doatkolom theme 
- * 
+ *
+ * GLOBAL Constant for doatkolom theme
+ *
  * @since 1.0.0
- */ 
+ */
 
-define( 'DOATKOLOM_HOME_URL', home_url('/'));
+define( 'DOATKOLOM_HOME_URL', home_url( '/' ) );
 define( 'DOATKOLOM_SITE_URL', get_site_url() . '/' );
 define( 'DOATKOLOM_THEME_URI', get_template_directory_uri() );
 define( 'DOATKOLOM_THEME_DIR', get_template_directory() );
@@ -42,6 +41,7 @@ define( 'CSS_VARIABLES', "
         --doatkolom-slate-200-color: #e2e8f0;
         --doatkolom-slate-100-color: #f1f5f9;
         --doatkolom-teal-100-color: #E7F4F6;
+        --doatkolom-blue-100-color: #F5FBFD;
         --doatkolom-blue-600-color: #2563eb;
         --doatkolom-green-600-color: #16a34a;
         --doatkolom-red-600-color: #dc2626;
@@ -50,19 +50,20 @@ define( 'CSS_VARIABLES', "
         --doatkolom-paste-blue-400-color: #3EB9D3;
         --doatkolom-paste-blue-100-color: #F8FEFF;
         --doatkolom-primary-blue-100-color: #F3FDFF;
+        --doatkolom-pink-100-color: #FEF8F8;
     }
-");
+" );
 
 /**
- * 
- * 
- * 
- * Get the logo of the institution 
- * 
- */ 
-if(has_custom_logo()):
+ *
+ *
+ *
+ * Get the logo of the institution
+ *
+ */
+if ( has_custom_logo() ):
     $custom_logo_id = get_theme_mod( 'custom_logo' );
-    $site_logo_url = wp_get_attachment_image_url( $custom_logo_id , 'full' );
+    $site_logo_url  = wp_get_attachment_image_url( $custom_logo_id, 'full' );
 else:
     $site_logo_url = DOATKOLOM_IMG . 'institution-logo.webp';
 endif;
@@ -78,14 +79,20 @@ define( 'DOATKOLOM_LOGO', $site_logo_url );
  * i.e; If a class named SomeClass is stored in app/SomeDir/SomeClass.php, there is no need to include/require that file
  * as the autoloader will handle that for you.
  */
-require get_stylesheet_directory() . '/app/AutoLoader.php';
+include_once get_stylesheet_directory() . '/app/AutoLoader.php';
 $loader = new AutoLoader();
 $loader->register();
 $loader->addNamespace( 'DoatKolom', get_stylesheet_directory() . '/app' );
+$loader->addNamespace( 'DoatKolom\Core', get_stylesheet_directory() . '/core' );
 
-remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
 
-require get_stylesheet_directory() . '/includes/theme-support.php';
-require get_stylesheet_directory() . '/includes/scripts-and-styles.php';
-require get_stylesheet_directory() . '/includes/block-scripts.php';
-require get_stylesheet_directory() . '/includes/admin-menu.php';
+include_once get_stylesheet_directory() . '/includes/theme-support.php';
+include_once get_stylesheet_directory() . '/includes/scripts-and-styles.php';
+include_once get_stylesheet_directory() . '/includes/block-scripts.php';
+include_once get_stylesheet_directory() . '/includes/admin-menu.php';
+
+include_once get_stylesheet_directory() . '/app/Settings.php';
+\Doatkolom\Settings::instance();
+
+// get_rest_url( '', '' ) . 'doatkolom-theme/v1/settings/setting_fields';

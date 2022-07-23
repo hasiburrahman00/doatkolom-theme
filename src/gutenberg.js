@@ -12,3 +12,4 @@ import './blocks/honorable-teachers-1';
 import './blocks/image-slider';
 import './blocks/lab-section-1';
 import './blocks/call-to-action';
+import './blocks/image-box';

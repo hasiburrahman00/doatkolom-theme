@@ -1,0 +1,11 @@
+{
+  "name": "doatkolom/image-box",
+  "title": "Doatkolom Image Box",
+  "description": "For Image Box",
+  "keywords": ["image", "box", "doatkolom", "image box"],
+  "attributes": {
+    "image_box": {
+      "type": "array"
+    }
+  }
+}

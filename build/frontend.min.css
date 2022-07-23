@@ -1390,6 +1390,12 @@ body::-webkit-scrollbar-thumb:hover {
   --tw-content: "";
   content: var(--tw-content);
 }
+.odd\:bg-pink-100:nth-child(odd) {
+  background-color: var(--doatkolom-pink-100-color);
+}
+.even\:bg-blue-100:nth-child(even) {
+  background-color: var(--doatkolom-blue-100-color);
+}
 .hover\:border-secondary:hover {
   border-color: var(--doatkolom-secondary-color);
 }
