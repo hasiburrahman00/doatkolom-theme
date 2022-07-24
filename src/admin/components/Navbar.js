@@ -6,15 +6,14 @@ const $ = window.jQuery;
 
 function Navbar(props) {
 
-    const { saveButton, setSaveButton } = props
+    const { saveButton } = props
     const headerRef = useRef(null);
     const location = useLocation();
 
     const handleSaveSetting = () => {
-        setSaveButton({
-            text: 'Saving...',
-            loading: true
-        })
+        if( props.onSave && typeof props.onSave === 'function' ) {
+            props.onSave();
+        }
     }
 
     useEffect(() => {
@@ -88,6 +87,7 @@ function Navbar(props) {
                             sx={loadingButtonStyle} 
                             variant="contained" size="large" 
                             onClick={handleSaveSetting}
+                            disabled={saveButton.disable}
                             loading={saveButton.loading}>
                                 { saveButton.text }
                         </LoadingButton>

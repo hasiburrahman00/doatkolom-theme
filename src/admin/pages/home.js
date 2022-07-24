@@ -4,13 +4,20 @@ import SiteSettings from "../layouts/site-settings";
 import EmptySettingsUI from "../components/empty-settings-ui";
 
 import { TextField, Box, Select, MenuItem, InputLabel, FormControl } from "@mui/material";
-import { useContext } from "react";
+import { useContext, useMemo, useCallback } from "react";
 import { AdminContext } from "../context";
 
 export default function Home() {
 
     const { attribute, setAttribute } = useContext(AdminContext);
     const fields = attribute.setting_fields.home; // input settings for home page
+
+    const onChangeHandler = useCallback((tab, name, value) => {
+        fields[tab].fields[name].default = value;;
+        setAttribute({
+            setting_fields: attribute.setting_fields
+        })
+    }, [])
     
     /**
      * 
@@ -18,29 +25,31 @@ export default function Home() {
      * @description properties name must be similar to the type coming from backend 
      * 
      */ 
-    const inputComponents = {
-        text(attr) {
-            return <TextField fullWidth label={attr.label} variant="outlined" />
-        },
-
-        textarea(attr) {
-            return <TextField multiline fullWidth label={attr.label} variant="outlined" />
-        },
-
-        select(attr) {
-            const options = attr.options || [];
-            return (
-                <FormControl fullWidth>
-                    <InputLabel id="demo-simple-select-label">{attr.label}</InputLabel>
-                    <Select label={attr.label} labelId="demo-simple-select-label">
-                        { options.map( item => <MenuItem key={item.value} value={item.value}>{item.label}</MenuItem> ) }
-                    </Select>
-                </FormControl>
-            )
-        }
-    }
+    const inputComponents = useMemo(() => {
+        return {
+            text(attr) {
+                return <TextField fullWidth onChange={ ev => onChangeHandler(attr.tab, attr.name, ev.target.value) }  value={attr.default} label={attr.label} variant="outlined" />
+            },
     
-    const InputFieldsBox = ({index}) => {
+            textarea(attr) {
+                return <TextField multiline onChange={ ev => onChangeHandler(attr.tab, attr.name, ev.target.value) } fullWidth value={attr.default} label={attr.label} variant="outlined" />
+            },
+    
+            select(attr) {
+                const options = attr.options || [];
+                return (
+                    <FormControl fullWidth>
+                        <InputLabel id="demo-simple-select-label">{attr.label}</InputLabel>
+                        <Select label={attr.label} onChange={ ev => onChangeHandler(attr.tab, attr.name, ev.target.value) } value={attr.default} labelId="demo-simple-select-label">
+                            { options.map( item => <MenuItem key={item.value} value={item.value}>{item.label}</MenuItem> ) }
+                        </Select>
+                    </FormControl>
+                )
+            }
+        }
+    }, [])
+    
+    const InputFieldsBox = useCallback(({index}) => {
         const inputFields = fields[index].fields;
         return (
             <Box
@@ -68,18 +77,20 @@ export default function Home() {
                     Object.keys(inputFields).map( key => {
                         const attr = inputFields[key];
                         const Components = inputComponents[attr.type] || EmptySettingsUI;
-                        return <Components key={key} {...attr}/>
+                        return <Components key={key} name={key} {...attr} tab={index}/>
                     })
                 }
             </Box>
         )
-    }
+    }, [])
 
-    const bodyComponents = {
-        site_settings   : SiteSettings,
-        information     : InputFieldsBox,
-        quick_url       : InputFieldsBox,
-    }
+    const bodyComponents = useMemo(() => {
+        return {
+            site_settings   : SiteSettings,
+            information     : InputFieldsBox,
+            quick_url       : InputFieldsBox,
+        }
+    }, [])
 
     return (
         <PageWrapper>

@@ -32,12 +32,14 @@ export default function SiteSettings( props ) {
                 <ImageUpload
                     label="Institution Logo"
                     value={data.institution_logo.default}
+                    onChange={ val => onChangeHandler('institution_logo', val.url) }
                 />
             </div>
             <div className="relative after:content-[''] after:w-px after:h-full after:bg-[#DFE9F1] after:absolute after:top-0 after:right-[50px]">
                 <ImageUpload
                     label="Website Favicon"
                     value={data.website_favicon.default}
+                    onChange={ val => onChangeHandler('website_favicon', val.url) }
                 />
             </div>
             <div className="col-span-2">
