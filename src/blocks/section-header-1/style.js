@@ -16,6 +16,9 @@ export default function Style({attributes, wrapper}){
                 margin: ${attributes.alignment == 'left'?'0':attributes.alignment == 'center'?'0 auto':attributes.alignment == 'right'&&'0 0 0 auto'};
             }
 
+            ${wrapper} .doatkolom-highlight {
+                color: ${attributes.highlight_color}
+            }
         `
     )
 }

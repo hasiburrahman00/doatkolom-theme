@@ -448,6 +448,9 @@
 .max-w-screen-sm {
   max-width: 640px;
 }
+.max-w-\[600px\] {
+  max-width: 600px;
+}
 .max-w-\[1000px\] {
   max-width: 1000px;
 }
@@ -734,6 +737,10 @@
   --tw-bg-opacity: 1;
   background-color: rgb(193 241 255 / var(--tw-bg-opacity));
 }
+.bg-\[\#4f46e5\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(79 70 229 / var(--tw-bg-opacity));
+}
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -875,6 +882,10 @@
   padding-left: 30px;
   padding-right: 30px;
 }
+.py-24 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
 .py-1\.5 {
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
@@ -998,11 +1009,11 @@
 .capitalize {
   text-transform: capitalize;
 }
-.leading-\[40px\] {
-  line-height: 40px;
-}
 .leading-\[60px\] {
   line-height: 60px;
+}
+.leading-\[40px\] {
+  line-height: 40px;
 }
 .text-primary {
   color: var(--doatkolom-primary-color);
@@ -1366,6 +1377,10 @@ body::-webkit-scrollbar-thumb:hover {
   content: var(--tw-content);
   left: -16px;
 }
+.before\:top-0::before {
+  content: var(--tw-content);
+  top: 0px;
+}
 .before\:h-full::before {
   content: var(--tw-content);
   height: 100%;
@@ -1373,6 +1388,10 @@ body::-webkit-scrollbar-thumb:hover {
 .before\:h-11::before {
   content: var(--tw-content);
   height: 2.75rem;
+}
+.before\:h-2::before {
+  content: var(--tw-content);
+  height: 0.5rem;
 }
 .before\:w-full::before {
   content: var(--tw-content);
@@ -1386,6 +1405,14 @@ body::-webkit-scrollbar-thumb:hover {
   content: var(--tw-content);
   border-radius: 0.75rem;
 }
+.before\:rounded-tl-lg::before {
+  content: var(--tw-content);
+  border-top-left-radius: 0.5rem;
+}
+.before\:rounded-tr-lg::before {
+  content: var(--tw-content);
+  border-top-right-radius: 0.5rem;
+}
 .before\:bg-gray-200::before {
   content: var(--tw-content);
   background-color: var(--doatkolom-gray-200-color);
@@ -1393,6 +1420,10 @@ body::-webkit-scrollbar-thumb:hover {
 .before\:bg-paste-blue-400::before {
   content: var(--tw-content);
   background-color: var(--doatkolom-paste-blue-400-color);
+}
+.before\:bg-red-600::before {
+  content: var(--tw-content);
+  background-color: var(--doatkolom-red-600-color);
 }
 .before\:content-\[\'\'\]::before {
   --tw-content: '';
@@ -1442,9 +1473,6 @@ body::-webkit-scrollbar-thumb:hover {
 .hover\:bg-white:hover {
   background-color: var(--doatkolom-white-color);
 }
-.hover\:bg-transparent:hover {
-  background-color: transparent;
-}
 .hover\:bg-secondary:hover {
   background-color: var(--doatkolom-secondary-color);
 }
@@ -1453,6 +1481,9 @@ body::-webkit-scrollbar-thumb:hover {
 }
 .hover\:bg-primary-blue-100:hover {
   background-color: var(--doatkolom-primary-blue-100-color);
+}
+.hover\:bg-transparent:hover {
+  background-color: transparent;
 }
 .hover\:text-secondary:hover {
   color: var(--doatkolom-secondary-color);
@@ -1660,6 +1691,9 @@ body::-webkit-scrollbar-thumb:hover {
   .md\:mt-11 {
     margin-top: 2.75rem;
   }
+  .md\:mb-5 {
+    margin-bottom: 1.25rem;
+  }
   .md\:mb-0 {
     margin-bottom: 0px;
   }
@@ -1747,6 +1781,10 @@ body::-webkit-scrollbar-thumb:hover {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
   }
+  .md\:px-14 {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
   .md\:pb-0 {
     padding-bottom: 0px;
   }
@@ -1777,6 +1815,10 @@ body::-webkit-scrollbar-thumb:hover {
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
   .md\:text-xl {
     font-size: 1.25rem;

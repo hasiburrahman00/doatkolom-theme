@@ -1,4 +1,4 @@
-const { RangeControl } = wp.components
+const { RangeControl, ColorPicker } = wp.components
 import Aligment from '../../components/alignment'
 
 export default function StyleControls({attributes, setAttributes}) {
@@ -29,6 +29,14 @@ export default function StyleControls({attributes, setAttributes}) {
                 min={ 320 }
                 max={ 900 }
             />
+
+            <div>
+                <label className="block mb-2">Highlight Color</label>
+                <ColorPicker
+                    color={attributes.highlight_color}
+                    onChange={ highlight_color => setAttributes({highlight_color})}
+                />
+            </div>
             
         </div>
     )

@@ -43,4 +43,13 @@ export default class Helper  {
         })
     }
 
+    static stringHighlight( str  = '' ) {
+        str  = str.replace(/{{.+?}}/g, function(target){
+            target = target.replace('{{', '<span class="doatkolom-highlight">');
+            target = target.replace('}}', '</span>');
+            return target
+        });
+        return str;
+    }
+
 }

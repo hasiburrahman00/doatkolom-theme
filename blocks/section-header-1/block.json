@@ -6,7 +6,7 @@
     "attributes": {
         "heading": {
             "type": "string",
-            "default": "Our Photo Gallery"
+            "default": "Our {{Photo}} Gallery"
         },
         "description": {
             "type": "string",
@@ -23,6 +23,10 @@
         "description_width": {
             "type": "string",
             "default": 496
+        },
+        "highlight_color": {
+            "type": "string",
+            "default": "#16aaca"
         }
     }
 }
