@@ -14,3 +14,4 @@ import './blocks/lab-section-1';
 import './blocks/cta-1';
 import './blocks/image-box-1';
 import './blocks/teachers-slider-1';
+import './blocks/mission-1';

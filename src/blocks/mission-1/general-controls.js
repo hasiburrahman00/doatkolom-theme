@@ -1,4 +1,4 @@
-const { TextControl, TextareaControl,RangeControl } = wp.components
+const { TextControl,ColorPicker } = wp.components
 import ImagePicker from "../../components/image-picker"
 
 export default function GeneralControls({attributes, setAttributes}) {
@@ -16,6 +16,15 @@ export default function GeneralControls({attributes, setAttributes}) {
                 value={ attributes.title }
                 onChange={ ( value ) => setAttributes({title: value}) }
             />
+
+            <div>
+                <label className="block mb-2">Highlight Color</label>
+                <ColorPicker
+                    color={attributes.highlight_color}
+                    onChange={ highlight_color => setAttributes({highlight_color})}
+                />
+            </div>
+
         </div>
     )
 }

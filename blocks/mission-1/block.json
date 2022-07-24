@@ -10,7 +10,7 @@
 
     "title": {
       "type": "string",
-      "default": "Our Mission And Benefits"
+      "default": "Our {{Mission}} And Benefits"
     },
 
     "description": {
@@ -32,6 +32,11 @@
           "text": "Find out what problems you are facing in generating products and new leads. Then I create a marketing strategy and execute it in a systematic way. I work with you for hours every week to help you build the marketing department you've always wanted. "
         }
       ]
+    },
+
+    "highlight_color": {
+      "type": "string",
+      "default": "#DB231E"
     }
   }
 }
