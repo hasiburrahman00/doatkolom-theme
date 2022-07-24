@@ -1,17 +1,45 @@
-import { useContext } from "react"
+import { memo, useEffect, useRef } from "react"
 import { Link, useLocation } from 'react-router-dom';
-import { AdminContext } from "../context";
 import { Button, styled } from "@mui/material";
 import LoadingButton from '@mui/lab/LoadingButton';
+const $ = window.jQuery;
 
-export default function Navbar(props) {
+function Navbar(props) {
 
-    const {attribute, setAttribute} = useContext(AdminContext);
+    const { saveButton } = props
+    const headerRef = useRef(null);
     const location = useLocation();
 
     const handleSaveSetting = () => {
-        setAttribute({save_setting_loader: true})
+        if( props.onSave && typeof props.onSave === 'function' ) {
+            props.onSave();
+        }
     }
+
+    useEffect(() => {
+        $(document).trigger( 'wp-window-resized' );
+    },[])
+
+    $(document).on( 'wp-menu-state-set wp-collapse-menu', function( event, eventData ) {
+        if( eventData.state === 'open' || eventData.state === 'folded' && headerRef.current ) {
+            const sidebarWidth      = $('#adminmenuwrap').outerWidth();
+            const adminBarHeight    = $('#wpadminbar').outerHeight();
+            
+            $(headerRef.current).css({
+                left: sidebarWidth + 'px',
+                top: adminBarHeight + 'px',
+                width: `calc(100% - ${sidebarWidth}px)`
+            })
+        }
+
+        if( eventData.state === 'responsive' && headerRef.current ) {
+            $(headerRef.current).css({
+                left: 0,
+                top: 0,
+                width: `100%`
+            })
+        }
+    });
 
     const SupportButton = styled(Button)`
         background-color: #DFE9F1;
@@ -35,17 +63,15 @@ export default function Navbar(props) {
             boxShadow: 'none'
         }
     }
-
-    const HeaderComponent = styled('header')(attribute.header_css)
-
+    
     return (
-        <HeaderComponent className="bg-white py-1 px-7 w-full fixed z-20 top-0 left-0 border-t-0 border-x-0 border-b border-solid border-gray-200">
+        <header ref={headerRef} className="bg-white py-1 px-7 w-full fixed z-20 top-0 left-0 border-t-0 border-x-0 border-b border-solid border-gray-200">
             <div className="flex">
                 <div className="w-2/6 flex items-center space-x-2 text-2xl font-bold text-[#1879C7]">
                     <picture>
-                        <img width="50" height="50" className="lazyload" data-src={attribute.logo}/>
+                        <img width="50" height="50" className="lazyload" data-src={`${doatkolom_object.img + 'logo.webp'}`}/>
                     </picture>
-                    <span>{attribute.site_name}</span>
+                    <span>DoatKolom</span>
                 </div>
                 <div className="w-4/6 flex justify-end items-center">
                     { props.menu.map( item => (
@@ -61,12 +87,16 @@ export default function Navbar(props) {
                             sx={loadingButtonStyle} 
                             variant="contained" size="large" 
                             onClick={handleSaveSetting}
-                            loading={attribute.save_setting_loader}>
-                                Submit Now
+                            disabled={saveButton.disable}
+                            loading={saveButton.loading}>
+                                { saveButton.text }
                         </LoadingButton>
                     </div>
                 </div>
             </div>
-        </HeaderComponent>
+        </header>
     )
 }
+
+const MemoedNavbar = memo(Navbar)
+export default MemoedNavbar;

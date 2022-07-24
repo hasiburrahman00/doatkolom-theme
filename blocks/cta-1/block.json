@@ -2,7 +2,14 @@
   "name": "doatkolom/call-to-action-1",
   "title": "Doatkolom Call To Action 1",
   "description": "For call to action",
-  "keywords": ["call", "cta", "banner", "call to action", "doatkolom", "action"],
+  "keywords": [
+    "call",
+    "cta",
+    "banner",
+    "call to action",
+    "doatkolom",
+    "action"
+  ],
   "attributes": {
     "background": {
       "type": "string"
@@ -10,18 +17,18 @@
 
     "title": {
       "type": "string",
-      "default": "উপসংহার ১০ বছরের উল্লেখযোগ্য অর্জনের সাথে জড়িত"
+      "default": "Conclusion 10 Years Of Significant Achievements Are Involved"
     },
 
     "description": {
       "type": "string",
-      "default": "অভিজ্ঞ মেন্টর আর আপডেটেড কারিকুলাম নিয়ে ক্রিয়েটিভ আইটি ইনস্টিটিউট প্রস্তুত আপনার ক্যারিয়ার গড়ার অগ্রযাত্রায়। আমাদের ৩০টিরও বেশি ট্রেন্ডি কোর্স থেকে আজই বেছে নিন আপনার পছন্দের"
+      "default": "With experienced mentors and updated curriculum, Creative IT Institute is ready to advance your career. Choose your favorite from our 30+ trendy courses today"
     },
 
     "primary_button": {
       "type": "object",
       "default": {
-        "text": "এখনি কল করুন",
+        "text": "Call now",
         "url": "#",
         "visible": true
       }
@@ -30,7 +37,7 @@
     "secondary_button": {
       "type": "object",
       "default": {
-        "text": "জয়েন ফ্রী সেমিনার",
+        "text": "Join Free Seminar",
         "url": "#",
         "visible": true
       }

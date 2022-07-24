@@ -54,7 +54,22 @@ class Settings extends Api
                         'label'     => esc_html__( 'Website Favicon', 'doatkolom' ),
                         'default'   => isset( $settings['website_favicon'] ) ? $settings['website_favicon'] : '',
                         'media_url' => $this->get_attachment_url( 'website_favicon' )
-                    ]
+                    ],
+                    'site_title' => [
+                        'type'    => 'text',
+                        'label'   => esc_html__( 'Site Title', 'doatkolom' ),
+                        'default' => isset( $settings['site_title'] ) ? $settings['site_title'] : ''
+                    ],
+                    'site_description' => [
+                        'type'    => 'text',
+                        'label'   => esc_html__( 'Site Description', 'doatkolom' ),
+                        'default' => isset( $settings['site_description'] ) ? $settings['site_description'] : ''
+                    ],
+                    'site_keywords' => [
+                        'type'    => 'text',
+                        'label'   => esc_html__( 'Site Keywords', 'doatkolom' ),
+                        'default' => isset( $settings['site_keywords'] ) ? $settings['site_keywords'] : ''
+                    ],
                 ]
             ],
             'information' => [

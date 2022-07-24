@@ -31,6 +31,7 @@ function doatkolom_theme_dashboard_menu() {
 function admin_enqueue_script_fn( $hook ) {
     if( $hook === 'toplevel_page_doatkolom-theme-settings' ) {
         
+        wp_enqueue_media();
         wp_enqueue_script('doatkolom-admin', DOATKOLOM_BUILD . 'admin.min.js', ['jquery', 'wp-editor', 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-date', 'wp-hooks', 'wp-components', 'underscore'], DOATKOLOM_VERSION, false);
         wp_enqueue_style('doatkolom-frontend', DOATKOLOM_BUILD . 'frontend.min.css', [], DOATKOLOM_VERSION, false);
         wp_add_inline_style( 'doatkolom-frontend', CSS_VARIABLES );

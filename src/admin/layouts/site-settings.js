@@ -16,18 +16,30 @@ export default function SiteSettings( props ) {
 
     const { attribute, setAttribute } = useContext(AdminContext);
     const data = attribute.setting_fields[props.page][props.index].fields;
-    console.log(data);
+
+    const onChangeHandler = (name, value) => {
+        data[name].default = value;
+
+        // update the parent state
+        setAttribute({
+            setting_fields: attribute.setting_fields
+        })
+    }
 
     return (
         <div className="grid grid-cols-4">
             <div className="relative after:content-[''] after:w-px after:h-full after:bg-[#DFE9F1] after:absolute after:top-0 after:right-[50px]">
                 <ImageUpload
                     label="Institution Logo"
+                    value={data.institution_logo.default}
+                    onChange={ val => onChangeHandler('institution_logo', val.url) }
                 />
             </div>
             <div className="relative after:content-[''] after:w-px after:h-full after:bg-[#DFE9F1] after:absolute after:top-0 after:right-[50px]">
                 <ImageUpload
                     label="Website Favicon"
+                    value={data.website_favicon.default}
+                    onChange={ val => onChangeHandler('website_favicon', val.url) }
                 />
             </div>
             <div className="col-span-2">
@@ -46,9 +58,9 @@ export default function SiteSettings( props ) {
                     noValidate
                     autoComplete="off"
                 >
-                    <TextField fullWidth label="Site Title" variant="outlined" />
-                    <TextField fullWidth label="Site Description" variant="outlined" />
-                    <TextField fullWidth label="Site Keywords" variant="outlined" />
+                    <TextField fullWidth onChange={ ev => onChangeHandler('site_title', ev.target.value) } value={data.site_title.default} label="Site Title" variant="outlined" />
+                    <TextField fullWidth onChange={ ev => onChangeHandler('site_description', ev.target.value) } value={data.site_description.default} label="Site Description" variant="outlined" />
+                    <TextField fullWidth onChange={ ev => onChangeHandler('site_keywords', ev.target.value) } value={data.site_keywords.default} label="Site Keywords" variant="outlined" />
                 </Box>
             </div>
         </div>
