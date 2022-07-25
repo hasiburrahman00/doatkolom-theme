@@ -211,14 +211,14 @@ class Settings extends Api
     {
         try {
             $data        = $this->request->get_params();
-            $image_id    = $data['image_id'];
+            $image_ids   = $data['image_ids'];
             $gallery_ids = get_option( self::GALLERY_KEY );
             if ( !$gallery_ids ) {
                 $gallery_ids = [];
             } else {
                 $gallery_ids = unserialize( $gallery_ids );
             }
-            $gallery_ids[] = $image_id;
+            $gallery_ids = array_merge( $gallery_ids, $image_ids );
             update_option( self::GALLERY_KEY, serialize( $gallery_ids ) );
 
             return [
@@ -327,7 +327,7 @@ class Settings extends Api
     {
         $data = $this->request->get_params();
         try {
-            $image_key = $data['image_key'];
+            $image_keys = $data['image_keys'];
 
             $gallery_ids = get_option( self::GALLERY_KEY );
             if ( !$gallery_ids ) {
@@ -335,7 +335,10 @@ class Settings extends Api
             } else {
                 $gallery_ids = unserialize( $gallery_ids );
             }
-            unset( $gallery_ids[$image_key] );
+
+            foreach ( $image_keys as $image_key ) {
+                unset( $gallery_ids[$image_key] );
+            }
             update_option( self::GALLERY_KEY, serialize( array_values( $gallery_ids ) ) );
 
             return [
