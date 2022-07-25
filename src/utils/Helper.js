@@ -52,4 +52,8 @@ export default class Helper  {
         return str;
     }
 
+    static wysiwyg( str = '' ) {
+        return str.replaceAll('\n', '<br/>')
+    }
+
 }

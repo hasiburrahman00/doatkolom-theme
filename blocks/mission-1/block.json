@@ -1,8 +1,8 @@
 {
   "name": "doatkolom/mission-1",
   "title": "Doatkolom Mission 1",
-  "description": "For mission 1",
-  "keywords": ["mission", "mission part", "doatkolom", "mission section"],
+  "description": "For mission and about section",
+  "keywords": ["mission", "mission part", "about", "paragraph", "box", "doatkolom", "mission section"],
   "attributes": {
     "background": {
       "type": "string"
@@ -14,26 +14,10 @@
     },
 
     "description": {
-      "type": "array",
-      "default": [
-        {
-          "text": "Do you want senior marketing input without the overhead associated with hiring a full-time CMO? This is where I come in. 50% of my time goes to small companies and the remaining 50% to mid-sized ones. As your part-time CMO, I dive in and your business,"
-        },
-
-        {
-          "text": "Find out what problems you are facing in generating products and new leads. Then I create a marketing strategy and execute it in a systematic way. I work with you for hours every week to help you build the marketing department you've always wanted.  "
-        },
-
-        {
-          "text": "I do this by executing strategic marketing that attracts, educates and then converts your target customers"
-        },
-
-        {
-          "text": "Find out what problems you are facing in generating products and new leads. Then I create a marketing strategy and execute it in a systematic way. I work with you for hours every week to help you build the marketing department you've always wanted. "
-        }
-      ]
+      "type": "string",
+      "default": "Do you want senior marketing input without the overhead associated with hiring a full-time CMO? This is where I come in. 50% of my time goes to small companies and the remaining 50% to mid-sized ones. As your part-time CMO, I dive in and your business\nFind out what problems you are facing in generating products and new leads. Then I create a marketing strategy and execute it in a systematic way. I work with you for hours every week to help you build the marketing department you've always wanted.\nI do this by executing strategic marketing that attracts, educates and then converts your target customers\nFind out what problems you are facing in generating products and new leads. Then I create a marketing strategy and execute it in a systematic way. I work with you for hours every week to help you build the marketing department you've always wanted."
     },
-
+    
     "highlight_color": {
       "type": "string",
       "default": "#DB231E"
