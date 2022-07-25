@@ -12,11 +12,6 @@
   "attributes": {
     "subjects": {
       "type": "array"
-    },
-
-    "box_width": {
-      "type": "number",
-      "default": 5
     }
   }
 }

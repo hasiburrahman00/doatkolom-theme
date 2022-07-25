@@ -54,7 +54,7 @@ export default function Edit({ attributes, setAttributes}) {
                 {
                     image: doatkolom_object.blocks + 'subject-1/img/subject9.webp',
                     subject: "ICT",
-                    box_span: 2
+                    box_span: 1
                 },
 
                 {
@@ -86,7 +86,6 @@ export default function Edit({ attributes, setAttributes}) {
                 }
             </div>
         </div>
-    
 	);
 }
 

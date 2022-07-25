@@ -38,7 +38,6 @@ export default function GeneralControls({attributes, setAttributes}) {
              ]
          })
     }
- 
 
     return (
         <div className="space-y-5">
