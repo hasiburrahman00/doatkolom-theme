@@ -1,0 +1,17 @@
+{
+  "name": "doatkolom/subject-1",
+  "title": "Doatkolom Subject 1",
+  "description": "For subject section",
+  "keywords": [
+    "subject",
+    "subject part",
+    "box",
+    "doatkolom",
+    "subject section"
+  ],
+  "attributes": {
+    "subjects": {
+      "type": "array"
+    }
+  }
+}
