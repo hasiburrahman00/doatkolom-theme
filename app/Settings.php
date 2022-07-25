@@ -12,6 +12,8 @@ class Settings extends Api
 
     use Singleton;
 
+    public $settings = [];
+
     public function config()
     {
         $this->prefix = 'settings';

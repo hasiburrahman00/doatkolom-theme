@@ -83,6 +83,7 @@ define( 'DOATKOLOM_LOGO', $site_logo_url );
  * as the autoloader will handle that for you.
  */
 include_once get_stylesheet_directory() . '/app/AutoLoader.php';
+include_once get_stylesheet_directory() . '/app/helpers/helper.php';
 $loader = new AutoLoader();
 $loader->register();
 $loader->addNamespace( 'DoatKolom', get_stylesheet_directory() . '/app' );
@@ -96,6 +97,9 @@ include_once get_stylesheet_directory() . '/includes/block-scripts.php';
 include_once get_stylesheet_directory() . '/includes/admin-menu.php';
 
 include_once get_stylesheet_directory() . '/app/Settings.php';
+
 \Doatkolom\Settings::instance();
 
 // get_rest_url( '', '' ) . 'doatkolom-theme/v1/settings/setting_fields';
+
+// error_log(get_doatkolom_theme_setting('site_title'));
