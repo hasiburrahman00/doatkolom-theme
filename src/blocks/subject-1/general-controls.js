@@ -60,10 +60,10 @@ export default function GeneralControls({attributes, setAttributes}) {
 
                         <RangeControl
                             label="Box width"
-                            value={ attributes.box_width}
-                            onChange={ ( value ) => setAttributes({box_width: value}) }
+                            value={ item.box_span}
+                            onChange={ ( value ) => handleTitleChange(value,index,'box_span') }
                             min={ 1 }
-                            max={ attributes.subjects.length }
+                            max={ 5 }
                         />
                     </Repeater.Item>
                 ))}
