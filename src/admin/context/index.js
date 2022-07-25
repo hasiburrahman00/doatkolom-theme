@@ -23,7 +23,9 @@ export function AdminContextProvider(props) {
 
         if( !attribute.setting_fields ) {
             API.setting_fields().then(res => {
-                setAttribute({ setting_fields: res })
+                if( res.status === 'success' ) {
+                    setAttribute({ setting_fields: res.data })
+                }
             })
 
             setSaveButton({
@@ -48,7 +50,6 @@ export function AdminContextProvider(props) {
             loading: true,
             disable: true
         })
-        console.log(attribute.setting_fields)
     }
 
     return(
@@ -56,7 +57,7 @@ export function AdminContextProvider(props) {
             <SnackbarProvider maxSnack={10}>
                 <MemoedNavbar onSave={saveButtonHandler} saveButton={saveButton} menu={props.menu}/>
                 <main className="mt-28">
-                    { attribute.setting_fields ? props.children : <AdminPageSkeleton/> }
+                    { attribute?.setting_fields ? props.children : <AdminPageSkeleton/> }
                 </main>
             </SnackbarProvider>
         </AdminContext.Provider>

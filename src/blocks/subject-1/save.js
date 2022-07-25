@@ -5,8 +5,8 @@ export default function Save({ attributes }) {
     }
     
 	return (
-        <div className="max-w-screen-xl lg:px-0 px-5 mx-auto py-20">
-            <div className="subject-box flex gap-[20px] flex-wrap">
+        <div className="max-w-screen-xl mx-auto py-20">
+            <div className="subject-box flex gap-[20px] px-5 flex-wrap">
                 {
                     attributes.subjects?.map((item,index)=>(
                         <div key={index} style={{ maxWidth : `calc(${boxWidthHandler(item.box_span)})` }} className="border w-full min-w-[200px] border-solid border-gray-300 rounded-lg text-center py-12 px-5">

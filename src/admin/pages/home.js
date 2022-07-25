@@ -95,7 +95,7 @@ export default function Home() {
     return (
         <PageWrapper>
         {
-            Object.keys(fields).map( key => {
+            fields && Object.keys(fields).map( key => {
                 const Component = bodyComponents[key]  || EmptySettingsUI;
                 const attr = fields[key];
                 return (     

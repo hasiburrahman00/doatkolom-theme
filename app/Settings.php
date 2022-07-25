@@ -36,7 +36,8 @@ class Settings extends Api
         return [
             "status" => "success",
             "data"   => [
-                "home" => $this->settings_page_tabs( $settings )
+                "home"      => $this->settings_page_tabs( $settings ),
+                "developer" => $this->developer_page( $settings )
             ]
         ];
     }
@@ -174,6 +175,126 @@ class Settings extends Api
                     ]
                 ]
             ]
+        ];
+    }
+
+    /**
+     * @param $settings
+     */
+    private function developer_page( $settings ) {
+        return [
+            'font_family_tab' => [
+                'title'         => esc_html__( 'Google Fonts Settings', 'doatkolom' ),
+                'fields'        => [
+                    'primary_font' => [
+                        'type'      => 'text',
+                        'label'     => esc_html__( 'Primary Font', 'doatkolom' ),
+                        'default'   => isset( $settings['primary_font'] ) ? $settings['primary_font'] : [
+                            'font' => "@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500;800&family=Roboto&display=swap');",
+                            'family' => "'Heebo', sans-serif"
+                        ],
+                    ],
+                    'secondary_font' => [
+                        'type'      => 'text',
+                        'label'     => esc_html__( 'Secondary Font', 'doatkolom' ),
+                        'default'   => isset( $settings['secondary_font'] ) ? $settings['secondary_font'] : [
+                            'font' => "@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500;800&family=Roboto&display=swap');",
+                            'family' => "'Heebo', sans-serif"
+                        ],
+                    ],
+                    'primary_font_weight' => [
+                        'type'    => 'select',
+                        'label'   => esc_html__( 'Primary Font Weight', 'doatkolom' ),
+                        'default' => isset( $settings['primary_font_weight'] ) ? $settings['primary_font_weight'] : 700,
+                        'options' => [
+                            ['label' => 'Thin 100', 'value' => 100],
+                            ['label' => 'Light', 'value' => 300],
+                            ['label' => 'Regular', 'value' => 400],
+                            ['label' => 'Medium', 'value' => 500],
+                            ['label' => 'Semi Bold', 'value' => 600],
+                            ['label' => 'Bold', 'value' => 700],
+                            ['label' => 'Extra Bold', 'value' => 800],
+                            ['label' => 'Black', 'value' =>  900],
+                        ]
+                    ],
+                    'secondary_font_weight' => [
+                        'type'    => 'select',
+                        'label'   => esc_html__( 'Secondary Font Weight', 'doatkolom' ),
+                        'default' => isset( $settings['secondary_font_weight'] ) ? $settings['secondary_font_weight'] : 400,
+                        'options' => [
+                            ['label' => 'Thin 100', 'value' => 100],
+                            ['label' => 'Light', 'value' => 300],
+                            ['label' => 'Regular', 'value' => 400],
+                            ['label' => 'Medium', 'value' => 500],
+                            ['label' => 'Semi Bold', 'value' => 600],
+                            ['label' => 'Bold', 'value' => 700],
+                            ['label' => 'Extra Bold', 'value' => 800],
+                            ['label' => 'Black', 'value' =>  900],
+                        ]
+                    ],
+                    'tertiary_font_weight' => [
+                        'type'    => 'select',
+                        'label'   => esc_html__( 'Tertiary Font Weight', 'doatkolom' ),
+                        'default' => isset( $settings['tertiary_font_weight'] ) ? $settings['tertiary_font_weight'] : 600,
+                        'options' => [
+                            ['label' => 'Thin 100', 'value' => 100],
+                            ['label' => 'Light', 'value' => 300],
+                            ['label' => 'Regular', 'value' => 400],
+                            ['label' => 'Medium', 'value' => 500],
+                            ['label' => 'Semi Bold', 'value' => 600],
+                            ['label' => 'Bold', 'value' => 700],
+                            ['label' => 'Extra Bold', 'value' => 800],
+                            ['label' => 'Black', 'value' =>  900],
+                        ]
+                    ],
+                ]
+            ],
+
+            'theme_color_tab' => [
+                'title'         => esc_html__( 'Theme Color', 'doatkolom' ),
+                'fields'        => [
+                    'doatkolom_primary_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Primary', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_primary_color'] ) ? $settings['doatkolom_primary_color'] : '#003646',
+                    ],
+                    'doatkolom_primary_color_80' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Primary 80', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_primary_color_80'] ) ? $settings['doatkolom_primary_color_80'] : '#003646cc',
+                    ],
+                    'doatkolom_primary_color_60' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Primary 60', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_primary_color_60'] ) ? $settings['doatkolom_primary_color_60'] : '#00364699',
+                    ],
+                    'doatkolom_primary_color_20' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Primary 20', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_primary_color_20'] ) ? $settings['doatkolom_primary_color_20'] : '#00364633',
+                    ],
+                    'doatkolom_primary_color_10' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Primary 10', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_primary_color_10'] ) ? $settings['doatkolom_primary_color_10'] : '#0036461a',
+                    ],
+                ]
+            ],
+
+            'doatkolom_auth_tab' => [
+                'title'         => esc_html__( 'Authentication and Token Settings', 'doatkolom' ),
+                'fields'        => [
+                    'auth_token' => [
+                        'type'    => 'text',
+                        'label'   => esc_html__( 'Authentication Token', 'doatkolom' ),
+                        'default' => isset( $settings['auth_token'] ) ? $settings['auth_token'] : [
+                            'token' => '',
+                            'isvalid' => false,
+                        ],
+                    ],
+                ]
+            ],
+            
         ];
     }
 
