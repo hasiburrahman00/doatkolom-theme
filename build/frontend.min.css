@@ -794,6 +794,9 @@
 .p-7 {
   padding: 1.75rem;
 }
+.p-8 {
+  padding: 2rem;
+}
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -1934,6 +1937,9 @@ body::-webkit-scrollbar-thumb:hover {
   }
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .lg\:grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
   .lg\:flex-row {
     flex-direction: row;
