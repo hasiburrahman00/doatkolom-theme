@@ -186,21 +186,25 @@ class Settings extends Api
             'font_family_tab' => [
                 'title'         => esc_html__( 'Google Fonts Settings', 'doatkolom' ),
                 'fields'        => [
-                    'primary_font' => [
+                    'primary_font_url' => [
                         'type'      => 'text',
-                        'label'     => esc_html__( 'Primary Font', 'doatkolom' ),
-                        'default'   => isset( $settings['primary_font'] ) ? $settings['primary_font'] : [
-                            'font' => "@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500;800&family=Roboto&display=swap');",
-                            'family' => "'Heebo', sans-serif"
-                        ],
+                        'label'     => esc_html__( 'Primary Font URL', 'doatkolom' ),
+                        'default'   => isset( $settings['primary_font_url'] ) ? $settings['primary_font_url'] : ""
                     ],
-                    'secondary_font' => [
+                    'primary_font_family' => [
                         'type'      => 'text',
-                        'label'     => esc_html__( 'Secondary Font', 'doatkolom' ),
-                        'default'   => isset( $settings['secondary_font'] ) ? $settings['secondary_font'] : [
-                            'font' => "@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500;800&family=Roboto&display=swap');",
-                            'family' => "'Heebo', sans-serif"
-                        ],
+                        'label'     => esc_html__( 'Primary Font Family', 'doatkolom' ),
+                        'default'   => isset( $settings['primary_font_family'] ) ? $settings['primary_font_family'] : ""
+                    ],
+                    'secondary_font_url' => [
+                        'type'      => 'text',
+                        'label'     => esc_html__( 'Secondary Font URL', 'doatkolom' ),
+                        'default'   => isset( $settings['secondary_font_url'] ) ? $settings['secondary_font_url'] : "",
+                    ],
+                    'secondary_font_family' => [
+                        'type'      => 'text',
+                        'label'     => esc_html__( 'Secondary Font Family', 'doatkolom' ),
+                        'default'   => isset( $settings['secondary_font_family'] ) ? $settings['secondary_font_family'] : "",
                     ],
                     'primary_font_weight' => [
                         'type'    => 'select',
@@ -285,7 +289,7 @@ class Settings extends Api
                 'title'         => esc_html__( 'Authentication and Token Settings', 'doatkolom' ),
                 'fields'        => [
                     'auth_token' => [
-                        'type'    => 'text',
+                        'type'    => 'auth',
                         'label'   => esc_html__( 'Authentication Token', 'doatkolom' ),
                         'default' => isset( $settings['auth_token'] ) ? $settings['auth_token'] : [
                             'token' => '',

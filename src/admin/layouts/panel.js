@@ -1,11 +1,47 @@
 import Play from '../icons/play';
 import { Modal, Backdrop, Fade, Box } from '@mui/material';
-import { useState } from 'react';
+import { useState, createContext, useContext } from 'react';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
+const PanelContext = createContext(null);
 export default function Panel(props) {
+    const Component = props.accordion ? Accordion : 'div'
     return (
         <div className='bg-white mb-5'>
-            {props.children}
+            <PanelContext.Provider value={{accordion: props.accordion}}>
+                <Component style={{boxShadow: 'none'}}>{props.children}</Component>
+            </PanelContext.Provider>
+        </div>
+    )
+}
+
+Panel.Header = function(props) {
+
+    const { accordion } = useContext(PanelContext);
+    
+    if( accordion ) {
+        const style = {
+            backgroundColor: '#DAECFA',
+            boxShadow: 'none',
+            fontSize: '1.25rem',
+            padding: '8px 35px',
+            fontWeight: '500'
+        }
+        return (
+            <AccordionSummary sx={style} expandIcon={<ExpandMoreIcon />}>
+                {props.children}
+            </AccordionSummary>
+        )
+    }
+
+    return (
+        <div className='px-8 py-3 bg-[#DAECFA] flex items-center justify-between text-[#101010]'>
+            <h2 className='text-xl p-0 m-0'>{props.children}</h2>
+            <button className='flex transition duration-200 items-center space-x-2 bg-transparent cursor-pointer border-none text-base hover:text-[#1879C7]'>
+                <Play/>
+            </button>
         </div>
     )
 }

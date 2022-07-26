@@ -439,6 +439,9 @@
 .min-w-\[200px\] {
   min-width: 200px;
 }
+.min-w-\[40px\] {
+  min-width: 40px;
+}
 .max-w-screen-lg {
   max-width: 1024px;
 }
@@ -669,6 +672,10 @@
 }
 .border-gray-500 {
   border-color: var(--doatkolom-gray-500-color);
+}
+.border-\[\#eee\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(238 238 238 / var(--tw-border-opacity));
 }
 .bg-\[\#E7F4F6\] {
   --tw-bg-opacity: 1;
