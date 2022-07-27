@@ -7,11 +7,11 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const PanelContext = createContext(null);
 export default function Panel(props) {
-    const Component = props.accordion ? Accordion : 'div'
+    const Component = props.accordion ? Accordion : Box
     return (
         <div className='bg-white mb-5'>
             <PanelContext.Provider value={{accordion: props.accordion}}>
-                <Component style={{boxShadow: 'none'}}>{props.children}</Component>
+                <Component defaultExpanded={props.expanded} style={{boxShadow: 'none'}}>{props.children}</Component>
             </PanelContext.Provider>
         </div>
     )
@@ -27,7 +27,10 @@ Panel.Header = function(props) {
             boxShadow: 'none',
             fontSize: '1.25rem',
             padding: '8px 35px',
-            fontWeight: '500'
+            fontWeight: '500',
+            '& .Mui-expanded': {
+                margin: '0 !important'
+            }
         }
         return (
             <AccordionSummary sx={style} expandIcon={<ExpandMoreIcon />}>

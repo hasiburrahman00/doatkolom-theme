@@ -6,7 +6,6 @@ import ReactTemplateMount from '../config';
 import Home from './pages/home';
 import Gallery from './pages/gallery';
 import Developer from './pages/developer';
-import SuccessStory from './pages/success-story';
 
 const menu = [
     {
@@ -18,11 +17,6 @@ const menu = [
         name: 'Photo Gallery',
         path: '/gallery',
         Component: Gallery
-    },
-    {
-        name: 'Success Story',
-        path: '/success',
-        Component: SuccessStory
     },
     {
         name: 'Developer Option',

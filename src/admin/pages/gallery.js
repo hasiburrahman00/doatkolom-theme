@@ -1,138 +1,55 @@
-import React from "react";
-import { useReducer } from "react"
-import ElementBox from './../components/ElelmentBox'
-import Pagination from './../components/Pagination'
-
-const initialState = {
-    gallery_img: doatkolom_object.img + 'gallery-img.webp',
-}
-
-const stateHandler = (state, action) => {
-  // if it is a function, allow to modify full state
-    if( typeof action === 'function' ) {
-        return action( state );
-    }
-
-    // update individual state
-    if( typeof action === 'object' ) {
-        return {
-            ...state,
-            ...action
-        } 
-    }
-
-    return state
-}
+import PageWrapper from "../layouts/page-wrapper";
+import Panel from "../layouts/panel";
+import SelectMultiImage from "../components/SelectMultiImage";
+import PictureOption from "../components/PictureOption";
 
 export default function Gallery() {
 
-    const [ attribute, setAttribute ] = useReducer(stateHandler, initialState)
+    const image = doatkolom_object.img + 'gallery-img.webp'
 
     return (
-        <ElementBox>
-            <div className="grid grid-cols-5 gap-5">
-                <div className="max-w-1/5 max-h-1/5 bg-primary">
-                    <picture>
-                        <img className="w-full block" src={attribute.gallery_img}/>
-                    </picture>
-                </div>
-                <div className="max-w-1/5 max-h-1/5 bg-primary">
-                    <picture>
-                        <img className="w-full block" src={attribute.gallery_img}/>
-                    </picture>
-                </div>
-                <div className="max-w-1/5 max-h-1/5 bg-primary">
-                    <picture>
-                        <img className="w-full block" src={attribute.gallery_img}/>
-                    </picture>
-                </div>
-                <div className="max-w-1/5 max-h-1/5 bg-primary">
-                    <picture>
-                        <img className="w-full block" src={attribute.gallery_img}/>
-                    </picture>
-                </div>
-                <div className="max-w-1/5 max-h-1/5 bg-primary">
-                    <picture>
-                        <img className="w-full block" src={attribute.gallery_img}/>
-                    </picture>
-                </div>
-                <div className="max-w-1/5 max-h-1/5 bg-primary">
-                    <picture>
-                        <img className="w-full block" src={attribute.gallery_img}/>
-                    </picture>
-                </div>
-                <div className="max-w-1/5 max-h-1/5 bg-primary">
-                    <picture>
-                        <img className="w-full block" src={attribute.gallery_img}/>
-                    </picture>
-                </div>
-                <div className="max-w-1/5 max-h-1/5 bg-primary">
-                    <picture>
-                        <img className="w-full block" src={attribute.gallery_img}/>
-                    </picture>
-                </div>
-                <div className="max-w-1/5 max-h-1/5 bg-primary">
-                    <picture>
-                        <img className="w-full block" src={attribute.gallery_img}/>
-                    </picture>
-                </div>
-                <div className="max-w-1/5 max-h-1/5 bg-primary">
-                    <picture>
-                        <img className="w-full block" src={attribute.gallery_img}/>
-                    </picture>
-                </div>
-                <div className="max-w-1/5 max-h-1/5 bg-primary">
-                    <picture>
-                        <img className="w-full block" src={attribute.gallery_img}/>
-                    </picture>
-                </div>
-                <div className="max-w-1/5 max-h-1/5 bg-primary">
-                    <picture>
-                        <img className="w-full block" src={attribute.gallery_img}/>
-                    </picture>
-                </div>
-                <div className="max-w-1/5 max-h-1/5 bg-primary">
-                    <picture>
-                        <img className="w-full block" src={attribute.gallery_img}/>
-                    </picture>
-                </div>
-                <div className="max-w-1/5 max-h-1/5 bg-primary">
-                    <picture>
-                        <img className="w-full block" src={attribute.gallery_img}/>
-                    </picture>
-                </div>
-                <div className="max-w-1/5 max-h-1/5 bg-primary">
-                    <picture>
-                        <img className="w-full block" src={attribute.gallery_img}/>
-                    </picture>
-                </div>
-                <div className="max-w-1/5 max-h-1/5 bg-primary">
-                    <picture>
-                        <img className="w-full block" src={attribute.gallery_img}/>
-                    </picture>
-                </div>
-                <div className="max-w-1/5 max-h-1/5 bg-primary">
-                    <picture>
-                        <img className="w-full block" src={attribute.gallery_img}/>
-                    </picture>
-                </div>
-                <div className="max-w-1/5 max-h-1/5 bg-primary">
-                    <picture>
-                        <img className="w-full block" src={attribute.gallery_img}/>
-                    </picture>
-                </div>
-                <div className="max-w-1/5 max-h-1/5 bg-primary">
-                    <picture>
-                        <img className="w-full block" src={attribute.gallery_img}/>
-                    </picture>
-                </div>
-                <div className="max-w-1/5 max-h-1/5 bg-primary">
-                    <picture>
-                        <img className="w-full block" src={attribute.gallery_img}/>
-                    </picture>
-                </div>
-            </div>
-            <Pagination/>
-        </ElementBox>
+        <PageWrapper>
+            <Panel>
+                <Panel.VideoHeader url="#">Photo Gallery</Panel.VideoHeader>
+                <Panel.Body>
+                    <div className="grid grid-cols-6 gap-5">
+                        <div className="bg-[#eee] hover:bg-[#ddd] cursor-pointer rounded-md flex items-center justify-center border border-solid border-[#ddd]">
+                            <SelectMultiImage/>
+                        </div>
+                        <picture className="relative">
+                            <img className="lazyload w-full rounded-md object-cover border border-solid border-[#ddd]" data-src={image} alt="gallery image"/>
+                            <PictureOption/>
+                        </picture>
+                        <picture className="relative">
+                            <img className="lazyload w-full rounded-md object-cover border border-solid border-[#ddd]" data-src={image} alt="gallery image"/>
+                            <PictureOption/>
+                        </picture>
+                        <picture className="relative">
+                            <img className="lazyload w-full rounded-md object-cover border border-solid border-[#ddd]" data-src={image} alt="gallery image"/>
+                            <PictureOption/>
+                        </picture>
+                        <picture className="relative">
+                            <img className="lazyload w-full rounded-md object-cover border border-solid border-[#ddd]" data-src={image} alt="gallery image"/>
+                            <PictureOption/>
+                        </picture>
+                        <picture className="relative">
+                            <img className="lazyload w-full rounded-md object-cover border border-solid border-[#ddd]" data-src={image} alt="gallery image"/>
+                            <PictureOption/>
+                        </picture>
+                        <picture className="relative">
+                            <img className="lazyload w-full rounded-md object-cover border border-solid border-[#ddd]" data-src={image} alt="gallery image"/>
+                            <PictureOption/>
+                        </picture>
+                        <picture className="relative">
+                            <img className="lazyload w-full rounded-md object-cover border border-solid border-[#ddd]" data-src={image} alt="gallery image"/>
+                            <PictureOption/>
+                        </picture>
+                    </div>
+                    <ul className="pagination">
+                        <li></li>
+                    </ul>
+                </Panel.Body>
+            </Panel>
+        </PageWrapper>
     )
 }

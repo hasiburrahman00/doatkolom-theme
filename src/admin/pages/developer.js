@@ -107,7 +107,7 @@ export default function Home() {
                 const Component =  InputFieldsBox  || EmptySettingsUI;;
                 const attr = fields[key];
                 return (     
-                    <Panel key={key} accordion>
+                    <Panel key={key} accordion expanded={['font_family_tab', 'theme_color_tab'].includes(key)}>
                         <Panel.Header>{attr.title}</Panel.Header>
                         <Panel.Body>
                             <Component page="developer" index={key}/>
