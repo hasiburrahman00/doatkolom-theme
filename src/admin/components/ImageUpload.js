@@ -6,6 +6,7 @@ export default function ImageUpload (props) {
 
   const frame = wp.media({
     title: 'Select Image',
+    multiple: true,
     button: {
         text: 'Use This Image',
     },

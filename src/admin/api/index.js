@@ -26,8 +26,33 @@ class DoatKolom_Api extends Api_Base {
         return promise
     }
 
+    post_method( endpoint, data, custom = false  ) {
+        const form = new FormData();
+        
+        Object.entries(data).map( ([name, value]) =>{
+            form.append(name, value || '')
+        })
+
+        const promise = new Promise( resolve => {
+            this.call_api({
+                endpoint,
+                method: 'POST',
+                body: form,
+                custom
+            }, response => {
+                resolve( JSON.parse(response) )
+            })
+        })
+
+        return promise
+    }
+
     setting_fields() {
         return this.get_method('setting_fields')
+    }
+
+    add_gallery( data ) {
+        return this.post_method( 'add_gallery', data )
     }
 
 }
