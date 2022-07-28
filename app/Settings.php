@@ -282,6 +282,131 @@ class Settings extends Api
                         'label'   => esc_html__( 'Primary 10', 'doatkolom' ),
                         'default' => isset( $settings['doatkolom_primary_color_10'] ) ? $settings['doatkolom_primary_color_10'] : '#0036461a',
                     ],
+                    'doatkolom_secondary_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Secondary', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_secondary_color'] ) ? $settings['doatkolom_secondary_color'] : '#16AACA',
+                    ],
+                    'doatkolom_white_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'White', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_white_color'] ) ? $settings['doatkolom_white_color'] : '#ffffff',
+                    ],
+                    'doatkolom_white_color_90' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'White 90', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_white_color_90'] ) ? $settings['doatkolom_white_color_90'] : '#ffffffe6',
+                    ],
+                    'doatkolom_black_color_90' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Black 90', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_black_color_90'] ) ? $settings['doatkolom_black_color_90'] : '#202020',
+                    ],
+                    'doatkolom_gray_100_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Gray 100', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_gray_100_color'] ) ? $settings['doatkolom_gray_100_color'] : '#f3f4f6',
+                    ],
+                    'doatkolom_gray_200_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Gray 200', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_gray_200_color'] ) ? $settings['doatkolom_gray_200_color'] : '#e5e7eb',
+                    ],
+                    'doatkolom_gray_300_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Gray 300', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_gray_300_color'] ) ? $settings['doatkolom_gray_300_color'] : '#d1d5db',
+                    ],
+                    'doatkolom_gray_400_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Gray 400', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_gray_400_color'] ) ? $settings['doatkolom_gray_400_color'] : '#9ca3af',
+                    ],
+                    'doatkolom_gray_500_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Gray 500', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_gray_500_color'] ) ? $settings['doatkolom_gray_500_color'] : '#E6EBED',
+                    ],
+                    'doatkolom_slate_200_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Slate 200', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_slate_200_color'] ) ? $settings['doatkolom_slate_200_color'] : '#e2e8f0',
+                    ],
+                    'doatkolom_slate_300_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Slate 300', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_slate_300_color'] ) ? $settings['doatkolom_slate_300_color'] : '#cbd5e1',
+                    ],
+                    'doatkolom_slate_100_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Slate 100', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_slate_100_color'] ) ? $settings['doatkolom_slate_100_color'] : '#f1f5f9',
+                    ],
+                    'doatkolom_teal_100_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Teal 100', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_teal_100_color'] ) ? $settings['doatkolom_teal_100_color'] : '#E7F4F6',
+                    ],
+                    'doatkolom_blue_100_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Blue 100', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_blue_100_color'] ) ? $settings['doatkolom_blue_100_color'] : '#F5FBFD',
+                    ],
+                    'doatkolom_blue_600_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Blue 600', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_blue_600_color'] ) ? $settings['doatkolom_blue_600_color'] : '#2563eb',
+                    ],
+                    'doatkolom_green_600_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Green 600', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_green_600_color'] ) ? $settings['doatkolom_green_600_color'] : '#16a34a',
+                    ],
+                    'doatkolom_red_100_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Red 100', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_red_100_color'] ) ? $settings['doatkolom_red_100_color'] : '#FDF4F4',
+                    ],
+                    'doatkolom_red_500_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Red 500', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_red_500_color'] ) ? $settings['doatkolom_red_500_color'] : '#DB231E',
+                    ],
+                    'doatkolom_red_600_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Red 600', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_red_600_color'] ) ? $settings['doatkolom_red_600_color'] : '#dc2626',
+                    ],
+                    'doatkolom_paste_green_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Paste', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_paste_green_color'] ) ? $settings['doatkolom_paste_green_color'] : '#035769',
+                    ],
+                    'doatkolom_paste_green_400_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Green 400', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_paste_green_400_color'] ) ? $settings['doatkolom_paste_green_400_color'] : '#C1F1FF',
+                    ],
+                    'doatkolom_paste_blue_400_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Blue 400', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_paste_blue_400_color'] ) ? $settings['doatkolom_paste_blue_400_color'] : '#3EB9D3',
+                    ],
+                    'doatkolom_paste_blue_100_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Paste 400', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_paste_blue_100_color'] ) ? $settings['doatkolom_paste_blue_100_color'] : '#F8FEFF',
+                    ],
+                    'doatkolom_primary_blue_100_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Primary 100', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_primary_blue_100_color'] ) ? $settings['doatkolom_primary_blue_100_color'] : '#F3FDFF',
+                    ],
+                    'doatkolom_pink_100_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Pink 100', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_pink_100_color'] ) ? $settings['doatkolom_pink_100_color'] : '#FEF8F8',
+                    ],
                 ]
             ],
 
