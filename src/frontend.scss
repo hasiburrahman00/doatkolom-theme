@@ -13,7 +13,7 @@ body::-webkit-scrollbar{
 }
 
 body::-webkit-scrollbar-thumb {
-  @apply bg-gray-300 hover:bg-gray-400 rounded-full border border-solid border-gray-200;
+  @apply bg-light_gray hover:bg-gray rounded-full border border-solid border-light_gray;
 }
 
 // header nav menu css
@@ -26,7 +26,7 @@ body::-webkit-scrollbar-thumb {
 
         &::before {
           content: "";
-          @apply w-2 h-2 rounded-full bg-slate-300 inline-block absolute -left-3 top-4 ease-linear duration-200;
+          @apply w-2 h-2 rounded-full bg-gray inline-block absolute -left-3 top-4 ease-linear duration-200;
         }
 
         &:hover:before {

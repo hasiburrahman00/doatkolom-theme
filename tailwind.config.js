@@ -26,7 +26,7 @@ module.exports = {
             'primary-light'     : 'var(--doatkolom_primary_light_color)',
             'primary-dark'      : 'var(--doatkolom_primary_dark_color)',
             'primary_shadow'    : 'var(--doatkolom_primary_shadow_color)',
-            'secondary_color'   : "var(--doatkolom_secondary_color)",
+            'secondary'         : "var(--doatkolom_secondary_color)",
             'secondary_shadow'  : "var(--doatkolom_secondary_shadow_color)",
             'white'             : "var(--doatkolom_white_color)",
             'black'             : "var(--doatkolom_black_color)",

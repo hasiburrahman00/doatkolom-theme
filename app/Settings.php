@@ -310,12 +310,12 @@ class Settings extends Api
                     'doatkolom_gray_color' => [
                         'type'    => 'color',
                         'label'   => esc_html__( 'Gray', 'doatkolom' ),
-                        'default' => isset( $settings['doatkolom_gray_color'] ) ? $settings['doatkolom_gray_color'] : '#ffffff',
+                        'default' => isset( $settings['doatkolom_gray_color'] ) ? $settings['doatkolom_gray_color'] : '#d1d5db',
                     ],
                     'doatkolom_light_gray_color' => [
                         'type'    => 'color',
                         'label'   => esc_html__( 'Light gray', 'doatkolom' ),
-                        'default' => isset( $settings['doatkolom_light_gray_color'] ) ? $settings['doatkolom_light_gray_color'] : '#ffffff',
+                        'default' => isset( $settings['doatkolom_light_gray_color'] ) ? $settings['doatkolom_light_gray_color'] : '#f9fafb',
                     ],
                     'doatkolom_overlay_color' => [
                         'type'    => 'color',
