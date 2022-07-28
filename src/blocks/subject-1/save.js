@@ -13,7 +13,7 @@ export default function Save({ attributes }) {
                             <picture>
                                 <img width="55" height="55" data-src={item.image} className="object-cover lazyload" alt="subject-image" />
                             </picture>
-                            <p className="font-secondary text-black-90 font-semibold text-lg m-0 mt-4">{item.subject}</p>
+                            <p className="font-secondary text-black-90 font-weight_tertiary text-lg m-0 mt-4">{item.subject}</p>
                         </div>
                     ))
                 }

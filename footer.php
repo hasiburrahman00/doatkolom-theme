@@ -14,7 +14,7 @@
         <?php get_template_part('template-parts/doatkolom-footer', 'menu') ?>
         <div class="grid sm:grid-cols-2 gap-5">
             <div>
-                <h4 class="text-xl mb-5 font-normal font-primary text-primary">Institution Resource</h4>
+                <h4 class="text-xl mb-5 font-weight_secondary font-primary text-primary">Institution Resource</h4>
                 <?php 
                     wp_nav_menu([
                         'menu'            => 'secondary',
@@ -29,7 +29,7 @@
                 ?>
             </div>
             <div>
-                <h4 class="text-xl mb-5 font-normal font-primary text-primary">Address</h4>
+                <h4 class="text-xl mb-5 font-weight_secondary font-primary text-primary">Address</h4>
                 <p class="text-base font-secondary text-primary">Dakkhin Para, Savar, Dhaka.1340-School Code: 1517 EIIN: 108409</p>
                 <p class="text-base font-secondary text-primary mt-5">infoname@gmail.com , www.yourname.com</p>
             </div>
@@ -43,7 +43,7 @@
                     <img class="w-16" src="<?php echo esc_url(DOATKOLOM_IMG . 'institution-logo.webp') ?>"/>
                 </a>
                 <div>
-                    <h3 class="font-normal text-xl font-primary text-primary mb-1">Savar Girls` High School</h3>
+                    <h3 class="font-weight_secondary text-xl font-primary text-primary mb-1">Savar Girls` High School</h3>
                     <p class="text-sm font-secondary text-primary">School Code: 1517 EIIN: 108409</p>
                 </div>
             </div>

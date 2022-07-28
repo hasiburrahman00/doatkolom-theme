@@ -53,13 +53,18 @@ module.exports = {
         },
 
         fontFamily: {
-            'primary': ['Abril Fatface', 'cursive'],
-            'secondary': ['Spectral', 'serif'],
+            'primary': ['var(--primary_font_family)'],
+            'secondary': ['var(--secondary_font_family)'],
         },
 
         lineHeight: {
             '12': '48px',
             '14': '56px',
+        },
+        fontWeight: {
+            weight_primary: 'var(--primary_font_weight)',
+            weight_secondary: 'var(--secondary_font_weight)',
+            weight_tertiary: 'var(--tertiary_font_weight)'
         }
     },
 }

@@ -13,9 +13,9 @@ Teacher.Item = function(props) {
             <picture>
                 <img className="w-full lazyload" data-src={image} alt="teacher image"/>
             </picture>
-            { props.name && <h3 className="text-primary font-primary font-normal text-2xl m-0 mt-4">{props.name}</h3> }
-            { props.designation && <h4 className="text-primary font-secondary font-normal text-sm mt-1">{props.designation}</h4> }
-            { props.description && <p className="text-primary font-secondary font-normal text-lg mt-4 pr-0 lg:pr-48">{props.description}</p> }
+            { props.name && <h3 className="text-primary font-primary font-weight_secondary text-2xl m-0 mt-4">{props.name}</h3> }
+            { props.designation && <h4 className="text-primary font-secondary font-weight_secondary text-sm mt-1">{props.designation}</h4> }
+            { props.description && <p className="text-primary font-secondary font-weight_secondary text-lg mt-4 pr-0 lg:pr-48">{props.description}</p> }
         </div>
     )
 }

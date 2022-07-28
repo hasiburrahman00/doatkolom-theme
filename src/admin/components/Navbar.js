@@ -67,7 +67,7 @@ function Navbar(props) {
     return (
         <header ref={headerRef} className="bg-white py-1 px-7 w-full fixed z-20 top-0 left-0 border-t-0 border-x-0 border-b border-solid border-gray-200">
             <div className="flex">
-                <div className="w-2/6 flex items-center space-x-2 text-2xl font-bold text-[#1879C7]">
+                <div className="w-2/6 flex items-center space-x-2 text-2xl font-weight_primary text-[#1879C7]">
                     <picture>
                         <img width="50" height="50" className="lazyload" data-src={`${doatkolom_object.img + 'logo.webp'}`}/>
                     </picture>

@@ -15,15 +15,15 @@ export default function Save({ attributes }) {
                         {
                         attributes.teachers?.map((item,index)=>(
                             <div key={index} className = "pr-0 md:pr-10">
-                                <p className="m-0 font-secondary text-lg md:text-xl font-semibold text-black-90 mb-4 lg:mb-0">{item.speach}</p>
+                                <p className="m-0 font-secondary text-lg md:text-xl font-weight_tertiary text-black-90 mb-4 lg:mb-0">{item.speach}</p>
                                 <div className="flex items-center mb-5 lg:mb-0">
                                     <picture className="block lg:hidden overflow-hidden">
                                         <img className="object-cover w-28 h-28 lazyload" data-src={item.image} alt="teacher-image" />
                                     </picture>
                                     
                                     <div className="ml-5 lg:ml-0 mt-6">
-                                        <h3 className="m-0 font-secondary mb-2 md:mb-0 text-sm md:text-2xl font-semibold text-red-500">{item.name}</h3>
-                                        <h4 className="m-0 font-secondary text-sm md:text-lg font-normal text-black-90">{item.position}</h4>        
+                                        <h3 className="m-0 font-secondary mb-2 md:mb-0 text-sm md:text-2xl font-weight_tertiary text-red-500">{item.name}</h3>
+                                        <h4 className="m-0 font-secondary text-sm md:text-lg font-weight_secondary text-black-90">{item.position}</h4>        
                                     </div>
                                 </div>
                             </div>

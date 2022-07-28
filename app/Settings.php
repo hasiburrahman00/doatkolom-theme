@@ -189,22 +189,22 @@ class Settings extends Api
                     'primary_font_url' => [
                         'type'      => 'text',
                         'label'     => esc_html__( 'Primary Font URL', 'doatkolom' ),
-                        'default'   => isset( $settings['primary_font_url'] ) ? $settings['primary_font_url'] : ""
+                        'default'   => isset( $settings['primary_font_url'] ) ? $settings['primary_font_url'] : "@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');"
                     ],
                     'primary_font_family' => [
                         'type'      => 'text',
                         'label'     => esc_html__( 'Primary Font Family', 'doatkolom' ),
-                        'default'   => isset( $settings['primary_font_family'] ) ? $settings['primary_font_family'] : ""
+                        'default'   => isset( $settings['primary_font_family'] ) ? $settings['primary_font_family'] : "Abril Fatface, cursive"
                     ],
                     'secondary_font_url' => [
                         'type'      => 'text',
                         'label'     => esc_html__( 'Secondary Font URL', 'doatkolom' ),
-                        'default'   => isset( $settings['secondary_font_url'] ) ? $settings['secondary_font_url'] : "",
+                        'default'   => isset( $settings['secondary_font_url'] ) ? $settings['secondary_font_url'] : "@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap');",
                     ],
                     'secondary_font_family' => [
                         'type'      => 'text',
                         'label'     => esc_html__( 'Secondary Font Family', 'doatkolom' ),
-                        'default'   => isset( $settings['secondary_font_family'] ) ? $settings['secondary_font_family'] : "",
+                        'default'   => isset( $settings['secondary_font_family'] ) ? $settings['secondary_font_family'] : "Spectral, serif",
                     ],
                     'primary_font_weight' => [
                         'type'    => 'select',
@@ -445,12 +445,28 @@ class Settings extends Api
 
         // colors variable
         $colors = $data['theme_color_tab']['fields'];
+        $fonts  = $data['font_family_tab']['fields'];
+
+        $primary_font_url   = $fonts['primary_font_url']['default'];
+        $secondary_font_url = $fonts['secondary_font_url']['default'];
+
         $varString = '';
         foreach( $colors as $name => $value ) {
             $varString .= "--".$name.":".$value['default'].";\n";
         }
 
-        return ":root{\n".$varString."}\n";
+        unset($fonts['primary_font_url']);
+        unset($fonts['secondary_font_url']);
+
+        foreach( $fonts as $name => $value ) {
+            $varString .= "--".$name.":".$value['default'].";\n";
+        }
+
+        return "
+            ".$primary_font_url."\n
+            ".$secondary_font_url."\n
+            :root{\n".$varString."}\n
+        ";
     }
 
     public function post_save_settings()

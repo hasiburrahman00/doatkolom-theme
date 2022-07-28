@@ -974,10 +974,10 @@
   text-align: justify;
 }
 .font-primary {
-  font-family: Abril Fatface, cursive;
+  font-family: var(--primary_font_family);
 }
 .font-secondary {
-  font-family: Spectral, serif;
+  font-family: var(--secondary_font_family);
 }
 .text-6xl {
   font-size: 3.75rem;
@@ -1015,20 +1015,14 @@
   font-size: 3rem;
   line-height: 1;
 }
-.font-normal {
-  font-weight: 400;
+.font-weight_secondary {
+  font-weight: var(--secondary_font_weight);
 }
-.font-bold {
-  font-weight: 700;
+.font-weight_primary {
+  font-weight: var(--primary_font_weight);
 }
-.font-medium {
-  font-weight: 500;
-}
-.font-light {
-  font-weight: 300;
-}
-.font-semibold {
-  font-weight: 600;
+.font-weight_tertiary {
+  font-weight: var(--tertiary_font_weight);
 }
 .capitalize {
   text-transform: capitalize;
