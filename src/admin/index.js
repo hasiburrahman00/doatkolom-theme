@@ -1,6 +1,7 @@
 import './../lib/lazysizes';
 import { Routes, Route } from 'react-router-dom';
 import { AdminContextProvider } from './context';
+import { SnackbarProvider } from 'notistack'
 
 import ReactTemplateMount from '../config';
 import Home from './pages/home';
@@ -25,12 +26,19 @@ const menu = [
     }
 ]
 
+const snackbarPosition = {
+    vertical: 'bottom',
+    horizontal: 'right',
+}
+
 ReactTemplateMount(()=>{
     return (
-        <AdminContextProvider menu={menu}>
-            <Routes>
-                { menu.map( Item => <Route key={Item.name} path={Item.path} element={<Item.Component/>}/> ) }
-            </Routes>
-        </AdminContextProvider>
+        <SnackbarProvider maxSnack={10} anchorOrigin={snackbarPosition}>
+            <AdminContextProvider menu={menu}>
+                <Routes>
+                    { menu.map( Item => <Route key={Item.name} path={Item.path} element={<Item.Component/>}/> ) }
+                </Routes>
+            </AdminContextProvider>
+        </SnackbarProvider>
     )
 }, 'doatkolom-admin-root')

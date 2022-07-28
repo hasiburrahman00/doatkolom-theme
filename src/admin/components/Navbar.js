@@ -11,8 +11,10 @@ function Navbar(props) {
     const location = useLocation();
 
     const handleSaveSetting = () => {
-        if( props.onSave && typeof props.onSave === 'function' ) {
+        if( location.pathname !== '/gallery' && props.onSave && typeof props.onSave === 'function' ) {
             props.onSave();
+        } else {
+            console.log('save gallery')
         }
     }
 

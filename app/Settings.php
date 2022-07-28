@@ -88,7 +88,7 @@ class Settings extends Api
                     'institution_type' => [
                         'type'    => 'select',
                         'label'   => esc_html__( 'Institution Type', 'doatkolom' ),
-                        'default' => isset( $settings['institution_type'] ) ? $settings['institution_type'] : '',
+                        'default' => isset( $settings['institution_type'] ) ? $settings['institution_type'] : 'school',
                         'options' => [
                             ['label' => 'School', 'value' => 'school'],
                             ['label' => 'College', 'value' => 'college'],
@@ -496,7 +496,7 @@ class Settings extends Api
                 return $attachment[0];
             }
         }
-        return false;
+        return DOATKOLOM_IMG . 'institution-logo.webp';
     }
 
     public function post_add_gallery()
