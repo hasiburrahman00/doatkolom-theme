@@ -7,6 +7,7 @@ import imageSlider1 from './blocks/image-slider-1/script';
 import InfiniteScroll from './modules/infinite-scroll';
 import labSection1 from './blocks/lab-section-1/script';
 import TeachersSlider1 from './blocks/teachers-slider-1/script';
+import boxSlider1 from './blocks/box-slider-1/script';
 
 
 jQuery(function() {
@@ -52,6 +53,7 @@ jQuery(function() {
             'doatkolom/teachers-slider-1': TeachersSlider1,
             'doatkolom/timeline-tab-1': timelineTab1,
             'doatkolom/lab-section-1': labSection1,
+            'doatkolom/box-slider-1': boxSlider1,
         }
 
         // connect script with the gutenberg block

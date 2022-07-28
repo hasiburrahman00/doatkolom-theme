@@ -48,7 +48,7 @@
 ?>
 
 <div>
-    <h4 class="text-xl mb-5 font-normal font-primary text-primary"><?php echo esc_html($data['title']) ?></h4>  
+    <h4 class="text-xl mb-5 font-weight_secondary font-primary text-primary"><?php echo esc_html($data['title']) ?></h4>  
     <ul class="grid sm:grid-cols-2 gap-3 list-none">
         <?php foreach( $data['menus'] as $menu ): ?>
         <li>

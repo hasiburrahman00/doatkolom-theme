@@ -16,10 +16,10 @@ export default function Save({ attributes }) {
                         {attributes.speech}
                     </h3>  
 
-                    <h2 className="m-0 mt-8 font-primary text-lg font-normal text-primary">{attributes.name}</h2> 
+                    <h2 className="m-0 mt-8 font-primary text-lg font-weight_secondary text-primary">{attributes.name}</h2> 
                     <p className="m-0 text-lg font-secondary font-light text-primary mt-3.5">{attributes.designation}</p> 
 
-                    <a href={attributes.teachers_page_link} className="inline-block sm:inline-flex group items-center font-secondary text-lg font-normal text-primary no-underline mt-5 md:mt-10 sm:space-x-5">
+                    <a href={attributes.teachers_page_link} className="inline-block sm:inline-flex group items-center font-secondary text-lg font-weight_secondary text-primary no-underline mt-5 md:mt-10 sm:space-x-5">
                         <div className="flex items-center space-x-2 md:-space-x-4">
                             {
                                 attributes.teachers_image?.map( (item, index) => (

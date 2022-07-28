@@ -2,6 +2,5 @@
     "/build/frontend.min.js": "/build/frontend.min.js",
     "/build/gutenberg.min.js": "/build/gutenberg.min.js",
     "/build/admin.min.js": "/build/admin.min.js",
-    "/build/app.min.js": "/build/app.min.js",
-    "/build/frontend.min.css": "/build/frontend.min.css"
+    "/build/app.min.js": "/build/app.min.js"
 }

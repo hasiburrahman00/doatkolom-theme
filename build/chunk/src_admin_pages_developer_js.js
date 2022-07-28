@@ -3151,9 +3151,9 @@ function developer() {
         "aria-controls": "panel1d-content",
         id: "panel1d-header",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("h2", {
-          className: "m-0 text-2xl font-bold",
+          className: "m-0 text-2xl font-weight_primary",
           children: ["Developer Options ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-            className: "font-normal inline-block ml-auto text-base absolute top-[25px] right-12",
+            className: "font-weight_secondary inline-block ml-auto text-base absolute top-[25px] right-12",
             children: "Be careful while you\u2019re changing these fields"
           })]
         })
@@ -3334,11 +3334,11 @@ function developer() {
             className: "mt-4",
             children: authentication ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
               onClick: handleRemove,
-              className: "py-3.5 px-8 border-0 bg-secondary text-white font-semibold text-base box-border rounded",
+              className: "py-3.5 px-8 border-0 bg-secondary text-white font-weight_tertiary text-base box-border rounded",
               children: "Remove"
             }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
               onClick: handleAuthentication,
-              className: "py-3.5 px-8 border-0 bg-primary text-white font-semibold text-base box-border rounded",
+              className: "py-3.5 px-8 border-0 bg-primary text-white font-weight_tertiary text-base box-border rounded",
               children: "Authenticate"
             })
           })]
