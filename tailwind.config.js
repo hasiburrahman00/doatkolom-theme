@@ -38,6 +38,7 @@ module.exports = {
             'sub_title'         : "var(--doatkolom_sub_title_color)",
             'title_description' : "var(--doatkolom_title_description_color)",
             'paragraph'         : "var(--doatkolom_paragraph_color)",
+            'body'              : "var(--doatkolom_body_color)",
         },
 
         fontFamily: {

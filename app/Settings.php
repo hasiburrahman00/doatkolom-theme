@@ -42,6 +42,16 @@ class Settings extends Api
         ];
     }
 
+    public static function options() {
+        $settings = get_option( self::SETTINGS_KEY );
+        if ( !$settings ) {
+            $settings = [];
+        } else {
+            $settings = unserialize( $settings );
+        }
+        return $settings;
+    }
+
     /**
      * @param $settings
      */
@@ -110,7 +120,7 @@ class Settings extends Api
                     'official_email'   => [
                         'type'    => 'text',
                         'label'   => esc_html__( 'Official Email Address', 'doatkolom' ),
-                        'default' => isset( $settings['official_email'] ) ? $settings['official_email'] : ''
+                        'default' => isset( $settings['official_email'] ) ? $settings['official_email'] : 'example@domain.com'
                     ],
                     'eiin_code'        => [
                         'type'    => 'text',
@@ -120,12 +130,12 @@ class Settings extends Api
                     'official_phone'   => [
                         'type'    => 'text',
                         'label'   => esc_html__( 'Official Phone Number', 'doatkolom' ),
-                        'default' => isset( $settings['official_phone'] ) ? $settings['official_phone'] : ''
+                        'default' => isset( $settings['official_phone'] ) ? $settings['official_phone'] : '+88123456789'
                     ],
                     'full_address'     => [
                         'type'    => 'textarea',
                         'label'   => esc_html__( 'Full Address', 'doatkolom' ),
-                        'default' => isset( $settings['full_address'] ) ? $settings['full_address'] : ''
+                        'default' => isset( $settings['full_address'] ) ? $settings['full_address'] : 'Example Dakkhin Para, Savar, Dhaka.1340'
                     ]
                 ]
             ],
@@ -142,11 +152,6 @@ class Settings extends Api
                         'type'    => 'text',
                         'label'   => esc_html__( 'Login Page', 'doatkolom' ),
                         'default' => isset( $settings['login_page'] ) ? $settings['login_page'] : ''
-                    ],
-                    'registration_page'      => [
-                        'type'    => 'text',
-                        'label'   => esc_html__( 'Registration Page', 'doatkolom' ),
-                        'default' => isset( $settings['registration_page'] ) ? $settings['registration_page'] : ''
                     ],
                     'facebook'               => [
                         'type'    => 'text',
@@ -346,6 +351,11 @@ class Settings extends Api
                         'type'    => 'color',
                         'label'   => esc_html__( 'Paragraph', 'doatkolom' ),
                         'default' => isset( $settings['doatkolom_paragraph_color'] ) ? $settings['doatkolom_paragraph_color'] : '#003646',
+                    ],
+                    'doatkolom_body_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Body', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_body_color'] ) ? $settings['doatkolom_body_color'] : '#ffffff',
                     ],
                 ]
             ],

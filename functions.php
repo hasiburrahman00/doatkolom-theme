@@ -22,6 +22,7 @@ define( 'DOATKOLOM_FONT', DOATKOLOM_THEME_URI . '/assets/fonts/' );
 define( 'DOATKOLOM_VERSION', '1.0.0' );
 define( 'DOATKOLOM_MINWP_VERSION', '5.0' );
 
+
 /**
  *
  *
@@ -54,7 +55,7 @@ $loader->register();
 $loader->addNamespace( 'DoatKolom', get_stylesheet_directory() . '/app' );
 $loader->addNamespace( 'DoatKolom\Core', get_stylesheet_directory() . '/core' );
 Settings::instance();
-
+define( 'INFO', \DoatKolom\Settings::options() );
 remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
 
 include_once get_stylesheet_directory() . '/includes/theme-support.php';
