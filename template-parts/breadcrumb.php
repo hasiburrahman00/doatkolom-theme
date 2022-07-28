@@ -28,7 +28,7 @@ if( !is_front_page() ) {
                     ?>
     
                     <div>
-                        <h1 class="font-normal mb-3 capitalize <?php echo is_single() ? 'text-2xl md:leading-12 font-secondary' : 'text-3xl sm:text-4xl font-primary lg:text-6xl' ?>">
+                        <h1 class="font-weight_secondary mb-3 capitalize <?php echo is_single() ? 'text-2xl md:leading-12 font-secondary' : 'text-3xl sm:text-4xl font-primary lg:text-6xl' ?>">
                             <?php 
                                 if( is_page() ) {
                                     the_title();
@@ -48,7 +48,7 @@ if( !is_front_page() ) {
                         <ol class="flex flex-wrap <?php echo has_post_thumbnail() && is_single() ? 'justify-start' : 'justify-center' ?> text-lg sm:text-xl gap-x-2 font-secondary list-none">
                             <?php 
                             if ( !is_home() ) {
-                                echo '<li class="mr-2"><a class="text-white no-underline font-bold hover:text-secondary" href="';
+                                echo '<li class="mr-2"><a class="text-white no-underline font-weight_primary hover:text-secondary" href="';
                                 echo esc_url( get_home_url( '/' ) );
                                 echo '">';
                                 echo esc_html__( 'Home', 'doatkolom' );

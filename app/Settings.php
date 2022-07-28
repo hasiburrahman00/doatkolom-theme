@@ -88,7 +88,7 @@ class Settings extends Api
                     'institution_type' => [
                         'type'    => 'select',
                         'label'   => esc_html__( 'Institution Type', 'doatkolom' ),
-                        'default' => isset( $settings['institution_type'] ) ? $settings['institution_type'] : '',
+                        'default' => isset( $settings['institution_type'] ) ? $settings['institution_type'] : 'school',
                         'options' => [
                             ['label' => 'School', 'value' => 'school'],
                             ['label' => 'College', 'value' => 'college'],
@@ -189,22 +189,22 @@ class Settings extends Api
                     'primary_font_url' => [
                         'type'      => 'text',
                         'label'     => esc_html__( 'Primary Font URL', 'doatkolom' ),
-                        'default'   => isset( $settings['primary_font_url'] ) ? $settings['primary_font_url'] : ""
+                        'default'   => isset( $settings['primary_font_url'] ) ? $settings['primary_font_url'] : "@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');"
                     ],
                     'primary_font_family' => [
                         'type'      => 'text',
                         'label'     => esc_html__( 'Primary Font Family', 'doatkolom' ),
-                        'default'   => isset( $settings['primary_font_family'] ) ? $settings['primary_font_family'] : ""
+                        'default'   => isset( $settings['primary_font_family'] ) ? $settings['primary_font_family'] : "Abril Fatface, cursive"
                     ],
                     'secondary_font_url' => [
                         'type'      => 'text',
                         'label'     => esc_html__( 'Secondary Font URL', 'doatkolom' ),
-                        'default'   => isset( $settings['secondary_font_url'] ) ? $settings['secondary_font_url'] : "",
+                        'default'   => isset( $settings['secondary_font_url'] ) ? $settings['secondary_font_url'] : "@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap');",
                     ],
                     'secondary_font_family' => [
                         'type'      => 'text',
                         'label'     => esc_html__( 'Secondary Font Family', 'doatkolom' ),
-                        'default'   => isset( $settings['secondary_font_family'] ) ? $settings['secondary_font_family'] : "",
+                        'default'   => isset( $settings['secondary_font_family'] ) ? $settings['secondary_font_family'] : "Spectral, serif",
                     ],
                     'primary_font_weight' => [
                         'type'    => 'select',
@@ -282,6 +282,131 @@ class Settings extends Api
                         'label'   => esc_html__( 'Primary 10', 'doatkolom' ),
                         'default' => isset( $settings['doatkolom_primary_color_10'] ) ? $settings['doatkolom_primary_color_10'] : '#0036461a',
                     ],
+                    'doatkolom_secondary_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Secondary', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_secondary_color'] ) ? $settings['doatkolom_secondary_color'] : '#16AACA',
+                    ],
+                    'doatkolom_white_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'White', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_white_color'] ) ? $settings['doatkolom_white_color'] : '#ffffff',
+                    ],
+                    'doatkolom_white_color_90' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'White 90', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_white_color_90'] ) ? $settings['doatkolom_white_color_90'] : '#ffffffe6',
+                    ],
+                    'doatkolom_black_color_90' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Black 90', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_black_color_90'] ) ? $settings['doatkolom_black_color_90'] : '#202020',
+                    ],
+                    'doatkolom_gray_100_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Gray 100', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_gray_100_color'] ) ? $settings['doatkolom_gray_100_color'] : '#f3f4f6',
+                    ],
+                    'doatkolom_gray_200_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Gray 200', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_gray_200_color'] ) ? $settings['doatkolom_gray_200_color'] : '#e5e7eb',
+                    ],
+                    'doatkolom_gray_300_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Gray 300', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_gray_300_color'] ) ? $settings['doatkolom_gray_300_color'] : '#d1d5db',
+                    ],
+                    'doatkolom_gray_400_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Gray 400', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_gray_400_color'] ) ? $settings['doatkolom_gray_400_color'] : '#9ca3af',
+                    ],
+                    'doatkolom_gray_500_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Gray 500', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_gray_500_color'] ) ? $settings['doatkolom_gray_500_color'] : '#E6EBED',
+                    ],
+                    'doatkolom_slate_200_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Slate 200', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_slate_200_color'] ) ? $settings['doatkolom_slate_200_color'] : '#e2e8f0',
+                    ],
+                    'doatkolom_slate_300_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Slate 300', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_slate_300_color'] ) ? $settings['doatkolom_slate_300_color'] : '#cbd5e1',
+                    ],
+                    'doatkolom_slate_100_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Slate 100', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_slate_100_color'] ) ? $settings['doatkolom_slate_100_color'] : '#f1f5f9',
+                    ],
+                    'doatkolom_teal_100_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Teal 100', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_teal_100_color'] ) ? $settings['doatkolom_teal_100_color'] : '#E7F4F6',
+                    ],
+                    'doatkolom_blue_100_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Blue 100', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_blue_100_color'] ) ? $settings['doatkolom_blue_100_color'] : '#F5FBFD',
+                    ],
+                    'doatkolom_blue_600_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Blue 600', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_blue_600_color'] ) ? $settings['doatkolom_blue_600_color'] : '#2563eb',
+                    ],
+                    'doatkolom_green_600_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Green 600', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_green_600_color'] ) ? $settings['doatkolom_green_600_color'] : '#16a34a',
+                    ],
+                    'doatkolom_red_100_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Red 100', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_red_100_color'] ) ? $settings['doatkolom_red_100_color'] : '#FDF4F4',
+                    ],
+                    'doatkolom_red_500_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Red 500', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_red_500_color'] ) ? $settings['doatkolom_red_500_color'] : '#DB231E',
+                    ],
+                    'doatkolom_red_600_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Red 600', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_red_600_color'] ) ? $settings['doatkolom_red_600_color'] : '#dc2626',
+                    ],
+                    'doatkolom_paste_green_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Paste', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_paste_green_color'] ) ? $settings['doatkolom_paste_green_color'] : '#035769',
+                    ],
+                    'doatkolom_paste_green_400_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Green 400', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_paste_green_400_color'] ) ? $settings['doatkolom_paste_green_400_color'] : '#C1F1FF',
+                    ],
+                    'doatkolom_paste_blue_400_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Blue 400', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_paste_blue_400_color'] ) ? $settings['doatkolom_paste_blue_400_color'] : '#3EB9D3',
+                    ],
+                    'doatkolom_paste_blue_100_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Paste 400', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_paste_blue_100_color'] ) ? $settings['doatkolom_paste_blue_100_color'] : '#F8FEFF',
+                    ],
+                    'doatkolom_primary_blue_100_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Primary 100', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_primary_blue_100_color'] ) ? $settings['doatkolom_primary_blue_100_color'] : '#F3FDFF',
+                    ],
+                    'doatkolom_pink_100_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Pink 100', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_pink_100_color'] ) ? $settings['doatkolom_pink_100_color'] : '#FEF8F8',
+                    ],
                 ]
             ],
 
@@ -320,12 +445,28 @@ class Settings extends Api
 
         // colors variable
         $colors = $data['theme_color_tab']['fields'];
+        $fonts  = $data['font_family_tab']['fields'];
+
+        $primary_font_url   = $fonts['primary_font_url']['default'];
+        $secondary_font_url = $fonts['secondary_font_url']['default'];
+
         $varString = '';
         foreach( $colors as $name => $value ) {
             $varString .= "--".$name.":".$value['default'].";\n";
         }
 
-        return ":root{\n".$varString."}\n";
+        unset($fonts['primary_font_url']);
+        unset($fonts['secondary_font_url']);
+
+        foreach( $fonts as $name => $value ) {
+            $varString .= "--".$name.":".$value['default'].";\n";
+        }
+
+        return "
+            ".$primary_font_url."\n
+            ".$secondary_font_url."\n
+            :root{\n".$varString."}\n
+        ";
     }
 
     public function post_save_settings()
@@ -355,14 +496,14 @@ class Settings extends Api
                 return $attachment[0];
             }
         }
-        return false;
+        return DOATKOLOM_IMG . 'institution-logo.webp';
     }
 
     public function post_add_gallery()
     {
         try {
             $data        = $this->request->get_params();
-            $image_ids   = $data['image_ids'];
+            $image_ids   = explode(',', $data['image_ids']);
             $gallery_ids = get_option( self::GALLERY_KEY );
             if ( !$gallery_ids ) {
                 $gallery_ids = [];
@@ -387,10 +528,9 @@ class Settings extends Api
     public function post_update_gallery()
     {
         try {
-
-            $data      = $this->request->get_params();
-            $image_id  = $data['image_id'];
-            $image_key = $data['image_key'];
+            $data         = $this->request->get_params();
+            $new_image_id = intval($data['new_image_id']);
+            $old_image_id = intval($data['old_image_id']);
 
             $gallery_ids = get_option( self::GALLERY_KEY );
             if ( !$gallery_ids ) {
@@ -398,7 +538,13 @@ class Settings extends Api
             } else {
                 $gallery_ids = unserialize( $gallery_ids );
             }
-            $gallery_ids[$image_key] = $image_id;
+
+            $old_image_array_key = array_search($old_image_id, $gallery_ids);
+            
+            if($old_image_array_key) {
+                $gallery_ids[$old_image_array_key] = $new_image_id;
+            }
+
             update_option( self::GALLERY_KEY, serialize( $gallery_ids ) );
 
             return [
@@ -418,25 +564,6 @@ class Settings extends Api
      */
     public function get_galleries()
     {
-        $data = $this->request->get_params();
-
-        if ( isset( $data['page'] ) ) {
-            $page = $data['page'];
-        } else {
-            $page = 1;
-        }
-
-        if ( isset( $data['per_page'] ) ) {
-            $perpage = intval( $data['per_page'] );
-            if ( $perpage > 100 ) {
-                $perpage = 100;
-            }
-        } else {
-            $perpage = 20;
-        }
-
-        $offset = ( $page - 1 ) * $perpage;
-
         $gallery_ids = get_option( self::GALLERY_KEY );
         if ( !$gallery_ids ) {
             $gallery_ids = [];
@@ -444,33 +571,27 @@ class Settings extends Api
             $gallery_ids = unserialize( $gallery_ids );
         }
 
-        $total       = count( $gallery_ids );
-        $gallery_ids = array_slice( $gallery_ids, $offset, $perpage );
-
         $gallery_items = [];
 
         foreach ( $gallery_ids as $key => $gallery_id ) {
 
             $gallery = [
-                'image_key' => $offset + $key,
                 'image_id'  => $gallery_id,
                 'image_url' => ''
             ];
-            $attachment = wp_get_attachment_image_src( $gallery_id, 'full' );
+
+            $attachment = wp_get_attachment_image_src( intval($gallery_id), 'full' );
 
             if ( isset( $attachment[0] ) ) {
                 $gallery['image_url'] = $attachment[0];
             }
 
             $gallery_items[] = $gallery;
-
         }
+
         return [
             'status' => 'success',
-            'data'   => [
-                'items' => $gallery_items,
-                'total' => $total
-            ]
+            'data'   => $gallery_items
         ];
     }
 
@@ -478,19 +599,24 @@ class Settings extends Api
     {
         $data = $this->request->get_params();
         try {
-            $image_keys = $data['image_keys'];
+            $image_ids = explode( ',', $data['image_ids'] );
 
             $gallery_ids = get_option( self::GALLERY_KEY );
+
             if ( !$gallery_ids ) {
                 $gallery_ids = [];
             } else {
                 $gallery_ids = unserialize( $gallery_ids );
             }
 
-            foreach ( $image_keys as $image_key ) {
-                unset( $gallery_ids[$image_key] );
+            foreach ( $image_ids as $image_id ) {
+                $image_array_key = array_search( intval( $image_id ), $gallery_ids );
+                if ( $image_array_key ) {
+                    unset( $gallery_ids[$image_array_key] );
+                }
             }
-            update_option( self::GALLERY_KEY, serialize( array_values( $gallery_ids ) ) );
+
+            update_option( self::GALLERY_KEY, serialize( $gallery_ids ) );
 
             return [
                 'message' => esc_html__( 'Gallery item deleted successfully!', 'doatkolom' ),
