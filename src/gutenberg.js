@@ -17,4 +17,5 @@ import './blocks/image-box-1';
 import './blocks/teachers-slider-1';
 import './blocks/mission-1';
 import './blocks/subject-1';
+import './blocks/number-box-2';
 import './blocks/box-slider-1';
