@@ -1,5 +1,7 @@
 <?php 
 
+use DoatKolom\Settings;
+
 // print the markup for the page
 function page_callback_function() {
     echo '<div id="doatkolom-admin-root"></div>';
@@ -34,7 +36,7 @@ function admin_enqueue_script_fn( $hook ) {
         wp_enqueue_media();
         wp_enqueue_script('doatkolom-admin', DOATKOLOM_BUILD . 'admin.min.js', ['jquery', 'wp-editor', 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-date', 'wp-hooks', 'wp-components', 'underscore'], DOATKOLOM_VERSION, false);
         wp_enqueue_style('doatkolom-frontend', DOATKOLOM_BUILD . 'frontend.min.css', [], DOATKOLOM_VERSION, false);
-        wp_add_inline_style( 'doatkolom-frontend', CSS_VARIABLES );
+        wp_add_inline_style( 'doatkolom-frontend', Settings::css_variables() );
         wp_localize_script( 'doatkolom-admin', 'doatkolom_object',
             array( 
                 'ajaxurl'       => admin_url( 'admin-ajax.php' ),
