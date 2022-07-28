@@ -1,6 +1,6 @@
 <?php
-
 use DoatKolom\AutoLoader;
+use DoatKolom\Settings;
 
 /**
  *
@@ -21,41 +21,6 @@ define( 'DOATKOLOM_BUILD', DOATKOLOM_THEME_URI . '/build/' );
 define( 'DOATKOLOM_FONT', DOATKOLOM_THEME_URI . '/assets/fonts/' );
 define( 'DOATKOLOM_VERSION', '1.0.0' );
 define( 'DOATKOLOM_MINWP_VERSION', '5.0' );
-
-define( 'CSS_VARIABLES', "
-    :root {
-        --doatkolom-primary-color: #003646;
-        --doatkolom-primary-color-80: #003646cc;
-        --doatkolom-primary-color-60: #00364699;
-        --doatkolom-primary-color-20: #00364633;
-        --doatkolom-primary-color-10: #0036461a;
-        --doatkolom-secondary-color: #16AACA;
-        --doatkolom-white-color: #ffffff;
-        --doatkolom-white-color-90: #ffffffe6;
-        --doatkolom-black-color-90: #202020;
-        --doatkolom-gray-100-color: #f3f4f6;
-        --doatkolom-gray-200-color: #e5e7eb;
-        --doatkolom-gray-300-color: #d1d5db;
-        --doatkolom-gray-400-color: #9ca3af;
-        --doatkolom-gray-500-color: #E6EBED;
-        --doatkolom-slate-300-color: #cbd5e1;
-        --doatkolom-slate-200-color: #e2e8f0;
-        --doatkolom-slate-100-color: #f1f5f9;
-        --doatkolom-teal-100-color: #E7F4F6;
-        --doatkolom-blue-100-color: #F5FBFD;
-        --doatkolom-blue-600-color: #2563eb;
-        --doatkolom-green-600-color: #16a34a;
-        --doatkolom-red-100-color: #FDF4F4;
-        --doatkolom-red-500-color: #DB231E;
-        --doatkolom-red-600-color: #dc2626;
-        --doatkolom-paste-green-color: #035769;
-        --doatkolom-paste-green-400-color: #C1F1FF;
-        --doatkolom-paste-blue-400-color: #3EB9D3;
-        --doatkolom-paste-blue-100-color: #F8FEFF;
-        --doatkolom-primary-blue-100-color: #F3FDFF;
-        --doatkolom-pink-100-color: #FEF8F8;
-    }
-" );
 
 /**
  *
@@ -88,6 +53,7 @@ $loader = new AutoLoader();
 $loader->register();
 $loader->addNamespace( 'DoatKolom', get_stylesheet_directory() . '/app' );
 $loader->addNamespace( 'DoatKolom\Core', get_stylesheet_directory() . '/core' );
+Settings::instance();
 
 remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
 
@@ -96,9 +62,6 @@ include_once get_stylesheet_directory() . '/includes/scripts-and-styles.php';
 include_once get_stylesheet_directory() . '/includes/block-scripts.php';
 include_once get_stylesheet_directory() . '/includes/admin-menu.php';
 
-include_once get_stylesheet_directory() . '/app/Settings.php';
-
-\Doatkolom\Settings::instance();
 
 // get_rest_url( '', '' ) . 'doatkolom-theme/v1/settings/setting_fields';
 

@@ -1,9 +1,12 @@
 <?php 
+
+use DoatKolom\Settings;
+
 function gutenberg_enqueue() {
     wp_enqueue_style('doatkolom-frontend', DOATKOLOM_BUILD . 'frontend.min.css', [], DOATKOLOM_VERSION, false);
     wp_enqueue_script('doatkolom-frontend', DOATKOLOM_BUILD . 'frontend.min.js', ['jquery'], DOATKOLOM_VERSION, false);
     wp_enqueue_script('doatkolom-blocks', DOATKOLOM_BUILD . 'gutenberg.min.js', ['jquery', 'wp-editor', 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-date', 'wp-hooks', 'wp-components', 'underscore'], DOATKOLOM_VERSION, false);
-    wp_add_inline_style( 'doatkolom-frontend', CSS_VARIABLES );
+    wp_add_inline_style( 'doatkolom-frontend', Settings::css_variables() );
     
     wp_localize_script( 'doatkolom-blocks', 'doatkolom_object',
         array( 

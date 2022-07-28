@@ -730,6 +730,9 @@
 .bg-\[\#fff\]\/80 {
   background-color: rgb(255 255 255 / 0.8);
 }
+.bg-\[red\]\/10 {
+  background-color: rgb(255 0 0 / 0.1);
+}
 .bg-\[\#DAECFA\] {
   --tw-bg-opacity: 1;
   background-color: rgb(218 236 250 / var(--tw-bg-opacity));
@@ -771,9 +774,6 @@
 .bg-\[\#4f46e5\] {
   --tw-bg-opacity: 1;
   background-color: rgb(79 70 229 / var(--tw-bg-opacity));
-}
-.bg-\[red\]\/10 {
-  background-color: rgb(255 0 0 / 0.1);
 }
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
@@ -1092,11 +1092,11 @@
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
 }
-.opacity-50 {
-  opacity: 0.5;
-}
 .opacity-70 {
   opacity: 0.7;
+}
+.opacity-50 {
+  opacity: 0.5;
 }
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);

@@ -1,6 +1,6 @@
 <?php
 
-namespace Doatkolom;
+namespace DoatKolom;
 
 use DoatKolom\Core\Api;
 use DoatKolom\Core\Singleton;
@@ -300,6 +300,32 @@ class Settings extends Api
             ],
             
         ];
+    }
+
+    /**
+     * 
+     *
+     * get css variabels   
+     */ 
+    public static function css_variables() {
+        $settings = get_option( self::SETTINGS_KEY );
+        if ( !$settings ) {
+            $settings = [];
+        } else {
+            $settings = unserialize( $settings );
+        }
+
+        $data = (new self)->developer_page( $settings );
+        unset( $data['doatkolom_auth_tab'] );
+
+        // colors variable
+        $colors = $data['theme_color_tab']['fields'];
+        $varString = '';
+        foreach( $colors as $name => $value ) {
+            $varString .= "--".$name.":".$value['default'].";\n";
+        }
+
+        return ":root{\n".$varString."}\n";
     }
 
     public function post_save_settings()
