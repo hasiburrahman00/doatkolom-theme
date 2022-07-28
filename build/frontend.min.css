@@ -730,6 +730,9 @@
 .bg-\[\#fff\]\/80 {
   background-color: rgb(255 255 255 / 0.8);
 }
+.bg-\[red\]\/10 {
+  background-color: rgb(255 0 0 / 0.1);
+}
 .bg-\[\#DAECFA\] {
   --tw-bg-opacity: 1;
   background-color: rgb(218 236 250 / var(--tw-bg-opacity));
@@ -771,9 +774,6 @@
 .bg-\[\#4f46e5\] {
   --tw-bg-opacity: 1;
   background-color: rgb(79 70 229 / var(--tw-bg-opacity));
-}
-.bg-\[red\]\/10 {
-  background-color: rgb(255 0 0 / 0.1);
 }
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
@@ -1092,11 +1092,11 @@
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
 }
-.opacity-50 {
-  opacity: 0.5;
-}
 .opacity-70 {
   opacity: 0.7;
+}
+.opacity-50 {
+  opacity: 0.5;
 }
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -1805,13 +1805,13 @@ body::-webkit-scrollbar-thumb:hover {
     padding-top: 7rem;
     padding-bottom: 7rem;
   }
-  .md\:py-20 {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
   .md\:py-10 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+  }
+  .md\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
   .md\:px-5 {
     padding-left: 1.25rem;
@@ -1962,6 +1962,9 @@ body::-webkit-scrollbar-thumb:hover {
   .lg\:flex-auto {
     flex: 1 1 auto;
   }
+  .lg\:grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -2027,13 +2030,13 @@ body::-webkit-scrollbar-thumb:hover {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
-  .lg\:px-56 {
-    padding-left: 14rem;
-    padding-right: 14rem;
-  }
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+  .lg\:px-56 {
+    padding-left: 14rem;
+    padding-right: 14rem;
   }
   .lg\:px-0 {
     padding-left: 0px;
