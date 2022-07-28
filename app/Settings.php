@@ -503,7 +503,7 @@ class Settings extends Api
     {
         try {
             $data        = $this->request->get_params();
-            $image_ids   = $data['image_ids'];
+            $image_ids   = explode(',', $data['image_ids']);
             $gallery_ids = get_option( self::GALLERY_KEY );
             if ( !$gallery_ids ) {
                 $gallery_ids = [];
@@ -528,10 +528,9 @@ class Settings extends Api
     public function post_update_gallery()
     {
         try {
-
-            $data      = $this->request->get_params();
-            $image_id  = $data['image_id'];
-            $image_key = $data['image_key'];
+            $data         = $this->request->get_params();
+            $new_image_id = intval($data['new_image_id']);
+            $old_image_id = intval($data['old_image_id']);
 
             $gallery_ids = get_option( self::GALLERY_KEY );
             if ( !$gallery_ids ) {
@@ -539,7 +538,13 @@ class Settings extends Api
             } else {
                 $gallery_ids = unserialize( $gallery_ids );
             }
-            $gallery_ids[$image_key] = $image_id;
+
+            $old_image_array_key = array_search($old_image_id, $gallery_ids);
+            
+            if($old_image_array_key) {
+                $gallery_ids[$old_image_array_key] = $new_image_id;
+            }
+
             update_option( self::GALLERY_KEY, serialize( $gallery_ids ) );
 
             return [
@@ -559,25 +564,6 @@ class Settings extends Api
      */
     public function get_galleries()
     {
-        $data = $this->request->get_params();
-
-        if ( isset( $data['page'] ) ) {
-            $page = $data['page'];
-        } else {
-            $page = 1;
-        }
-
-        if ( isset( $data['per_page'] ) ) {
-            $perpage = intval( $data['per_page'] );
-            if ( $perpage > 100 ) {
-                $perpage = 100;
-            }
-        } else {
-            $perpage = 20;
-        }
-
-        $offset = ( $page - 1 ) * $perpage;
-
         $gallery_ids = get_option( self::GALLERY_KEY );
         if ( !$gallery_ids ) {
             $gallery_ids = [];
@@ -585,33 +571,27 @@ class Settings extends Api
             $gallery_ids = unserialize( $gallery_ids );
         }
 
-        $total       = count( $gallery_ids );
-        $gallery_ids = array_slice( $gallery_ids, $offset, $perpage );
-
         $gallery_items = [];
 
         foreach ( $gallery_ids as $key => $gallery_id ) {
 
             $gallery = [
-                'image_key' => $offset + $key,
                 'image_id'  => $gallery_id,
                 'image_url' => ''
             ];
-            $attachment = wp_get_attachment_image_src( $gallery_id, 'full' );
+
+            $attachment = wp_get_attachment_image_src( intval($gallery_id), 'full' );
 
             if ( isset( $attachment[0] ) ) {
                 $gallery['image_url'] = $attachment[0];
             }
 
             $gallery_items[] = $gallery;
-
         }
+
         return [
             'status' => 'success',
-            'data'   => [
-                'items' => $gallery_items,
-                'total' => $total
-            ]
+            'data'   => $gallery_items
         ];
     }
 
@@ -619,19 +599,24 @@ class Settings extends Api
     {
         $data = $this->request->get_params();
         try {
-            $image_keys = $data['image_keys'];
+            $image_ids = explode( ',', $data['image_ids'] );
 
             $gallery_ids = get_option( self::GALLERY_KEY );
+
             if ( !$gallery_ids ) {
                 $gallery_ids = [];
             } else {
                 $gallery_ids = unserialize( $gallery_ids );
             }
 
-            foreach ( $image_keys as $image_key ) {
-                unset( $gallery_ids[$image_key] );
+            foreach ( $image_ids as $image_id ) {
+                $image_array_key = array_search( intval( $image_id ), $gallery_ids );
+                if ( $image_array_key ) {
+                    unset( $gallery_ids[$image_array_key] );
+                }
             }
-            update_option( self::GALLERY_KEY, serialize( array_values( $gallery_ids ) ) );
+
+            update_option( self::GALLERY_KEY, serialize( $gallery_ids ) );
 
             return [
                 'message' => esc_html__( 'Gallery item deleted successfully!', 'doatkolom' ),
