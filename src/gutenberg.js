@@ -1,4 +1,5 @@
 import './blocks/banner-1';
+import './blocks/banner-2';
 import './blocks/headmaster-1';
 import './blocks/features-1'
 import './blocks/section-header-1';
