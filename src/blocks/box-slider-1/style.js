@@ -33,5 +33,9 @@ export default function Style({attributes, wrapper}){
         ${wrapper} .box-slider .slick-slide.slick-center .center-text{
             color: #DB231E;
         }
+
+        ${wrapper} .main-box-slider {
+            margin-top: ${attributes.box_position}px;
+        }
     `
 }

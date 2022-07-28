@@ -12,6 +12,11 @@
   "attributes": {
     "box_slider": {
       "type": "array"
+    },
+
+    "box_position": {
+      "type": "number",
+      "default": -160
     }
   }
 }
