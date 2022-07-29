@@ -20,7 +20,31 @@ export default function boxSlider1($scope){
         nextArrow       : nextBtn,
         prevArrow       : prevBtn,
         centerMode      : true,
-        centerPadding   : "0px"
+        centerPadding   : "0px",
+        responsive: [
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 576,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+        ]
     });
 
 }
