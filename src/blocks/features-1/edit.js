@@ -42,8 +42,8 @@ export default function Edit({ attributes, setAttributes}) {
 	return (
 		<div className="bg-gray-200 py-16 md:py-28">
             <div className="max-w-screen-sm mx-auto px-5">
-                <h3 className="m-0 font-primary text-3xl sm:text-5xl font-weight_secondary text-primary pb-5 text-center">{attributes.heading}</h3>
-                <p className="m-0 font-secondary text-lg text-primary font-weight_secondary text-center">{attributes.description}</p>
+                <h3 className="m-0 font-primary text-3xl sm:text-5xl font-weight_primary text-primary pb-5 text-center">{attributes.heading}</h3>
+                <p className="m-0 font-secondary text-lg text-primary font-weight_primary text-center">{attributes.description}</p>
             </div>
             <div className="max-w-screen-xl grid grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-5 mx-auto px-5 mt-10">
                 {

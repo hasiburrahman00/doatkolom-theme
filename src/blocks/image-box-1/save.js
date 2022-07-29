@@ -9,7 +9,7 @@ export default function Save({ attributes }) {
                                 <img width="80" height="80" className="object-cover lazyload" data-src={item.image} alt="service-image" />
                             </picture>
                             <h3 className="m-0 mt-4 font-secondary text-xl font-weight_primary text-primary">{item.title}</h3>
-                            <p className="m-0 mt-3 text-base font-secondary font-weight_secondary text-primary">{item.description}</p>
+                            <p className="m-0 mt-3 text-base font-secondary font-weight_primary text-primary">{item.description}</p>
                         </div>
                     ))
                 }

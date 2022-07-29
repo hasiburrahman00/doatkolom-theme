@@ -26,20 +26,25 @@ export default function SiteSettings( props ) {
         })
     }
 
+    const onImageChange = (name, {url, id}) => {
+        data[name].media_url = url;
+        onChangeHandler( name, id )
+    }
+
     return (
         <div className="grid grid-cols-4">
             <div className="relative after:content-[''] after:w-px after:h-full after:bg-[#DFE9F1] after:absolute after:top-0 after:right-[50px]">
                 <ImageUpload
                     label="Institution Logo"
                     value={data.institution_logo.media_url}
-                    onChange={ val => onChangeHandler('institution_logo', val.url) }
+                    onChange={ val => onImageChange('institution_logo', val) }
                 />
             </div>
             <div className="relative after:content-[''] after:w-px after:h-full after:bg-[#DFE9F1] after:absolute after:top-0 after:right-[50px]">
                 <ImageUpload
                     label="Website Favicon"
                     value={data.website_favicon.media_url}
-                    onChange={ val => onChangeHandler('website_favicon', val.url) }
+                    onChange={ val => onImageChange('website_favicon', val) }
                 />
             </div>
             <div className="col-span-2">

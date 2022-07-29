@@ -48,11 +48,11 @@
 ?>
 
 <div>
-    <h4 class="text-xl mb-5 font-weight_secondary font-primary text-primary"><?php echo esc_html($data['title']) ?></h4>  
+    <h4 class="text-xl mb-5 font-weight_primary font-primary text-title"><?php echo esc_html($data['title']) ?></h4>  
     <ul class="grid sm:grid-cols-2 gap-3 list-none">
         <?php foreach( $data['menus'] as $menu ): ?>
         <li>
-            <a class="no-underline text-base text-primary hover:underline" href="<?php echo esc_url($menu['href']) ?>">
+            <a class="no-underline text-base text-black hover:underline" href="<?php echo esc_url($menu['href']) ?>">
                 <?php echo esc_html($menu['text']) ?>
             </a>
         </li>

@@ -47,8 +47,8 @@ export default function Edit({ attributes, setAttributes}) {
 		    <div className="max-w-screen-xl lg:px-8 px-5 mx-auto py-12 md:py-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                     <div>
-                        <h2 className="m-0 font-primary text-primary font-weight_secondary text-4xl md:text-5xl mb-3">{attributes.heading}</h2>
-                        <p className="m-0 font-secondary text-primary font-weight_secondary text-base md:text-lg">{attributes.sub_heading}</p>
+                        <h2 className="m-0 font-primary text-primary font-weight_primary text-4xl md:text-5xl mb-3">{attributes.heading}</h2>
+                        <p className="m-0 font-secondary text-primary font-weight_primary text-base md:text-lg">{attributes.sub_heading}</p>
 
                             <div className="honorable-teacher-slider mt-8">
                                 {
@@ -60,11 +60,11 @@ export default function Edit({ attributes, setAttributes}) {
                                                 </picture>
                                                    
                                             <div className="ml-5 lg:ml-0">
-                                                <h3 className="m-0 font-primary text-lg md:text-2xl font-weight_secondary text-primary">{item.names}</h3>
-                                                <h4 className="m-0 mb-3 font-secondary text-base md:text-lg font-weight_secondary text-primary">{item.position}</h4>        
+                                                <h3 className="m-0 font-primary text-lg md:text-2xl font-weight_primary text-primary">{item.names}</h3>
+                                                <h4 className="m-0 mb-3 font-secondary text-base md:text-lg font-weight_primary text-primary">{item.position}</h4>        
                                             </div>
                                             </div>
-                                            <p className="m-0 font-secondary text-lg font-weight_secondary text-primary">{item.speach}</p>
+                                            <p className="m-0 font-secondary text-lg font-weight_primary text-primary">{item.speach}</p>
                                         </div>
                                         ))
                                 }

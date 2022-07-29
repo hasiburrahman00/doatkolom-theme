@@ -12,12 +12,12 @@ AllSyllabus.Item = function (props) {
             <div className="flex items-center mb-3">
                 {props.icons && props.icons}
                 <div className="ml-5">
-                    <span className="text-primary font-secondary font-weight_secondary text-base">Uploaded on</span>
-                    <h5 className="text-primary font-secondary font-weight_secondary text-lg">3th June 2022</h5>
+                    <span className="text-primary font-secondary font-weight_primary text-base">Uploaded on</span>
+                    <h5 className="text-primary font-secondary font-weight_primary text-lg">3th June 2022</h5>
                 </div>
             </div>
             {props.topic && <h2 className="text-primary font-secondary font-weight_primary text-xl">{props.topic}</h2>}
-            <p className="text-primary font-secondary font-weight_secondary text-base mt-3">The school was established on a small scale on 19th</p>
+            <p className="text-primary font-secondary font-weight_primary text-base mt-3">The school was established on a small scale on 19th</p>
             <button className="flex items-center mt-6 py-3 px-7 rounded-md border-none bg-primary text-white cursor-pointer">
                 {props.download && props.download}
                 {props.title && <span className="ml-2 font-secondary font-medium text-base">{props.title}</span>}

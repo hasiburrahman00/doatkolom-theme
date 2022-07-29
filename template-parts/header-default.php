@@ -4,7 +4,7 @@
 ?>
 <header class="py-1 lg:py-2 bg-white doatkolom-primary-header" data-show="0">
     <nav class="max-w-screen-xl mx-auto px-5 flex justify-between items-center">
-        <a href="<?php echo esc_url( DOATKOLOM_HOME_URL ); ?>" class="bg-white lg:shadow-md lg:px-2 lg:rounded-xl inline-block">
+        <a href="<?php echo esc_url( DOATKOLOM_HOME_URL ); ?>" class="inline-block">
             <picture>
                 <img class="object-contain object-center doatkolom-nav-logo" width="80" height="80" src="<?php echo esc_url( DOATKOLOM_LOGO ) ?>" alt="main logo"/>
             </picture>
@@ -14,7 +14,7 @@
             wp_nav_menu([
                 'menu'            => 'primary',
                 'theme_location'  => 'primary',
-                'menu_class'      => 'doatkolom-nav list-none flex flex-col lg:flex-row p-10 lg:p-0 lg:inline-flex items-baseline lg:gap-x-8 lg:flex-wrap',
+                'menu_class'      => 'doatkolom-nav list-none flex flex-col lg:flex-row p-10 lg:p-0 lg:inline-flex items-baseline lg:gap-x-4 lg:flex-wrap',
                 'container_class' => 'hidden lg:block doatkolom-main-nav',
                 'items_wrap'      => '<ul id="doatkolom-nav-menu" class="%2$s">%3$s</ul>',
                 'depth'           => 5,
@@ -23,11 +23,24 @@
             ]);
         ?>
 
-        <button id="doatkolom-menu-button" class="bg-transparent lg:bg-slate-200 rounded-full w-12 h-12 border-0 text-primary flex items-center justify-center cursor-pointer ease-linear duration-200">
+        <button class="doatkolom-menu-button bg-transparent lg:hidden lg:bg-primary_light rounded-full w-12 h-12 border-0 text-black flex items-center justify-center cursor-pointer ease-linear duration-200">
             <?php Icons::gridDots() ?>
         </button>
 
-        <button id="nav-close-btn" class="hidden fixed top-4 right-5 text-white-90 hover:text-white w-10 h-10 z-50 bg-transparent border-0">
+        <!-- show for school -->
+        <?php if( !empty(INFO['doatkolom_app_template']) && INFO['institution_type'] !== 'doatkolom' ): ?>
+            <button class="doatkolom-menu-button bg-transparent lg:inline-block lg:bg-primary_light rounded-full w-12 h-12 border-0 text-black flex items-center justify-center cursor-pointer ease-linear duration-200">
+                <?php Icons::gridDots() ?>
+            </button>
+        <?php elseif( INFO['institution_type'] !== 'doatkolom' && !empty(INFO['call_btn_label']) ): ?>
+            <a class="lg:inline-block no-underline hidden bg-primary primary-shadow hover:shadow-none text-white py-2.5 px-5 rounded-lg font-secondary text-base transition duration-200 hover:bg-secondary" 
+                href="tel:<?php echo esc_attr(INFO['official_phone']) ?>">
+                <?php echo esc_html(INFO['call_btn_label']) ?>
+            </a>
+        <?php else: ?>
+            <button>DoatkKolom</button>
+        <?php endif; ?>
+        <button id="nav-close-btn" class="hidden cursor-pointer fixed lg:hidden top-4 md:top-8 right-5 text-white-90 hover:text-[#db231e] w-10 h-10 z-50 bg-transparent border-0">
             <?php Icons::remove() ?>
         </button>
 

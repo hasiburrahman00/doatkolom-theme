@@ -16,12 +16,12 @@ export default function Edit({ attributes, setAttributes}) {
         <div className="max-w-screen-xl lg:px-0 px-5 mx-auto py-20">
             <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-4">
                 <div className="lg:pr-14 md:pr-0">
-                    <h2 className="m-0 text-primary font-weight_secondary font-primary text-4xl md:text-5xl leading-snug">{attributes.heading}</h2>
-                    <p className="font-secondary text-primary font-weight_secondary text-lg m-0 mt-5">{attributes.header_details}</p>           
-                    <h3 className="m-0 text-primary font-weight_secondary font-primary text-2xl mt-8">{attributes.location_heading}</h3>
+                    <h2 className="m-0 text-primary font-weight_primary font-primary text-4xl md:text-5xl leading-snug">{attributes.heading}</h2>
+                    <p className="font-secondary text-primary font-weight_primary text-lg m-0 mt-5">{attributes.header_details}</p>           
+                    <h3 className="m-0 text-primary font-weight_primary font-primary text-2xl mt-8">{attributes.location_heading}</h3>
                     
-                    <p className="m-0 mt-3 text-primary font-weight_secondary font-secondary text-lg">{attributes.location}</p>                 
-                    <p className="m-0 text-primary font-weight_secondary font-secondary text-lg">{attributes.city}</p>
+                    <p className="m-0 mt-3 text-primary font-weight_primary font-secondary text-lg">{attributes.location}</p>                 
+                    <p className="m-0 text-primary font-weight_primary font-secondary text-lg">{attributes.city}</p>
 
                     <a href= "#" className="flex items-center bg-primary rounded-md justify-center mt-8 no-underline text-white hover:text-white">
                         <LocationArrow/>
