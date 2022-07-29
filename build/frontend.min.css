@@ -334,6 +334,9 @@
 .h-\[40px\] {
     height: 40px;
 }
+.h-\[145px\] {
+    height: 145px;
+}
 .h-\[50px\] {
     height: 50px;
 }
@@ -357,9 +360,6 @@
 }
 .h-40 {
     height: 10rem;
-}
-.h-\[145px\] {
-    height: 145px;
 }
 .max-h-\[80px\] {
     max-height: 80px;
@@ -1344,16 +1344,16 @@
 }
 
 * {
-    margin: 0px;
-    box-sizing: border-box;
-    padding: 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0px;
+  box-sizing: border-box;
+  padding: 0px;
 }
 
 body::-webkit-scrollbar {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  width: 0.375rem;
-  background-color: transparent;
+    width: 0.375rem;
+    background-color: transparent;
 }
 
 body::-webkit-scrollbar-thumb {
