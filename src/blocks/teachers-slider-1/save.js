@@ -23,7 +23,7 @@ export default function Save({ attributes }) {
                                     
                                     <div className="ml-5 lg:ml-0 mt-6">
                                         <h3 className="m-0 font-secondary mb-2 md:mb-0 text-sm md:text-2xl font-weight_tertiary text-red-500">{item.name}</h3>
-                                        <h4 className="m-0 font-secondary text-sm md:text-lg font-weight_secondary text-black-90">{item.position}</h4>        
+                                        <h4 className="m-0 font-secondary text-sm md:text-lg font-weight_primary text-black-90">{item.position}</h4>        
                                     </div>
                                 </div>
                             </div>

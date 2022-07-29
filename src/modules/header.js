@@ -67,8 +67,10 @@ $.fn.extend({
     },
 
     toggleHamburger() {
-        this.toggleClass('bg-transparent lg:bg-slate-200 bg-primary text-white');
-        $('#nav-close-btn').removeClass('hidden');
+        this.toggleClass('bg-transparent lg:bg-primary_light bg-primary text-black text-white');
+        if( innerWidth <= 1024 ) {
+            $('#nav-close-btn').removeClass('hidden');
+        }
     }
 
 })
@@ -81,7 +83,7 @@ export default class Header extends Helper{
             dropdownToggle  : '.dropdown-toggle',
             dropdownMenu    : '.dropdown-menu',
             quickMenu       : '#doatkolom-quick-menu',
-            hamburger       : '#doatkolom-menu-button',
+            hamburger       : '.doatkolom-menu-button',
             navmenu         : '.doatkolom-main-nav',
             $headerTop      : $('.nav-menu-top'),
             $header         : $('.doatkolom-primary-header'),
@@ -116,7 +118,7 @@ export default class Header extends Helper{
             mobileMenuToggle() {
                 $(this).toggleHamburger();
                 $(self.settings.navmenu)
-                .addClass('fixed hidden top-0 left-0 w-full h-screen bg-primary overflow-y-scroll z-20')
+                .addClass('fixed hidden top-0 left-0 w-full h-screen bg-white overflow-y-scroll z-20')
                 .slideDown()
             },
 

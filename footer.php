@@ -4,7 +4,7 @@
     use DoatKolom\FooterWalker;
     if ( ! defined( 'ABSPATH' ) ) exit; 
 ?> 
-<footer class="bg-[#E7F4F6] pb-8 md:pb-0">
+<footer class="bg-footer pb-8 md:pb-0">
     <!-- footer cta -->
     <div class="max-w-screen-lg px-5 sm:px-10 mx-auto relative -top-20 mt-20">
         <?php get_template_part('template-parts/doatkolom-footer', 'cta') ?>
@@ -14,7 +14,7 @@
         <?php get_template_part('template-parts/doatkolom-footer', 'menu') ?>
         <div class="grid sm:grid-cols-2 gap-5">
             <div>
-                <h4 class="text-xl mb-5 font-weight_secondary font-primary text-primary">Institution Resource</h4>
+                <h4 class="text-xl mb-5 font-weight_primary font-primary text-title"><?php esc_html_e('Institution Resource', 'doatkolom') ?></h4>
                 <?php 
                     wp_nav_menu([
                         'menu'            => 'secondary',
@@ -29,37 +29,60 @@
                 ?>
             </div>
             <div>
-                <h4 class="text-xl mb-5 font-weight_secondary font-primary text-primary">Address</h4>
-                <p class="text-base font-secondary text-primary">Dakkhin Para, Savar, Dhaka.1340-School Code: 1517 EIIN: 108409</p>
-                <p class="text-base font-secondary text-primary mt-5">infoname@gmail.com , www.yourname.com</p>
+                <h4 class="text-xl mb-5 font-weight_primary font-primary text-title"><?php esc_html_e('Address', 'doatkolom') ?></h4>
+                <p class="text-base font-secondary text-black">
+                    <?php echo esc_html(INFO['full_address']);?>
+                </p>
+                <p class="text-base font-secondary text-black mt-5"><?php echo esc_html(INFO['official_email'] . ', ' . INFO['official_phone']) ?></p>
             </div>
         </div>
     </div>
     <!-- footer bottom -->
     <div class="mt-16 hidden md:block px-5">
-       <div class="max-w-screen-xl mx-auto md:flex justify-between items-center py-4 border-t border-solid border-x-0 border-b-0 border-t-primary/20">
+       <div class="max-w-screen-xl mx-auto md:flex justify-between items-center py-4 border-t border-solid border-x-0 border-b-0 border-t-gray">
             <div class="flex items-center space-x-3">
-                <a href="<?php echo esc_url(DOATKOLOM_SITE_URL) ?>" class="bg-white shadow-md py-1 px-2 overflow-hidden rounded-lg">
-                    <img class="w-16" src="<?php echo esc_url(DOATKOLOM_IMG . 'institution-logo.webp') ?>"/>
+                <a href="<?php echo esc_url(DOATKOLOM_SITE_URL) ?>">
+                    <picture>
+                        <img width="64" height="64" class="w-16 lazyload" data-src="<?php echo esc_url(DOATKOLOM_LOGO) ?>"/>
+                    </picture>
                 </a>
                 <div>
-                    <h3 class="font-weight_secondary text-xl font-primary text-primary mb-1">Savar Girls` High School</h3>
-                    <p class="text-sm font-secondary text-primary">School Code: 1517 EIIN: 108409</p>
+                    <h3 class="font-weight_primary text-xl font-primary text-title mb-1"><?php echo esc_html(INFO['site_title']) ?></h3>
+                    <p class="text-sm font-secondary text-sub_title"><?php echo esc_html(INFO['site_description']) ?></p>
                 </div>
             </div>
             <div>
-                <p class="text-base font-secondary text-primary">&copy; <?php echo esc_html(date("Y")); ?> All Rights Reserved by <a class="underline text-base font-secondary text-primary" href="about.doatkolom.com">DoatKolom</a>.</p>
+                <p class="text-base font-secondary text-black">&copy; 
+                    <?php echo esc_html(date("Y")); ?> 
+                    <?php echo esc_html(INFO['site_title']) ?> 
+                    | <?php esc_html_e('Developed By', 'doatkolom') ?>
+                    <a class="underline text-base font-secondary text-primary" target="_blank"
+                        href="//about.doatkolom.com/"><?php esc_html_e('DoatKolom', 'doatkolom') ?>
+                    </a>
+                </p>
             </div>
             <div class="flex items-center space-x-5">
-                <a href="#" class="w-8 h-8 duration-200 transition ease-in rounded-sm flex justify-center items-center bg-green-600 hover:bg-primary text-white">
+                <?php if( !empty(INFO['whatsapp']) ): ?>
+                <a 
+                    href="<?php echo esc_url(INFO['whatsapp']) ?>" target="_blank"
+                    class="w-8 h-8 duration-200 transition ease-in rounded-sm flex justify-center items-center bg-primary_light hover:bg-primary text-primary hover:text-white">
                     <span class="w-4 h-4 inline-block"><?php echo Icons::whatsapp() ?></span>
                 </a>
-                <a href="#" class="w-8 h-8 duration-200 transition ease-in rounded-sm flex justify-center items-center bg-blue-600 hover:bg-primary text-white">
+                <?php endif; ?>
+                <?php if( !empty(INFO['facebook']) ): ?>
+                <a 
+                    href="<?php echo esc_url(INFO['facebook']) ?>" target="_blank"
+                    class="w-8 h-8 duration-200 transition ease-in rounded-sm flex justify-center items-center bg-primary_light hover:bg-primary text-primary hover:text-white">
                     <span class="w-4 h-4 inline-block"><?php echo Icons::facebookF() ?></span>
                 </a>
-                <a href="#" class="w-8 h-8 duration-200 transition ease-in rounded-sm flex justify-center items-center bg-red-600 hover:bg-primary text-white">
+                <?php endif; ?>
+                <?php if( !empty(INFO['youtube']) ): ?>
+                <a 
+                href="<?php echo esc_url(INFO['youtube']) ?>" target="_blank"
+                    class="w-8 h-8 duration-200 transition ease-in rounded-sm flex justify-center items-center bg-primary_light hover:bg-primary text-primary hover:text-white">
                     <span class="w-4 h-4 inline-block"><?php echo Icons::youtubePlay() ?></span>
                 </a>
+                <?php endif; ?>
             </div>
        </div>
     </div>

@@ -10,7 +10,7 @@ export default function Save({ attributes }) {
                     />
                     <div className="text-left mb-3 md:mb-5">
                         <p 
-                            className="m-0 font-secondary font-weight_secondary text-black-90 text-base md:text-lg"
+                            className="m-0 font-secondary font-weight_primary text-black-90 text-base md:text-lg"
                             dangerouslySetInnerHTML={{__html: Helper.wysiwyg(attributes.description)}}
                         />
                     </div>

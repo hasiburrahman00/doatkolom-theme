@@ -2,9 +2,9 @@ import { Megaphone, ArrowRight } from "./icons";
 export default function Save({ attributes }) {
 	return (
         <div className="banner-wrapper bg-cover bg-no-repeat">
-            <div className="bg-gradient-to-b from-primary-80 md:via-primary-60 to-[#ffffff_!important] pt-24 md:pt-40 pb-8 px-5">
+            <div className="bg-gradient-to-b from-primary_opacity_80 md:via-primary_opacity_60 to-[#ffffff_!important] pt-24 md:pt-40 pb-8 px-5">
                 <div className="max-w-screen-xl mx-auto">
-                    <h1 className="font-primary text-white mt-0 mb-6 text-center font-weight_secondary text-4xl sm:text-5xl lg:text-6xl">{attributes.institution_name}</h1>
+                    <h1 className="font-primary text-white mt-0 mb-6 text-center font-weight_primary text-4xl sm:text-5xl lg:text-6xl">{attributes.institution_name}</h1>
                     <p className="max-w-3xl text-white text-center font-secondary text-base sm:text-lg mx-auto m-0 leading-7">{attributes.description}</p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center space-y-5 sm:space-y-0 sm:space-x-8 mt-8">
@@ -27,7 +27,7 @@ export default function Save({ attributes }) {
                     <div className="flex flex-col md:flex-row items-baseline justify-between mt-20">
 
                         <div className="md:w-1/2 border-l-2 border-y-0 border-r-0 border-solid border-primary pl-8 pt-10">
-                            <h2 className="font-primary text-primary text-3xl m-0 mb-5 font-weight_secondary">{attributes.history_title}</h2>
+                            <h2 className="font-primary text-primary text-3xl m-0 mb-5 font-weight_primary">{attributes.history_title}</h2>
                             <p className="font-secondary text-primary text-base sm:text-lg m-0">
                                 {attributes.history_description}
                                 {attributes.history_read_more_btn.visible && 
@@ -43,7 +43,7 @@ export default function Save({ attributes }) {
                                 <Megaphone/>
                             </div>
                             <a className="inline-block text-primary no-underline group cursor-pointer" href={attributes.notice_url}>
-                                <h2 className="m-0 font-primary font-weight_secondary text-2xl sm:text-4xl inline-flex items-center space-x-2 group-hover:text-primary group-hover:underline">
+                                <h2 className="m-0 font-primary font-weight_primary text-2xl sm:text-4xl inline-flex items-center space-x-2 group-hover:text-primary group-hover:underline">
                                     {attributes.notice_title}
                                     <ArrowRight/>
                                 </h2>

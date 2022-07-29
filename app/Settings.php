@@ -77,7 +77,7 @@ class Settings extends Api
                     'site_title'       => [
                         'type'    => 'text',
                         'label'   => esc_html__( 'Site Title', 'doatkolom' ),
-                        'default' => isset( $settings['site_title'] ) ? $settings['site_title'] : ''
+                        'default' => isset( $settings['site_title'] ) ? $settings['site_title'] : 'DoatKolom Website'
                     ],
                     'site_description' => [
                         'type'    => 'text',
@@ -125,12 +125,17 @@ class Settings extends Api
                     'eiin_code'        => [
                         'type'    => 'text',
                         'label'   => esc_html__( 'EIIN Code', 'doatkolom' ),
-                        'default' => isset( $settings['eiin_code'] ) ? $settings['eiin_code'] : ''
+                        'default' => isset( $settings['eiin_code'] ) ? $settings['eiin_code'] : 'EIIN: 000000'
                     ],
                     'official_phone'   => [
                         'type'    => 'text',
                         'label'   => esc_html__( 'Official Phone Number', 'doatkolom' ),
                         'default' => isset( $settings['official_phone'] ) ? $settings['official_phone'] : '+88123456789'
+                    ],
+                    'call_btn_label'   => [
+                        'type'    => 'text',
+                        'label'   => esc_html__( 'Call Button Label', 'doatkolom' ),
+                        'default' => isset( $settings['call_btn_label'] ) ? $settings['call_btn_label'] : 'Talk to us'
                     ],
                     'full_address'     => [
                         'type'    => 'textarea',
@@ -156,7 +161,7 @@ class Settings extends Api
                     'facebook'               => [
                         'type'    => 'text',
                         'label'   => esc_html__( 'Facebook', 'doatkolom' ),
-                        'default' => isset( $settings['facebook'] ) ? $settings['facebook'] : ''
+                        'default' => isset( $settings['facebook'] ) ? $settings['facebook'] : 'https://www.facebook.com/'
                     ],
                     'linkedin'               => [
                         'type'    => 'text',
@@ -166,12 +171,12 @@ class Settings extends Api
                     'youtube'                => [
                         'type'    => 'text',
                         'label'   => esc_html__( 'Youtube', 'doatkolom' ),
-                        'default' => isset( $settings['youtube'] ) ? $settings['youtube'] : ''
+                        'default' => isset( $settings['youtube'] ) ? $settings['youtube'] : 'https://www.youtube.com/'
                     ],
                     'whatsapp'               => [
                         'type'    => 'text',
                         'label'   => esc_html__( 'WhatsApp', 'doatkolom' ),
-                        'default' => isset( $settings['whatsapp'] ) ? $settings['whatsapp'] : ''
+                        'default' => isset( $settings['whatsapp'] ) ? $settings['whatsapp'] : 'whatsapp_url'
                     ],
                     'custom_contact_page'    => [
                         'type'    => 'text',
@@ -214,7 +219,7 @@ class Settings extends Api
                     'primary_font_weight' => [
                         'type'    => 'select',
                         'label'   => esc_html__( 'Primary Font Weight', 'doatkolom' ),
-                        'default' => isset( $settings['primary_font_weight'] ) ? $settings['primary_font_weight'] : 700,
+                        'default' => isset( $settings['primary_font_weight'] ) ? $settings['primary_font_weight'] : 400,
                         'options' => [
                             ['label' => 'Thin 100', 'value' => 100],
                             ['label' => 'Light', 'value' => 300],
@@ -229,7 +234,7 @@ class Settings extends Api
                     'secondary_font_weight' => [
                         'type'    => 'select',
                         'label'   => esc_html__( 'Secondary Font Weight', 'doatkolom' ),
-                        'default' => isset( $settings['secondary_font_weight'] ) ? $settings['secondary_font_weight'] : 400,
+                        'default' => isset( $settings['secondary_font_weight'] ) ? $settings['secondary_font_weight'] : 600,
                         'options' => [
                             ['label' => 'Thin 100', 'value' => 100],
                             ['label' => 'Light', 'value' => 300],
@@ -244,7 +249,7 @@ class Settings extends Api
                     'tertiary_font_weight' => [
                         'type'    => 'select',
                         'label'   => esc_html__( 'Tertiary Font Weight', 'doatkolom' ),
-                        'default' => isset( $settings['tertiary_font_weight'] ) ? $settings['tertiary_font_weight'] : 600,
+                        'default' => isset( $settings['tertiary_font_weight'] ) ? $settings['tertiary_font_weight'] : 700,
                         'options' => [
                             ['label' => 'Thin 100', 'value' => 100],
                             ['label' => 'Light', 'value' => 300],
@@ -356,6 +361,11 @@ class Settings extends Api
                         'type'    => 'color',
                         'label'   => esc_html__( 'Body', 'doatkolom' ),
                         'default' => isset( $settings['doatkolom_body_color'] ) ? $settings['doatkolom_body_color'] : '#ffffff',
+                    ],
+                    'doatkolom_footer_color' => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Footer', 'doatkolom' ),
+                        'default' => isset( $settings['doatkolom_footer_color'] ) ? $settings['doatkolom_footer_color'] : '#E7F4F6',
                     ],
                 ]
             ],

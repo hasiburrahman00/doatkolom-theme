@@ -15,7 +15,7 @@ class NavWalker extends \Walker_Nav_Menu {
 
     function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
 
-        $a_tag_class    = 'font-secondary text-xl sm:text-4xl lg:text-base text-white lg:text-primary no-underline font-weight_primary hover:text-secondary focus:text-secondary ease-in duration-200 inline-block flex items-center';
+        $a_tag_class    = 'font-secondary text-xl sm:text-4xl lg:text-lg text-black no-underline font-weight_primary hover:text-secondary focus:text-secondary ease-in duration-200 inline-block flex items-center';
 
         $arrow_icon     = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
             <mask id="mask0_377_1938" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">

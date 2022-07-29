@@ -3153,7 +3153,7 @@ function developer() {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("h2", {
           className: "m-0 text-2xl font-weight_primary",
           children: ["Developer Options ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-            className: "font-weight_secondary inline-block ml-auto text-base absolute top-[25px] right-12",
+            className: "font-weight_primary inline-block ml-auto text-base absolute top-[25px] right-12",
             children: "Be careful while you\u2019re changing these fields"
           })]
         })
