@@ -4,7 +4,7 @@ export default function Repeater(props) {
     return(
         <div className="doatkolom-repeater">
             <label className="components-base-control__label mb-3 inline-block">{props?.label}</label>
-            <div className="bg-gray-100 p-5 border border-solid border-gray-300">
+            <div className="bg-light_gray p-5 border border-solid border-gray-300">
                 <main>
                     <ul>
                         {props.children}

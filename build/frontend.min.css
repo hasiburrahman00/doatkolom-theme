@@ -1029,6 +1029,9 @@
 .font-weight_tertiary {
     font-weight: var(--tertiary_font_weight);
 }
+.font-weight_secondary {
+    font-weight: var(--secondary_font_weight);
+}
 .capitalize {
     text-transform: capitalize;
 }
@@ -1080,6 +1083,9 @@
     --tw-text-opacity: 1;
     color: rgb(193 241 255 / var(--tw-text-opacity));
 }
+.text-paragraph {
+    color: var(--doatkolom_paragraph_color);
+}
 .underline {
     -webkit-text-decoration-line: underline;
             text-decoration-line: underline;
@@ -1093,6 +1099,9 @@
 }
 .opacity-50 {
     opacity: 0.5;
+}
+.opacity-40 {
+    opacity: 0.4;
 }
 .shadow-xl {
     --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);

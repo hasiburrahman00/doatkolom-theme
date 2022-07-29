@@ -15,7 +15,7 @@ export default function GeneralControls({attributes, setAttributes}) {
     return (
         <div className="space-y-5">
             {attributes.card.map((item,index)=>(
-               <div key={index} className ="border border-solid border-gray-300 p-5 bg-gray-100 space-y-5">
+               <div key={index} className ="border border-solid border-gray-300 p-5 bg-light_gray space-y-5">
                      <TextControl
                         className="w-full"
                         label="Title"

@@ -1,7 +1,7 @@
 <?php 
 	$favicon = DOATKOLOM_LOGO;
-	if( !empty( INFO['website_favicon'] ) ) {
-		$favicon = wp_get_attachment_url( INFO['website_favicon'] );
+	if( !empty( get_doatkolom_theme_setting('website_favicon')) ) {
+		$favicon = wp_get_attachment_url( get_doatkolom_theme_setting('website_favicon') );
 	}
 ?>
 <!doctype html>
@@ -10,9 +10,9 @@
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="description" content="<?php echo esc_html(INFO['site_description']) ?>">
-	<meta name="keywords" content="<?php echo esc_html(INFO['site_keywords']) ?>">
-	<title><?php echo esc_html(INFO['site_title']) ?> | <?php echo esc_html(INFO['site_description']) ?></title>
+	<meta name="description" content="<?php echo esc_html(get_doatkolom_theme_setting('site_description')) ?>">
+	<meta name="keywords" content="<?php echo esc_html(get_doatkolom_theme_setting('site_keywords')) ?>">
+	<title><?php echo esc_html(get_doatkolom_theme_setting('site_title')) ?> | <?php echo esc_html(get_doatkolom_theme_setting('site_description')) ?></title>
 	<link rel="shortcut icon" href="<?php echo esc_url( $favicon ) ?>" type="image/x-icon">
 	<?php wp_head() ?>
 </head>

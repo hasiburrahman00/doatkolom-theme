@@ -25,7 +25,7 @@ export default function Edit({ attributes, setAttributes}) {
 
                     <a href= "#" className="flex items-center bg-primary rounded-md justify-center mt-8 no-underline text-white hover:text-white">
                         <LocationArrow/>
-                        <span className="text-white font-medium font-secondary px-2 py-3">{attributes.map_link.text}</span>
+                        <span className="text-white font-weight_secondary font-secondary px-2 py-3">{attributes.map_link.text}</span>
                     </a>                 
                 </div>
                 <div className="col-span-2 rounded-md overflow-hidden shadow-xl border-8 border-solid border-white mt-10 md:mt-11 lg:mt-0">

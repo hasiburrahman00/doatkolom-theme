@@ -11,9 +11,9 @@ export default function Syllabus () {
     return (
         <div className="max-w-screen-xl px-5 py-20 mx-auto">
             <div className="flex justify-between">
-                <div className="bg-gray-100 flex items-center px-4 py-4 w-[400px] rounded-md">
+                <div className="bg-light_gray flex items-center px-4 py-4 w-[400px] rounded-md">
                     <SearchIcon/>
-                    <input className="w-full border-none bg-gray-100 focus:outline-none placeholder:text-primary font-secondary font-weight_primary text-base ml-4" type="search" placeholder="Search Your Syllabus"/>
+                    <input className="w-full border-none bg-light_gray focus:outline-none placeholder:text-primary font-secondary font-weight_primary text-base ml-4" type="search" placeholder="Search Your Syllabus"/>
                 </div>
                 <button type="button" className="rounded-md p-4 border-none cursor-pointer hidden md:block"><MenuIcon/></button>
             </div>

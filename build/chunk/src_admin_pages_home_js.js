@@ -1498,7 +1498,7 @@ var BootstrapInput = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_2__["defau
 var InputBox = function InputBox(props) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
-      className: "text-base font-medium mb-2",
+      className: "text-base font-weight_secondary mb-2",
       children: props.title
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(BootstrapInput, {
       fullWidth: true,

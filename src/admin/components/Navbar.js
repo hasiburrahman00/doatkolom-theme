@@ -78,7 +78,7 @@ function Navbar(props) {
                     { props.menu.map( item => (
                         <Link 
                             key={item.name}
-                            className={`${ location.pathname === item.path ? 'text-[#16aaca] focus:text-[#16aaca]' : 'text-[#003646]' } no-underline inline-block mr-7 text-base hover:underline focus:shadow-none font-medium`} 
+                            className={`${ location.pathname === item.path ? 'text-[#16aaca] focus:text-[#16aaca]' : 'text-[#003646]' } no-underline inline-block mr-7 text-base hover:underline focus:shadow-none font-weight_secondary`} 
                             to={item.path}>{item.name}</Link>
                     ) ) }
                     

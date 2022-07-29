@@ -40,7 +40,7 @@ export default function GeneralControls({attributes, setAttributes}) {
 
             {
                 attributes.primary_button.visible && 
-                <div className="border border-solid border-gray-300 p-5 bg-gray-100 space-y-5">
+                <div className="border border-solid border-gray-300 p-5 bg-light_gray space-y-5">
                     <TextControl
                         className="w-full"
                         label="Primary Button Label"
@@ -76,7 +76,7 @@ export default function GeneralControls({attributes, setAttributes}) {
 
             {
                 attributes.secondary_button.visible && 
-                <div className="border border-solid border-gray-300 p-5 bg-gray-100 space-y-5">
+                <div className="border border-solid border-gray-300 p-5 bg-light_gray space-y-5">
                     <TextControl
                         className="w-full"
                         label="Secondary Button Label"

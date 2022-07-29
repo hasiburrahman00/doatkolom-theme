@@ -3007,7 +3007,7 @@ var BootstrapInput = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_2__["defau
 var InputBox = function InputBox(props) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
-      className: "text-base font-medium mb-2",
+      className: "text-base font-weight_secondary mb-2",
       children: props.title
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(BootstrapInput, {
       fullWidth: true,
@@ -3198,7 +3198,7 @@ function developer() {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_ColorPicker__WEBPACK_IMPORTED_MODULE_2__["default"], {
               selector: "color1"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-              className: "font-medium text-sm",
+              className: "font-weight_secondary text-sm",
               children: "Primary"
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
@@ -3206,7 +3206,7 @@ function developer() {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_ColorPicker__WEBPACK_IMPORTED_MODULE_2__["default"], {
               selector: "color2"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-              className: "font-medium text-sm",
+              className: "font-weight_secondary text-sm",
               children: "Primary"
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
@@ -3214,7 +3214,7 @@ function developer() {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_ColorPicker__WEBPACK_IMPORTED_MODULE_2__["default"], {
               selector: "color3"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-              className: "font-medium text-sm",
+              className: "font-weight_secondary text-sm",
               children: "Primary"
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
@@ -3222,7 +3222,7 @@ function developer() {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_ColorPicker__WEBPACK_IMPORTED_MODULE_2__["default"], {
               selector: "color3"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-              className: "font-medium text-sm",
+              className: "font-weight_secondary text-sm",
               children: "Primary"
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
@@ -3230,7 +3230,7 @@ function developer() {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_ColorPicker__WEBPACK_IMPORTED_MODULE_2__["default"], {
               selector: "color4"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-              className: "font-medium text-sm",
+              className: "font-weight_secondary text-sm",
               children: "Secondary"
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
@@ -3238,7 +3238,7 @@ function developer() {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_ColorPicker__WEBPACK_IMPORTED_MODULE_2__["default"], {
               selector: "color5"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-              className: "font-medium text-sm",
+              className: "font-weight_secondary text-sm",
               children: "Secondary"
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
@@ -3246,7 +3246,7 @@ function developer() {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_ColorPicker__WEBPACK_IMPORTED_MODULE_2__["default"], {
               selector: "color6"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-              className: "font-medium text-sm",
+              className: "font-weight_secondary text-sm",
               children: "Secondary"
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
@@ -3254,7 +3254,7 @@ function developer() {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_ColorPicker__WEBPACK_IMPORTED_MODULE_2__["default"], {
               selector: "color7"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-              className: "font-medium text-sm",
+              className: "font-weight_secondary text-sm",
               children: "Secondary"
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
@@ -3262,7 +3262,7 @@ function developer() {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_ColorPicker__WEBPACK_IMPORTED_MODULE_2__["default"], {
               selector: "color8"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-              className: "font-medium text-sm",
+              className: "font-weight_secondary text-sm",
               children: "Secondary 80"
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
@@ -3270,7 +3270,7 @@ function developer() {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_ColorPicker__WEBPACK_IMPORTED_MODULE_2__["default"], {
               selector: "color9"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-              className: "font-medium text-sm",
+              className: "font-weight_secondary text-sm",
               children: "Secondary 80"
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
@@ -3278,7 +3278,7 @@ function developer() {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_ColorPicker__WEBPACK_IMPORTED_MODULE_2__["default"], {
               selector: "color10"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-              className: "font-medium text-sm",
+              className: "font-weight_secondary text-sm",
               children: "Secondary 80"
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
@@ -3286,7 +3286,7 @@ function developer() {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_ColorPicker__WEBPACK_IMPORTED_MODULE_2__["default"], {
               selector: "color11"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-              className: "font-medium text-sm",
+              className: "font-weight_secondary text-sm",
               children: "Secondary 80"
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
@@ -3294,7 +3294,7 @@ function developer() {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_ColorPicker__WEBPACK_IMPORTED_MODULE_2__["default"], {
               selector: "color7"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-              className: "font-medium text-sm",
+              className: "font-weight_secondary text-sm",
               children: "Secondary 60"
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
@@ -3302,7 +3302,7 @@ function developer() {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_ColorPicker__WEBPACK_IMPORTED_MODULE_2__["default"], {
               selector: "color8"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-              className: "font-medium text-sm",
+              className: "font-weight_secondary text-sm",
               children: "Secondary 60"
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
@@ -3310,7 +3310,7 @@ function developer() {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_ColorPicker__WEBPACK_IMPORTED_MODULE_2__["default"], {
               selector: "color9"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-              className: "font-medium text-sm",
+              className: "font-weight_secondary text-sm",
               children: "Secondary 60"
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
@@ -3318,7 +3318,7 @@ function developer() {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_ColorPicker__WEBPACK_IMPORTED_MODULE_2__["default"], {
               selector: "color10"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-              className: "font-medium text-sm",
+              className: "font-weight_secondary text-sm",
               children: "Secondary 60"
             })]
           })]

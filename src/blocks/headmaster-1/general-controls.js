@@ -1,4 +1,4 @@
-const { TextControl, TextareaControl } = wp.components
+const { TextControl, TextareaControl, ToggleControl } = wp.components
 import ImagePicker from "../../components/image-picker"
 
 export default function GeneralControls({attributes, setAttributes}) {
@@ -64,6 +64,48 @@ export default function GeneralControls({attributes, setAttributes}) {
                 value={ attributes.teachers_page_link }
                 onChange={ ( value ) => setAttributes({teachers_page_link: value}) }
             />
+            
+            <ToggleControl
+                label="Show Teacher Page Button"
+                checked={ attributes.teachers_page.visible }
+                onChange={ () => {
+                    const value = {
+                        ...attributes.teachers_page,
+                        visible: !attributes.teachers_page.visible
+                    }
+                    setAttributes({teachers_page: value})
+                } }
+            />
+
+            { 
+                /**
+                 * 
+                 * Primary button controls
+                 * @author ashraf
+                 * @since 1.0.0
+                 */ 
+                attributes.teachers_page.visible && 
+                <div className="border border-solid border-gray-300 p-5 bg-light_gray space-y-5">
+                    <TextControl
+                        className="w-full"
+                        label="Button Label"
+                        value={ attributes.teachers_page.text }
+                        onChange={ text => {
+                            const value = { ...attributes.teachers_page, text }
+                            setAttributes({teachers_page: value})
+                        } }
+                    />
+                    <TextControl
+                        className="w-full"
+                        label="Button URL"
+                        value={ attributes.teachers_page.link }
+                        onChange={ link => {
+                            const value = { ...attributes.teachers_page, link }
+                            setAttributes({teachers_page: value})
+                        } }
+                    />
+                </div>
+            }
         </div>
     )
 }

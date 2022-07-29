@@ -8,7 +8,7 @@ export default function AllSyllabus (props) {
 
 AllSyllabus.Item = function (props) {
     return (
-        <div className="bg-gray-100 border border-gray-500 border-solid py-7 px-5 hover:bg-primary-blue-100 hover:border-secondary transition duration-100 ease-linear">
+        <div className="bg-light_gray border border-gray-500 border-solid py-7 px-5 hover:bg-primary-blue-100 hover:border-secondary transition duration-100 ease-linear">
             <div className="flex items-center mb-3">
                 {props.icons && props.icons}
                 <div className="ml-5">
@@ -20,7 +20,7 @@ AllSyllabus.Item = function (props) {
             <p className="text-primary font-secondary font-weight_primary text-base mt-3">The school was established on a small scale on 19th</p>
             <button className="flex items-center mt-6 py-3 px-7 rounded-md border-none bg-primary text-white cursor-pointer">
                 {props.download && props.download}
-                {props.title && <span className="ml-2 font-secondary font-medium text-base">{props.title}</span>}
+                {props.title && <span className="ml-2 font-secondary font-weight_secondary text-base">{props.title}</span>}
             </button>
         </div>
     ) 

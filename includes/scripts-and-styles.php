@@ -1,10 +1,10 @@
 <?php
-use DoatKolom\Settings;
+
 add_action( 'wp_enqueue_scripts', function () {
 
 	wp_enqueue_style('doatkolom-frontend', DOATKOLOM_BUILD . 'frontend.min.css', [], DOATKOLOM_VERSION, false);
 	wp_enqueue_script('doatkolom-frontend', DOATKOLOM_BUILD . 'frontend.min.js', ['jquery'], DOATKOLOM_VERSION, false);
-	wp_add_inline_style( 'doatkolom-frontend', Settings::css_variables() );
+	wp_add_inline_style( 'doatkolom-frontend', doatkolom_app()->css_variables() );
 	
 	/**
 	 * 

@@ -14,7 +14,7 @@ export default function Edit({ attributes, setAttributes }) {
                         </a>
                         <p className="font-secondary text-lg text-primary font-weight_primary m-0 mb-9">{item.event_details}</p>
                         <a href="#" className="group inline-flex items-center font-secondary text-lg font-weight_primary text-primary no-underline hover:text-primary hover:underline">
-                            <span className="w-12 h-12 rounded-full bg-gray-100 inline-flex justify-center items-center mr-4 group-hover:bg-primary group-hover:text-white transition duration-200 ease-linear">
+                            <span className="w-12 h-12 rounded-full bg-light_gray inline-flex justify-center items-center mr-4 group-hover:bg-primary group-hover:text-white transition duration-200 ease-linear">
                                 <RightArrow/>
                             </span> Read More
                         </a>
