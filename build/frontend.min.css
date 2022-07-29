@@ -773,6 +773,12 @@
     --tw-bg-opacity: 1;
     background-color: rgb(79 70 229 / var(--tw-bg-opacity));
 }
+.bg-gray {
+    background-color: var(--doatkolom_gray_color);
+}
+.bg-light_gray {
+    background-color: var(--doatkolom_light_gray_color);
+}
 .bg-gradient-to-b {
     background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -1026,6 +1032,9 @@
 .font-weight_tertiary {
     font-weight: var(--tertiary_font_weight);
 }
+.font-weight_secondary {
+    font-weight: var(--secondary_font_weight);
+}
 .capitalize {
     text-transform: capitalize;
 }
@@ -1077,6 +1086,9 @@
     --tw-text-opacity: 1;
     color: rgb(193 241 255 / var(--tw-text-opacity));
 }
+.text-paragraph {
+    color: var(--doatkolom_paragraph_color);
+}
 .underline {
     -webkit-text-decoration-line: underline;
             text-decoration-line: underline;
@@ -1090,6 +1102,9 @@
 }
 .opacity-50 {
     opacity: 0.5;
+}
+.opacity-40 {
+    opacity: 0.4;
 }
 .shadow-xl {
     --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
@@ -1527,6 +1542,10 @@ body::-webkit-scrollbar-thumb:hover {
 
 .hover\:bg-transparent:hover {
     background-color: transparent;
+}
+
+.hover\:bg-primary_dark:hover {
+    background-color: var(--doatkolom_primary_dark_color);
 }
 
 .hover\:text-white:hover {

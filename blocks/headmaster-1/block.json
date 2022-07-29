@@ -22,9 +22,13 @@
     "teachers_image": {
       "type": "array"
     },
-    "teachers_page_link": {
-      "type": "string",
-      "default": "#"
+    "teachers_page": {
+      "type": "object",
+      "default": {
+        "visible": true,
+        "link": "#",
+        "text": "See our honorable teachers"
+      }
     }
   }
 }

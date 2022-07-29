@@ -19,11 +19,11 @@ export default function Save({ attributes }) {
                 </div>
 
                 <div className="block lg:hidden">
-                    <button type="button" className="slick-prev-btn left-arrow absolute bg-gray-100 border-0 w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition ease-linear duration-200 hover:bg-secondary hover:text-white">
+                    <button type="button" className="slick-prev-btn left-arrow absolute bg-light_gray border-0 w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition ease-linear duration-200 hover:bg-secondary hover:text-white">
                         <PrevArrow/>
                     </button>
                             
-                    <button type="button" className="slick-next-btn right-arrow border-0 bg-gray-100 w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition ease-linear duration-200 hover:bg-secondary hover:text-white">
+                    <button type="button" className="slick-next-btn right-arrow border-0 bg-light_gray w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition ease-linear duration-200 hover:bg-secondary hover:text-white">
                         <NextArrow/>
                     </button>
                 </div>
@@ -46,11 +46,11 @@ export default function Save({ attributes }) {
                 </div>
 
                 <div className="hidden lg:block">
-                    <button type="button" className="lg:block slick-prev-btn absolute bg-gray-100 border-0 w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition ease-linear duration-200 hover:bg-secondary hover:text-white">
+                    <button type="button" className="lg:block slick-prev-btn absolute bg-light_gray border-0 w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition ease-linear duration-200 hover:bg-secondary hover:text-white">
                         <PrevArrow/>
                     </button>
                             
-                    <button type="button" className="slick-next-btn border-0 bg-gray-100 w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition ease-linear duration-200 hover:bg-secondary hover:text-white">
+                    <button type="button" className="slick-next-btn border-0 bg-light_gray w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition ease-linear duration-200 hover:bg-secondary hover:text-white">
                         <NextArrow/>
                     </button>
                 </div>

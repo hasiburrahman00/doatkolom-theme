@@ -33,7 +33,7 @@
                 <?php Icons::gridDots() ?>
             </button>
         <?php elseif( INFO['institution_type'] !== 'doatkolom' && !empty(INFO['call_btn_label']) ): ?>
-            <a class="lg:inline-block no-underline hidden bg-primary primary-shadow hover:shadow-none text-white py-2.5 px-5 rounded-lg font-secondary text-base transition duration-200 hover:bg-secondary" 
+            <a class="lg:inline-block no-underline hidden bg-primary primary-shadow text-white py-2.5 px-5 rounded-lg font-secondary text-base transition duration-200 hover:bg-primary_dark" 
                 href="tel:<?php echo esc_attr(INFO['official_phone']) ?>">
                 <?php echo esc_html(INFO['call_btn_label']) ?>
             </a>

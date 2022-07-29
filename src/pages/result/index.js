@@ -3,7 +3,7 @@ export default function Result() {
     updateBreadcrumb('Result');
     return(
         <div className="max-w-screen-xl px-5 py-16 mx-auto">
-            <div className="max-w-[785px] m-auto p-7 md:p-14 box-border bg-gray-100 rounded-md">
+            <div className="max-w-[785px] m-auto p-7 md:p-14 box-border bg-light_gray rounded-md">
                 <form>
                     <div>
                         <label For="certificate" className="w-full lg:w-[221px] text-primary font-secondary font-weight_primary text-lg block md:inline-block" >Birth Certificate Number :</label>
