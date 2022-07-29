@@ -1538,6 +1538,10 @@ body::-webkit-scrollbar-thumb:hover {
     background-color: var(--doatkolom_primary_light_color);
 }
 
+.even\:bg-secondary_light:nth-child(even) {
+    background-color: var(--doatkolom_secondary_light_color);
+}
+
 .hover\:border-secondary:hover {
     border-color: var(--doatkolom_secondary_color);
 }
