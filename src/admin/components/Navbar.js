@@ -1,27 +1,73 @@
-import { memo, useEffect, useRef } from "react"
+import { memo, useEffect, useRef, useState } from "react"
 import { Link, useLocation } from 'react-router-dom';
 import { Button, styled } from "@mui/material";
 import LoadingButton from '@mui/lab/LoadingButton';
 const $ = window.jQuery;
 
+const savebtnStyle = {
+    boxShadow: 'none',
+    textTransform: 'capitalize',
+    fontSize: '16px',
+    borderRadius: '8px',
+    '&:hover': { 
+        boxShadow: 'none'
+    }
+}
+
 function Navbar(props) {
 
-    const { saveButton } = props
+    const { saveButton, setSaveButton } = props
     const headerRef = useRef(null);
-    const location = useLocation();
-
+    const location  = useLocation();
+    const [ loadingButtonStyle, setLoadingButtonStyle ] = useState(savebtnStyle)
+    
     const handleSaveSetting = () => {
         if( location.pathname !== '/gallery' && props.onSave && typeof props.onSave === 'function' ) {
             props.onSave();
-        } else {
-            console.log('save gallery')
+        } else if( props.deleteGallery && typeof props.deleteGallery === 'function' ) {
+            props.deleteGallery();
         }
     }
 
     useEffect(() => {
+        setTimeout(() => {
+            setSaveButton( prevState => {
+                return { ...prevState, text: 'Delete Selected Images' }
+            })
+        }, 100)
         $(document).trigger( 'wp-window-resized' );
     },[])
 
+    /**
+     * 
+     * 
+     * change save button text based on gallery page and other pages 
+     */ 
+    useEffect(() => {
+        if( location.pathname === '/gallery' ) {
+            setSaveButton( prevState => {
+                return { ...prevState, text: 'Delete Selected Images' }
+            })
+            setLoadingButtonStyle({
+                ...loadingButtonStyle, 
+                backgroundColor: '#db231e',
+                '&:hover': {
+                    backgroundColor: '#9f0f0b'
+                }
+            })
+        } else {
+            setSaveButton( prevState => {
+                return { ...prevState, text: 'Save Now' }
+            })
+            setLoadingButtonStyle(savebtnStyle)
+        }
+    }, [location.pathname])
+
+    /**
+     * 
+     * 
+     * change the header width based on wordpress sidebar  
+     */ 
     $(document).on( 'wp-menu-state-set wp-collapse-menu', function( event, eventData ) {
         if( eventData.state === 'open' || eventData.state === 'folded' && headerRef.current ) {
             const sidebarWidth      = $('#adminmenuwrap').outerWidth();
@@ -54,16 +100,6 @@ function Navbar(props) {
             background-color: #bac8d3;
         }
     `
-
-    const loadingButtonStyle = {
-        boxShadow: 'none',
-        textTransform: 'capitalize',
-        fontSize: '16px',
-        borderRadius: '8px',
-        '&:hover': { 
-            boxShadow: 'none'
-        }
-    }
     
     return (
         <header ref={headerRef} className="bg-white py-1 px-7 w-full fixed z-20 top-0 left-0 border-t-0 border-x-0 border-b border-solid border-[#ddd]">

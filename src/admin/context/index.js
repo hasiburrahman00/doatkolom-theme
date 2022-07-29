@@ -11,6 +11,7 @@ export function AdminContextProvider(props) {
 
     // for global state
     const [ attribute, setAttribute ] = useStore({})
+    const [ loading, setLoading ] = useState(false); // gallery page loading
     const { enqueueSnackbar } = useSnackbar()
 
     // for navbar component
@@ -82,9 +83,47 @@ export function AdminContextProvider(props) {
         })
     }
 
+    /**
+     * 
+     * delete selected images from gallery page 
+     * 
+     */ 
+    const deletegalelryImage = () => {
+        if( Array.from(attribute.galleries_mark).length === 0 ) return;
+        setSaveButton({
+            text: 'Loading...',
+            loading: true,
+            disable: true
+        })
+
+        setLoading(true)
+        API.delete_gallery({image_ids: Array.from(attribute.galleries_mark)}).then( res => {
+            
+            const newImageList = [];
+            attribute.galleries.map( item => {
+                if( !attribute.galleries_mark.has( item.image_id ) ) {
+                    newImageList.push( item )
+                }
+            })
+
+            setAttribute({
+                galleries: newImageList,
+                galleries_mark: new Set(),
+            })
+
+            setSaveButton({
+                text: 'Delete Selected Images',
+                loading: false,
+                disable: false
+            })
+            setLoading(false)
+            enqueueSnackbar(res.message, { variant: res.status } )
+        })
+}
+
     return(
-        <AdminContext.Provider value={{attribute, setAttribute}}>
-            <MemoedNavbar onSave={saveButtonHandler} saveButton={saveButton} menu={props.menu}/>
+        <AdminContext.Provider value={{attribute, setAttribute, loading, setLoading}}>
+            <MemoedNavbar onSave={saveButtonHandler} deleteGallery={deletegalelryImage} setSaveButton={setSaveButton} saveButton={saveButton} menu={props.menu}/>
             <main className="mt-28">
                 { attribute?.setting_fields ? props.children : <AdminPageSkeleton/> }
             </main>
