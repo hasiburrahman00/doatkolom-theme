@@ -775,6 +775,10 @@
 .bg-overlay {
     background-color: var(--doatkolom_overlay_color);
 }
+.bg-\[green\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 128 0 / var(--tw-bg-opacity));
+}
 .bg-gradient-to-b {
     background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -788,6 +792,9 @@
 }
 .bg-cover {
     background-size: cover;
+}
+.bg-contain {
+    background-size: contain;
 }
 .bg-center {
     background-position: center;

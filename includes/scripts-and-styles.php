@@ -35,7 +35,6 @@ add_action( 'wp_enqueue_scripts', function () {
 	$breadcrumb_css = "
 		#doatkolom-breadcrumb {
 			background-image: url('$breadcrumb_image');
-			background-size: contain;
 			background-color: var(--doatkolom_primary_light_color);
 		}
 	";
