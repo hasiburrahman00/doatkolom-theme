@@ -297,7 +297,7 @@ class Settings
                     'doatkolom_light_gray_color'         => [
                         'type'    => 'color',
                         'label'   => esc_html__( 'Light gray', 'doatkolom' ),
-                        'default' => isset( $this->settings['doatkolom_light_gray_color'] ) ? $this->settings['doatkolom_light_gray_color'] : '#f9fafb'
+                        'default' => $this->getSettingDbValue( 'doatkolom_light_gray_color', '#E9E9E9' )
                     ],
                     'doatkolom_overlay_color'            => [
                         'type'    => 'color',

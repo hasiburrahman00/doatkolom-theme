@@ -33,7 +33,7 @@
                 <?php Icons::gridDots()?>
             </button>
         <?php elseif ( get_doatkolom_theme_setting( 'institution_type' ) !== 'doatkolom' && !empty( get_doatkolom_theme_setting( 'call_btn_label' ) ) ): ?>
-            <a class="lg:inline-block no-underline hidden bg-primary primary-shadow hover:shadow-none text-white py-2.5 px-5 rounded-lg font-secondary text-base transition duration-200 hover:bg-secondary"
+            <a class="lg:inline-block no-underline hidden bg-primary primary-shadow text-white py-2.5 px-5 rounded-lg font-secondary text-base transition duration-200 hover:bg-primary_dark"
                 href="tel:<?php echo esc_attr( get_doatkolom_theme_setting( 'official_phone' ) ) ?>">
                 <?php echo esc_html( get_doatkolom_theme_setting( 'call_btn_label' ) ) ?>
             </a>
