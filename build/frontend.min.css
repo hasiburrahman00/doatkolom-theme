@@ -226,6 +226,9 @@
 .mt-4 {
     margin-top: 1rem;
 }
+.mb-14 {
+    margin-bottom: 3.5rem;
+}
 .ml-3 {
     margin-left: 0.75rem;
 }
@@ -276,9 +279,6 @@
 }
 .mt-12 {
     margin-top: 3rem;
-}
-.mb-14 {
-    margin-bottom: 3.5rem;
 }
 .box-border {
     box-sizing: border-box;
@@ -1350,11 +1350,14 @@
 }
 
 * {
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 0px;
-  box-sizing: border-box;
-  padding: 0px;
 }
 
 body::-webkit-scrollbar {
