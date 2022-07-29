@@ -27,7 +27,7 @@ export default function Style({attributes, wrapper}){
         }
 
         ${wrapper} .box-slider .slick-slide.slick-center {
-            filter: drop-shadow(0px 30px 30px rgba(219, 35, 30, 0.15));
+            filter: drop-shadow(0px 30px 30px var(--doatkolom_primary_shadow_color));
         }
 
         ${wrapper} .box-slider .slick-slide.slick-center .center-text{

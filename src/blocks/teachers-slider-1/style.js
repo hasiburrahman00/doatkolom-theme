@@ -26,7 +26,7 @@ export default function Style({wrapper}){
             display: inline-block;
             width: 15px;
             height: 15px;
-            background-color: #FDF4F4;
+            background-color: var(--doatkolom_primary_light_color);
             border-radius: 50%;
             margin-right: 5px;
         }
@@ -36,7 +36,7 @@ export default function Style({wrapper}){
             width: 15px;
             height: 15px;
             line-height: 26px;
-            background-color: #DB231E;
+            background-color: var(--doatkolom_primary_color);
             border: none;
             border-radius: 50%;
             opacity: 0;
@@ -45,6 +45,12 @@ export default function Style({wrapper}){
 
         ${wrapper} .slider-dots .slick-dots li.slick-active button {
             opacity: 1;
+        }
+
+        @media (min-width: 1356px) {
+            ${wrapper} .arrows {
+                display: block;
+            }
         }
     `
 }

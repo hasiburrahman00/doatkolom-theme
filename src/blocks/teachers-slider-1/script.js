@@ -30,7 +30,7 @@ export default function TeachersSlider1 ($scope) {
         slidesToShow    : 1,
         slidesToScroll  : 1,
         dots            : true,
-        autoplay        : false,
+        autoplay        : true,
         appendDots      : dotWrapper,
         nextArrow       : nextBtn,
         prevArrow       : prevBtn,
