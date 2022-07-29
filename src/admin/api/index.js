@@ -50,11 +50,23 @@ class DoatKolom_Api extends Api_Base {
     setting_fields() {
         return this.get_method('setting_fields')
     }
+    
+    galleries() {
+        return this.get_method('galleries')
+    }
 
     add_gallery( data ) {
         return this.post_method( 'add_gallery', data )
     }
-    
+
+    delete_gallery( data ) {
+        return this.post_method( 'delete_gallery', data )
+    }
+
+    update_gallery( data ) {
+        return this.post_method( 'update_gallery', data )
+    }
+
     save_settings( data ) {
         return this.post_method( 'save_settings', data )
     }

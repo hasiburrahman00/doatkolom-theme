@@ -55,3 +55,5 @@ include_once get_stylesheet_directory() . '/includes/admin-menu.php';
 // error_log(print_r(doatkolom_app()->css_variables(), true));
 
 // get_rest_url( '', '' ) . 'doatkolom-theme/v1/settings/setting_fields';
+
+// delete_option(\DoatKolom\Settings::GALLERY_KEY);

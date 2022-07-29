@@ -63,11 +63,11 @@
 .left-0 {
     left: 0px;
 }
-.bottom-\[15px\] {
-    bottom: 15px;
+.bottom-\[5px\] {
+    bottom: 5px;
 }
-.left-\[15px\] {
-    left: 15px;
+.left-\[5px\] {
+    left: 5px;
 }
 .left-8 {
     left: 2rem;
@@ -192,6 +192,9 @@
 }
 .-mb-2 {
     margin-bottom: -0.5rem;
+}
+.-mb-1 {
+    margin-bottom: -0.25rem;
 }
 .mb-8 {
     margin-bottom: 2rem;
@@ -355,8 +358,8 @@
 .h-40 {
     height: 10rem;
 }
-.h-\[386px\] {
-    height: 386px;
+.h-\[145px\] {
+    height: 145px;
 }
 .max-h-\[80px\] {
     max-height: 80px;
@@ -394,8 +397,8 @@
 .w-4\/6 {
     width: 66.666667%;
 }
-.w-\[calc\(100\%_-_30px\)\] {
-    width: calc(100% - 30px);
+.w-\[calc\(100\%_-_10px\)\] {
+    width: calc(100% - 10px);
 }
 .w-\[50px\] {
     width: 50px;
@@ -559,9 +562,6 @@
 .gap-\[20px\] {
     gap: 20px;
 }
-.gap-6 {
-    gap: 1.5rem;
-}
 .gap-x-2 {
     -moz-column-gap: 0.5rem;
          column-gap: 0.5rem;
@@ -703,6 +703,10 @@
     --tw-border-opacity: 1;
     border-color: rgb(238 238 238 / var(--tw-border-opacity));
 }
+.border-\[\#1976d2\] {
+    --tw-border-opacity: 1;
+    border-color: rgb(25 118 210 / var(--tw-border-opacity));
+}
 .border-primary {
     border-color: var(--doatkolom_primary_color);
 }
@@ -745,6 +749,10 @@
 }
 .bg-\[\#fff\]\/80 {
     background-color: rgb(255 255 255 / 0.8);
+}
+.bg-\[\#fff\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 .bg-\[red\]\/10 {
     background-color: rgb(255 0 0 / 0.1);
@@ -929,10 +937,6 @@
     padding-top: 7rem;
     padding-bottom: 7rem;
 }
-.px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-}
 .pb-8 {
     padding-bottom: 2rem;
 }
@@ -971,15 +975,6 @@
 }
 .pb-10 {
     padding-bottom: 2.5rem;
-}
-.pr-7 {
-    padding-right: 1.75rem;
-}
-.pr-16 {
-    padding-right: 4rem;
-}
-.pr-20 {
-    padding-right: 5rem;
 }
 .text-left {
     text-align: left;
@@ -1049,9 +1044,6 @@
 }
 .leading-\[40px\] {
     line-height: 40px;
-}
-.leading-\[70px\] {
-    line-height: 70px;
 }
 .text-title {
     color: var(--doatkolom_title_color);
@@ -1174,6 +1166,9 @@
 }
 .primary-shadow {
     box-shadow: 0px 4px 10px var(--doatkolom_primary_shadow_color);
+  }
+.grayscale-element {
+    filter: grayscale(1);
   } /* Slider */
 .slick-slider {
   position: relative;
@@ -1620,6 +1615,10 @@ body::-webkit-scrollbar-thumb:hover {
 .focus\:outline-none:focus {
     outline: 2px solid transparent;
     outline-offset: 2px;
+}
+
+.group:hover .group-hover\:flex {
+    display: flex;
 }
 
 .group:hover .group-hover\:bg-primary {

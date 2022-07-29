@@ -19,8 +19,14 @@ export default function SelectMultiImage(props) {
                 current = current.toJSON();
                 const id  = [...total.id, current.id];
                 const url = [...total.url, current.url];
-                return {...total, id, url}
-          }, {id: [], url: []})
+                const data = [
+                    ...total.data, {
+                        image_url   : current.url,
+                        image_id    : current.id
+                    }
+                ]
+                return {...total, id, url, data}
+          }, {id: [], url: [], data: []})
 
           if( props.onSelect && typeof props.onSelect === 'function' ) {
             props.onSelect(data);
