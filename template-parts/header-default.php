@@ -6,7 +6,7 @@
     <nav class="max-w-screen-xl mx-auto px-5 flex justify-between items-center">
         <a href="<?php echo esc_url( DOATKOLOM_HOME_URL ); ?>" class="inline-block">
             <picture>
-                <img class="object-contain object-center doatkolom-nav-logo h-auto w-full" width="80" height="80" src="<?php echo esc_url( DOATKOLOM_LOGO ) ?>" alt="main logo"/>
+                <img class="doatkolom-nav-logo h-auto w-auto max-h-[80px]" width="80" height="80" src="<?php echo esc_url( DOATKOLOM_LOGO ) ?>" alt="main logo"/>
             </picture>
         </a>
 
