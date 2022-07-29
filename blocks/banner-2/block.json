@@ -16,7 +16,7 @@
 
     "institution_name": {
       "type": "string",
-      "default": "HSC Science With The Conclusion"
+      "default": "HSC Science <br/> With The Conclusion"
     },
 
     "description": {

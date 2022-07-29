@@ -280,6 +280,12 @@
 .mt-12 {
     margin-top: 3rem;
 }
+.mb-10 {
+    margin-bottom: 2.5rem;
+}
+.mt-9 {
+    margin-top: 2.25rem;
+}
 .box-border {
     box-sizing: border-box;
 }
@@ -1831,6 +1837,9 @@ body::-webkit-scrollbar-thumb:hover {
     .md\:mt-20 {
         margin-top: 5rem;
     }
+    .md\:mb-9 {
+        margin-bottom: 2.25rem;
+    }
     .md\:block {
         display: block;
     }
@@ -2140,6 +2149,10 @@ body::-webkit-scrollbar-thumb:hover {
     .lg\:px-0 {
         padding-left: 0px;
         padding-right: 0px;
+    }
+    .lg\:py-52 {
+        padding-top: 13rem;
+        padding-bottom: 13rem;
     }
     .lg\:pt-0 {
         padding-top: 0px;
