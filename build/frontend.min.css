@@ -358,6 +358,12 @@
 .max-h-72 {
     max-height: 18rem;
 }
+.max-h-\[70px\] {
+    max-height: 70px;
+}
+.max-h-\[80px\] {
+    max-height: 80px;
+}
 .min-h-\[calc\(100vh_-_100px\)\] {
     min-height: calc(100vh - 100px);
 }
@@ -435,6 +441,9 @@
 }
 .w-\[400px\] {
     width: 400px;
+}
+.w-auto {
+    width: auto;
 }
 .min-w-\[40px\] {
     min-width: 40px;
@@ -699,6 +708,9 @@
 }
 .border-white {
     border-color: var(--doatkolom_white_color);
+}
+.border-border {
+    border-color: var(--doatkolom_border_color);
 }
 .border-t-gray {
     border-top-color: var(--doatkolom_gray_color);

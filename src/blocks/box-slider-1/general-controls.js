@@ -1,4 +1,4 @@
-const { TextControl } = wp.components
+const { TextControl,RangeControl } = wp.components
 import Repeater from '../../components/repeater'
 import ImagePicker from "../../components/image-picker"
 
@@ -60,6 +60,13 @@ export default function GeneralControls({attributes, setAttributes}) {
                     </Repeater.Item>
                 ))}
             </Repeater> 
+            <RangeControl
+                label="Box Position"
+                value={ attributes.box_position}
+                onChange={ ( value ) => setAttributes({box_position: value}) }
+                min={ -160 }
+                max={ 0 }
+            />
         </div>
     )
 }
