@@ -15,9 +15,9 @@ function Alignment( props, ref ) {
     return (
         <div ref={ref}>
             <div>
-                <button onClick={()=>handleChange('left')} className={position=='left'?'py-1.5 px-3 border-0 bg-indigo-600 text-white':'py-1.5 px-3 border-0 cursor-pointer'}><span className="dashicons dashicons-editor-alignleft"></span></button>
-                <button onClick={()=>handleChange('center')} className={position=='center'?'py-1.5 px-3 border-0 bg-indigo-600 text-white':'py-1.5 px-3 border-0 cursor-pointer'}><span className="dashicons dashicons-editor-aligncenter"></span></button>
-                <button onClick={()=>handleChange('right')} className={position=='right'?'py-1.5 px-3 border-0 bg-indigo-600 text-white':'py-1.5 px-3 border-0 cursor-pointer'}><span className="dashicons dashicons-editor-alignright"></span></button>
+                <button onClick={()=>handleChange('left')} className={position=='left'?'py-1.5 px-3 border-0 bg-[#4f46e5] text-white':'py-1.5 px-3 border-0 cursor-pointer'}><span className="dashicons dashicons-editor-alignleft"></span></button>
+                <button onClick={()=>handleChange('center')} className={position=='center'?'py-1.5 px-3 border-0 bg-[#4f46e5] text-white':'py-1.5 px-3 border-0 cursor-pointer'}><span className="dashicons dashicons-editor-aligncenter"></span></button>
+                <button onClick={()=>handleChange('right')} className={position=='right'?'py-1.5 px-3 border-0 bg-[#4f46e5] text-white':'py-1.5 px-3 border-0 cursor-pointer'}><span className="dashicons dashicons-editor-alignright"></span></button>
             </div>
         </div>
     )

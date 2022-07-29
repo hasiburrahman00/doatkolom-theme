@@ -1,0 +1,46 @@
+{
+  "name": "doatkolom/call-to-action-1",
+  "title": "Doatkolom Call To Action 1",
+  "description": "For call to action",
+  "keywords": [
+    "call",
+    "cta",
+    "banner",
+    "call to action",
+    "doatkolom",
+    "action"
+  ],
+  "attributes": {
+    "background": {
+      "type": "string"
+    },
+
+    "title": {
+      "type": "string",
+      "default": "Conclusion 10 Years Of Significant Achievements Are Involved"
+    },
+
+    "description": {
+      "type": "string",
+      "default": "With experienced mentors and updated curriculum, Creative IT Institute is ready to advance your career. Choose your favorite from our 30+ trendy courses today"
+    },
+
+    "primary_button": {
+      "type": "object",
+      "default": {
+        "text": "Call now",
+        "url": "#",
+        "visible": true
+      }
+    },
+
+    "secondary_button": {
+      "type": "object",
+      "default": {
+        "text": "Join Free Seminar",
+        "url": "#",
+        "visible": true
+      }
+    }
+  }
+}

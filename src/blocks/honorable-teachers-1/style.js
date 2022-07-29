@@ -72,6 +72,11 @@ export default function Style({wrapper}){
                 height: 140px;
                 border-radius: 50%;
             }
+
+            ${wrapper} .testimonial-slides .slick-slide:first-child img{
+                width: 140px !important;
+                height: 140px;
+            }
     
             ${wrapper} .testimonial-slides .slick-slide:first-child:before {
                 content: "";
@@ -97,6 +102,11 @@ export default function Style({wrapper}){
                 height: 140px;
                 border-radius: 50%;
             }
+
+            ${wrapper} .testimonial-slides .slick-slide:nth-child(2) img {
+                width: 140px !important;
+                height: 140px;
+            }
     
             ${wrapper} .testimonial-slides .slick-slide:nth-child(2):before {
                 content: "";
@@ -121,6 +131,11 @@ export default function Style({wrapper}){
                 width: 220px !important;
                 height: 220px;
                 border-radius: 50%;
+            }
+
+            ${wrapper} .testimonial-slides .slick-slide:nth-child(3) img {
+                width: 220px !important;
+                height: 220px;
             }
     
             ${wrapper} .testimonial-slides .slick-slide:nth-child(3):before {
@@ -214,6 +229,11 @@ export default function Style({wrapper}){
                 border-radius: 50%;
             }
 
+            ${wrapper} .testimonial-slides .slick-slide:first-child img {
+                width: 140px !important;
+                height: 140px;
+            }
+
             ${wrapper} .testimonial-slides .slick-slide:first-child:before {
                 content: "";
                 border: 2px solid #003646;
@@ -237,6 +257,11 @@ export default function Style({wrapper}){
                 width: 140px !important;
                 height: 140px;
                 border-radius: 50%;
+            }
+
+            ${wrapper} .testimonial-slides .slick-slide:nth-child(2) img {
+                width: 140px !important;
+                height: 140px;
             }
     
             ${wrapper} .testimonial-slides .slick-slide:nth-child(2):before {
@@ -263,6 +288,11 @@ export default function Style({wrapper}){
                 height: 220px;
                 border-radius: 50%;
             }
+
+            ${wrapper} .testimonial-slides .slick-slide:nth-child(3) img{
+                width: 220px !important;
+                height: 220px;
+            }
     
             ${wrapper} .testimonial-slides .slick-slide:nth-child(3):before {
                 content: "";
@@ -281,6 +311,12 @@ export default function Style({wrapper}){
                 opacity: 1;
             }
 
+        }
+
+        @media (min-width: 454px) {
+            ${wrapper} .others-teacher {
+                margin-top: 0px;
+            }
         }
     `
 }

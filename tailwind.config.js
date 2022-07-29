@@ -1,42 +1,61 @@
 module.exports = {
-    mode: 'jit',
-    purge: {
-        content: [
-            './functions.php',
-            './header.php',
-            './404.php',
-            './footer.php',
-            './index.php',
-            './page.php',
-            './single.php',
-            './search.php',
-            './author.php',
-            './sidebar.php',
-            './templates/**/*.php',
-            './template-parts/**/*.php',
-            './app/**/*.php',
-            './src/**/*.js',
-            './tailwind-purge-safelist.txt',
-        ]
-    },
-    darkMode: false, // or 'media' or 'class'
-    theme: {
-        extend: {
-            fontFamily: {
-                'primary': ['Abril Fatface', 'cursive'],
-                'secondary': ['Spectral', 'serif'],
-            },
+    content: [
+        './functions.php',
+        './header.php',
+        './404.php',
+        './footer.php',
+        './index.php',
+        './page.php',
+        './single.php',
+        './search.php',
+        './author.php',
+        './sidebar.php',
+        './templates/**/*.php',
+        './template-parts/**/*.php',
+        './app/**/*.php',
+        './src/**/*.js'
+    ],
 
-            colors: {
-                'primary': '#003646',
-                'secondary': '#16AACA',
-                'doatkolom-gray': '#e6e6e6',
-            },
-            
-            lineHeight: {
-                '12': '48px',
-                '14': '56px',
-            }
+    theme: {
+        colors: {
+            'current'           : 'currentColor',
+            'transparent'       : "transparent",
+            'primary'           : 'var(--doatkolom_primary_color)',
+            'primary_opacity_80': 'var(--doatkolom_primary_opacity_80_color)',
+            'primary_opacity_60': 'var(--doatkolom_primary_opacity_60_color)',
+            'primary_light'     : 'var(--doatkolom_primary_light_color)',
+            'primary_dark'      : 'var(--doatkolom_primary_dark_color)',
+            'primary_shadow'    : 'var(--doatkolom_primary_shadow_color)',
+            'secondary'         : "var(--doatkolom_secondary_color)",
+            'secondary_shadow'  : "var(--doatkolom_secondary_shadow_color)",
+            'white'             : "var(--doatkolom_white_color)",
+            'black'             : "var(--doatkolom_black_color)",
+            'gray'              : "var(--doatkolom_gray_color)",
+            'light_gray'        : "var(--doatkolom_light_gray_color)",
+            'overlay'           : "var(--doatkolom_overlay_color)",
+            'border'            : "var(--doatkolom_border_color)",
+            'title'             : "var(--doatkolom_title_color)",
+            'sub_title'         : "var(--doatkolom_sub_title_color)",
+            'title_description' : "var(--doatkolom_title_description_color)",
+            'paragraph'         : "var(--doatkolom_paragraph_color)",
+            'body'              : "var(--doatkolom_body_color)",
+            'footer'            : "var(--doatkolom_footer_color)",
+            'secondary_light'   : "var(--doatkolom_secondary_light_color)",
+        },
+
+        fontFamily: {
+            'primary'   : ['var(--primary_font_family)'],
+            'secondary' : ['var(--secondary_font_family)'],
+        },
+
+        lineHeight: {
+            '12': '48px',
+            '14': '56px',
+        },
+        fontWeight: {
+            weight_primary  : 'var(--primary_font_weight)',
+            weight_secondary: 'var(--secondary_font_weight)',
+            weight_tertiary : 'var(--tertiary_font_weight)'
         },
     },
 }

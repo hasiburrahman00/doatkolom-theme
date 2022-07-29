@@ -1,0 +1,17 @@
+{
+  "name": "doatkolom/box-slider-1",
+  "title": "Doatkolom Box Slider 1",
+  "description": "For page box slider section 1",
+  "keywords": [
+    "box 1",
+    "banner slider",
+    "doatkolom",
+    "hero slider",
+    "hero box"
+  ],
+  "attributes": {
+    "box_slider": {
+      "type": "array"
+    }
+  }
+}

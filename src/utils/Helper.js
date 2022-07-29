@@ -14,6 +14,7 @@ export default class Helper  {
         window.doatkolomGutenbergInit = callback => {
             jQuery(function($){
                 callback( $ );
+                if( window.wp && window.wp.element ) return;
                 $('.doatkolom-block-wrap').each((index, item) => {
                     const $item = $(item);
                     const type  = $item.data('type');
@@ -40,6 +41,19 @@ export default class Helper  {
         dom.addEventListener('scroll', (ev) => {
             fn( ev.target.scrollTop || scrollY )
         })
+    }
+
+    static stringHighlight( str  = '' ) {
+        str  = str.replace(/{{.+?}}/g, function(target){
+            target = target.replace('{{', '<span class="doatkolom-highlight">');
+            target = target.replace('}}', '</span>');
+            return target
+        });
+        return str;
+    }
+
+    static wysiwyg( str = '' ) {
+        return str.replaceAll('\n', '<br/>')
     }
 
 }

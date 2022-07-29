@@ -4,6 +4,8 @@ add_action( 'wp_enqueue_scripts', function () {
 
 	wp_enqueue_style('doatkolom-frontend', DOATKOLOM_BUILD . 'frontend.min.css', [], DOATKOLOM_VERSION, false);
 	wp_enqueue_script('doatkolom-frontend', DOATKOLOM_BUILD . 'frontend.min.js', ['jquery'], DOATKOLOM_VERSION, false);
+	wp_add_inline_style( 'doatkolom-frontend', doatkolom_app()->css_variables() );
+	
 	/**
 	 * 
 	 * 
@@ -11,12 +13,10 @@ add_action( 'wp_enqueue_scripts', function () {
 	 * 
 	 */
 	if( is_page_template('templates/doatkolom-app.php') ) {		
-		wp_enqueue_script('doatkolom-app', 'http://103.110.113.196/doatkolom/wp-content/themes/institution-website/build/home.min.js', ['jquery'], DOATKOLOM_VERSION, false);
+		wp_enqueue_script('doatkolom-app', DOATKOLOM_BUILD . 'app.min.js', ['jquery'], DOATKOLOM_VERSION, false);
 	}
 
-	if( is_page_template('templates/doatkolom-teachers.php') ) {		
-		wp_enqueue_script('doatkolom-teacher', 'http://103.110.113.196/doatkolom/wp-content/themes/institution-website/build/teachers.min.js', ['jquery'], DOATKOLOM_VERSION, false);
-	}
+	wp_dequeue_style( 'global-styles' );
 
 	/**
 	 * 
@@ -26,7 +26,7 @@ add_action( 'wp_enqueue_scripts', function () {
 	 * adding dynamic css as internal file. This css get loads into theme head part
 	 * 
 	 */
-	$breadcrumb_image = DOATKOLOM_IMG . 'breadcrumb-background.webp';
+	$breadcrumb_image = DOATKOLOM_IMG . 'breadcrumb.webp';
 
 	if ( has_post_thumbnail() ) {
 		$breadcrumb_image = get_the_post_thumbnail_url(get_the_ID(), 'full');
@@ -35,6 +35,7 @@ add_action( 'wp_enqueue_scripts', function () {
 	$breadcrumb_css = "
 		#doatkolom-breadcrumb {
 			background-image: url('$breadcrumb_image');
+			background-color: var(--doatkolom_primary_light_color);
 		}
 	";
 	wp_add_inline_style( 'doatkolom-frontend', $breadcrumb_css ); 

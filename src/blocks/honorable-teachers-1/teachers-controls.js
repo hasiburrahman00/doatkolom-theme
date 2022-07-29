@@ -1,3 +1,4 @@
+const { TextControl} = wp.components
 import ImagePicker from "../../components/image-picker"
 
 export default function TeachersControls({attributes, setAttributes}) {
@@ -23,6 +24,28 @@ export default function TeachersControls({attributes, setAttributes}) {
 
                     </div>
                 ))}
+
+            <TextControl
+                className="w-full"
+                label="Text"
+                value={ attributes.more_info.text }
+                onChange={ ( text ) => {
+                    attributes.more_info.text = text
+                    const value = {...attributes.more_info,text}
+                    setAttributes({more_info:value})
+                }}
+            />
+
+            <TextControl
+                className="w-full"
+                label="Link"
+                value={ attributes.more_info.link }
+                onChange={ ( link ) => {
+                    attributes.more_info.link = link
+                    const value = {...attributes.more_info,link}
+                    setAttributes({more_info:value})
+                }}
+            />
 
         </div>
     )

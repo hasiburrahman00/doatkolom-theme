@@ -17,7 +17,7 @@ export default function Style({wrapper}){
             }
             
             ${wrapper} .achivement-wrapper {
-                width: 208px;
+                width: 185px;
             }
 
         }

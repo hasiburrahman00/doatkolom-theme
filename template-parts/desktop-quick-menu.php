@@ -1,5 +1,4 @@
 <?php 
-    use DoatKolom\Icons;
     //**** DO NOT APPLY ANY STYLE INTO THIS <sidebar> TAG
 
     $data = array(
@@ -41,12 +40,12 @@
         ]
     );
 ?>
-<sidebar id="doatkolom-quick-menu" class="hidden bg-white rounded-md border border-solid border-primary/10 shadow-xl" style="width: 600px;">
+<sidebar id="doatkolom-quick-menu" class="hidden bg-white rounded-md lg:border lg:border-solid lg:border-border shadow-xl" style="width: 600px;">
     <div class="hidden lg:block px-5 py-10">
         <ul class="grid grid-cols-3 gap-10 list-none">
             <?php foreach( $data as $item ): ?>
             <li>
-                <a href="#" class="flex font-secondary space-y-3 hover:text-secondary items-center justify-center flex-col no-underline text-primary text-base">
+                <a href="#" class="flex font-secondary space-y-3 hover:text-secondary items-center justify-center flex-col no-underline text-black text-base">
                     <?php echo call_user_func(array('DoatKolom\Icons', $item['icon'])) ?>
                     <span><?php echo esc_html($item['label']) ?></span>
                 </a>
