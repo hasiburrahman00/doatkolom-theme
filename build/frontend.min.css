@@ -280,12 +280,6 @@
 .mt-12 {
     margin-top: 3rem;
 }
-.mb-10 {
-    margin-bottom: 2.5rem;
-}
-.mt-9 {
-    margin-top: 2.25rem;
-}
 .box-border {
     box-sizing: border-box;
 }
@@ -1819,6 +1813,9 @@ body::-webkit-scrollbar-thumb:hover {
     .md\:mb-7 {
         margin-bottom: 1.75rem;
     }
+    .md\:mb-9 {
+        margin-bottom: 2.25rem;
+    }
     .md\:ml-5 {
         margin-left: 1.25rem;
     }
@@ -1836,9 +1833,6 @@ body::-webkit-scrollbar-thumb:hover {
     }
     .md\:mt-20 {
         margin-top: 5rem;
-    }
-    .md\:mb-9 {
-        margin-bottom: 2.25rem;
     }
     .md\:block {
         display: block;
@@ -1911,10 +1905,6 @@ body::-webkit-scrollbar-thumb:hover {
     .md\:py-28 {
         padding-top: 7rem;
         padding-bottom: 7rem;
-    }
-    .md\:py-52 {
-        padding-top: 13rem;
-        padding-bottom: 13rem;
     }
     .md\:py-10 {
         padding-top: 2.5rem;
@@ -2138,6 +2128,10 @@ body::-webkit-scrollbar-thumb:hover {
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
     }
+    .lg\:py-52 {
+        padding-top: 13rem;
+        padding-bottom: 13rem;
+    }
     .lg\:px-8 {
         padding-left: 2rem;
         padding-right: 2rem;
@@ -2149,10 +2143,6 @@ body::-webkit-scrollbar-thumb:hover {
     .lg\:px-0 {
         padding-left: 0px;
         padding-right: 0px;
-    }
-    .lg\:py-52 {
-        padding-top: 13rem;
-        padding-bottom: 13rem;
     }
     .lg\:pt-0 {
         padding-top: 0px;
