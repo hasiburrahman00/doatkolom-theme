@@ -1,7 +1,20 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) exit;
+use DoatKolom\App;
 
-function get_doatkolom_theme_setting( $setting_name ) {
-	return \DoatKolom\App::instance()->getSetting( $setting_name );
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
+
+/**
+ * @param $setting_name
+ */
+function get_doatkolom_theme_setting( $setting_name )
+{
+    return doatkolom_app()->getSetting( $setting_name );
+}
+
+function doatkolom_app(): App
+{
+    return App::instance();
 }
