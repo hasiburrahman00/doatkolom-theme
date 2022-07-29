@@ -1,6 +1,7 @@
 <?php
 use DoatKolom\AutoLoader;
 use DoatKolom\Settings;
+use DoatKolom\SettingsApi;
 
 /**
  *
@@ -38,15 +39,9 @@ $loader = new AutoLoader();
 $loader->register();
 $loader->addNamespace( 'DoatKolom', get_stylesheet_directory() . '/app' );
 $loader->addNamespace( 'DoatKolom\Core', get_stylesheet_directory() . '/core' );
-Settings::instance();
+SettingsApi::instance();
 
-define( 'INFO', \DoatKolom\Settings::options() );
-
-if ( !empty( INFO['institution_logo'] ) ):
-    $site_logo_url  = wp_get_attachment_image_url( INFO['institution_logo'], 'full' );
-else:
-    $site_logo_url = DOATKOLOM_IMG . 'institution-logo.webp';
-endif;
+$site_logo_url = Settings::instance()->get_attachment_url('institution_logo');
 
 define( 'DOATKOLOM_LOGO', $site_logo_url );
 
@@ -57,7 +52,6 @@ include_once get_stylesheet_directory() . '/includes/scripts-and-styles.php';
 include_once get_stylesheet_directory() . '/includes/block-scripts.php';
 include_once get_stylesheet_directory() . '/includes/admin-menu.php';
 
+// error_log(print_r(doatkolom_app()->css_variables(), true));
 
 // get_rest_url( '', '' ) . 'doatkolom-theme/v1/settings/setting_fields';
-
-// error_log(get_doatkolom_theme_setting('site_title'));
