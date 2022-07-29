@@ -63,6 +63,10 @@ class DoatKolom_Api extends Api_Base {
         return this.post_method( 'delete_gallery', data )
     }
 
+    update_gallery( data ) {
+        return this.post_method( 'update_gallery', data )
+    }
+
     save_settings( data ) {
         return this.post_method( 'save_settings', data )
     }

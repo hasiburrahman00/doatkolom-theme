@@ -18,9 +18,9 @@ function Navbar(props) {
 
     const { saveButton, setSaveButton } = props
     const headerRef = useRef(null);
-    const location = useLocation();
+    const location  = useLocation();
     const [ loadingButtonStyle, setLoadingButtonStyle ] = useState(savebtnStyle)
-
+    
     const handleSaveSetting = () => {
         if( location.pathname !== '/gallery' && props.onSave && typeof props.onSave === 'function' ) {
             props.onSave();

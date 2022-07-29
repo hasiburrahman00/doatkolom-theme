@@ -12,7 +12,6 @@ import { useSnackbar } from 'notistack';
 export default function Gallery() {
 
     const { attribute, setAttribute, loading, setLoading } = useContext(AdminContext)
-    
     const { enqueueSnackbar } = useSnackbar()
 
     useEffect(()=>{
@@ -28,6 +27,10 @@ export default function Gallery() {
         }
     },[])
 
+    /**
+     * @param id contains array of image id 
+     * @param data contains array of this interface {image_id: string, image_url: string}
+     */ 
     const imageSelectHandler = ({id, data}) => {
         setLoading(true)
         API.add_gallery({image_ids: id}).then( res => {
@@ -39,6 +42,7 @@ export default function Gallery() {
             enqueueSnackbar(res.message, { variant: res.status } )
         })
     }
+
     const updateState = () => setAttribute({galleries_mark: attribute.galleries_mark})
     const imageAction = {
         mark() {
@@ -48,7 +52,44 @@ export default function Gallery() {
         },
 
         update() {
+            setLoading(true)
+            const { image_id, index } = this;
+            const frame = wp.media({
+                title: 'Change Image',
+                multiple: true,
+                button: {
+                    text: 'Apply The Image',
+                },
+                multiple: false,
+            })
+            
+            frame.on( 'select', function() {
+                const attachment = frame.state().get('selection').first().toJSON();
 
+                API.update_gallery({ new_image_id: attachment.id, old_image_id:image_id  })
+                .then( res => {
+                    
+                    if( attribute.galleries_mark.has( image_id ) ) {
+                        attribute.galleries_mark.delete( image_id )
+                    }
+
+                    attribute.galleries[index] = {
+                        image_id: attachment.id,
+                        image_url: attachment.url
+                    }
+    
+                    setAttribute({
+                        galleries: attribute.galleries,
+                        galleries_mark: attribute.galleries_mark
+                    })
+
+                    setLoading(false)
+                    enqueueSnackbar(res.message, { variant: res.status } )
+                })
+                
+            });
+
+            frame.open();
         },
 
         delete() {
@@ -59,12 +100,12 @@ export default function Gallery() {
                 if( attribute.galleries_mark.has(image_id) ) {
                     attribute.galleries_mark.delete(image_id)
                 }
-                enqueueSnackbar(res.message, { variant: res.status } )
                 setAttribute({
-                    galleries: attribute.galleries,
-                    galleries_mark: attribute.galleries_mark
+                    galleries       : attribute.galleries,
+                    galleries_mark  : attribute.galleries_mark
                 })
                 setLoading(false)
+                enqueueSnackbar(res.message, { variant: res.status } )
             })
         }
     }
@@ -75,7 +116,6 @@ export default function Gallery() {
             <Panel>
                 <Panel.VideoHeader url="#">Photo Gallery</Panel.VideoHeader>
                 <Panel.Body>
-                    
                     <div className="grid grid-cols-6 gap-5">
                         <div className="bg-[#eee] h-[145px] hover:bg-[#ddd] cursor-pointer rounded-md flex items-center justify-center border border-solid border-[#ddd]">
                             <SelectMultiImage disabled={loading} onSelect={imageSelectHandler}/>
