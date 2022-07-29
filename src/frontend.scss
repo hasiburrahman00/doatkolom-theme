@@ -9,6 +9,8 @@
 }
 
 body::-webkit-scrollbar{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   @apply w-1.5 bg-transparent;
 }
 
