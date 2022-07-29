@@ -1,0 +1,47 @@
+{
+  "name": "doatkolom/number-box-1",
+  "title": "Doatkolom Number Box 1",
+  "description": "For Number Box 1",
+  "keywords": ["number 1", "count 1", "doatkolom", "number box 1"],
+  "attributes": {
+    "number_box": {
+      "type": "array",
+      "default": [
+        {
+          "number": "5000",
+          "text": "Total Students"
+        },
+
+        {
+          "number": "1000",
+          "text": "Golden student"
+        },
+
+        {
+          "number": "3000",
+          "text": "A+ student"
+        },
+
+        {
+          "number": "500",
+          "text": "Medical Students"
+        },
+
+        {
+          "number": "50",
+          "text": "Buet Students"
+        },
+
+        {
+          "number": "2000",
+          "text": "Public University"
+        },
+
+        {
+          "number": "500",
+          "text": "Failed"
+        }
+      ]
+    }
+  }
+}
