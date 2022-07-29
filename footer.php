@@ -43,7 +43,7 @@
             <div class="flex items-center space-x-3">
                 <a href="<?php echo esc_url(DOATKOLOM_SITE_URL) ?>">
                     <picture>
-                        <img width="64" height="64" class="w-16 lazyload" data-src="<?php echo esc_url(DOATKOLOM_LOGO) ?>"/>
+                        <img width="64" height="64" class="w-auto h-auto max-h-[80px] lazyload" data-src="<?php echo esc_url(DOATKOLOM_LOGO) ?>"/>
                     </picture>
                 </a>
                 <div>

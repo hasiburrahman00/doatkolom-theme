@@ -87,7 +87,7 @@ export default class Header extends Helper{
             navmenu         : '.doatkolom-main-nav',
             $headerTop      : $('.nav-menu-top'),
             $header         : $('.doatkolom-primary-header'),
-            defaultLogoWidth: innerWidth >= 768 ? '80px' : '60px',
+            defaultLogoWidth: innerWidth >= 768 ? '80px' : '65px',
         }, config)
 
         this.matchMediaView( this.settings.breakpoint, {
@@ -97,8 +97,7 @@ export default class Header extends Helper{
 
         // header related js
         this.settings.$header.find('.doatkolom-nav-logo').animate({
-            width: this.settings.defaultLogoWidth,
-            height: this.settings.defaultLogoWidth
+            maxHeight: this.settings.defaultLogoWidth
         })
         this.stickyHandler();
         Helper.onScroll( this.stickyHandler.bind(this) );
@@ -234,8 +233,7 @@ export default class Header extends Helper{
 
             // change header logo width when header become sticky 
             $header.find('.doatkolom-nav-logo').animate({
-                width: '50px',
-                height: '50px'
+                maxHeight: "50px"
             })
         }
 
@@ -243,8 +241,7 @@ export default class Header extends Helper{
             
             // change header logo width when header is not sticky 
             $header.find('.doatkolom-nav-logo').animate({
-                width: self.settings.defaultLogoWidth,
-                height: self.settings.defaultLogoWidth
+                maxHeight: self.settings.defaultLogoWidth
             })
                     
             // remove some style form header to make it static
