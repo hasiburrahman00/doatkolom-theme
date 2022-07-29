@@ -38,7 +38,7 @@ export default function Edit({ attributes, setAttributes }) {
                 </picture>                           
             </div>
             <div className="text-center sm:text-right mt-4">
-                <a className="inline-flex items-center space-x-2 text-xl sm:text-2xl md:text-3xl font-primary text-primary underline transition duration-200 ease-linear hover:text-secondary" href="#">
+                <a className="inline-flex items-center space-x-2 text-xl sm:text-2xl md:text-3xl font-primary text-primary underline transition duration-200 ease-linear hover:text-primary_dark" href="#">
                     <span>See More Photos</span>
                     <ArrowRight/>
                 </a>
