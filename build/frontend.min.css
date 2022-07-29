@@ -211,6 +211,12 @@
 .mt-1 {
     margin-top: 0.25rem;
 }
+.mb-4 {
+    margin-bottom: 1rem;
+}
+.mt-10 {
+    margin-top: 2.5rem;
+}
 .mt-0 {
     margin-top: 0px;
 }
@@ -219,9 +225,6 @@
 }
 .ml-1 {
     margin-left: 0.25rem;
-}
-.mt-10 {
-    margin-top: 2.5rem;
 }
 .mt-4 {
     margin-top: 1rem;
@@ -256,9 +259,6 @@
 .mr-8 {
     margin-right: 2rem;
 }
-.mb-4 {
-    margin-bottom: 1rem;
-}
 .ml-0 {
     margin-left: 0px;
 }
@@ -279,12 +279,6 @@
 }
 .mt-12 {
     margin-top: 3rem;
-}
-.mb-10 {
-    margin-bottom: 2.5rem;
-}
-.mt-9 {
-    margin-top: 2.25rem;
 }
 .box-border {
     box-sizing: border-box;
@@ -345,6 +339,9 @@
 }
 .h-\[145px\] {
     height: 145px;
+}
+.h-\[386px\] {
+    height: 386px;
 }
 .h-\[50px\] {
     height: 50px;
@@ -528,6 +525,9 @@
 }
 .grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.grid-cols-7 {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 .flex-col {
     flex-direction: column;
@@ -910,6 +910,10 @@
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
 }
+.px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
 .px-9 {
     padding-left: 2.25rem;
     padding-right: 2.25rem;
@@ -951,6 +955,12 @@
 }
 .pl-5 {
     padding-left: 1.25rem;
+}
+.pr-20 {
+    padding-right: 5rem;
+}
+.pr-7 {
+    padding-right: 1.75rem;
 }
 .pt-24 {
     padding-top: 6rem;
@@ -1047,6 +1057,9 @@
 }
 .capitalize {
     text-transform: capitalize;
+}
+.leading-\[70px\] {
+    line-height: 70px;
 }
 .leading-\[60px\] {
     line-height: 60px;
@@ -1819,6 +1832,9 @@ body::-webkit-scrollbar-thumb:hover {
     .md\:mb-7 {
         margin-bottom: 1.75rem;
     }
+    .md\:mb-9 {
+        margin-bottom: 2.25rem;
+    }
     .md\:ml-5 {
         margin-left: 1.25rem;
     }
@@ -1836,9 +1852,6 @@ body::-webkit-scrollbar-thumb:hover {
     }
     .md\:mt-20 {
         margin-top: 5rem;
-    }
-    .md\:mb-9 {
-        margin-bottom: 2.25rem;
     }
     .md\:block {
         display: block;
@@ -1911,10 +1924,6 @@ body::-webkit-scrollbar-thumb:hover {
     .md\:py-28 {
         padding-top: 7rem;
         padding-bottom: 7rem;
-    }
-    .md\:py-52 {
-        padding-top: 13rem;
-        padding-bottom: 13rem;
     }
     .md\:py-10 {
         padding-top: 2.5rem;
@@ -2138,6 +2147,10 @@ body::-webkit-scrollbar-thumb:hover {
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
     }
+    .lg\:py-52 {
+        padding-top: 13rem;
+        padding-bottom: 13rem;
+    }
     .lg\:px-8 {
         padding-left: 2rem;
         padding-right: 2rem;
@@ -2149,10 +2162,6 @@ body::-webkit-scrollbar-thumb:hover {
     .lg\:px-0 {
         padding-left: 0px;
         padding-right: 0px;
-    }
-    .lg\:py-52 {
-        padding-top: 13rem;
-        padding-bottom: 13rem;
     }
     .lg\:pt-0 {
         padding-top: 0px;
