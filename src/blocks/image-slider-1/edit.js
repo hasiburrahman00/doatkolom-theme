@@ -61,15 +61,14 @@ export default function Edit({ attributes, setAttributes}) {
                     </div>
 
                     <div className="hidden lg:block">
-                        <button type="button" className="lg:block slick-prev-btn absolute bg-light_gray border-0 w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition ease-linear duration-200 hover:bg-secondary hover:text-white">
+                        <button type="button" className="lg:block slick-prev-btn absolute bg-light_gray border-0 w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition ease-linear duration-200 hover:bg-primary hover:text-white">
                             <PrevArrow/>
                         </button>
                             
-                        <button type="button" className="slick-next-btn border-0 bg-light_gray w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition ease-linear duration-200 hover:bg-secondary hover:text-white">
+                        <button type="button" className="slick-next-btn border-0 bg-light_gray w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition ease-linear duration-200 hover:bg-primary hover:text-white">
                             <NextArrow/>
                         </button>
-                    </div>
-                                   
+                    </div>         
                 </div>
             </div>
 	);
