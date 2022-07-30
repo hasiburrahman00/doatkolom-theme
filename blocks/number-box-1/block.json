@@ -2,7 +2,7 @@
   "name": "doatkolom/number-box-1",
   "title": "Doatkolom Number Box 1",
   "description": "For Number Box 1",
-  "keywords": ["number 1", "doatkolom", "number box 1", "1"],
+  "keywords": ["number 1", "count 1", "doatkolom", "number box 1"],
   "attributes": {
     "number_box": {
       "type": "array",
