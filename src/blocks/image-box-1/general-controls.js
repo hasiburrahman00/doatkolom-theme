@@ -17,46 +17,37 @@ export default function BoxControls({attributes, setAttributes}) {
 
     const requestDelete = (index)=>{
         attributes.image_box.splice(index,1)
-         setAttributes({image_box : [
-             ...attributes.image_box
-         ]})
-     }
-
-    const handeImageUpload = (val,index,image)=>{
-        attributes.image_box[index][image] = val
-        setAttributes({
-            image_box:[
+            setAttributes({image_box : [
                 ...attributes.image_box
             ]
         })
     }
  
-    const handleTitleChange = (val,index,type)=>{
-         attributes.image_box[index][type] = val
-         setAttributes({
+    const handleChange = (val,index,type)=>{
+        attributes.image_box[index][type] = val
+        setAttributes({
             image_box: [
-                 ...attributes.image_box
-             ]
-         })
+                ...attributes.image_box
+            ]
+        })
     }
  
-
     return (
         <div className="space-y-5">
-            <Repeater label = "ImageBox" addNewRequest ={addNewRequest}>
+            <Repeater label="Image Box" addNewRequest={addNewRequest}>
                 {attributes.image_box.map((item,index)=>(
                     <Repeater.Item key={index} title = {item.title} deleteRequest = {()=>requestDelete(index)}>
                         <ImagePicker
                             label="Select Image"
                             value={item.image}
-                            onChange={ ( url ) => handeImageUpload(url,index,'image') }
+                            onChange={ ( url ) => handleChange(url,index,'image') }
                         />
 
                         <TextControl
                                 className="w-full"
                                 label="Title"
                                 value={item.title}
-                                onChange={ ( value ) => handleTitleChange(value,index,'title') }
+                                onChange={ ( value ) => handleChange(value,index,'title') }
                         />
 
                         <TextareaControl
@@ -64,7 +55,7 @@ export default function BoxControls({attributes, setAttributes}) {
                             rows="6"
                             label="Description"
                             value={item.description }
-                            onChange={ ( value ) => handleTitleChange(value,index,'description')}
+                            onChange={ ( value ) => handleChange(value,index,'description')}
                         />
                     </Repeater.Item>
                 ))}
