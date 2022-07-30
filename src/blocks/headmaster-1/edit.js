@@ -31,7 +31,7 @@ export default function Edit({ attributes, setAttributes }) {
                         {attributes.speech}
                     </h3>  
 
-                    <h2 className="m-0 mt-8 font-primary text-lg font-weight_secondary text-primary">{attributes.name}</h2> 
+                    <h2 className="m-0 mt-8 font-primary text-lg font-weight_tertiary text-primary">{attributes.name}</h2> 
                     <p className="m-0 text-lg font-secondary font-weight_primary text-paragraph mt-3.5">{attributes.designation}</p> 
                     {
                         attributes.teachers_page.visible &&

@@ -24,7 +24,7 @@ export default function Save({ attributes }) {
                 </picture>                           
             </div>
             <div className="text-center sm:text-right mt-4">
-                <a className="inline-flex items-center space-x-2 text-xl sm:text-2xl md:text-3xl font-primary text-primary underline transition duration-200 ease-linear hover:text-primary_dark" href={attributes.gallery_page_url}>
+                <a className="inline-flex items-center space-x-2 text-xl sm:text-2xl md:text-3xl font-primary hover:text-black no-underline text-black transition duration-200 ease-linear hover:underline font-weight_tertiary" href={attributes.gallery_page_url}>
                     <span>See More Photos</span>
                     <ArrowRight/>
                 </a>
