@@ -1,4 +1,4 @@
-import config from '../../../blocks/number-box-1/block.json';
+import config from './../../../blocks/number-box-1/block.json';
 import RegisterBlock from '../../modules/register-block';
 import Edit from './edit';
 import Save from './save';
