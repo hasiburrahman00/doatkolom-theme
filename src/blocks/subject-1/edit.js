@@ -72,7 +72,7 @@ export default function Edit({ attributes, setAttributes}) {
     }
 
 	return (
-        <div className="max-w-screen-xl mx-auto py-20">
+        <div className="max-w-screen-xl mx-auto py-12 md:py-20">
             <div className="subject-box flex gap-[20px] flex-wrap px-5">
                 {
                     attributes.subjects?.map((item,index)=>(
@@ -80,7 +80,7 @@ export default function Edit({ attributes, setAttributes}) {
                             <picture>
                                 <img width="55" height="55" src={item.image} className="object-cover" alt="subject-image" />
                             </picture>
-                            <p className="font-primary text-title font-weight_tertiary text-lg m-0 mt-4">{item.subject}</p>
+                            <p className="font-secondary text-title font-weight_secondary text-base md:text-lg m-0 mt-4">{item.subject}</p>
                         </div>
                     ))
                 }
