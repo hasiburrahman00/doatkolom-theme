@@ -66,12 +66,19 @@ export default class InfiniteScroll {
             
             this.classList.remove('lazyloading');
             this.classList.add('lazyloaded');
+            self.loading.delete( this.dataset.id );
 
-            self.loading.delete( this.dataset.id )
-            if( self.loading.size === 0  ) {
+            const end = (self.$root.outerHeight() + self.$root.offset().top) - (innerHeight * 1.5);
+            if( self.loading.size === 0 && scrollY > end ) {
                 self.loadNextBatch();
             }
 
+        })
+
+        Helper.onScroll(()=> {
+            const end = (self.$root.outerHeight() + self.$root.offset().top) - (innerHeight * 1.5);
+            if ( self.loading.size !== 0 || scrollY < end || self.currentPage >= self.totalPage ) return;
+                self.loadNextBatch();
         })
 
     }
