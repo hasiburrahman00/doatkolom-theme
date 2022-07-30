@@ -22,3 +22,4 @@ import './blocks/number-box-2';
 import './blocks/number-box-1';
 import './blocks/box-slider-1';
 import './blocks/story-1';
+import './blocks/post-card-1';
