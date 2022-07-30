@@ -1,4 +1,4 @@
-const { TextControl, TextareaControl, ToggleControl } = wp.components
+const { TextControl, TextareaControl } = wp.components
 import Repeater from '../../components/repeater'
 import ImagePicker from "../../components/image-picker"
 
@@ -8,7 +8,7 @@ export default function BoxControls({attributes, setAttributes}) {
         setAttributes({image_box: [
             ...attributes.image_box,
             {
-                image: doatkolom_object.blocks + 'image-box/img/money.webp',
+                image: doatkolom_object.blocks + 'image-box-1/img/money.webp',
                 title: "Affordable fees",
                 description: "This is an important thing that every parent looks at when paying fees. You must always expect the fees to be low so that more people can benefit.",
             }

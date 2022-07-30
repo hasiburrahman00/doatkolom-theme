@@ -21,7 +21,7 @@
             "default": 600
         },
         "description_width": {
-            "type": "string",
+            "type": "number",
             "default": 496
         },
         "highlight_color": {

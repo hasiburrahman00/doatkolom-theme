@@ -1,59 +1,71 @@
 const { TextControl, TextareaControl } = wp.components
+import Repeater from '../../components/repeater'
 import ImagePicker from "../../components/image-picker"
 
-export default function GeneralControls({attributes, setAttributes}) {
-     const handleImageUpload = (val,index,images)=>{
-        attributes.teachers[index][images] = val
-        setAttributes({
-            teachers: [
-                ...attributes.teachers
-            ]
-        })
+export default function BoxControls({attributes, setAttributes}) {
+
+    const addNewRequest = ()=>{
+        setAttributes({teachers: [
+            ...attributes.teachers,
+            {
+                image: doatkolom_object.blocks + 'teachers-slider-1/img/teachers1.webp',
+                speach: "Pages is a powerful word processor that lets you create stunning documents and is included with most Apple devices. And with real-time collaboration, your team.",
+                name: "Mohammad Ashikuzzaman",
+                position: "Departmental Head Teacher, Savar Girls High School",
+            }
+        ]})
     }
 
-     const handleTextChange = (val,index,type)=>{
+    const requestDelete = (index)=>{
+        attributes.teachers.splice(index,1);
+        setAttributes({teachers: [...attributes.teachers] })
+    }
+
+    const handleChange = (val,index,type)=>{
         attributes.teachers[index][type] = val
         setAttributes({
             teachers: [
-                ...attributes.teachers
+                 ...attributes.teachers
             ]
         })
     }
+ 
 
     return (
         <div className="space-y-5">
-            {attributes.teachers.map((item,index)=>(
-                <div key = {index} className = "space-y-5">
-                    <ImagePicker
-                        label="Teacher Image"
-                        value={item.image}
-                        onChange={ ( url ) => handleImageUpload(url,index,'image') }
-                    />
-                    <div className="border border-solid border-gray-300 p-5 bg-light_gray space-y-5">
-                        <TextareaControl
-                            className="w-full"
-                            rows="6"
-                            label="Speach"
-                            value={item.speach}
-                            onChange={ ( value ) => handleTextChange(value,index,'speach')}
-                        />
-                        <TextControl
-                            className="w-full"
-                            label="Teacher Name"
-                            value={item.name}
-                            onChange={ ( value ) => handleTextChange(value,index,'name') }
+            <Repeater label = "Teachers Slider" addNewRequest ={addNewRequest}>
+                {attributes.teachers?.map((item,index)=>(
+                    <Repeater.Item key={index} title = {item.name} deleteRequest = {()=>requestDelete(index)}>
+                        <ImagePicker
+                            label="Image"
+                            value={item.image}
+                            onChange={ ( url ) => handleChange(url,index,'image') }
                         />
 
                         <TextControl
                             className="w-full"
-                            rows="6"
-                            label="Position"
-                            value={item.position }
-                            onChange={ ( value ) => handleTextChange(value,index,'position')}
+                            label="Name"
+                            value={item.name}
+                            onChange={ ( value ) => handleChange(value,index,'name') }
                         />
-                    </div>
-                    </div>
+                        
+                        <TextControl
+                            className="w-full"
+                            label="Designation"
+                            value={item.position}
+                            onChange={ ( value ) => handleChange(value,index,'position') }
+                        />
+
+                        <TextareaControl
+                            className="w-full"
+                            rows="6"
+                            label="Speech"
+                            value={item.speach }
+                            onChange={ ( value ) => handleChange(value,index,'speach')}
+                        />
+                    </Repeater.Item>
                 ))}
+            </Repeater> 
         </div>
     )
 }

@@ -109,7 +109,7 @@ class FooterWalker extends \Walker_Nav_Menu {
         $atts['href']   = ! empty( $item->url )        ? $item->url        : '';
         // New
         if ($depth === 0) {
-            $atts['class'] = 'nav-link font-lato ease-linear duration-200 hover:underline no-underline text-base text-black';
+            $atts['class'] = 'nav-link font-secondary font-weight_primary ease-linear duration-200 hover:underline no-underline text-base text-black';
         }
         if ($depth === 0 && in_array('doatkolom-menu-item-has-children', $classes)) {
             $atts['class']       .= ' doatkolom-dropdown-toggle';

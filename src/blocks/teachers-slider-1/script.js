@@ -1,4 +1,3 @@
-import { TryRounded } from "@mui/icons-material";
 import slick from "slick-carousel";
 const $ = window.jQuery;
 
@@ -24,6 +23,7 @@ export default function TeachersSlider1 ($scope) {
         asNavFor        : contentSlide[0],
         focusOnSelect   : true,
         arrows          : false,
+        fade            : true,
     });
 
     contentSlide.slick({

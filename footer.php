@@ -17,7 +17,7 @@
         <?php get_template_part( 'template-parts/doatkolom-footer', 'menu' )?>
         <div class="grid sm:grid-cols-2 gap-5">
             <div>
-                <h4 class="text-xl mb-5 font-weight_primary font-primary text-title"><?php esc_html_e( 'Institution Resource', 'doatkolom' )?></h4>
+                <h4 class="text-xl mb-5 font-weight_tertiary font-primary text-title"><?php esc_html_e( 'Institution Resource', 'doatkolom' )?></h4>
                 <?php
                     wp_nav_menu( [
                         'menu'            => 'secondary',
@@ -32,8 +32,8 @@
                 ?>
             </div>
             <div>
-                <h4 class="text-xl mb-5 font-weight_primary font-primary text-title"><?php esc_html_e( 'Address', 'doatkolom' )?></h4>
-                <p class="text-base font-secondary text-black">
+                <h4 class="text-xl mb-5 font-weight_tertiary font-primary text-title"><?php esc_html_e( 'Address', 'doatkolom' )?></h4>
+                <p class="text-base font-secondary font-weight_primary text-black">
                     <?php echo esc_html( get_doatkolom_theme_setting( 'full_address' ) ); ?>
                 </p>
                 <p class="text-base font-secondary text-black mt-5"><?php echo esc_html( get_doatkolom_theme_setting( 'official_email' ) . ', ' . get_doatkolom_theme_setting( 'official_phone' ) ) ?></p>
@@ -50,14 +50,14 @@
                     </picture>
                 </a>
                 <div>
-                    <h3 class="font-weight_primary text-xl font-primary text-title mb-1"><?php echo esc_html( get_doatkolom_theme_setting( 'site_title' ) ) ?></h3>
-                    <p class="text-sm font-secondary text-sub_title"><?php echo esc_html( get_doatkolom_theme_setting( 'site_description' ) ) ?></p>
+                    <h3 class="font-weight_tertiary text-xl font-primary text-title mb-0"><?php echo esc_html( get_doatkolom_theme_setting( 'site_title' ) ) ?></h3>
+                    <p class="text-sm font-secondary font-weight_primary text-sub_title"><?php echo esc_html( get_doatkolom_theme_setting( 'site_description' ) ) ?></p>
                 </div>
             </div>
             <div>
-                <p class="text-base font-secondary text-black">&copy;
-                    <?php echo esc_html( date( "Y" ) ); ?>
-<?php echo esc_html( get_doatkolom_theme_setting( 'site_title' ) ) ?>
+                <p class="text-base font-weight_primary font-secondary text-black">&copy;
+                    <?php echo esc_html( date( "Y" ) ); ?> 
+                    <?php echo esc_html( get_doatkolom_theme_setting( 'site_title' ) ) ?>
                     |<?php esc_html_e( 'Developed By', 'doatkolom' )?>
                     <a class="underline text-base font-secondary text-primary" target="_blank"
                         href="//about.doatkolom.com/"><?php esc_html_e( 'DoatKolom', 'doatkolom' )?>

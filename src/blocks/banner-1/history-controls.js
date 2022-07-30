@@ -38,7 +38,7 @@ export default function HistoryControls({attributes, setAttributes}) {
                  * @since 1.0.0
                  */ 
                 attributes.history_read_more_btn.visible && 
-                <div className="border border-solid border-gray-300 p-5 bg-light_gray space-y-5">
+                <div className="border border-solid border-gray p-5 bg-light_gray space-y-5">
                     <TextControl
                         className="w-full"
                         label="Read More Button"
