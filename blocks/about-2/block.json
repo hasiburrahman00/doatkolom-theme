@@ -2,7 +2,7 @@
   "name": "doatkolom/about-2",
   "title": "Doatkolom About 2",
   "description": "For about 2",
-  "keywords": ["about 2", "about page 2", "doatkolom", "about section 2"],
+  "keywords": ["about 2", "about page 2", "about", "doatkolom", "about section 2"],
   "attributes": {
     "top_heading": {
       "type": "string",
@@ -11,12 +11,12 @@
 
     "heading": {
       "type": "string",
-      "default": "Conclusion is a trusted <br/> institution in the world"
+      "default": "Conclusion is<br/> institution in the world"
     },
 
     "description": {
       "type": "string",
-      "default": "Creative IT Institute is at your side to keep yourself updated with modern technology. IT experts are in good demand everywhere, be it IT sector or non-IT sector. That is why we have been creating IT experts for 13 years with updated curriculum, experienced mentors and modern labs. As a result of this, we have found more than 50 thousand successful faces, who have become self-reliant and created employment for more people. And the success of these students is the inspiration for our journey. We believe every human being is talented"
+      "default": "Creative IT Institute is at your side to keep yourself updated with modern technology. IT experts are in good demand everywhere, be it IT sector or non-IT sector. That is why we have been creating IT experts for 13 years with updated curriculum, experienced mentors and modern labs."
     },
 
     "button": {

@@ -114,6 +114,9 @@
 .z-0 {
     z-index: 0;
 }
+.-order-1 {
+    order: -1;
+}
 .col-span-2 {
     grid-column: span 2 / span 2;
 }
@@ -166,8 +169,8 @@
 .mt-16 {
     margin-top: 4rem;
 }
-.mb-1 {
-    margin-bottom: 0.25rem;
+.mb-0 {
+    margin-bottom: 0px;
 }
 .mb-3 {
     margin-bottom: 0.75rem;
@@ -211,6 +214,12 @@
 .mt-1 {
     margin-top: 0.25rem;
 }
+.mb-4 {
+    margin-bottom: 1rem;
+}
+.mt-10 {
+    margin-top: 2.5rem;
+}
 .mt-0 {
     margin-top: 0px;
 }
@@ -219,9 +228,6 @@
 }
 .ml-1 {
     margin-left: 0.25rem;
-}
-.mt-10 {
-    margin-top: 2.5rem;
 }
 .mt-4 {
     margin-top: 1rem;
@@ -247,6 +253,9 @@
 .mt-3\.5 {
     margin-top: 0.875rem;
 }
+.mr-3 {
+    margin-right: 0.75rem;
+}
 .ml-5 {
     margin-left: 1.25rem;
 }
@@ -256,17 +265,11 @@
 .mr-8 {
     margin-right: 2rem;
 }
-.mb-4 {
-    margin-bottom: 1rem;
+.mb-1 {
+    margin-bottom: 0.25rem;
 }
 .ml-0 {
     margin-left: 0px;
-}
-.mb-0 {
-    margin-bottom: 0px;
-}
-.mr-3 {
-    margin-right: 0.75rem;
 }
 .mt-6 {
     margin-top: 1.5rem;
@@ -340,6 +343,9 @@
 .h-\[145px\] {
     height: 145px;
 }
+.h-\[386px\] {
+    height: 386px;
+}
 .h-\[50px\] {
     height: 50px;
 }
@@ -348,6 +354,12 @@
 }
 .h-\[100\%_\!important\] {
     height: 100% !important;
+}
+.h-\[400px\] {
+    height: 400px;
+}
+.h-\[400px_\!important\] {
+    height: 400px !important;
 }
 .h-28 {
     height: 7rem;
@@ -363,15 +375,6 @@
 }
 .h-40 {
     height: 10rem;
-}
-.h-\[386px\] {
-    height: 386px;
-}
-.h-\[400px\] {
-    height: 400px;
-}
-.h-\[400px_\!important\] {
-    height: 400px !important;
 }
 .max-h-\[80px\] {
     max-height: 80px;
@@ -414,9 +417,6 @@
 }
 .w-\[50px\] {
     width: 50px;
-}
-.w-48 {
-    width: 12rem;
 }
 .w-\[140px\] {
     width: 140px;
@@ -532,14 +532,14 @@
 .grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
 }
-.grid-cols-7 {
-    grid-template-columns: repeat(7, minmax(0, 1fr));
-}
 .flex-col {
     flex-direction: column;
 }
 .flex-wrap {
     flex-wrap: wrap;
+}
+.items-start {
+    align-items: flex-start;
 }
 .items-center {
     align-items: center;
@@ -722,6 +722,9 @@
     --tw-border-opacity: 1;
     border-color: rgb(25 118 210 / var(--tw-border-opacity));
 }
+.border-gray {
+    border-color: var(--doatkolom_gray_color);
+}
 .border-primary {
     border-color: var(--doatkolom_primary_color);
 }
@@ -730,9 +733,6 @@
 }
 .border-white {
     border-color: var(--doatkolom_white_color);
-}
-.border-gray {
-    border-color: var(--doatkolom_gray_color);
 }
 .border-t-gray {
     border-top-color: var(--doatkolom_gray_color);
@@ -919,6 +919,10 @@
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
 }
+.px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
 .px-9 {
     padding-left: 2.25rem;
     padding-right: 2.25rem;
@@ -955,10 +959,6 @@
     padding-top: 7rem;
     padding-bottom: 7rem;
 }
-.px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-}
 .pb-8 {
     padding-bottom: 2rem;
 }
@@ -986,6 +986,9 @@
 .pt-20 {
     padding-top: 5rem;
 }
+.pb-12 {
+    padding-bottom: 3rem;
+}
 .pr-0 {
     padding-right: 0px;
 }
@@ -997,15 +1000,6 @@
 }
 .pb-10 {
     padding-bottom: 2.5rem;
-}
-.pr-20 {
-    padding-right: 5rem;
-}
-.pr-7 {
-    padding-right: 1.75rem;
-}
-.pb-12 {
-    padding-bottom: 3rem;
 }
 .text-left {
     text-align: left;
@@ -1058,17 +1052,20 @@
     font-size: 3rem;
     line-height: 1;
 }
+.font-weight_tertiary {
+    font-weight: var(--tertiary_font_weight);
+}
 .font-weight_primary {
     font-weight: var(--primary_font_weight);
 }
 .font-weight_secondary {
     font-weight: var(--secondary_font_weight);
 }
-.font-weight_tertiary {
-    font-weight: var(--tertiary_font_weight);
-}
 .capitalize {
     text-transform: capitalize;
+}
+.leading-\[50px\] {
+    line-height: 50px;
 }
 .leading-\[60px\] {
     line-height: 60px;
@@ -1076,17 +1073,14 @@
 .leading-\[40px\] {
     line-height: 40px;
 }
-.leading-\[70px\] {
-    line-height: 70px;
-}
 .text-title {
     color: var(--doatkolom_title_color);
 }
 .text-black {
     color: var(--doatkolom_black_color);
 }
-.text-sub_title {
-    color: var(--doatkolom_sub_title_color);
+.text-title_description {
+    color: var(--doatkolom_title_description_color);
 }
 .text-primary {
     color: var(--doatkolom_primary_color);
@@ -1120,8 +1114,8 @@
 .text-paragraph {
     color: var(--doatkolom_paragraph_color);
 }
-.text-title_description {
-    color: var(--doatkolom_title_description_color);
+.text-sub_title {
+    color: var(--doatkolom_sub_title_color);
 }
 .text-\[\#C1F1FF\] {
     --tw-text-opacity: 1;
@@ -1163,10 +1157,6 @@
     --tw-shadow: 0px 24px 34px rgba(0,0,0,0.06) !important;
     --tw-shadow-colored: 0px 24px 34px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-.drop-shadow {
-    --tw-drop-shadow: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
-    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .filter {
     filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -1641,10 +1631,6 @@ body::-webkit-scrollbar-thumb:hover {
     color: var(--doatkolom_black_color);
 }
 
-.hover\:text-primary_dark:hover {
-    color: var(--doatkolom_primary_dark_color);
-}
-
 .hover\:underline:hover {
     -webkit-text-decoration-line: underline;
             text-decoration-line: underline;
@@ -1748,11 +1734,11 @@ body::-webkit-scrollbar-thumb:hover {
     .sm\:grid-cols-2 {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-    .sm\:grid-cols-3 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
     .sm\:grid-cols-4 {
         grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .sm\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
     .sm\:flex-row {
         flex-direction: row;
@@ -1855,6 +1841,9 @@ body::-webkit-scrollbar-thumb:hover {
     .md\:top-\[28vh\] {
         top: 28vh;
     }
+    .md\:order-1 {
+        order: 1;
+    }
     .md\:mt-0 {
         margin-top: 0px;
     }
@@ -1864,14 +1853,14 @@ body::-webkit-scrollbar-thumb:hover {
     .md\:mb-7 {
         margin-bottom: 1.75rem;
     }
+    .md\:mt-10 {
+        margin-top: 2.5rem;
+    }
     .md\:mb-9 {
         margin-bottom: 2.25rem;
     }
     .md\:ml-5 {
         margin-left: 1.25rem;
-    }
-    .md\:mt-10 {
-        margin-top: 2.5rem;
     }
     .md\:mt-11 {
         margin-top: 2.75rem;
@@ -1882,14 +1871,11 @@ body::-webkit-scrollbar-thumb:hover {
     .md\:mb-0 {
         margin-bottom: 0px;
     }
-    .md\:mt-20 {
-        margin-top: 5rem;
-    }
-    .md\:mt-5 {
-        margin-top: 1.25rem;
-    }
     .md\:mt-6 {
         margin-top: 1.5rem;
+    }
+    .md\:mt-20 {
+        margin-top: 5rem;
     }
     .md\:block {
         display: block;
@@ -1920,9 +1906,6 @@ body::-webkit-scrollbar-thumb:hover {
     }
     .md\:grid-cols-3 {
         grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-    .md\:grid-cols-4 {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
     .md\:grid-cols-5 {
         grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -2012,6 +1995,10 @@ body::-webkit-scrollbar-thumb:hover {
         font-size: 1.5rem;
         line-height: 2rem;
     }
+    .md\:text-4xl {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+    }
     .md\:text-6xl {
         font-size: 3.75rem;
         line-height: 1;
@@ -2019,10 +2006,6 @@ body::-webkit-scrollbar-thumb:hover {
     .md\:text-lg {
         font-size: 1.125rem;
         line-height: 1.75rem;
-    }
-    .md\:text-4xl {
-        font-size: 2.25rem;
-        line-height: 2.5rem;
     }
     .md\:text-xl {
         font-size: 1.25rem;
@@ -2035,17 +2018,17 @@ body::-webkit-scrollbar-thumb:hover {
     .md\:leading-12 {
         line-height: 48px;
     }
+    .md\:leading-\[60px\] {
+        line-height: 60px;
+    }
     .md\:leading-\[74px\] {
         line-height: 74px;
     }
-    .md\:leading-\[80px\] {
-        line-height: 80px;
+    .md\:leading-\[70px\] {
+        line-height: 70px;
     }
     .md\:leading-14 {
         line-height: 56px;
-    }
-    .md\:leading-\[70px\] {
-        line-height: 70px;
     }
     .md\:opacity-50 {
         opacity: 0.5;
@@ -2098,6 +2081,9 @@ body::-webkit-scrollbar-thumb:hover {
     .lg\:mt-3 {
         margin-top: 0.75rem;
     }
+    .lg\:mt-20 {
+        margin-top: 5rem;
+    }
     .lg\:mb-0 {
         margin-bottom: 0px;
     }
@@ -2140,20 +2126,17 @@ body::-webkit-scrollbar-thumb:hover {
     .lg\:flex-auto {
         flex: 1 1 auto;
     }
-    .lg\:grid-cols-3 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
     .lg\:grid-cols-2 {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .lg\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
     .lg\:grid-cols-4 {
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
     .lg\:grid-cols-7 {
         grid-template-columns: repeat(7, minmax(0, 1fr));
-    }
-    .lg\:grid-cols-6 {
-        grid-template-columns: repeat(6, minmax(0, 1fr));
     }
     .lg\:flex-row {
         flex-direction: row;
@@ -2220,20 +2203,23 @@ body::-webkit-scrollbar-thumb:hover {
         padding-left: 0px;
         padding-right: 0px;
     }
+    .lg\:pr-7 {
+        padding-right: 1.75rem;
+    }
     .lg\:pt-0 {
         padding-top: 0px;
     }
     .lg\:pl-20 {
         padding-left: 5rem;
     }
+    .lg\:pb-32 {
+        padding-bottom: 8rem;
+    }
     .lg\:pr-14 {
         padding-right: 3.5rem;
     }
     .lg\:pr-48 {
         padding-right: 12rem;
-    }
-    .lg\:pb-32 {
-        padding-bottom: 8rem;
     }
     .lg\:text-right {
         text-align: right;
@@ -2250,9 +2236,16 @@ body::-webkit-scrollbar-thumb:hover {
         font-size: 1.5rem;
         line-height: 2rem;
     }
+    .lg\:text-5xl {
+        font-size: 3rem;
+        line-height: 1;
+    }
     .lg\:text-xl {
         font-size: 1.25rem;
         line-height: 1.75rem;
+    }
+    .lg\:leading-\[70px_\!important\] {
+        line-height: 70px !important;
     }
     .lg\:shadow-md {
         --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
