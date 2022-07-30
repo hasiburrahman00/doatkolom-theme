@@ -1,0 +1,50 @@
+{
+  "name": "doatkolom/history-1",
+  "title": "Doatkolom History 1",
+  "description": "For History 1",
+  "keywords": [
+    "history 1",
+    "boxes 1",
+    "photo 1",
+    "history box 1",
+    "history section 1",
+    "doatkolom"
+  ],
+  "attributes": {
+    "person_history": {
+      "type": "object"
+    },
+
+    "history_box": {
+      "type": "array",
+      "default": [
+        {
+          "description": "Creative IT is at your side to keep yourself updated with modern technology.....",
+          "see_more": {
+            "text": "Learn more",
+            "url": "#",
+            "visible": true
+          }
+        },
+
+        {
+          "description": "Creative IT is at your side to keep yourself updated with modern technology.....",
+          "see_more": {
+            "text": "Learn more",
+            "url": "#",
+            "visible": true
+          }
+        },
+
+        {
+          "description": "Creative IT is at your side to keep yourself updated with modern technology.....",
+          "see_more": {
+            "text": "Learn more",
+            "url": "#",
+            "visible": true
+          }
+        }
+      ]
+    }
+  }
+}
