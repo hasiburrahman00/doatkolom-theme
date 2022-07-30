@@ -17,7 +17,7 @@ new RegisterBlock(config).setup({
         },
 
         {
-            title: 'Achivement Controls',
+            title: 'Articles',
             component: AchivementControls
         }
     ]

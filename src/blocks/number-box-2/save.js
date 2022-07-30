@@ -6,7 +6,7 @@ export default function Save({ attributes }) {
                     attributes.number_box.map((item,index)=>(
                         <div key={index} className="max-w-[250px]">
                             <h3 className="font-primary font-weight_tertiary text-title text-3xl sm:text-6xl m-0 mt-5">{item.number} +</h3>
-                            <p className="m-0 mt-2 font-secondary text-sub_title font-weight_primary text-base sm:text-xl">{item.text}</p>
+                            <p className="m-0 mt-2 font-secondary text-title_description font-weight_primary text-base sm:text-xl">{item.text}</p>
                         </div>
                     ))
                 }

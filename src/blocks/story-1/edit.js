@@ -25,7 +25,7 @@ export default function Edit({ attributes, setAttributes}) {
                 <div className="pt-10 px-10 history-box  pb-12 lg:pb-32">
                     <p className="m-0 mb-7 font-primary text-paragraph font-weight_primary md:text-lg lg:text-xl">{attributes.person_story?.description}</p>
                     {
-                        attributes.person_story.see_more.visible &&
+                        attributes.person_story?.see_more.visible &&
                         <a href="#" className="inline-flex transition ease-linear duration-100 items-center no-underline text-black hover:underline font-secondary text-lg font-weight_primary">
                         <span className="mr-3">{attributes.person_story?.see_more.text}</span>
                         <Arrows/>
@@ -44,11 +44,10 @@ export default function Edit({ attributes, setAttributes}) {
                         <div key={index} className="histories p-10 bg-light_gray last:bg-black last:text-white">
                             <p className="m-0 font-primary text-description font-weight_primary md:text-lg lg:text-xl">{item.description}</p>
                             {
-                                item.see_more.visible &&
-                                    <a href="#" className="inline-flex transition ease-linear duration-100 items-center no-underline text-black hover:underline mt-7 font-secondary text-lg font-weight_primary">
+                                item.see_more.visible && <a href="#" className="inline-flex transition ease-linear duration-100 items-center no-underline text-black hover:underline mt-7 font-secondary text-lg font-weight_primary">
                                     <span className="mr-3">{item.see_more.text}</span>
                                     <Arrows/>
-                                    </a>
+                                </a>
                             }
                         </div>
                     ))
