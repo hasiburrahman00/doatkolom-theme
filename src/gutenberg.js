@@ -21,4 +21,4 @@ import './blocks/subject-1';
 import './blocks/number-box-2';
 import './blocks/number-box-1';
 import './blocks/box-slider-1';
-import './blocks/history-1';
+import './blocks/story-1';
