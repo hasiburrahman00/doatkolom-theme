@@ -51,7 +51,7 @@
                 </a>
                 <div>
                     <h3 class="font-weight_tertiary text-xl font-primary text-title mb-0"><?php echo esc_html( get_doatkolom_theme_setting( 'site_title' ) ) ?></h3>
-                    <p class="text-sm font-secondary font-weight_primary text-sub_title"><?php echo esc_html( get_doatkolom_theme_setting( 'site_description' ) ) ?></p>
+                    <p class="text-sm font-secondary font-weight_primary text-title_description"><?php echo esc_html( get_doatkolom_theme_setting( 'site_description' ) ) ?></p>
                 </div>
             </div>
             <div>
