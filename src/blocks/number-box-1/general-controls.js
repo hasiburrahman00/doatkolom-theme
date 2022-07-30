@@ -29,12 +29,11 @@ export default function GeneralControls({attributes,setAttributes}) {
          })
     }
 
-
     return (
         <div className="space-y-5">   
             <Repeater label = "Number Box" addNewRequest ={addNewRequest}>
                 {attributes.number_box.map((item,index)=>(
-                    <Repeater.Item key={index} title="Number Box" deleteRequest={()=>requestDelete(index)}>
+                    <Repeater.Item key={index} title={item.number} deleteRequest={()=>requestDelete(index)}>
                         <TextControl
                             className="w-full"
                             label="Number"

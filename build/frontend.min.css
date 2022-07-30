@@ -1751,6 +1751,9 @@ body::-webkit-scrollbar-thumb:hover {
     .sm\:grid-cols-3 {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
+    .sm\:grid-cols-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
     .sm\:flex-row {
         flex-direction: row;
     }
@@ -1920,6 +1923,9 @@ body::-webkit-scrollbar-thumb:hover {
     }
     .md\:grid-cols-4 {
         grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .md\:grid-cols-5 {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
     }
     .md\:flex-row {
         flex-direction: row;
@@ -2145,6 +2151,9 @@ body::-webkit-scrollbar-thumb:hover {
     }
     .lg\:grid-cols-7 {
         grid-template-columns: repeat(7, minmax(0, 1fr));
+    }
+    .lg\:grid-cols-6 {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
     }
     .lg\:flex-row {
         flex-direction: row;
