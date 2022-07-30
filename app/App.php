@@ -82,6 +82,7 @@ class App
         return "
             " . $primary_font_url . "\n
             " . $secondary_font_url . "\n
+            :root{--doatkolom-loading-img: url(". DOATKOLOM_IMG . "loader.gif" .");} \n
             :root{\n" . $varString . "}\n
         ";
     }

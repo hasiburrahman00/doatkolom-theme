@@ -61,3 +61,17 @@ body::-webkit-scrollbar-thumb {
 .menu-item.active a {
   color: var(--doatkolom_secondary_color) !important;
 }
+
+.lazyload {
+  opacity: 0;
+}
+
+.lazyloading {
+  opacity: 1;
+  transition: opacity 300ms;
+  background:  var(--doatkolom-loading-img) no-repeat center;
+}
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 9ms;
+}
