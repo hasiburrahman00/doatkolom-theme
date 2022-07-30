@@ -40,6 +40,7 @@ module.exports = {
             'paragraph'         : "var(--doatkolom_paragraph_color)",
             'body'              : "var(--doatkolom_body_color)",
             'footer'            : "var(--doatkolom_footer_color)",
+            'secondary_light'   : "var(--doatkolom_secondary_light_color)",
         },
 
         fontFamily: {

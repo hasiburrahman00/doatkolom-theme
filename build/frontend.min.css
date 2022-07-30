@@ -211,6 +211,12 @@
 .mt-1 {
     margin-top: 0.25rem;
 }
+.mb-4 {
+    margin-bottom: 1rem;
+}
+.mt-10 {
+    margin-top: 2.5rem;
+}
 .mt-0 {
     margin-top: 0px;
 }
@@ -219,9 +225,6 @@
 }
 .ml-1 {
     margin-left: 0.25rem;
-}
-.mt-10 {
-    margin-top: 2.5rem;
 }
 .mt-4 {
     margin-top: 1rem;
@@ -255,9 +258,6 @@
 }
 .mr-8 {
     margin-right: 2rem;
-}
-.mb-4 {
-    margin-bottom: 1rem;
 }
 .ml-0 {
     margin-left: 0px;
@@ -339,6 +339,9 @@
 }
 .h-\[145px\] {
     height: 145px;
+}
+.h-\[386px\] {
+    height: 386px;
 }
 .h-\[50px\] {
     height: 50px;
@@ -719,6 +722,9 @@
 .border-white {
     border-color: var(--doatkolom_white_color);
 }
+.border-gray {
+    border-color: var(--doatkolom_gray_color);
+}
 .border-t-gray {
     border-top-color: var(--doatkolom_gray_color);
 }
@@ -904,6 +910,10 @@
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
 }
+.px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
 .px-9 {
     padding-left: 2.25rem;
     padding-right: 2.25rem;
@@ -945,6 +955,12 @@
 }
 .pl-5 {
     padding-left: 1.25rem;
+}
+.pr-20 {
+    padding-right: 5rem;
+}
+.pr-7 {
+    padding-right: 1.75rem;
 }
 .pt-24 {
     padding-top: 6rem;
@@ -1041,6 +1057,9 @@
 }
 .capitalize {
     text-transform: capitalize;
+}
+.leading-\[70px\] {
+    line-height: 70px;
 }
 .leading-\[60px\] {
     line-height: 60px;
@@ -1355,11 +1374,14 @@
     padding: 0px;
 }
 
-body::-webkit-scrollbar {
+h1, h2, h3, h4, h5, h6, strong {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 0.375rem;
-  background-color: transparent;
+}
+
+body::-webkit-scrollbar {
+    width: 0.375rem;
+    background-color: transparent;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -1490,6 +1512,16 @@ body::-webkit-scrollbar-thumb:hover {
     border-top-right-radius: 0.5rem;
 }
 
+.before\:bg-primary::before {
+    content: var(--tw-content);
+    background-color: var(--doatkolom_primary_color);
+}
+
+.before\:bg-secondary::before {
+    content: var(--tw-content);
+    background-color: var(--doatkolom_secondary_color);
+}
+
 .before\:content-\[\'\'\]::before {
     --tw-content: '';
     content: var(--tw-content);
@@ -1533,6 +1565,10 @@ body::-webkit-scrollbar-thumb:hover {
 
 .odd\:bg-primary_light:nth-child(odd) {
     background-color: var(--doatkolom_primary_light_color);
+}
+
+.even\:bg-secondary_light:nth-child(even) {
+    background-color: var(--doatkolom_secondary_light_color);
 }
 
 .hover\:border-secondary:hover {
@@ -1810,6 +1846,9 @@ body::-webkit-scrollbar-thumb:hover {
     .md\:mb-7 {
         margin-bottom: 1.75rem;
     }
+    .md\:mb-9 {
+        margin-bottom: 2.25rem;
+    }
     .md\:ml-5 {
         margin-left: 1.25rem;
     }
@@ -1827,6 +1866,12 @@ body::-webkit-scrollbar-thumb:hover {
     }
     .md\:mt-20 {
         margin-top: 5rem;
+    }
+    .md\:mt-5 {
+        margin-top: 1.25rem;
+    }
+    .md\:mt-6 {
+        margin-top: 1.5rem;
     }
     .md\:block {
         display: block;
@@ -1857,6 +1902,9 @@ body::-webkit-scrollbar-thumb:hover {
     }
     .md\:grid-cols-3 {
         grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .md\:grid-cols-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
     .md\:flex-row {
         flex-direction: row;
@@ -1899,10 +1947,6 @@ body::-webkit-scrollbar-thumb:hover {
     .md\:py-28 {
         padding-top: 7rem;
         padding-bottom: 7rem;
-    }
-    .md\:py-52 {
-        padding-top: 13rem;
-        padding-bottom: 13rem;
     }
     .md\:py-10 {
         padding-top: 2.5rem;
@@ -1962,6 +2006,10 @@ body::-webkit-scrollbar-thumb:hover {
     .md\:text-xl {
         font-size: 1.25rem;
         line-height: 1.75rem;
+    }
+    .md\:text-base {
+        font-size: 1rem;
+        line-height: 1.5rem;
     }
     .md\:leading-12 {
         line-height: 48px;
@@ -2077,6 +2125,9 @@ body::-webkit-scrollbar-thumb:hover {
     .lg\:grid-cols-4 {
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
+    .lg\:grid-cols-7 {
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+    }
     .lg\:flex-row {
         flex-direction: row;
     }
@@ -2125,6 +2176,10 @@ body::-webkit-scrollbar-thumb:hover {
     .lg\:py-2 {
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
+    }
+    .lg\:py-52 {
+        padding-top: 13rem;
+        padding-bottom: 13rem;
     }
     .lg\:px-8 {
         padding-left: 2rem;

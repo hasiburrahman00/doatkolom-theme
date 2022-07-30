@@ -30,11 +30,13 @@ function Navbar(props) {
     }
 
     useEffect(() => {
-        setTimeout(() => {
-            setSaveButton( prevState => {
-                return { ...prevState, text: 'Delete Selected Images' }
-            })
-        }, 100)
+        if( location.pathname === '/gallery' ) {
+            setTimeout(() => {
+                setSaveButton( prevState => {
+                    return { ...prevState, text: 'Delete Selected Images' }
+                })
+            }, 100)
+        }
         $(document).trigger( 'wp-window-resized' );
     },[])
 

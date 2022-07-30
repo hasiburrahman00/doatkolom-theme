@@ -4,7 +4,7 @@ export default function Repeater(props) {
     return(
         <div className="doatkolom-repeater">
             <label className="components-base-control__label mb-3 inline-block">{props?.label}</label>
-            <div className="bg-light_gray p-5 border border-solid border-gray-300">
+            <div className="bg-light_gray p-5 border border-solid border-gray">
                 <main>
                     <ul>
                         {props.children}
@@ -23,7 +23,7 @@ Repeater.Item = props => (
         <div className="header-container">
             <button onClick={props?.deleteRequest} className="remove-button"><span className="dashicons dashicons-no-alt"></span></button>
         </div>
-        <PanelBody className="bg-white border border-solid border-gray-200" title={props?.title.substring(0,60)} initialOpen={ false }>
+        <PanelBody className="bg-white border border-solid border-border" title={props?.title.substring(0,60)} initialOpen={ false }>
             <PanelRow>
                 <div className="py-5 w-full space-y-5">
                     {props.children}

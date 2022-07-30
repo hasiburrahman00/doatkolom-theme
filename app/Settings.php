@@ -274,6 +274,11 @@ class Settings
                         'label'   => esc_html__( 'Secondary', 'doatkolom' ),
                         'default' => isset( $this->settings['doatkolom_secondary_color'] ) ? $this->settings['doatkolom_secondary_color'] : '#16AACA'
                     ],
+                    'doatkolom_secondary_light_color'          => [
+                        'type'    => 'color',
+                        'label'   => esc_html__( 'Secondary light', 'doatkolom' ),
+                        'default' => $this->getSettingDbValue( 'doatkolom_secondary_light_color', '#F5FBFD' )
+                    ],
                     'doatkolom_secondary_shadow_color'   => [
                         'type'    => 'color',
                         'label'   => esc_html__( 'Secondary shadow', 'doatkolom' ),

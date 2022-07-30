@@ -2,7 +2,7 @@
   "name": "doatkolom/teachers-slider-1",
   "title": "Doatkolom Teachers Slider 1",
   "description": "For teachers slider 1",
-  "keywords": ["teachers", "teacher slider", "doatkolom", "slider"],
+  "keywords": ["teachers", "teacher slider", "testimonial", "teacher", "student", "doatkolom", "slider"],
   "attributes": {
     "teachers": {
       "type": "array"
