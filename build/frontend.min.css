@@ -1496,6 +1496,16 @@ body::-webkit-scrollbar-thumb:hover {
     border-top-right-radius: 0.5rem;
 }
 
+.before\:bg-primary::before {
+    content: var(--tw-content);
+    background-color: var(--doatkolom_primary_color);
+}
+
+.before\:bg-secondary::before {
+    content: var(--tw-content);
+    background-color: var(--doatkolom_secondary_color);
+}
+
 .before\:content-\[\'\'\]::before {
     --tw-content: '';
     content: var(--tw-content);
