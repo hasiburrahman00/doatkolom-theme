@@ -7,13 +7,11 @@ export default function BoxControls({attributes, setAttributes}) {
         setAttributes({history_box: [
             ...attributes.history_box,
             {
-                title: "Madical Health Care Center",
-                description: "The school was established on a small scale on 19th April, 1959 at the initiative of some.",
-                icon: doatkolom_object.img + 'icons/readmorearrow.svg',
-                button: {
-                    text: "Read More",
-                    visible: true,
-                    url: "#" 
+                description: "Creative IT is at your side to keep yourself updated with modern technology.....",
+                see_more: {
+                    text: "Learn more",
+                    url: "#",
+                    visible: true
                 }
             }
         ]})
