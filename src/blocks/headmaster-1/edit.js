@@ -17,7 +17,7 @@ export default function Edit({ attributes, setAttributes }) {
     },[]);
 
 	return (
-        <div className="max-w-screen-xl mx-auto px-5 py-10 md:py-20">
+        <div className="max-w-screen-xl mx-auto px-5 py-10">
             <div className="lg:flex items-center">
                 <div className="relative mx-5 lg:mx-0 inline-block">
                     <img width="470" height="470" className="relative z-10 object-cover h-auto rounded-lg overflow-hidden w-full sm:w-auto sm:max-w-[470px_!important]" src={attributes.image}/>        

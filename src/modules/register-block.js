@@ -38,7 +38,10 @@ export default class RegisterBlock {
                     type    : 'string',
                     default : self.name
                 },
-
+                _doatkolom_editor_modal: {
+                    type    : 'boolean',
+                    default : false
+                },
                 _doatkolom_block_id: {
                     type    : 'string'
                 }
@@ -62,7 +65,6 @@ export default class RegisterBlock {
         const { Modal, TabPanel, ToolbarButton, ToolbarGroup } = wp.components;
         const { BlockControls} = wp.blockEditor;
         const { Fragment } = wp.element;
-        const [ modalVisible, setModalVisible ] = wp.element.useState(false);
         const header = props.self.controls.map( item => {
             return {
                 ...item,
@@ -70,23 +72,24 @@ export default class RegisterBlock {
             }
         } )
 
+
         return(
             <Fragment>
                 <BlockControls>
                     <ToolbarGroup>
-                        <ToolbarButton onClick={() => setModalVisible(true)}> <span className="dashicons dashicons-admin-generic mr-2"></span> Edit Section</ToolbarButton>
+                        <ToolbarButton onClick={() => props.setAttributes({_doatkolom_editor_modal: true}) }> <span className="dashicons dashicons-admin-generic mr-2"></span> Edit Section</ToolbarButton>
                     </ToolbarGroup>
                 </BlockControls>
                 {
-                    modalVisible &&
-                    <Modal style={{width: '100%', maxWidth: '900px', minHeight: '600px'}} title="Section Preferences" shouldCloseOnClickOutside={false} onRequestClose={ () => setModalVisible(false) }>
+                    props.attributes._doatkolom_editor_modal &&
+                    <Modal style={{width: '100%', maxWidth: '900px', minHeight: '600px'}} title="Section Preferences" shouldCloseOnClickOutside={false} onRequestClose={ () => props.setAttributes({_doatkolom_editor_modal: false}) }>
                         <TabPanel
                             className="flex doatkolom-editor-tab"
                             activeClass="is-active"
                             orientation="vertical"
                             tabs={ header }
                         >
-                            {tab => <tab.component attributes={props.attributes} setAttributes={props.setAttributes}/>}
+                            {tab => <tab.component {...props}/>}
                         </TabPanel>
                     </Modal>
                 }
@@ -97,7 +100,7 @@ export default class RegisterBlock {
     BlockWrapper({attributes, children, self}) {
 
         const stateKeys = Object.keys(attributes);
-        const settings  =  stateKeys.reduce((total, current) => {
+        const settings  = stateKeys.reduce((total, current) => {
             return {
                 ...total,
                 ...( (current && Reflect.has(self.config.attributes, current) && self.config.attributes[current].frontend) && {
@@ -137,11 +140,7 @@ export default class RegisterBlock {
         const EditComponent = self.EditComponent;
         const BlockWrapperEditor = self.BlockWrapperEditor;
 
-        wp.element.useEffect( () => {
-            if ( ! attributes._doatkolom_block_id ) {
-                setAttributes( { _doatkolom_block_id: clientId } );
-            }
-
+        function executeScript() {
             setTimeout(() => {
                 const device = wp.data.select('core/edit-post').__experimentalGetPreviewDeviceType();
                 if( device === 'Desktop' ) {
@@ -153,15 +152,35 @@ export default class RegisterBlock {
                     jQuery(window).trigger(self.name, [$scope]);
                 }
             }, 500)
+        }
 
+        wp.element.useEffect( () => {
+            if ( ! attributes._doatkolom_block_id ) {
+                setAttributes( { _doatkolom_block_id: clientId } );
+            }
+            executeScript();
         }, [] );
+
+        const refreshBlock = () => {
+            const currentBlock  = wp.data.select( 'core/block-editor' ).getBlocksByClientId( clientId )[ 0 ];
+            const clonedBlock   = wp.blocks.cloneBlock( currentBlock )
+            wp.data.dispatch( 'core/block-editor' ).replaceBlock(
+                clientId,
+                clonedBlock
+            );
+        }
 
         return (
             <>
                 <BlockWrapper attributes={attributes} self={self}>
                     <EditComponent attributes={attributes} setAttributes={setAttributes}/>
                 </BlockWrapper>
-                <BlockWrapperEditor attributes={attributes} setAttributes={setAttributes} self={self}/>
+                <BlockWrapperEditor 
+                    refreshBlock={refreshBlock} 
+                    attributes={attributes} 
+                    setAttributes={setAttributes} 
+                    self={self}
+                />
             </>
         )
     }

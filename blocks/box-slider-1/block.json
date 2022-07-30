@@ -1,19 +1,20 @@
 {
   "name": "doatkolom/box-slider-1",
   "title": "Doatkolom Box Slider 1",
-  "description": "For page box slider section 1",
+  "description": "Make horizontial box and slide them",
   "keywords": [
     "banner box",
     "box slider",
     "doatkolom",
     "hero box",
+    "box", 
+    "slider",
     "hero box area"
   ],
   "attributes": {
     "box_slider": {
       "type": "array"
     },
-
     "box_position": {
       "type": "number",
       "default": -160

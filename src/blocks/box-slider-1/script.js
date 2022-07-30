@@ -25,26 +25,25 @@ export default function boxSlider1($scope){
             {
               breakpoint: 992,
               settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
+                slidesToShow: 4,
+                slidesToScroll: 1,
                 infinite: true,
               }
             },
             {
               breakpoint: 768,
               settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
+                slidesToShow: 3,
+                slidesToScroll: 1
               }
             },
             {
               breakpoint: 576,
               settings: {
-                slidesToShow: 1,
+                slidesToShow: 2,
                 slidesToScroll: 1
               }
             }
         ]
     });
-
 }
