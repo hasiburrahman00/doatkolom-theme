@@ -58,7 +58,7 @@
                 <p class="text-base font-weight_primary font-secondary text-black">&copy;
                     <?php echo esc_html( date( "Y" ) ); ?> 
                     <?php echo esc_html( get_doatkolom_theme_setting( 'site_title' ) ) ?>
-                    |<?php esc_html_e( 'Developed By', 'doatkolom' )?>
+                    | <?php esc_html_e( 'Developed By', 'doatkolom' )?>
                     <a class="underline text-base font-secondary text-primary" target="_blank"
                         href="//about.doatkolom.com/"><?php esc_html_e( 'DoatKolom', 'doatkolom' )?>
                     </a>

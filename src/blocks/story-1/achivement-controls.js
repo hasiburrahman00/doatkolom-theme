@@ -39,7 +39,7 @@ export default function AchivementControls({attributes, setAttributes}) {
 
             <Repeater label = "Story Box" addNewRequest ={addNewRequest}>
                 {attributes.story_box.map((item,index)=>(
-                    <Repeater.Item key={index} title = "All Story" deleteRequest = {()=>requestDelete(index)}>
+                    <Repeater.Item key={index} title={ item.description.substring(0, 50) } deleteRequest = {()=>requestDelete(index)}>
                         <TextareaControl
                                 className="w-full"
                                 label="Title"

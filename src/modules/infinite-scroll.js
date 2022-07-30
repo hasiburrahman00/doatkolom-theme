@@ -2,6 +2,7 @@ import Helper from "../utils/Helper";
 const $ = window.jQuery;
 
 export default class InfiniteScroll {
+    
     constructor() {
         const self          = this;
         self.$root          = $('#doatkolom-photo-gallery-root');
@@ -21,10 +22,16 @@ export default class InfiniteScroll {
     }
 
     // call api
-    loadNextBatch(batchSize = 9) {
+    loadNextBatch(batchSize = 10) {
         const self = this;
         self.currentPage++
+
+        const start = (self.currentPage - 1) * batchSize;
+        const end   = (self.currentPage * batchSize) - 1;
+
         console.log('call api', self.currentPage)
+        console.log('start', start)
+        console.log('end', end)
 
         // loop through the data array
         while (batchSize--) {

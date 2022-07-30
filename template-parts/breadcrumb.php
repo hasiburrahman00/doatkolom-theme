@@ -28,7 +28,7 @@ if( !is_front_page() ) {
                     ?>
     
                     <div>
-                        <h1 class="font-weight_primary mb-3 capitalize <?php echo is_single() ? 'text-2xl md:text-3xl md:leading-12 font-secondary' : 'text-3xl sm:text-4xl font-primary lg:text-6xl' ?>">
+                        <h1 class="font-weight_tertiary mb-3 capitalize <?php echo is_single() ? 'text-2xl md:text-3xl md:leading-12 font-secondary' : 'text-3xl sm:text-4xl font-primary lg:text-6xl' ?>">
                             <?php 
                                 if( is_page() ) {
                                     the_title();
