@@ -1,13 +1,14 @@
 import ImagePicker from "../../components/image-picker"
 import Repeater from '../../components/repeater'
 
-export default function GeneralControls({attributes, setAttributes}) {
+export default function GeneralControls({attributes, setAttributes, refreshBlock}) {
 
     const addNewRequest = ()=>{
         setAttributes({images: [
             ...attributes.images,
-            doatkolom_object.blocks + 'image-slider/img/slider1.webp',
+            doatkolom_object.blocks + 'image-slider-1/img/slider1.webp',
         ]})
+        refreshBlock()
     }
 
     const requestDelete = (index)=>{
@@ -15,6 +16,7 @@ export default function GeneralControls({attributes, setAttributes}) {
          setAttributes({images : [
              ...attributes.images
          ]})
+         refreshBlock()
      }
 
     const handleImageUpload = (val,index)=>{

@@ -23,13 +23,13 @@ export default function Style({wrapper}){
         ${wrapper} .slick-prev-btn {
            position: absolute;
            top: 58px;
-           left: -17px;
+           left: -25px;
         }
 
         ${wrapper} .slick-next-btn {
            position: absolute;
            top: 58px;
-           right: -17px;
+           right: -25px;
         }
     `
 }
