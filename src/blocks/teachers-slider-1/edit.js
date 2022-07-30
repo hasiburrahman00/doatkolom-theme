@@ -1,7 +1,4 @@
 import { PrevArrow ,NextArrow } from "./icons"; 
-
-const { useEffect } = wp.element;
-
 export default function Edit({ attributes, setAttributes}) {
 
     wp.element.useEffect(()=>{

@@ -52,7 +52,7 @@ export default function Gallery() {
         },
 
         update() {
-            setLoading(true)
+        
             const { image_id, index } = this;
             const frame = wp.media({
                 title: 'Change Image',
@@ -64,6 +64,8 @@ export default function Gallery() {
             })
             
             frame.on( 'select', function() {
+                
+                setLoading(true)
                 const attachment = frame.state().get('selection').first().toJSON();
 
                 API.update_gallery({ new_image_id: attachment.id, old_image_id:image_id  })

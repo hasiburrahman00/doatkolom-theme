@@ -2,7 +2,7 @@ const { TextControl, TextareaControl } = wp.components
 import Repeater from '../../components/repeater'
 import ImagePicker from "../../components/image-picker"
 
-export default function BoxControls({attributes, setAttributes}) {
+export default function BoxControls({attributes, setAttributes, refreshBlock}) {
 
     const addNewRequest = ()=>{
         setAttributes({teachers: [
@@ -14,11 +14,15 @@ export default function BoxControls({attributes, setAttributes}) {
                 position: "Departmental Head Teacher, Savar Girls High School",
             }
         ]})
+
+        refreshBlock();
     }
 
     const requestDelete = (index)=>{
         attributes.teachers.splice(index,1);
         setAttributes({teachers: [...attributes.teachers] })
+
+        refreshBlock();
     }
 
     const handleChange = (val,index,type)=>{
