@@ -6,6 +6,14 @@ add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_script('doatkolom-frontend', DOATKOLOM_BUILD . 'frontend.min.js', ['jquery'], DOATKOLOM_VERSION, false);
 	wp_add_inline_style( 'doatkolom-frontend', doatkolom_app()->css_variables() );
 	
+	wp_localize_script( 'doatkolom-frontend', 'doatkolom_object',
+        array( 
+			'wp_json'       => get_rest_url( '', '' ),
+			'api_version'   => 'v1',
+			'prefix'        => DOATKOLOM_POST_TYPE,
+        )
+    );
+
 	/**
 	 * 
 	 * 
