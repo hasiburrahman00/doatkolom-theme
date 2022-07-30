@@ -62,7 +62,7 @@ export default class InfiniteScroll {
         element.className = "element-list__item";
         element.innerHTML = `
             <picture>
-                <img width="250" height="250" class="w-full h-full max-h-[120px] sm:max-h-[180px] md:max-h-[250px] object-cover border border-solid border-border rounded-md lazyload" data-src="${data.image_url}" alt="gallery image"/>
+                <img width="250" height="280" class="w-full h-full max-h-[200px] sm:max-h-[280px] object-cover border border-solid border-border rounded-md lazyload" data-src="${data.image_url}" alt="gallery image"/>
             </picture>
         `
         return element;

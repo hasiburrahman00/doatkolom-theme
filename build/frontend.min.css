@@ -123,6 +123,9 @@
 .col-span-2 {
     grid-column: span 2 / span 2;
 }
+.col-span-1 {
+    grid-column: span 1 / span 1;
+}
 .m-0 {
     margin: 0px;
 }
@@ -384,6 +387,9 @@
 }
 .max-h-\[120px\] {
     max-height: 120px;
+}
+.max-h-\[200px\] {
+    max-height: 200px;
 }
 .min-h-\[calc\(100vh_-_100px\)\] {
     min-height: calc(100vh - 100px);
@@ -1653,6 +1659,9 @@ body::-webkit-scrollbar-thumb:hover {
     .sm\:col-span-4 {
         grid-column: span 4 / span 4;
     }
+    .sm\:col-span-2 {
+        grid-column: span 2 / span 2;
+    }
     .sm\:my-3 {
         margin-top: 0.75rem;
         margin-bottom: 0.75rem;
@@ -1677,6 +1686,9 @@ body::-webkit-scrollbar-thumb:hover {
     }
     .sm\:max-h-\[180px\] {
         max-height: 180px;
+    }
+    .sm\:max-h-\[280px\] {
+        max-height: 280px;
     }
     .sm\:w-36 {
         width: 9rem;
@@ -1805,6 +1817,9 @@ body::-webkit-scrollbar-thumb:hover {
     .md\:order-1 {
         order: 1;
     }
+    .md\:col-span-3 {
+        grid-column: span 3 / span 3;
+    }
     .md\:mt-0 {
         margin-top: 0px;
     }
@@ -1858,6 +1873,15 @@ body::-webkit-scrollbar-thumb:hover {
     }
     .md\:h-\[134px_\!important\] {
         height: 134px !important;
+    }
+    .md\:h-52 {
+        height: 13rem;
+    }
+    .md\:h-\[300px\] {
+        height: 300px;
+    }
+    .md\:h-\[270px\] {
+        height: 270px;
     }
     .md\:max-h-\[250px\] {
         max-height: 250px;
