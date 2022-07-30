@@ -11,7 +11,7 @@ class SettingsApi extends Api
 
     public function config()
     {
-        $this->prefix = 'settings';
+        $this->prefix = 'admin-settings';
     }
 
     public function get_setting_fields()
@@ -100,34 +100,9 @@ class SettingsApi extends Api
      */
     public function get_galleries()
     {
-        $gallery_ids = get_option( Settings::GALLERY_KEY );
-        if ( !$gallery_ids ) {
-            $gallery_ids = [];
-        } else {
-            $gallery_ids = unserialize( $gallery_ids );
-        }
-
-        $gallery_items = [];
-
-        foreach ( $gallery_ids as $key => $gallery_id ) {
-
-            $gallery = [
-                'image_id'  => $gallery_id,
-                'image_url' => ''
-            ];
-
-            $attachment = wp_get_attachment_image_src( intval( $gallery_id ), 'full' );
-
-            if ( isset( $attachment[0] ) ) {
-                $gallery['image_url'] = $attachment[0];
-            }
-
-            $gallery_items[] = $gallery;
-        }
-
         return [
             'status' => 'success',
-            'data'   => $gallery_items
+            'data'   => Settings::instance()->gallery_items()
         ];
     }
 
@@ -147,7 +122,7 @@ class SettingsApi extends Api
 
             foreach ( $image_ids as $image_id ) {
                 $image_array_key = array_search( intval( $image_id ), $gallery_ids );
-                if ( $image_array_key ) {
+                if ( is_numeric($image_array_key) ) {
                     unset( $gallery_ids[$image_array_key] );
                 }
             }

@@ -19,6 +19,11 @@ abstract class Api
      */
     public $request = null;
 
+    /**
+     * @var mixed
+     */
+    public $manage_options = true;
+
     abstract public function config();
 
     public function __construct()
@@ -34,8 +39,10 @@ abstract class Api
                 'methods'             => \WP_REST_Server::ALLMETHODS,
                 'callback'            => [$this, 'action'],
                 'permission_callback' => function () {
+                    if ( $this->manage_options ) {
+                        return current_user_can( 'manage_options' );
+                    }
                     return true;
-                    // return current_user_can( 'manage_options' );
                 }
             ] );
         } );
