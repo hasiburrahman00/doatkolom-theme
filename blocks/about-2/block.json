@@ -11,7 +11,7 @@
 
     "heading": {
       "type": "string",
-      "default": "Conclusion is a trusted institution in the world"
+      "default": "Conclusion is a trusted <br/> institution in the world"
     },
 
     "description": {
