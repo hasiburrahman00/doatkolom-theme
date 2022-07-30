@@ -61,15 +61,3 @@ body::-webkit-scrollbar-thumb {
 .menu-item.active a {
   color: var(--doatkolom_secondary_color) !important;
 }
-
-// .element-list__item is for library page
-.element-list__item {
-  width: 100%;
-  height: 200px;
-  text-align: center;
-  font-size: 46px;
-  background: #eee;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
