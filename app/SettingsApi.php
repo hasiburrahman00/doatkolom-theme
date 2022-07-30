@@ -11,7 +11,7 @@ class SettingsApi extends Api
 
     public function config()
     {
-        $this->prefix = 'settings';
+        $this->prefix = 'admin-settings';
     }
 
     public function get_setting_fields()
