@@ -46,5 +46,4 @@ export default function boxSlider1($scope){
             }
         ]
     });
-
 }

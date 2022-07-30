@@ -2,9 +2,9 @@ const { TextControl,RangeControl } = wp.components
 import Repeater from '../../components/repeater'
 import ImagePicker from "../../components/image-picker"
 
-export default function GeneralControls({attributes, setAttributes}) {
-
+export default function GeneralControls({attributes, setAttributes, refreshBlock}) {
     const addNewRequest = ()=>{
+        
         setAttributes({box_slider: [
             ...attributes.box_slider,
             {
@@ -12,14 +12,18 @@ export default function GeneralControls({attributes, setAttributes}) {
                 text: "Physics" 
             }
         ]})
+
+        refreshBlock();
     }
 
     const requestDelete = (index)=>{
         attributes.box_slider.splice(index,1)
-         setAttributes({box_slider : [
+        setAttributes({box_slider : [
              ...attributes.box_slider
-         ]})
-     }
+        ]})
+        
+        refreshBlock();
+    }
  
     const changeHandler = (val,index,type)=>{
          attributes.box_slider[index][type] = val
@@ -30,7 +34,6 @@ export default function GeneralControls({attributes, setAttributes}) {
          })
     }
  
-
     return (
         <div className="space-y-5">
             <Repeater label = "Box Slider" addNewRequest ={addNewRequest}>
@@ -43,10 +46,10 @@ export default function GeneralControls({attributes, setAttributes}) {
                         />
 
                         <TextControl
-                                className="w-full"
-                                label="Title"
-                                value={item.text}
-                                onChange={ ( value ) => changeHandler(value,index,'text') }
+                            className="w-full"
+                            label="Title"
+                            value={item.text}
+                            onChange={ ( value ) => changeHandler(value,index,'text') }
                         />
                     </Repeater.Item>
                 ))}

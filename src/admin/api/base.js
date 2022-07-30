@@ -12,7 +12,7 @@
     call_api({endpoint, method, body, custom}, callback) {
 
         const _self = this;
-        const url = _self.base + _self.prefix + '/' + _self.version + '/settings/' + endpoint;
+        const url = _self.base + _self.prefix + '/' + _self.version + '/admin-settings/' + endpoint;
 
         const xhttp  = new XMLHttpRequest();
 
