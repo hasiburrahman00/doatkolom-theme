@@ -77,7 +77,7 @@ class SettingsApi extends Api
 
             $old_image_array_key = array_search( $old_image_id, $gallery_ids );
 
-            if ( $old_image_array_key ) {
+            if ( is_numeric($old_image_array_key) ) {
                 $gallery_ids[$old_image_array_key] = $new_image_id;
             }
 
