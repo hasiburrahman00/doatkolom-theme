@@ -20,17 +20,8 @@ export default function GeneralControls({attributes, setAttributes}) {
              ...attributes.box_slider
          ]})
      }
-
-    const handeImageUpload = (val,index,image)=>{
-        attributes.box_slider[index][image] = val
-        setAttributes({
-            box_slider:[
-                ...attributes.box_slider
-            ]
-        })
-    }
  
-    const handleTitleChange = (val,index,type)=>{
+    const changeHandler = (val,index,type)=>{
          attributes.box_slider[index][type] = val
          setAttributes({
             box_slider: [
@@ -48,24 +39,24 @@ export default function GeneralControls({attributes, setAttributes}) {
                         <ImagePicker
                             label="Select Image"
                             value={item.background}
-                            onChange={ ( url ) => handeImageUpload(url,index,'background') }
+                            onChange={ ( url ) => changeHandler(url,index,'background') }
                         />
 
                         <TextControl
                                 className="w-full"
                                 label="Title"
                                 value={item.text}
-                                onChange={ ( value ) => handleTitleChange(value,index,'text') }
+                                onChange={ ( value ) => changeHandler(value,index,'text') }
                         />
                     </Repeater.Item>
                 ))}
             </Repeater> 
             <RangeControl
-                label="Box Position"
+                label="Box Position Y"
                 value={ attributes.box_position}
                 onChange={ ( value ) => setAttributes({box_position: value}) }
-                min={ -160 }
-                max={ 0 }
+                min={ -300 }
+                max={ 300 }
             />
         </div>
     )

@@ -211,12 +211,6 @@
 .mt-1 {
     margin-top: 0.25rem;
 }
-.mb-4 {
-    margin-bottom: 1rem;
-}
-.mt-10 {
-    margin-top: 2.5rem;
-}
 .mt-0 {
     margin-top: 0px;
 }
@@ -225,6 +219,9 @@
 }
 .ml-1 {
     margin-left: 0.25rem;
+}
+.mt-10 {
+    margin-top: 2.5rem;
 }
 .mt-4 {
     margin-top: 1rem;
@@ -258,6 +255,9 @@
 }
 .mr-8 {
     margin-right: 2rem;
+}
+.mb-4 {
+    margin-bottom: 1rem;
 }
 .ml-0 {
     margin-left: 0px;
@@ -340,9 +340,6 @@
 .h-\[145px\] {
     height: 145px;
 }
-.h-\[386px\] {
-    height: 386px;
-}
 .h-\[50px\] {
     height: 50px;
 }
@@ -366,6 +363,9 @@
 }
 .h-40 {
     height: 10rem;
+}
+.h-\[386px\] {
+    height: 386px;
 }
 .max-h-\[80px\] {
     max-height: 80px;
@@ -525,6 +525,9 @@
 }
 .grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.grid-cols-7 {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 .flex-col {
     flex-direction: column;
@@ -910,10 +913,6 @@
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
 }
-.px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-}
 .px-9 {
     padding-left: 2.25rem;
     padding-right: 2.25rem;
@@ -950,17 +949,15 @@
     padding-top: 7rem;
     padding-bottom: 7rem;
 }
+.px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
 .pb-8 {
     padding-bottom: 2rem;
 }
 .pl-5 {
     padding-left: 1.25rem;
-}
-.pr-20 {
-    padding-right: 5rem;
-}
-.pr-7 {
-    padding-right: 1.75rem;
 }
 .pt-24 {
     padding-top: 6rem;
@@ -994,6 +991,12 @@
 }
 .pb-10 {
     padding-bottom: 2.5rem;
+}
+.pr-20 {
+    padding-right: 5rem;
+}
+.pr-7 {
+    padding-right: 1.75rem;
 }
 .text-left {
     text-align: left;
@@ -1058,14 +1061,14 @@
 .capitalize {
     text-transform: capitalize;
 }
-.leading-\[70px\] {
-    line-height: 70px;
-}
 .leading-\[60px\] {
     line-height: 60px;
 }
 .leading-\[40px\] {
     line-height: 40px;
+}
+.leading-\[70px\] {
+    line-height: 70px;
 }
 .text-title {
     color: var(--doatkolom_title_color);
@@ -1510,11 +1513,6 @@ body::-webkit-scrollbar-thumb:hover {
 .before\:rounded-tr-lg::before {
     content: var(--tw-content);
     border-top-right-radius: 0.5rem;
-}
-
-.before\:bg-primary::before {
-    content: var(--tw-content);
-    background-color: var(--doatkolom_primary_color);
 }
 
 .before\:bg-secondary::before {
