@@ -18,7 +18,7 @@ export default function GeneralControls({attributes, setAttributes}) {
 
             <TextControl
                 className="w-full"
-                label="Link"
+                label="Button Label"
                 value={ attributes.person_history.see_more.text}
                 onChange={ (text) => {
                     attributes.person_history.see_more.text = text
@@ -30,7 +30,7 @@ export default function GeneralControls({attributes, setAttributes}) {
 
             <TextControl
                 className="w-full"
-                label="Link"
+                label="Button URL"
                 value={ attributes.person_history.see_more.url}
                 onChange={ (url) => {
                     attributes.person_history.see_more.url = url

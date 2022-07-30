@@ -367,6 +367,12 @@
 .h-\[386px\] {
     height: 386px;
 }
+.h-\[400px\] {
+    height: 400px;
+}
+.h-\[400px_\!important\] {
+    height: 400px !important;
+}
 .max-h-\[80px\] {
     max-height: 80px;
 }
@@ -998,6 +1004,9 @@
 .pr-7 {
     padding-right: 1.75rem;
 }
+.pb-12 {
+    padding-bottom: 3rem;
+}
 .text-left {
     text-align: left;
 }
@@ -1559,6 +1568,14 @@ body::-webkit-scrollbar-thumb:hover {
 .after\:content-\[\'\'\]::after {
     --tw-content: '';
     content: var(--tw-content);
+}
+
+.last\:bg-black:last-child {
+    background-color: var(--doatkolom_black_color);
+}
+
+.last\:text-white:last-child {
+    color: var(--doatkolom_white_color);
 }
 
 .odd\:bg-primary_light:nth-child(odd) {
@@ -2206,6 +2223,9 @@ body::-webkit-scrollbar-thumb:hover {
     .lg\:pr-48 {
         padding-right: 12rem;
     }
+    .lg\:pb-32 {
+        padding-bottom: 8rem;
+    }
     .lg\:text-right {
         text-align: right;
     }
@@ -2220,6 +2240,10 @@ body::-webkit-scrollbar-thumb:hover {
     .lg\:text-2xl {
         font-size: 1.5rem;
         line-height: 2rem;
+    }
+    .lg\:text-xl {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
     }
     .lg\:shadow-md {
         --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
