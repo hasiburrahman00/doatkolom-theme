@@ -1,21 +1,21 @@
 {
-  "name": "doatkolom/history-1",
-  "title": "Doatkolom History 1",
-  "description": "For History 1",
+  "name": "doatkolom/story-1",
+  "title": "Doatkolom Story 1",
+  "description": "For story 1",
   "keywords": [
-    "history 1",
+    "story 1",
     "boxes 1",
     "photo 1",
-    "history box 1",
-    "history section 1",
+    "story box 1",
+    "story section 1",
     "doatkolom"
   ],
   "attributes": {
-    "person_history": {
+    "person_story": {
       "type": "object"
     },
 
-    "history_box": {
+    "story_box": {
       "type": "array",
       "default": [
         {

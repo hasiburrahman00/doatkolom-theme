@@ -1,11 +1,11 @@
 const { TextControl, TextareaControl, ToggleControl } = wp.components
 import Repeater from '../../components/repeater'
 
-export default function BoxControls({attributes, setAttributes}) {
+export default function AchivementControls({attributes, setAttributes}) {
 
     const addNewRequest = ()=>{
-        setAttributes({history_box: [
-            ...attributes.history_box,
+        setAttributes({story_box: [
+            ...attributes.story_box,
             {
                 description: "Creative IT is at your side to keep yourself updated with modern technology.....",
                 see_more: {
@@ -18,17 +18,17 @@ export default function BoxControls({attributes, setAttributes}) {
     }
 
     const requestDelete = (index)=>{
-        attributes.history_box.splice(index,1)
-         setAttributes({history_box : [
-             ...attributes.history_box
+        attributes.story_box.splice(index,1)
+         setAttributes({story_box : [
+             ...attributes.story_box
          ]})
      }
  
     const handleChange = (val,index,type)=>{
-         attributes.history_box[index][type] = val
+         attributes.story_box[index][type] = val
          setAttributes({
-            history_box: [
-                 ...attributes.history_box
+            story_box: [
+                 ...attributes.story_box
              ]
          })
     }
@@ -37,9 +37,9 @@ export default function BoxControls({attributes, setAttributes}) {
     return (
         <div className="space-y-5">
 
-            <Repeater label = "History Box" addNewRequest ={addNewRequest}>
-                {attributes.history_box.map((item,index)=>(
-                    <Repeater.Item key={index} title = "All History" deleteRequest = {()=>requestDelete(index)}>
+            <Repeater label = "Story Box" addNewRequest ={addNewRequest}>
+                {attributes.story_box.map((item,index)=>(
+                    <Repeater.Item key={index} title = "All Story" deleteRequest = {()=>requestDelete(index)}>
                         <TextareaControl
                                 className="w-full"
                                 label="Title"
@@ -92,7 +92,6 @@ export default function BoxControls({attributes, setAttributes}) {
                     </Repeater.Item>
                 ))}
             </Repeater> 
-
         </div>
     )
 }
