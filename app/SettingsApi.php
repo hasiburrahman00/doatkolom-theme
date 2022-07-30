@@ -46,7 +46,7 @@ class SettingsApi extends Api
             } else {
                 $gallery_ids = unserialize( $gallery_ids );
             }
-            $gallery_ids = array_merge( $gallery_ids, $image_ids );
+            $gallery_ids = array_merge( $image_ids, $gallery_ids );
             update_option( Settings::GALLERY_KEY, serialize( $gallery_ids ) );
 
             return [
