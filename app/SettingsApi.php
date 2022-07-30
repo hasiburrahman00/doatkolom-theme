@@ -147,7 +147,7 @@ class SettingsApi extends Api
 
             foreach ( $image_ids as $image_id ) {
                 $image_array_key = array_search( intval( $image_id ), $gallery_ids );
-                if ( $image_array_key ) {
+                if ( is_numeric($image_array_key) ) {
                     unset( $gallery_ids[$image_array_key] );
                 }
             }
