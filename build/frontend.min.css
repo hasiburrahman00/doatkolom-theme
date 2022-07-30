@@ -1440,6 +1440,9 @@ body::-webkit-scrollbar-thumb:hover {
         background-color: var(--doatkolom_secondary_color);
     }
 }
+.doatkolom-block-wrap p {
+  line-height: 1.8;
+}
 .menu-item.active a {
   color: var(--doatkolom_secondary_color) !important;
 }
