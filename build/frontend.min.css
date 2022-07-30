@@ -2021,6 +2021,9 @@ body::-webkit-scrollbar-thumb:hover {
     .md\:leading-14 {
         line-height: 56px;
     }
+    .md\:leading-\[70px\] {
+        line-height: 70px;
+    }
     .md\:opacity-50 {
         opacity: 0.5;
     }
