@@ -274,7 +274,7 @@ class Settings
                         'label'   => esc_html__( 'Secondary', 'doatkolom' ),
                         'default' => isset( $this->settings['doatkolom_secondary_color'] ) ? $this->settings['doatkolom_secondary_color'] : '#16AACA'
                     ],
-                    'doatkolom_secondary_light_color'          => [
+                    'doatkolom_secondary_light_color'    => [
                         'type'    => 'color',
                         'label'   => esc_html__( 'Secondary light', 'doatkolom' ),
                         'default' => $this->getSettingDbValue( 'doatkolom_secondary_light_color', '#F5FBFD' )
@@ -388,5 +388,38 @@ class Settings
             }
         }
         return DOATKOLOM_IMG . 'institution-logo.webp';
+    }
+
+    /**
+     * @return mixed
+     */
+    public function gallery_items()
+    {
+        $gallery_ids = get_option( self::GALLERY_KEY );
+        if ( !$gallery_ids ) {
+            $gallery_ids = [];
+        } else {
+            $gallery_ids = unserialize( $gallery_ids );
+        }
+
+        $gallery_items = [];
+
+        foreach ( $gallery_ids as $key => $gallery_id ) {
+
+            $gallery = [
+                'image_id'  => $gallery_id,
+                'image_url' => ''
+            ];
+
+            $attachment = wp_get_attachment_image_src( intval( $gallery_id ), 'full' );
+
+            if ( isset( $attachment[0] ) ) {
+                $gallery['image_url'] = $attachment[0];
+            }
+
+            $gallery_items[] = $gallery;
+        }
+
+        return $gallery_items;
     }
 }
