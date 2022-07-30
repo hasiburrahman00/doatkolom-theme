@@ -1,0 +1,11 @@
+{
+  "name": "doatkolom/post-card-1",
+  "title": "Doatkolom Post Card 1",
+  "description": "For post card 1",
+  "keywords": ["post", "card", "doatkolom", "post card"],
+  "attributes": {
+    "post_card": {
+      "type": "array"
+    }
+  }
+}
