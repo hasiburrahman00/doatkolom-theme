@@ -14,12 +14,11 @@ add_action( 'wp_enqueue_scripts', function () {
         )
     );
 
-	/**
-	 * 
-	 * 
-	 * register these scripts and stylesheets into home template
-	 * 
-	 */
+	if( is_page_template('templates/photo-gallery.php') && false ) {	
+		wp_enqueue_style('doatkolom-venobox', DOATKOLOM_THEME_URI . '/lib/venobox.min.css', [], DOATKOLOM_VERSION, false);	
+		wp_enqueue_script('doatkolom-venobox', DOATKOLOM_THEME_URI . '/lib/venobox.min.js', ['jquery'], DOATKOLOM_VERSION, false);
+	}
+
 	if( is_page_template('templates/doatkolom-app.php') ) {		
 		wp_enqueue_script('doatkolom-app', DOATKOLOM_BUILD . 'app.min.js', ['jquery'], DOATKOLOM_VERSION, false);
 	}

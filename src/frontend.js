@@ -25,9 +25,6 @@ jQuery(function() {
 
     // for photo gallery infinite scroll
     new InfiniteScroll();
-    
-
-
 
     /**
      * 

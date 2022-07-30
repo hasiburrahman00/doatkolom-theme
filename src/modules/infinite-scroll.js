@@ -36,9 +36,8 @@ export default class InfiniteScroll {
             complete() {
                 self.$root.find('#gallery-loader').remove();
             }
-        })
+        })  
 
-        
     }
 
     // call api
