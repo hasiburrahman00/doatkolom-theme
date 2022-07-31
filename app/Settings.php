@@ -171,22 +171,22 @@ class Settings
                     'primary_font_url'      => [
                         'type'    => 'text',
                         'label'   => esc_html__( 'Primary Font URL', 'doatkolom' ),
-                        'default' => isset( $this->settings['primary_font_url'] ) ? $this->settings['primary_font_url'] : "@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');"
+                        'default' => isset( $this->settings['primary_font_url'] ) ? $this->settings['primary_font_url'] : "@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');"
                     ],
                     'primary_font_family'   => [
                         'type'    => 'text',
                         'label'   => esc_html__( 'Primary Font Family', 'doatkolom' ),
-                        'default' => isset( $this->settings['primary_font_family'] ) ? $this->settings['primary_font_family'] : "Abril Fatface, cursive"
+                        'default' => isset( $this->settings['primary_font_family'] ) ? $this->settings['primary_font_family'] : "Poppins, sans-serif;"
                     ],
                     'secondary_font_url'    => [
                         'type'    => 'text',
                         'label'   => esc_html__( 'Secondary Font URL', 'doatkolom' ),
-                        'default' => isset( $this->settings['secondary_font_url'] ) ? $this->settings['secondary_font_url'] : "@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap');"
+                        'default' => isset( $this->settings['secondary_font_url'] ) ? $this->settings['secondary_font_url'] : ""
                     ],
                     'secondary_font_family' => [
                         'type'    => 'text',
                         'label'   => esc_html__( 'Secondary Font Family', 'doatkolom' ),
-                        'default' => isset( $this->settings['secondary_font_family'] ) ? $this->settings['secondary_font_family'] : "Spectral, serif"
+                        'default' => isset( $this->settings['secondary_font_family'] ) ? $this->settings['secondary_font_family'] : "Poppins, sans-serif;"
                     ],
                     'primary_font_weight'   => [
                         'type'    => 'select',
