@@ -51,18 +51,18 @@ export default function Edit({ attributes, setAttributes}) {
             <div className="rounded-md p-10 bg-light_gray">
                 <h3 className="m-0 text-title font-primary font-weight_secondary text-2xl mb-6">{attributes.quick_response.title}</h3>
                 <a href="#" className="text-black font-secondary font-weight_primary text-lg no-underline hover:text-black block focus:shadow-none">{attributes.quick_response.number}</a>
-                <a href="#" className="text-black font-secondary font-weight_primary text-lg no-underline hover:text-black block mt-1 focus:shadow-none">{attributes.quick_response.web_site.site_name}</a>
+                <a href="#" className="text-black font-secondary font-weight_primary text-lg no-underline hover:text-black block mt-1 focus:shadow-none">{attributes.quick_response.web_site}</a>
                 <div className="py-10 relative before:content-[''] before:absolute before:top-[22px] before:left-0 before:w-full before:h-[1px] before:bg-gray">
                     <h3 className="m-0 text-title font-primary font-weight_secondary text-2xl mb-6">{attributes.key_title}</h3>
                     {
                         attributes.Key_contacts?.map((item,index)=>(
-                            <div key={index} className="flex justify-between mb-5 items-start">
-                                <div className="w-20 h-20 overflow-hidden">
+                            <div key={index} className="flex mb-5 items-start sm:flex-row flex-col">
+                                <div className="max-w-20 max-h-20 overflow-hidden rounded-md">
                                     <picture>
                                         <img width="80" height="80" className="w-full object-cover" src={item.image} alt="teacher-images" />
                                     </picture>
                                 </div>
-                                <div className="w-4/5">
+                                <div className="max-w-4/5 mt-4 sm:ml-5 sm:mt-0">
                                     <h4 className="m-0 font-primary text-title text-lg font-weight_tertiary">{item.name}</h4>
                                     <a href="#" className="text-black font-secondary font-weight_primary text-base no-underline hover:text-black block focus:shadow-none">{item.phone}</a>
                                     <a href="#" className="text-black font-secondary font-weight_primary text-base no-underline hover:text-black block focus:shadow-none">{item.email}</a>
