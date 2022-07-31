@@ -44,7 +44,19 @@ export default class InfiniteScroll {
             if ( self.loading.size !== 0 || scrollY < end || self.currentPage >= self.totalPage ) return;
             self.loadNextBatch();
         })
+    }
 
+    // reduce dom height
+    elementObserver( element ) {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach( entry => {
+                entry.target.classList.toggle('doatkolom-show', entry.isIntersecting);
+                entry.target.classList.toggle('doatkolom-hide', !entry.isIntersecting);
+            })
+        }, {
+            rootMargin: "200px"
+        })
+        observer.observe(element)
     }
 
     //gallery end position
@@ -83,6 +95,8 @@ export default class InfiniteScroll {
             this.classList.add('lazyloaded');
             self.loading.delete( this.dataset.id );
 
+            self.elementObserver( $(this).parents('div')[0] )
+
             const end = self.getGalleryEnd.call(self);
             if( self.loading.size === 0 && scrollY > end ) {
                 self.loadNextBatch();
@@ -93,7 +107,6 @@ export default class InfiniteScroll {
     // prepare gallery single image
     getElement( data, index ) {
         const element = document.createElement("div");
-
         element.innerHTML = `
             <picture>
                 <img width="250" height="280" data-id="img-${data.image_id}-${index}" class="doatkolom-gallery-image-item lazyloading w-full h-full max-h-[200px] sm:max-h-[280px] object-cover border border-solid border-border rounded-md" src="${data.image_url}" alt="gallery image"/>

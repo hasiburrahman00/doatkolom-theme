@@ -75,3 +75,13 @@ body::-webkit-scrollbar-thumb {
   opacity: 1;
   transition: opacity 9ms;
 }
+
+.doatkolom-hide {
+  height: 40px !important;
+  overflow: hidden;
+  transition: all lienar .2s;
+}
+
+.doatkolom-show {
+  transition: all lienar .2s;
+}
