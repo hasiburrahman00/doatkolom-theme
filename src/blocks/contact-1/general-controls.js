@@ -1,29 +1,29 @@
-const { TextControl } = wp.components
+const { TextControl} = wp.components
 import Repeater from '../../components/repeater'
 import ImagePicker from "../../components/image-picker"
 
-export default function GeneralControls({attributes, setAttributes, refreshBlock}) {
+export default function GeneralControls({attributes,setAttributes}) {
+
     const addNewRequest = ()=>{
-        
         setAttributes({Key_contacts: [
             ...attributes.Key_contacts,
-            {
-                image:  doatkolom_object.blocks + 'contact-1/img/contact-image1.webp',
-                name: "Zahirul Islam",
-                phone: "+880 1234-56789",
-                email: "johirul@uposhonghar.com"
-            }
+                {
+                    image:  doatkolom_object.blocks + 'contact-1/img/contact-image1.webp',
+                    name: "Zahirul Islam",
+                    phone: "+880 1234-56789",
+                    email: "johirul@uposhonghar.com"
+                }
         ]})
     }
-
+    
     const requestDelete = (index)=>{
         attributes.Key_contacts.splice(index,1)
-        setAttributes({Key_contacts : [
-             ...attributes.box_slider
-        ]})
-    }
- 
-    const changeHandler = (val,index,type)=>{
+         setAttributes({Key_contacts : [
+             ...attributes.Key_contacts
+         ]})
+     }
+    
+    const handleTitleChange = (val,index,type)=>{
          attributes.Key_contacts[index][type] = val
          setAttributes({
             Key_contacts: [
@@ -31,12 +31,13 @@ export default function GeneralControls({attributes, setAttributes, refreshBlock
              ]
          })
     }
- 
+
+
     return (
-        <div className="space-y-5">
-            <Repeater label = "Key Contacts" addNewRequest ={addNewRequest}>
+        <div className="space-y-5">   
+            <Repeater label = "Number Box" addNewRequest ={addNewRequest}>
                 {attributes.Key_contacts.map((item,index)=>(
-                    <Repeater.Item key={index} title={item.name} deleteRequest = {()=>requestDelete(index)}>
+                    <Repeater.Item key={index} title="teachers details" deleteRequest={()=>requestDelete(index)}>
                         <ImagePicker
                             label="Select Image"
                             value={item.image}
@@ -45,27 +46,27 @@ export default function GeneralControls({attributes, setAttributes, refreshBlock
 
                         <TextControl
                             className="w-full"
-                            label="name"
+                            label="Number"
                             value={item.name}
-                            onChange={ ( value ) => changeHandler(value,index,'name') }
+                            onChange={ ( value ) => handleTitleChange(value,index,'name') }
                         />
 
                         <TextControl
                             className="w-full"
-                            label="phone"
+                            label="Phone"
                             value={item.phone}
-                            onChange={ ( value ) => changeHandler(value,index,'phone') }
+                            onChange={ ( value ) => handleTitleChange(value,index,'phone')}
                         />
 
                         <TextControl
                             className="w-full"
-                            label="email"
+                            label="Email"
                             value={item.email}
-                            onChange={ ( value ) => changeHandler(value,index,'email') }
+                            onChange={ ( value ) => handleTitleChange(value,index,'email')}
                         />
                     </Repeater.Item>
                 ))}
-            </Repeater> 
+            </Repeater>
         </div>
     )
 }
