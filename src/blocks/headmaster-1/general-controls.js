@@ -58,13 +58,6 @@ export default function GeneralControls({attributes, setAttributes}) {
                 onChange={ url => onTeacherImageChange(url, 2) }
             />
             
-            <TextControl
-                className="w-full"
-                label="Teachers Page URL"
-                value={ attributes.teachers_page_link }
-                onChange={ ( value ) => setAttributes({teachers_page_link: value}) }
-            />
-            
             <ToggleControl
                 label="Show Teacher Page Button"
                 checked={ attributes.teachers_page.visible }
