@@ -1,0 +1,32 @@
+{
+  "name": "doatkolom/contact-1",
+  "title": "Doatkolom Contact 1",
+  "description": "Make contact form and submit data",
+  "keywords": ["contact", "form", "doatkolom", "submit form", "submit"],
+  "attributes": {
+    "name": {
+      "type": "string",
+      "default": "Name"
+    },
+
+    "email": {
+      "type": "string",
+      "default": "Email"
+    },
+
+    "number": {
+      "type": "string",
+      "default": "Contact Number"
+    },
+
+    "location": {
+      "type": "string",
+      "default": "Location"
+    },
+
+    "message": {
+      "type": "string",
+      "default": "Message"
+    }
+  }
+}

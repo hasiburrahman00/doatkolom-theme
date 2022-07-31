@@ -367,14 +367,14 @@
 .h-\[100px_\!important\] {
     height: 100px !important;
 }
-.h-\[350px\] {
-    height: 350px;
-}
 .h-\[400px\] {
     height: 400px;
 }
 .h-\[400px_\!important\] {
     height: 400px !important;
+}
+.h-\[350px\] {
+    height: 350px;
 }
 .h-40 {
     height: 10rem;
