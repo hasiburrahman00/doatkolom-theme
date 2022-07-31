@@ -322,8 +322,8 @@
 .h-4 {
     height: 1rem;
 }
-.h-20 {
-    height: 5rem;
+.h-\[200px\] {
+    height: 200px;
 }
 .h-12 {
     height: 3rem;
@@ -379,9 +379,6 @@
 .h-40 {
     height: 10rem;
 }
-.h-\[200px\] {
-    height: 200px;
-}
 .max-h-\[80px\] {
     max-height: 80px;
 }
@@ -390,6 +387,9 @@
 }
 .max-h-\[200px\] {
     max-height: 200px;
+}
+.max-h-\[350px\] {
+    max-height: 350px;
 }
 .min-h-\[calc\(100vh_-_100px\)\] {
     min-height: calc(100vh - 100px);
@@ -888,17 +888,13 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
-.py-20 {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+.py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 .py-10 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
-}
-.py-12 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
 }
 .py-3 {
     padding-top: 0.75rem;
@@ -975,6 +971,10 @@
 .py-16 {
     padding-top: 4rem;
     padding-bottom: 4rem;
+}
+.py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 .px-\[30px\] {
     padding-left: 30px;
@@ -1991,6 +1991,10 @@ body::-webkit-scrollbar-thumb:hover {
     .md\:p-14 {
         padding: 3.5rem;
     }
+    .md\:py-20 {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
     .md\:py-24 {
         padding-top: 6rem;
         padding-bottom: 6rem;
@@ -2006,10 +2010,6 @@ body::-webkit-scrollbar-thumb:hover {
     .md\:py-10 {
         padding-top: 2.5rem;
         padding-bottom: 2.5rem;
-    }
-    .md\:py-20 {
-        padding-top: 5rem;
-        padding-bottom: 5rem;
     }
     .md\:px-5 {
         padding-left: 1.25rem;

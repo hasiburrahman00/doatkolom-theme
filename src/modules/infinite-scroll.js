@@ -36,8 +36,20 @@ export default class InfiniteScroll {
             complete() {
                 window.scrollTo(0, 0);
             }
-        })  
+        })
 
+        // load next after after scolling to the bottom
+        Helper.onScroll(()=> {
+            const end = self.getGalleryEnd.bind(self);
+            if ( self.loading.size !== 0 || scrollY < end || self.currentPage >= self.totalPage ) return;
+            self.loadNextBatch();
+        })
+
+    }
+
+    //gallery end position
+    getGalleryEnd() {
+        return (this.$root.outerHeight() + this.$root.offset().top) - (innerHeight * 1.5)
     }
 
     // call api
@@ -56,31 +68,24 @@ export default class InfiniteScroll {
             }
         }
 
-        if( self.currentPage <= self.totalPage ) {
+        if( self.currentPage < self.totalPage ) {
             self.$root.append( self.skeleton );
         } else {
             self.$root.find('#gallery-loader').remove();
         }
 
+        // load next batch after current image loading
         $('.doatkolom-gallery-image-item').on('load', function() {
-            
+                    
             this.classList.remove('lazyloading');
             this.classList.add('lazyloaded');
             self.loading.delete( this.dataset.id );
 
-            const end = (self.$root.outerHeight() + self.$root.offset().top) - (innerHeight * 1.5);
+            const end = self.getGalleryEnd.bind(self);
             if( self.loading.size === 0 && scrollY > end ) {
                 self.loadNextBatch();
             }
-
         })
-
-        Helper.onScroll(()=> {
-            const end = (self.$root.outerHeight() + self.$root.offset().top) - (innerHeight * 1.5);
-            if ( self.loading.size !== 0 || scrollY < end || self.currentPage >= self.totalPage ) return;
-                self.loadNextBatch();
-        })
-
     }
 
     // prepare gallery single image
