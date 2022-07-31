@@ -49,7 +49,7 @@ export default class InfiniteScroll {
 
     //gallery end position
     getGalleryEnd() {
-        return (this.$root.outerHeight() + this.$root.offset().top) - (innerHeight * 1.5)
+        return (this.$root.outerHeight() + this.$root.offset().top) - (innerHeight / 2)
     }
 
     // call api
