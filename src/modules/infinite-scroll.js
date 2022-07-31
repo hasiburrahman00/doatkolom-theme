@@ -72,7 +72,7 @@ export default class InfiniteScroll {
             self.$root.append( self.skeleton );
         } 
 
-        if( self.currentPage >= self.totalPage ) {
+        if( self.currentPage >= self.totalPage && self.currentPage !== 1) {
             self.$root.find('#gallery-loader').remove();
         }
 

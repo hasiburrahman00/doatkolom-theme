@@ -499,6 +499,9 @@
 .max-w-\[785px\] {
     max-width: 785px;
 }
+.max-w-\[100\%_\!important\] {
+    max-width: 100% !important;
+}
 .flex-auto {
     flex: 1 1 auto;
 }
@@ -880,6 +883,9 @@
 .p-7 {
     padding: 1.75rem;
 }
+.p-\[20px_\!important\] {
+    padding: 20px !important;
+}
 .px-5 {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
@@ -988,6 +994,22 @@
     padding-top: 7rem;
     padding-bottom: 7rem;
 }
+.px-\[20px_\!important\] {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+.py-\[17px_\!important\] {
+    padding-top: 17px !important;
+    padding-bottom: 17px !important;
+}
+.py-\[12px_\!important\] {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+}
+.py-\[8px_\!important\] {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+}
 .pb-8 {
     padding-bottom: 2rem;
 }
@@ -1026,6 +1048,9 @@
 }
 .pb-10 {
     padding-bottom: 2.5rem;
+}
+.pt-\[17px_\!important\] {
+    padding-top: 17px !important;
 }
 .text-left {
     text-align: left;
@@ -1685,6 +1710,10 @@ body::-webkit-scrollbar-thumb:hover {
     --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.focus\:border-secondary:focus {
+    border-color: var(--doatkolom_secondary_color);
 }
 
 .focus\:text-secondary:focus {
