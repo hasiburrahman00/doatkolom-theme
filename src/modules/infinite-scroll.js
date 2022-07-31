@@ -44,8 +44,8 @@ export default class InfiniteScroll {
             if ( self.loading.size !== 0 || scrollY < end || self.currentPage >= self.totalPage ) return;
             self.loadNextBatch();
         })
-
     }
+
 
     //gallery end position
     getGalleryEnd() {
@@ -93,7 +93,6 @@ export default class InfiniteScroll {
     // prepare gallery single image
     getElement( data, index ) {
         const element = document.createElement("div");
-
         element.innerHTML = `
             <picture>
                 <img width="250" height="280" data-id="img-${data.image_id}-${index}" class="doatkolom-gallery-image-item lazyloading w-full h-full max-h-[200px] sm:max-h-[280px] object-cover border border-solid border-border rounded-md" src="${data.image_url}" alt="gallery image"/>
