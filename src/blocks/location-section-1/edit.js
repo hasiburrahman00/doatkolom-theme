@@ -13,7 +13,7 @@ export default function Edit({ attributes, setAttributes}) {
     },[])
 
 	return (
-        <div className="max-w-screen-xl px-5 mx-auto py-20">
+        <div className="max-w-screen-xl px-5 mx-auto py-12 md:py-20">
             <div className="grid grid-cols-1 lg:grid-cols-3 items-start lg:gap-4">
                 <div className="lg:pr-14 md:pr-0">
                     <h2 className="m-0 text-title font-weight_tartiary font-primary text-4xl md:text-5xl leading-[50px_!important] lg:leading-[70px_!important]">{attributes.heading}</h2>
