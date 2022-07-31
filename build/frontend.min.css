@@ -102,6 +102,15 @@
 .left-\[-105px\] {
     left: -105px;
 }
+.bottom-0 {
+    bottom: 0px;
+}
+.bottom-\[2px\] {
+    bottom: 2px;
+}
+.bottom-\[-2px\] {
+    bottom: -2px;
+}
 .z-50 {
     z-index: 50;
 }
@@ -286,6 +295,15 @@
 .mt-12 {
     margin-top: 3rem;
 }
+.mt-56 {
+    margin-top: 14rem;
+}
+.mb-16 {
+    margin-bottom: 4rem;
+}
+.mb-32 {
+    margin-bottom: 8rem;
+}
 .box-border {
     box-sizing: border-box;
 }
@@ -462,6 +480,9 @@
 }
 .w-\[400px\] {
     width: 400px;
+}
+.w-\[100\%\] {
+    width: 100%;
 }
 .min-w-\[40px\] {
     min-width: 40px;
@@ -988,6 +1009,22 @@
     padding-top: 7rem;
     padding-bottom: 7rem;
 }
+.px-48 {
+    padding-left: 12rem;
+    padding-right: 12rem;
+}
+.px-\[260px\] {
+    padding-left: 260px;
+    padding-right: 260px;
+}
+.px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+.px-\[312px\] {
+    padding-left: 312px;
+    padding-right: 312px;
+}
 .pb-8 {
     padding-bottom: 2rem;
 }
@@ -1026,6 +1063,9 @@
 }
 .pb-10 {
     padding-bottom: 2.5rem;
+}
+.pb-16 {
+    padding-bottom: 4rem;
 }
 .text-left {
     text-align: left;
@@ -1101,6 +1141,9 @@
 }
 .leading-\[50px_\!important\] {
     line-height: 50px !important;
+}
+.leading-\[70px\] {
+    line-height: 70px;
 }
 .text-title {
     color: var(--doatkolom_title_color);
@@ -1773,6 +1816,9 @@ body::-webkit-scrollbar-thumb:hover {
     .sm\:w-auto {
         width: auto;
     }
+    .sm\:w-\[auto\] {
+        width: auto;
+    }
     .sm\:max-w-\[470px_\!important\] {
         max-width: 470px !important;
     }
@@ -1832,6 +1878,10 @@ body::-webkit-scrollbar-thumb:hover {
     .sm\:py-24 {
         padding-top: 6rem;
         padding-bottom: 6rem;
+    }
+    .sm\:px-\[200px\] {
+        padding-left: 200px;
+        padding-right: 200px;
     }
     .sm\:text-right {
         text-align: right;
@@ -2021,6 +2071,10 @@ body::-webkit-scrollbar-thumb:hover {
     .md\:px-14 {
         padding-left: 3.5rem;
         padding-right: 3.5rem;
+    }
+    .md\:px-\[312px\] {
+        padding-left: 312px;
+        padding-right: 312px;
     }
     .md\:pb-0 {
         padding-bottom: 0px;
@@ -2254,6 +2308,10 @@ body::-webkit-scrollbar-thumb:hover {
         padding-left: 0px;
         padding-right: 0px;
     }
+    .lg\:px-\[312px\] {
+        padding-left: 312px;
+        padding-right: 312px;
+    }
     .lg\:pr-7 {
         padding-right: 1.75rem;
     }
@@ -2299,5 +2357,12 @@ body::-webkit-scrollbar-thumb:hover {
         --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
         --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
         box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    }
+}
+
+@media (min-width: 1280px) {
+    .xl\:px-\[312px\] {
+        padding-left: 312px;
+        padding-right: 312px;
     }
 }
