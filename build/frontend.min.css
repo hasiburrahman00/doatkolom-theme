@@ -1099,18 +1099,6 @@
 .leading-\[40px\] {
     line-height: 40px;
 }
-.leading-\[70px\] {
-    line-height: 70px;
-}
-.leading-\[90px\] {
-    line-height: 90px;
-}
-.leading-\[70px_\!important\] {
-    line-height: 70px !important;
-}
-.leading-\[40px_\!important\] {
-    line-height: 40px !important;
-}
 .leading-\[50px_\!important\] {
     line-height: 50px !important;
 }
@@ -2095,9 +2083,6 @@ body::-webkit-scrollbar-thumb:hover {
     }
     .md\:leading-14 {
         line-height: 56px;
-    }
-    .md\:leading-\[50px_\!important\] {
-        line-height: 50px !important;
     }
     .md\:opacity-50 {
         opacity: 0.5;

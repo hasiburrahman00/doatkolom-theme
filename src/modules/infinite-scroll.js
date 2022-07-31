@@ -40,7 +40,7 @@ export default class InfiniteScroll {
 
         // load next after after scolling to the bottom
         Helper.onScroll(()=> {
-            const end = self.getGalleryEnd.bind(self);
+            const end = self.getGalleryEnd.call(self);
             if ( self.loading.size !== 0 || scrollY < end || self.currentPage >= self.totalPage ) return;
             self.loadNextBatch();
         })
@@ -49,7 +49,7 @@ export default class InfiniteScroll {
 
     //gallery end position
     getGalleryEnd() {
-        return (this.$root.outerHeight() + this.$root.offset().top) - (innerHeight / 2)
+        return (this.$root.outerHeight() + this.$root.offset().top) - (innerHeight ) 
     }
 
     // call api
@@ -68,7 +68,7 @@ export default class InfiniteScroll {
             }
         }
 
-        if( self.currentPage < self.totalPage ) {
+        if( self.currentPage <= self.totalPage ) {
             self.$root.append( self.skeleton );
         } else {
             self.$root.find('#gallery-loader').remove();
@@ -81,7 +81,7 @@ export default class InfiniteScroll {
             this.classList.add('lazyloaded');
             self.loading.delete( this.dataset.id );
 
-            const end = self.getGalleryEnd.bind(self);
+            const end = self.getGalleryEnd.call(self);
             if( self.loading.size === 0 && scrollY > end ) {
                 self.loadNextBatch();
             }
