@@ -24,7 +24,7 @@ export default function Style({attributes, wrapper}){
             height: 100%;
         }
 
-        @media (min-width: 1024px) {
+        @media (min-width: 1350px) {
             ${wrapper} .arrows {
                 display: block;
             }
