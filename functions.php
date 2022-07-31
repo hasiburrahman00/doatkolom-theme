@@ -3,6 +3,7 @@ use DoatKolom\AutoLoader;
 use DoatKolom\Settings;
 use DoatKolom\SettingsApi;
 use DoatKolom\SettingsPublicApi;
+use DoatKolom\Upgrade;
 
 /**
  *
@@ -23,6 +24,7 @@ define( 'DOATKOLOM_BUILD', DOATKOLOM_THEME_URI . '/build/' );
 define( 'DOATKOLOM_FONT', DOATKOLOM_THEME_URI . '/assets/fonts/' );
 define( 'DOATKOLOM_VERSION', '1.0.0' );
 define( 'DOATKOLOM_MINWP_VERSION', '5.0' );
+define( 'DOATKOLOM_UPGRADE_API', 'http://localhost/test-api/' );
 
 
 /*
@@ -42,6 +44,7 @@ $loader->addNamespace( 'DoatKolom', get_stylesheet_directory() . '/app' );
 $loader->addNamespace( 'DoatKolom\Core', get_stylesheet_directory() . '/core' );
 SettingsApi::instance();
 SettingsPublicApi::instance();
+new Upgrade;
 
 $site_logo_url = Settings::instance()->get_attachment_url('institution_logo');
 
