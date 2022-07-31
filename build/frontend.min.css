@@ -1475,16 +1475,6 @@ body::-webkit-scrollbar-thumb:hover {
   transition: opacity 9ms;
 }
 
-.doatkolom-hide {
-  height: 40px !important;
-  overflow: hidden;
-  transition: all lienar 0.2s;
-}
-
-.doatkolom-show {
-  transition: all lienar 0.2s;
-}
-
 .placeholder\:text-primary::-moz-placeholder {
     color: var(--doatkolom_primary_color);
 }

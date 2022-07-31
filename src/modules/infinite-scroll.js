@@ -46,18 +46,6 @@ export default class InfiniteScroll {
         })
     }
 
-    // reduce dom height
-    elementObserver( element ) {
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach( entry => {
-                entry.target.classList.toggle('doatkolom-show', entry.isIntersecting);
-                entry.target.classList.toggle('doatkolom-hide', !entry.isIntersecting);
-            })
-        }, {
-            rootMargin: "200px"
-        })
-        observer.observe(element)
-    }
 
     //gallery end position
     getGalleryEnd() {
@@ -94,8 +82,6 @@ export default class InfiniteScroll {
             this.classList.remove('lazyloading');
             this.classList.add('lazyloaded');
             self.loading.delete( this.dataset.id );
-
-            self.elementObserver( $(this).parents('div')[0] )
 
             const end = self.getGalleryEnd.call(self);
             if( self.loading.size === 0 && scrollY > end ) {
