@@ -14,8 +14,6 @@ export default function GeneralControls({attributes, setAttributes, refreshBlock
                 email: "johirul@uposhonghar.com"
             }
         ]})
-
-        refreshBlock();
     }
 
     const requestDelete = (index)=>{
@@ -23,8 +21,6 @@ export default function GeneralControls({attributes, setAttributes, refreshBlock
         setAttributes({Key_contacts : [
              ...attributes.box_slider
         ]})
-        
-        refreshBlock();
     }
  
     const changeHandler = (val,index,type)=>{
