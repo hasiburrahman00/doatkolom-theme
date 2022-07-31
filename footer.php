@@ -7,13 +7,13 @@
     }
 
 ?>
-<footer class="bg-footer pb-8 md:pb-0">
+<footer class="bg-footer pb-8 lg:pb-0">
     <!-- footer cta -->
     <div class="max-w-screen-lg px-5 sm:px-10 mx-auto relative -top-20 mt-20">
         <?php get_template_part( 'template-parts/doatkolom-footer', 'cta' )?>
     </div>
     <!-- footer middle -->
-    <div class="px-5 max-w-screen-xl mx-auto grid sm:grid-cols-2 gap-5">
+    <div class="px-5 max-w-screen-xl mx-auto grid md:grid-cols-2 gap-5">
         <?php get_template_part( 'template-parts/doatkolom-footer', 'menu' )?>
         <div class="grid sm:grid-cols-2 gap-5">
             <div>
@@ -41,7 +41,7 @@
         </div>
     </div>
     <!-- footer bottom -->
-    <div class="mt-16 hidden md:block px-5">
+    <div class="mt-16 hidden lg:block px-5">
        <div class="max-w-screen-xl mx-auto md:flex justify-between items-center py-4 border-t border-solid border-x-0 border-b-0 border-t-gray">
             <div class="flex items-center space-x-3">
                 <a href="<?php echo esc_url( DOATKOLOM_SITE_URL ) ?>">
