@@ -3,45 +3,45 @@
         "title" => "Explore DoatKolom",
         "menus" => array(
             [
-                "text"=> "eLearning School",
-                "href"=> "#",
+                "text"=> "Dummy URL A",
+                "href"=> "//about.doatkolom.com",
                 "badge"=> "New Feature"
             ],
             [
                 "text"=> "Privacy Policy",
-                "href"=> "#"
+                "href"=> "//about.doatkolom.com"
             ],
             [
-                "text"=> "Courses",
-                "href"=> "#"
+                "text"=> "DEMO URL",
+                "href"=> "//about.doatkolom.com"
             ],
             [
                 "text"=> "Become A Teacher",
-                "href"=> "#"
+                "href"=> "//about.doatkolom.com"
             ],
             [
                 "text"=> "Blog",
-                "href"=> "#"
+                "href"=> "//about.doatkolom.com"
             ],
             [
-                "text"=> "All Courses",
-                "href"=> "#"
+                "text"=> "All Subjects Demo",
+                "href"=> "//about.doatkolom.com"
             ],
             [
                 "text"=> "Web Development",
-                "href"=> "#"
+                "href"=> "//about.doatkolom.com"
             ],
             [
                 "text"=> "General Education",
-                "href"=> "#"
+                "href"=> "//about.doatkolom.com"
             ],
             [
-                "text"=> "Digital Marketing",
-                "href"=> "#"
+                "text"=> "Digital",
+                "href"=> "//about.doatkolom.com"
             ],
             [
                 "text"=> "Web Design",
-                "href"=> "#"
+                "href"=> "//about.doatkolom.com"
             ]
         )
     ];
@@ -52,7 +52,7 @@
     <ul class="grid sm:grid-cols-2 gap-3 list-none">
         <?php foreach( $data['menus'] as $menu ): ?>
         <li>
-            <a class="no-underline font-secondary font-weight_primary text-base text-black hover:underline" href="<?php echo esc_url($menu['href']) ?>">
+            <a target="_blank" class="no-underline font-secondary font-weight_primary text-base text-black hover:underline" href="<?php echo esc_url($menu['href']) ?>">
                 <?php echo esc_html($menu['text']) ?>
             </a>
         </li>

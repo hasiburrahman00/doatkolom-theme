@@ -11,5 +11,5 @@
     </div>
     <a 
         class="inline-block mt-8 font-weight_primary md:mt-0 font-secondary bg-black text-white text-base py-3 px-5 rounded-md no-underline hover:bg-white hover:text-secondary hover:shadow-xl transition duration-200 ease-in" 
-        href="https://about.doatkolom.com/" target="_blank">Explore More</a>
+        href="//about.doatkolom.com/" target="_blank">Explore More</a>
 </div>

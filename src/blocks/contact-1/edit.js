@@ -23,29 +23,29 @@ export default function Edit({ attributes, setAttributes}) {
 	return (
 		<div className="max-w-screen-xl lg:px-8 px-5 mx-auto py-12 md:py-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <form>
+            <form id="doatkolom-contact-form">
                 <div className="form-field">
                     <label className="mb-2 inline-block font-primary text-title text-lg font-weight_primary" For="name">{attributes.name}</label>
-                    <input className="w-[100%_!important] bg-light_gray_!important border-none focus:border-secondary py-[8px_!important] px-[20px_!important] font-primary text-black font-weight_primary text-base" id="name" type="text" />
+                    <input className="w-[100%_!important] bg-light_gray_!important border-none focus:border-secondary py-[8px_!important] px-[20px_!important] font-primary text-black font-weight_primary text-base" name="name" id="name" type="text" />
                 </div>
                 <div className="form-field mt-7">
                     <label className="mb-2 inline-block font-primary text-title text-lg font-weight_primary" For="gmail">{attributes.email}</label>
-                    <input className="w-[100%_!important] bg-light_gray_!important border-none focus:border-secondary py-[8px_!important] px-[20px_!important] font-primary text-black font-weight_primary text-base" id="gmail" type="email" placeholder="mdathikfoisal@gmail.com" />
+                    <input className="w-[100%_!important] bg-light_gray_!important border-none focus:border-secondary py-[8px_!important] px-[20px_!important] font-primary text-black font-weight_primary text-base" name="gmail" id="gmail" type="email" placeholder="mdathikfoisal@gmail.com" />
                 </div>
                 <div className="form-field mt-7">
                     <label className="mb-2 inline-block font-primary text-title text-lg font-weight_primary" For="number">{attributes.number}</label>
-                    <input className="w-[100%_!important] bg-light_gray_!important border-none focus:border-secondary py-[8px_!important] px-[20px_!important] font-primary text-black font-weight_primary text-base" id="number" type="number" />
+                    <input className="w-[100%_!important] bg-light_gray_!important border-none focus:border-secondary py-[8px_!important] px-[20px_!important] font-primary text-black font-weight_primary text-base" name="number" id="number" type="number" />
                 </div>
                 <div className="form-field mt-7">
                     <label className="mb-2 inline-block font-primary text-title text-lg font-weight_primary" For="location">{attributes.location}</label>
-                    <input className="w-[100%_!important] bg-light_gray_!important border-none focus:border-secondary py-[8px_!important] px-[20px_!important] font-primary text-black font-weight_primary text-base" id="location" type="text" />
+                    <input className="w-[100%_!important] bg-light_gray_!important border-none focus:border-secondary py-[8px_!important] px-[20px_!important] font-primary text-black font-weight_primary text-base" name="location" id="location" type="text" />
                 </div>
                 <div className="form-field mt-7">
                     <label className="mb-2 inline-block font-primary text-title text-lg font-weight_primary" For="message">{attributes.message}</label>
-                    <textarea rows="6" className="w-[100%_!important] bg-light_gray border-none focus:border-secondary py-[8px_!important] px-[20px_!important] font-primary text-black font-weight_primary text-base" id="message" type="text" />
+                    <textarea rows="6" className="w-[100%_!important] bg-light_gray border-none focus:border-secondary py-[8px_!important] px-[20px_!important] font-primary text-black font-weight_primary text-base" name="message" id="message" type="text" />
                 </div>
                 <div className="mt-5">
-                    <button type="submit" className="block w-full py-3 border-none rounded-md bg-secondary text-white font-secondary font-weight_primary text-lg cursor-pointer">{attributes.submit}</button>
+                    <button id="form-submit-btn" type="submit" className="block w-full py-3 border-none rounded-md bg-primary hover:bg-primary_dark transition duration-200 ease-linear text-white font-secondary font-weight_primary text-lg cursor-pointer">{attributes.submit}</button>
                 </div>
             </form>
             <div className="rounded-md p-10 bg-light_gray">
@@ -64,8 +64,8 @@ export default function Edit({ attributes, setAttributes}) {
                                 </div>
                                 <div className="max-w-4/5 mt-4 sm:ml-5 sm:mt-0">
                                     <h4 className="m-0 font-primary text-title text-lg font-weight_tertiary">{item.name}</h4>
-                                    <a href="#" className="text-black font-secondary font-weight_primary text-base no-underline hover:text-black block focus:shadow-none">{item.phone}</a>
-                                    <a href="#" className="text-black font-secondary font-weight_primary text-base no-underline hover:text-black block focus:shadow-none">{item.email}</a>
+                                    <span className="text-black font-secondary font-weight_primary text-base no-underline hover:text-black block focus:shadow-none">{item.phone}</span>
+                                    <span className="text-black font-secondary font-weight_primary text-base no-underline hover:text-black block focus:shadow-none">{item.email}</span>
                                 </div>
                             </div>
                         ))

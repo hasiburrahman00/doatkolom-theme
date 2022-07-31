@@ -257,7 +257,7 @@ class Settings
                     'doatkolom_primary_light_color'      => [
                         'type'    => 'color',
                         'label'   => esc_html__( 'Primary light', 'doatkolom' ),
-                        'default' => isset( $this->settings['doatkolom_primary_light_color'] ) ? $this->settings['doatkolom_primary_light_color'] : '#0036461a'
+                        'default' => $this->getSettingDbValue( 'doatkolom_primary_light_color', '#E5EBEC' )
                     ],
                     'doatkolom_primary_dark_color'       => [
                         'type'    => 'color',
