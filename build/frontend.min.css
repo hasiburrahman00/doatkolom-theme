@@ -102,12 +102,6 @@
 .left-\[-105px\] {
     left: -105px;
 }
-.bottom-0 {
-    bottom: 0px;
-}
-.bottom-\[2px\] {
-    bottom: 2px;
-}
 .bottom-\[-2px\] {
     bottom: -2px;
 }
@@ -294,12 +288,6 @@
 }
 .mt-12 {
     margin-top: 3rem;
-}
-.mt-56 {
-    margin-top: 14rem;
-}
-.mb-16 {
-    margin-bottom: 4rem;
 }
 .mb-32 {
     margin-bottom: 8rem;
@@ -519,6 +507,12 @@
 }
 .max-w-\[785px\] {
     max-width: 785px;
+}
+.max-w-\[560px\] {
+    max-width: 560px;
+}
+.max-w-\[450px\] {
+    max-width: 450px;
 }
 .flex-auto {
     flex: 1 1 auto;
@@ -1009,21 +1003,9 @@
     padding-top: 7rem;
     padding-bottom: 7rem;
 }
-.px-48 {
-    padding-left: 12rem;
-    padding-right: 12rem;
-}
-.px-\[260px\] {
-    padding-left: 260px;
-    padding-right: 260px;
-}
 .px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-}
-.px-\[312px\] {
-    padding-left: 312px;
-    padding-right: 312px;
 }
 .pb-8 {
     padding-bottom: 2rem;
@@ -1066,6 +1048,15 @@
 }
 .pb-16 {
     padding-bottom: 4rem;
+}
+.pb-12 {
+    padding-bottom: 3rem;
+}
+.pt-12 {
+    padding-top: 3rem;
+}
+.pb-3 {
+    padding-bottom: 0.75rem;
 }
 .text-left {
     text-align: left;
@@ -1142,8 +1133,14 @@
 .leading-\[50px_\!important\] {
     line-height: 50px !important;
 }
-.leading-\[70px\] {
-    line-height: 70px;
+.leading-\[1\.5\] {
+    line-height: 1.5;
+}
+.leading-\[3\] {
+    line-height: 3;
+}
+.leading-\[1\.8\] {
+    line-height: 1.8;
 }
 .text-title {
     color: var(--doatkolom_title_color);
@@ -1879,10 +1876,6 @@ body::-webkit-scrollbar-thumb:hover {
         padding-top: 6rem;
         padding-bottom: 6rem;
     }
-    .sm\:px-\[200px\] {
-        padding-left: 200px;
-        padding-right: 200px;
-    }
     .sm\:text-right {
         text-align: right;
     }
@@ -2002,6 +1995,9 @@ body::-webkit-scrollbar-thumb:hover {
     .md\:w-52 {
         width: 13rem;
     }
+    .md\:max-w-\[560px\] {
+        max-width: 560px;
+    }
     .md\:grid-cols-3 {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
@@ -2072,10 +2068,6 @@ body::-webkit-scrollbar-thumb:hover {
         padding-left: 3.5rem;
         padding-right: 3.5rem;
     }
-    .md\:px-\[312px\] {
-        padding-left: 312px;
-        padding-right: 312px;
-    }
     .md\:pb-0 {
         padding-bottom: 0px;
     }
@@ -2090,6 +2082,12 @@ body::-webkit-scrollbar-thumb:hover {
     }
     .md\:pl-8 {
         padding-left: 2rem;
+    }
+    .md\:pb-20 {
+        padding-bottom: 5rem;
+    }
+    .md\:text-left {
+        text-align: left;
     }
     .md\:text-3xl {
         font-size: 1.875rem;
@@ -2308,10 +2306,6 @@ body::-webkit-scrollbar-thumb:hover {
         padding-left: 0px;
         padding-right: 0px;
     }
-    .lg\:px-\[312px\] {
-        padding-left: 312px;
-        padding-right: 312px;
-    }
     .lg\:pr-7 {
         padding-right: 1.75rem;
     }
@@ -2326,6 +2320,9 @@ body::-webkit-scrollbar-thumb:hover {
     }
     .lg\:pr-48 {
         padding-right: 12rem;
+    }
+    .lg\:pb-0 {
+        padding-bottom: 0px;
     }
     .lg\:text-right {
         text-align: right;
