@@ -1099,6 +1099,9 @@
 .leading-\[40px\] {
     line-height: 40px;
 }
+.leading-\[50px_\!important\] {
+    line-height: 50px !important;
+}
 .text-title {
     color: var(--doatkolom_title_color);
 }
