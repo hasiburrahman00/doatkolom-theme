@@ -350,13 +350,18 @@ class Settings
             'doatkolom_auth_tab' => [
                 'title'  => esc_html__( 'Authentication and Token Settings', 'doatkolom' ),
                 'fields' => [
-                    'auth_token' => [
+                    'auth_token'       => [
                         'type'    => 'auth',
                         'label'   => esc_html__( 'Authentication Token', 'doatkolom' ),
                         'default' => isset( $this->settings['auth_token'] ) ? $this->settings['auth_token'] : [
                             'token'   => '',
                             'isvalid' => false
                         ]
+                    ],
+                    'contact_form7_id' => [
+                        'type'    => 'text',
+                        'label'   => esc_html__( 'Contact Form 7 Id', 'doatkolom' ),
+                        'default' => isset( $this->settings['contact_form7_id'] ) ? $this->settings['contact_form7_id'] : ''
                     ]
                 ]
             ]
