@@ -25,7 +25,7 @@ Repeater.Item = props => (
         </div>
         <PanelBody className="bg-white border border-solid border-border" title={props?.title.substring(0,60)} initialOpen={ false }>
             <PanelRow>
-                <div className="py-5 w-full space-y-5">
+                <div className="p-5 w-full space-y-5">
                     {props.children}
                 </div>
             </PanelRow>
