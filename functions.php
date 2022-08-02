@@ -44,7 +44,7 @@ $loader->addNamespace( 'DoatKolom', get_stylesheet_directory() . '/app' );
 $loader->addNamespace( 'DoatKolom\Core', get_stylesheet_directory() . '/core' );
 SettingsApi::instance();
 SettingsPublicApi::instance();
-new Upgrade;
+// new Upgrade;
 
 $site_logo_url = Settings::instance()->get_attachment_url('institution_logo');
 
