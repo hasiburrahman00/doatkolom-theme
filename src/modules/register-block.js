@@ -62,16 +62,17 @@ export default class RegisterBlock {
 
     BlockWrapperEditor(props) {
 
-        const { Modal, TabPanel, ToolbarButton, ToolbarGroup } = wp.components;
+        const { Modal, TabPanel, ToolbarButton, ToolbarGroup, PanelBody } = wp.components;
         const { BlockControls} = wp.blockEditor;
         const { Fragment } = wp.element;
-        const header = props.self.controls.map( item => {
+        const header = props.self.controls.map( (item, index) => {
             return {
-                ...item,
-                name: item.component.name
+                title       : item.title,
+                name        : `tab${index+1}`,
+                className   : `tab-${index+1}`,
+                component   : item.component
             }
         } )
-
 
         return(
             <Fragment>
@@ -87,9 +88,16 @@ export default class RegisterBlock {
                             className="flex doatkolom-editor-tab"
                             activeClass="is-active"
                             orientation="vertical"
+                            initialTabName="tab1"
                             tabs={ header }
                         >
-                            {tab => <tab.component {...props}/>}
+                            { tab => {
+                                return (
+                                    <PanelBody style={{padding: 0, border: 0}}>
+                                        <tab.component {...props}/>
+                                    </PanelBody>
+                                )
+                            }}
                         </TabPanel>
                     </Modal>
                 }

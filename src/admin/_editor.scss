@@ -41,6 +41,11 @@
   .components-tab-panel__tab-content {
     width: 100%;
   }
+
+  .components-panel__body.is-opened {
+    padding: 0 !important;
+    border: 0 !important;
+  }
 }
 
 .doatkolom-repeater {
