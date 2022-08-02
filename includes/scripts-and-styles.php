@@ -61,7 +61,7 @@ add_action( 'wp_enqueue_scripts', function () {
 		if ( is_user_logged_in() ) return $tag; //don't break WP Admin
 		if ( FALSE === strpos( $tag, '.js' ) ) return $tag;
 		// if ( strpos( $tag, 'jquery.js' ) ) return $tag;
-
+		error_log($tag);
 		return str_replace( ' src', ' defer src', $tag );
 	}
 
