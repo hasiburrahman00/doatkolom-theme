@@ -1,5 +1,9 @@
 <?php
+
+defined( 'ABSPATH' ) || exit;
+
 use DoatKolom\AutoLoader;
+use DoatKolom\Contact;
 use DoatKolom\Settings;
 use DoatKolom\SettingsApi;
 use DoatKolom\SettingsPublicApi;
@@ -25,7 +29,7 @@ define( 'DOATKOLOM_FONT', DOATKOLOM_THEME_URI . '/assets/fonts/' );
 define( 'DOATKOLOM_VERSION', '1.0.0.101' );
 define( 'DOATKOLOM_MINWP_VERSION', '5.0' );
 define( 'DOATKOLOM_UPGRADE_API', 'https://www.demo.doatkolom.com/wp-json/doatkolom-theme/info' );
-
+define( 'DOATKOLOM_CONTACT_POST_TYPE', 'doatkolom-contact' );
 
 /*
  * Set up our auto loading class and mapping our namespace to the app directory.
@@ -44,9 +48,13 @@ $loader->addNamespace( 'DoatKolom', get_stylesheet_directory() . '/app' );
 $loader->addNamespace( 'DoatKolom\Core', get_stylesheet_directory() . '/core' );
 SettingsApi::instance();
 SettingsPublicApi::instance();
-// new Upgrade;
 
-$site_logo_url = Settings::instance()->get_attachment_url('institution_logo');
+if ( is_admin() ) {
+    new Upgrade;
+    new Contact;
+}
+
+$site_logo_url = Settings::instance()->get_attachment_url( 'institution_logo' );
 
 define( 'DOATKOLOM_LOGO', $site_logo_url );
 
@@ -56,9 +64,3 @@ include_once get_stylesheet_directory() . '/includes/theme-support.php';
 include_once get_stylesheet_directory() . '/includes/scripts-and-styles.php';
 include_once get_stylesheet_directory() . '/includes/block-scripts.php';
 include_once get_stylesheet_directory() . '/includes/admin-menu.php';
-
-// error_log(print_r(doatkolom_app()->css_variables(), true));
-
-// get_rest_url( '', '' ) . 'doatkolom-theme/v1/settings/setting_fields';
-
-// delete_option(\DoatKolom\Settings::GALLERY_KEY);

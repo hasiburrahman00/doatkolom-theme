@@ -2,6 +2,8 @@
 
 namespace DoatKolom;
 
+defined( 'ABSPATH' ) || exit;
+
 class Upgrade
 {
     public function __construct()
@@ -61,7 +63,7 @@ class Upgrade
         ) {
             $transient->response[$stylesheet] = $data;
         } else {
-            $transient->no_update[$stylesheet] = $data;
+            // $transient->no_update[$stylesheet] = $data;
         }
 
         return $transient;
