@@ -26,7 +26,7 @@ define( 'DOATKOLOM_IMG', DOATKOLOM_THEME_URI . '/assets/img/' );
 define( 'DOATKOLOM_BLOCKS', DOATKOLOM_THEME_URI . '/blocks/' );
 define( 'DOATKOLOM_BUILD', DOATKOLOM_THEME_URI . '/build/' );
 define( 'DOATKOLOM_FONT', DOATKOLOM_THEME_URI . '/assets/fonts/' );
-define( 'DOATKOLOM_VERSION', '1.0.0.101' );
+define( 'DOATKOLOM_VERSION', '1.0.0' );
 define( 'DOATKOLOM_MINWP_VERSION', '5.0' );
 define( 'DOATKOLOM_UPGRADE_API', 'https://www.demo.doatkolom.com/wp-json/doatkolom-theme/info' );
 define( 'DOATKOLOM_CONTACT_POST_TYPE', 'doatkolom-contact' );
