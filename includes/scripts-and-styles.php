@@ -10,6 +10,7 @@ add_action( 'wp_enqueue_scripts', function () {
         array( 
 			'wp_json'       => get_rest_url( '', '' ),
 			'api_version'   => 'v1',
+			'uri'			=> DOATKOLOM_THEME_URI,
 			'prefix'        => DOATKOLOM_POST_TYPE,
         )
     );

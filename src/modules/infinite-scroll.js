@@ -1,20 +1,21 @@
 import Helper from "../utils/Helper";
-const $ = window.jQuery;
 
+const $ = window.jQuery;
+const worker = new Worker(doatkolom_object.uri + "/assets/js/image-worker.js");
 export default class InfiniteScroll {
     
     constructor() {
         const self          = this;
         self.$root          = $('#doatkolom-photo-gallery-root');
         self.currentPage    = 0;
-        self.totalPage      = 1;
+        self.totalPage      = 0;
         self.perPage        = 6;
         self.version        = doatkolom_object.api_version;
         self.base           = doatkolom_object.wp_json;
         self.prefix         = doatkolom_object.prefix;
         self.api_url        = self.base + self.prefix + '/' + self.version + '/settings/galleries';
         self.data           = [];
-        self.loading        = new Set();
+        self.loading        = false;
 
         if( self.$root.length === 0 ) return;
 
@@ -24,8 +25,9 @@ export default class InfiniteScroll {
                 self.totalPage  = Math.ceil(data.data.length / self.perPage);
                 self.data       = data.data;
                 self.skeleton   = self.$root.find('#gallery-loader').clone();
-                self.$root.find('#gallery-loader').remove();
-                self.loadNextBatch();
+                if( data.data.length > 0 ) {
+                    self.loadNextBatch();
+                }
             },
 
             error(xhr) {
@@ -41,7 +43,7 @@ export default class InfiniteScroll {
         // load next after after scolling to the bottom
         Helper.onScroll(()=> {
             const end = self.getGalleryEnd.call(self);
-            if ( self.loading.size !== 0 || scrollY < end || self.currentPage >= self.totalPage ) return;
+            if ( self.loading || scrollY < end || self.currentPage >= self.totalPage ) return;
             self.loadNextBatch();
         })
     }
@@ -56,48 +58,56 @@ export default class InfiniteScroll {
     loadNextBatch() {
         const self = this;
         self.currentPage++
-
-        const start = (self.currentPage - 1) * self.perPage;
-        const end   = (self.currentPage * self.perPage) - 1;
-
-        for( let i = start; i <= end; i++ ) {
-            if( self.data[i] ) {
-                self.loading.add( `img-${self.data[i].image_id}-${i}` );
-                const element = self.getElement(self.data[i], i);
-                self.$root.append(element);
-            }
-        }
-
-        if( self.currentPage <= self.totalPage ) {
+        self.loading    = true;
+        const start     = (self.currentPage - 1) * self.perPage;
+        const end       = (self.currentPage * self.perPage) - 1;
+        
+        if( this.currentPage > 1 ) {
             self.$root.append( self.skeleton );
-        } 
-
-        if( self.currentPage >= self.totalPage && self.currentPage !== 1) {
-            self.$root.find('#gallery-loader').remove();
         }
 
-        // load next batch after current image loading
-        $('.doatkolom-gallery-image-item').on('load', function() {
-                    
-            this.classList.remove('lazyloading');
-            this.classList.add('lazyloaded');
-            self.loading.delete( this.dataset.id );
+        worker.postMessage({
+            data: self.data, start, end
+        });
 
-            const end = self.getGalleryEnd.call(self);
-            if( self.loading.size === 0 && scrollY > end ) {
-                self.loadNextBatch();
+        worker.onmessage = async (e) => {
+            self.$root.find('#gallery-loader').remove();
+            if( e.data.length > 0 ) {
+                self.loading = false;
             }
-        })
+
+            e.data.map( blobImage => {
+                self.createImage( blobImage, img => {
+                    self.$root.append(img);
+                })
+            })
+
+           setTimeout(() => {
+                const galleryEnd = self.getGalleryEnd.call(self);
+                if( !self.loading && galleryEnd > 0 && scrollY > galleryEnd ) {
+                    self.loadNextBatch();
+                }
+           }, 10);
+            
+        }
     }
 
     // prepare gallery single image
-    getElement( data, index ) {
-        const element = document.createElement("div");
-        element.innerHTML = `
-            <picture>
-                <img width="250" height="280" data-id="img-${data.image_id}-${index}" class="doatkolom-gallery-image-item lazyloading w-full h-full max-h-[200px] sm:max-h-[280px] object-cover border border-solid border-border rounded-md" src="${data.image_url}" alt="gallery image"/>
-            </picture>
-        `
-        return element;
+    createImage(url, afterloading) {
+        const img = new Image();
+        img.onload = () => {
+            const div = document.createElement("div");
+            const 
+                picture = document.createElement("picture");
+                picture.appendChild(img);
+                div.appendChild(picture);
+                afterloading(div);
+        };
+        
+        img.src         = url;
+        img.width       = 250
+        img.height      = 280
+        img.classList   = "w-full h-full max-h-[200px] sm:max-h-[280px] object-cover border border-solid border-border rounded-md";
+        img.alt         = ""
     }
 }
