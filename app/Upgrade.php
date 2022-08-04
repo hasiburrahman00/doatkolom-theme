@@ -62,8 +62,8 @@ class Upgrade
              && version_compare( $data['requires_php'], PHP_VERSION, '<' )
         ) {
             $transient->response[$stylesheet] = $data;
-        } else {
-            // $transient->no_update[$stylesheet] = $data;
+        } elseif(is_array($transient->no_update)) {
+            $transient->no_update[$stylesheet] = $data;
         }
 
         return $transient;
