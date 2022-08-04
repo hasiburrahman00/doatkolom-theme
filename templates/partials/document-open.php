@@ -14,6 +14,24 @@
 	<meta name="keywords" content="<?php echo esc_html(get_doatkolom_theme_setting('site_keywords')) ?>">
 	<title><?php echo esc_html(get_doatkolom_theme_setting('site_title')) ?> | <?php echo esc_html(get_doatkolom_theme_setting('site_description')) ?></title>
 	<link rel="shortcut icon" href="<?php echo esc_url( $favicon ) ?>" type="image/x-icon">
+	<style>
+		@font-face {
+			font-family: "Shurjo";
+			src:local('Shurjo'),
+				url("<?php echo esc_url(DOATKOLOM_FONT) . 'ShurjoWeb_400.woff2' ?>") format('truetype');
+			font-weight: 400;
+			font-style: normal;
+			font-display: swap;
+		}
+		@font-face {
+			font-family: "Shurjo";
+			src: local('Shurjo'),
+				url("<?php echo esc_url(DOATKOLOM_FONT) . 'ShurjoWeb_700.woff2' ?>") format('truetype');
+			font-weight: 700;
+			font-style: normal;
+			font-display: swap;
+		}
+	</style>
 	<?php wp_head() ?>
 </head>
 <body <?php body_class() ?>>
