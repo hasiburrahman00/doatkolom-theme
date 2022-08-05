@@ -14,6 +14,15 @@ function gutenberg_enqueue() {
         )
     );
 
+    wp_localize_script( 'doatkolom-frontend', 'doatkolom_object',
+        array( 
+			'wp_json'       => get_rest_url( '', '' ),
+			'api_version'   => 'v1',
+			'uri'			=> DOATKOLOM_THEME_URI,
+			'prefix'        => DOATKOLOM_POST_TYPE,
+        )
+    );
+
     $spectral_regular = DOATKOLOM_FONT . 'Spectral-Regular.ttf';
 	$spectral_bold	  = DOATKOLOM_FONT . 'Spectral-Bold.ttf';
 	$abrilFatface	  = DOATKOLOM_FONT . 'AbrilFatface-Regular.ttf';

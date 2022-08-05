@@ -10,4 +10,6 @@ class TextInputField extends HTMLElement {
     }
 }
 
-customElements.define('doatkolom-input-text', TextInputField);
+if( !customElements.get( 'doatkolom-input-text' ) ) {
+    customElements.define('doatkolom-input-text', TextInputField);
+}
