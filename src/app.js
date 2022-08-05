@@ -1,3 +1,4 @@
+import './web-components';
 import ReactTemplateMount from './config';
 import { Routes, Route } from 'react-router-dom';
 import { FrontendContextProvider } from './context';

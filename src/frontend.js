@@ -1,4 +1,5 @@
 import './lib/lazysizes';
+import './web-components';
 import Header from "./modules/header";
 import Helper from './utils/Helper';
 import honorableTeachers1 from './blocks/honorable-teachers-1/script';

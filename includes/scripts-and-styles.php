@@ -36,7 +36,7 @@ add_action( 'wp_enqueue_scripts', function () {
 	 */
 	$breadcrumb_image = DOATKOLOM_IMG . 'breadcrumb.webp';
 
-	if ( has_post_thumbnail() ) {
+	if ( has_post_thumbnail() && !is_home() ) {
 		$breadcrumb_image = get_the_post_thumbnail_url(get_the_ID(), 'full');
 	}
 

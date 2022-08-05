@@ -82,32 +82,24 @@ export default class InfiniteScroll {
                 })
             })
 
-           setTimeout(() => {
+            setTimeout(() => {
                 const galleryEnd = self.getGalleryEnd.call(self);
                 if( !self.loading && galleryEnd > 0 && scrollY > galleryEnd ) {
                     self.loadNextBatch();
                 }
-           }, 10);
+            }, 10);
             
         }
     }
 
     // prepare gallery single image
     createImage(url, afterloading) {
-        const img = new Image();
-        img.onload = () => {
-            const div = document.createElement("div");
-            const 
-                picture = document.createElement("picture");
-                picture.appendChild(img);
-                div.appendChild(picture);
-                afterloading(div);
-        };
-        
-        img.src         = url;
-        img.width       = 250
-        img.height      = 280
-        img.classList   = "w-full h-full max-h-[200px] sm:max-h-[280px] object-cover border border-solid border-border rounded-md";
-        img.alt         = ""
+        afterloading(`
+            <div>
+                <picture>
+                    <img src="${url}" width="250" height="280" alt="" class="w-full h-full max-h-[200px] sm:max-h-[280px] object-cover border border-solid border-border rounded-md"/>
+                </picture>
+            </div>
+        `)
     }
 }

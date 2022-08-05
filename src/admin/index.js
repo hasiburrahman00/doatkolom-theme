@@ -1,4 +1,5 @@
 import './../lib/lazysizes';
+import '../web-components';
 import { Routes, Route } from 'react-router-dom';
 import { AdminContextProvider } from './context';
 import { SnackbarProvider } from 'notistack'
