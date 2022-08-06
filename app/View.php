@@ -1,6 +1,6 @@
 <?php
 
-namespace Doatkolom;
+namespace DoatKolom;
 
 class View {
 
@@ -106,14 +106,18 @@ class View {
 	 * show article title
 	 * 
 	 */
-	public static function article_title( string $classes = '', $title_length = 10 ) {
-		?>
-		<a href="<?php the_permalink(); ?>" class="<?php echo esc_attr($classes) ?>">
-			<?php
-				echo wp_trim_words( get_the_title(), $title_length, null ) 
-			?>
-		</a>  
-		<?php
+	public static function article_title( $title_length = 20 ) {
+		echo wp_trim_words( get_the_title(), $title_length, null );
+	}
+
+	public static function excerpt( int $words = 43 ) {
+		$excerpt		 = get_the_excerpt();
+		$trimmed_content = wp_trim_words( $excerpt, $words );
+
+		if( !empty( $trimmed_content ) ) {
+			echo $trimmed_content;
+		}
+
 	}
 
 	/**
@@ -122,7 +126,7 @@ class View {
 	 * @since 1.0.0
 	 * 
 	 */
-	public static function author_name ( string $classes = '' ) {
+	public static function author_name ( string $classes = 'text-gray-2 no-underline font-secondary text-base hover:text-primary' ) {
 		?>
 			<a 
 				href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) ?>"
@@ -140,7 +144,7 @@ class View {
 	 * 
 	 */ 
 
-	 public static function categories( $limit = false ) {
+	 public static function categories( $class = '', $limit = false ) {
 
 		$category_list = get_the_category();
 		
@@ -151,20 +155,23 @@ class View {
 		foreach( $category_list as $k => $cat ):
 			if( $k < $limit ) {
 				?>
-				<a href="<?php echo esc_url(get_category_link($cat->term_id)) ?>">
-					<?php 
-						echo esc_html( $cat->name );
-						echo $k === $limit - 1 ? '' :  esc_html(','); 
-					?>
-				</a>
+					<a  
+						class="<?php echo esc_attr($class) ?>" 
+						href="<?php echo esc_url(get_category_link($cat->term_id)) ?>">
+						<?php echo esc_html( $cat->name )?>
+					</a>
 				<?php 
-			} 
+			}
 		endforeach;
 	}
 
 	public static function date ( string $classes = '' ) {
 		if( get_post_type() === 'post' ) : 
-		echo get_the_date();
+		?>
+			<span class="text-gray-2 font-secondary text-base">
+				<?php echo get_the_date(); ?>
+			</span>
+		<?php 
 		endif;
 	}
 
@@ -201,7 +208,7 @@ class View {
 		return $output;
 	}
 
-	public static function thumbnail( $attr = '', $size = 'post-thumbnail' ) {
+	public static function thumbnail( $attr = '', $size = '' ) {
 		if(  has_post_thumbnail() ) {
 			echo get_the_post_thumbnail( null, $size, $attr );
 		}

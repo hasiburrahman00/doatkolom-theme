@@ -36,7 +36,7 @@ add_action( 'wp_enqueue_scripts', function () {
 	 */
 	$breadcrumb_image = DOATKOLOM_IMG . 'breadcrumb.webp';
 
-	if ( has_post_thumbnail() && !is_home() ) {
+	if ( has_post_thumbnail() && !is_home() && !is_archive() ) {
 		$breadcrumb_image = get_the_post_thumbnail_url(get_the_ID(), 'full');
 	}
 
@@ -62,7 +62,6 @@ add_action( 'wp_enqueue_scripts', function () {
 		if ( is_user_logged_in() ) return $tag; //don't break WP Admin
 		if ( FALSE === strpos( $tag, '.js' ) ) return $tag;
 		// if ( strpos( $tag, 'jquery.js' ) ) return $tag;
-		error_log($tag);
 		return str_replace( ' src', ' defer src', $tag );
 	}
 
