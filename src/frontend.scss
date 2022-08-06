@@ -82,3 +82,12 @@ body::-webkit-scrollbar-thumb {
       @apply no-underline transition duration-200 ease-linear rounded-lg bg-white text-black text-base font-secondary border border-solid border-border px-3 py-1.5 hover:bg-primary hover:text-white hover:border-primary
   }
 }
+
+.doatkolom-category {
+  li {
+    @apply flex items-center space-x-2 border-b border-solid border-border border-x-0 border-t-0 last:border-b-0;
+  }
+  a {
+      @apply font-secondary hover:text-primary transition duration-200 block py-1.5 text-base no-underline text-black;
+  }
+}

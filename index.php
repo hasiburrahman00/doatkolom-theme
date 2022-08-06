@@ -1,11 +1,16 @@
 <?php
 get_header();
 get_template_part( 'template-parts/breadcrumb');
+if (!defined('ABSPATH')) die('Direct access forbidden.');
 ?>
 <section class="py-10 md:py-14">
     
     <doatkolom-blog-nav class="max-w-screen-xl px-5 pb-8 block mx-auto">
-        <doatkolom-ajax-search class="flex-1"></doatkolom-ajax-search>
+        <doatkolom-ajax-search 
+            value="<?php echo esc_attr(isset($_GET['s']) ? $_GET['s'] : '') ?>" 
+            action="<?php echo esc_url(DOATKOLOM_SITE_URL) ?>" 
+            class="flex-1">
+        </doatkolom-ajax-search>
         <doatkolom-category-slider>
             <?php
                 wp_list_categories([
@@ -31,7 +36,7 @@ get_template_part( 'template-parts/breadcrumb');
         ?>
     </main>
 
-    <div class="flex justify-center px-5">
+    <div class="flex sm:justify-center px-5">
         <?php 
             get_template_part( 'template-parts/pagination' );
         ?>

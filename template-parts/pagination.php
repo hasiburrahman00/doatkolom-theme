@@ -26,7 +26,7 @@ if ( ( $paged + 2 ) <= $max ) {
     $links[] = $paged + 1;
 }
 
-echo '<ul class="list-none flex flex-wrap items-center mt-10 md:mt-14 gap-3">' . "\n";
+echo '<ul class="list-none flex flex-wrap items-center mt-10 gap-3">' . "\n";
 
 // previous Post Link
 if ( get_previous_posts_link() ){
