@@ -210,7 +210,11 @@ class View {
 
 	public static function thumbnail( $attr = '', $size = '' ) {
 		if(  has_post_thumbnail() ) {
-			echo get_the_post_thumbnail( null, $size, $attr );
+			?>
+				<picture>
+					<img width="500" height="350" class="lazyload <?php echo esc_attr($attr) ?>" data-src="<?php echo esc_url(self::attachment()) ?>" alt="thumbnail">
+				</picture>
+			<?php 
 		}
 	}
 

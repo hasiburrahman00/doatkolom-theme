@@ -1,7 +1,7 @@
 <?php
+if (!defined('ABSPATH')) die('Direct access forbidden.');
 get_header();
 get_template_part( 'template-parts/breadcrumb');
-if (!defined('ABSPATH')) die('Direct access forbidden.');
 ?>
 <section class="py-10 md:py-14">
 

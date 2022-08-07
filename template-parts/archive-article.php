@@ -12,7 +12,7 @@ if (!defined('ABSPATH')) die('Direct access forbidden.');
     <?php if(has_post_thumbnail()): ?>
     <a href="<?php the_permalink(); ?>">
         <figure class="relative overflow-hidden">
-            <?php View::thumbnail(['class' => 'w-full object-cover h-[200px] md:h-[250px] rounded-lg']) ?>
+            <?php View::thumbnail('w-full object-cover h-[200px] md:h-[250px] rounded-lg') ?>
             <div class="flex gap-2 absolute bottom-4 left-1">
                 <?php View::categories('inline-block text-[12px] font-secondary no-underline odd:bg-primary opacity-90 hover:opacity-100 even:bg-[#972fff] text-white px-3 py-1 rounded-full', 2); ?>
             </div>
