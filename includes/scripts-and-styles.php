@@ -24,8 +24,6 @@ add_action( 'wp_enqueue_scripts', function () {
 		wp_enqueue_script('doatkolom-app', DOATKOLOM_BUILD . 'app.min.js', ['jquery'], DOATKOLOM_VERSION, false);
 	}
 
-	wp_dequeue_style( 'global-styles' );
-
 	/**
 	 * 
 	 * 
