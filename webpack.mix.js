@@ -21,7 +21,11 @@ mix.browserSync({
     open: true,
     watch: true,
     https: true,
-    files: ['./assets/js/*.js', './assets/css/*.css', './**/*.php'],
+    files: [
+        './resources/scss/**/*.scss', 
+        './resources/typescript/**/*.ts',
+        './**/*.php'
+    ],
     port: 8080,
     proxy: {
         target: 'http://doatkolom.test',

@@ -515,12 +515,15 @@ video {
 .relative {
   position: relative;
 }
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
 .inline-flex {
   display: inline-flex;
 }
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+.max-w-7xl {
+  max-width: 80rem;
 }
 .py-12 {
   padding-top: 3rem;
@@ -543,6 +546,20 @@ video {
 }
 .pt-24 {
   padding-top: 6rem;
+}
+.font-inter {
+  font-family: Inter, sans-serif;
+}
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+.font-semibold {
+  font-weight: 600;
+}
+.text-purple-600 {
+  --tw-text-opacity: 1;
+  color: rgb(147 51 234 / var(--tw-text-opacity));
 }
 @media (min-width: 768px) {
 

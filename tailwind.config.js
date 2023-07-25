@@ -11,8 +11,13 @@ module.exports = {
         '404.php',
         './app/*.php',
         './templates/*.php',
-        './views/*.php',
+        './views/**/*.php',
         './src/**/*.ts',
     ],
+    theme: {
+        fontFamily: {
+            inter: ['Inter', 'sans-serif'],
+        },
+    },
     plugins: [],
 };
