@@ -21,7 +21,7 @@ mix.browserSync({
     open: true,
     watch: true,
     https: true,
-    files: ['./assets/js/*.js', './assets/css/*.css'],
+    files: ['./assets/js/*.js', './assets/css/*.css', './**/*.php'],
     port: 8080,
     proxy: {
         target: 'https://x-currency.test',
