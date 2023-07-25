@@ -24,7 +24,7 @@ mix.browserSync({
     files: ['./assets/js/*.js', './assets/css/*.css', './**/*.php'],
     port: 8080,
     proxy: {
-        target: 'https://x-currency.test',
+        target: 'http://doatkolom.test',
         ws: true,
     },
     cors: false,
