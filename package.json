@@ -5,18 +5,16 @@
         "node": ">=18.0.0 <18.16.0"
     },
     "scripts": {
-        "format": "npx prettier --write .",
+        "format": "npx prettier --write ./resources",
         "dev": "mix",
         "start": "mix watch",
-        "prod": "mix --production",
-        "prepare": "husky install"
+        "prod": "mix --production"
     },
     "devDependencies": {
         "@types/jquery": "3.5.16",
         "@types/node": "20.3.1",
         "browser-sync": "2.29.3",
         "browser-sync-webpack-plugin": "2.3.0",
-        "husky": "8.0.3",
         "laravel-mix": "6.0.49",
         "mix-tailwindcss": "1.3.0",
         "prettier": "2.8.8",
@@ -25,7 +23,6 @@
         "sass-loader": "12.6.0",
         "tailwindcss": "3.3.2",
         "ts-loader": "^9.4.4",
-        "tsconfig-paths-webpack-plugin": "^4.0.1",
         "typescript": "^5.1.6"
     }
 }
