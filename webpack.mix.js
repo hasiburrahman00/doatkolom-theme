@@ -1,20 +1,32 @@
 const mix = require('laravel-mix');
+const path = require('path');
+require('mix-tailwindcss');
 
-mix.options({ 
+mix.options({
     processCssUrls: false,
 });
 
-mix.sass('src/frontend.scss', 'build/frontend.min.css');
-mix.js('src/frontend.js', 'build/frontend.min.js')
-mix.js('src/gutenberg.js', 'build/gutenberg.min.js').react();
-mix.js('src/admin/index.js', 'build/admin.min.js').react();
-mix.js('src/app.js', 'build/app.min.js').react();
+/**
+ * compile tailwindcss
+ */
+mix.sass('src/app.scss', 'dist/css/').tailwind();
+/**
+ * compile typescript
+ */
+mix.ts('src/app.ts', 'dist/js/');
+
+mix.alias({
+    '@': path.join(__dirname, 'src/'),
+});
 
 mix.webpackConfig({
+    watchOptions: {
+        ignored: ['/node_modules/', '/dist/'],
+    },
     externals: {
-        "jquery": "jQuery"
+        jquery: 'jQuery',
     },
     output: {
-        chunkFilename: 'build/chunk/[name].js',
-    }
-})
+        chunkFilename: 'dist/chunk/[name].js',
+    },
+});

@@ -1,35 +1,54 @@
-<?php
+<?php 
+namespace Doatkolom;
+use Doatkolom\App\AutoLoader;
+use Doatkolom\App\Supports;
+use Doatkolom\App\Assets;
 
-defined( 'ABSPATH' ) || exit;
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-use DoatKolom\AutoLoader;
-use DoatKolom\Contact;
-use DoatKolom\Settings;
-use DoatKolom\SettingsApi;
-use DoatKolom\SettingsPublicApi;
-use DoatKolom\Upgrade;
+class Doatkolom {
+    public function __construct() {
+        add_action( 'after_setup_theme', array( $this, 'after_setup_theme' ) );
+    }
 
-/**
- *
- * GLOBAL Constant for doatkolom theme
- *
- * @since 1.0.0
- */
+    public static function version()
+    {
+        return '0.0.1';
+    }
 
-define( 'DOATKOLOM_POST_TYPE', 'doatkolom-theme' );
-define( 'DOATKOLOM_HOME_URL', home_url( '/' ) );
-define( 'DOATKOLOM_SITE_URL', get_site_url() . '/' );
-define( 'DOATKOLOM_THEME_URI', get_template_directory_uri() );
-define( 'DOATKOLOM_THEME_DIR', get_template_directory() );
-define( 'DOATKOLOM_INCLUDE_DIR', DOATKOLOM_THEME_DIR . '/includes/' );
-define( 'DOATKOLOM_IMG', DOATKOLOM_THEME_URI . '/assets/img/' );
-define( 'DOATKOLOM_BLOCKS', DOATKOLOM_THEME_URI . '/blocks/' );
-define( 'DOATKOLOM_BUILD', DOATKOLOM_THEME_URI . '/build/' );
-define( 'DOATKOLOM_FONT', DOATKOLOM_THEME_URI . '/assets/fonts/' );
-define( 'DOATKOLOM_VERSION', '1.0.0' );
-define( 'DOATKOLOM_MINWP_VERSION', '5.0' );
-define( 'DOATKOLOM_UPGRADE_API', 'https://www.demo.doatkolom.com/wp-json/doatkolom-theme/info' );
-define( 'DOATKOLOM_CONTACT_POST_TYPE', 'doatkolom-contact' );
+    public static function site_url()
+    {
+        return home_url('/');
+    }
+
+    public static function url($path = '')
+    {
+        return get_template_directory_uri() . DIRECTORY_SEPARATOR . $path;
+    }
+
+    public static function dir($path = '')
+    {
+        return get_template_directory() . DIRECTORY_SEPARATOR . $path;
+    }
+    
+    public static function require($path = '')
+    {
+        return require( get_template_directory() . DIRECTORY_SEPARATOR . $path );
+    }
+
+    public function after_setup_theme() {
+        new Supports();
+        new Assets();
+    }
+
+    public static function sign_in_url() {
+        return '#';
+    }
+
+    public static function sign_up_url() {
+        return '#';
+    }
+}
 
 /*
  * Set up our auto loading class and mapping our namespace to the app directory.
@@ -40,27 +59,10 @@ define( 'DOATKOLOM_CONTACT_POST_TYPE', 'doatkolom-contact' );
  * i.e; If a class named SomeClass is stored in app/SomeDir/SomeClass.php, there is no need to include/require that file
  * as the autoloader will handle that for you.
  */
-include_once get_stylesheet_directory() . '/app/AutoLoader.php';
-include_once get_stylesheet_directory() . '/app/helpers/helper.php';
+require Doatkolom::dir('app/AutoLoader.php');
 $loader = new AutoLoader();
 $loader->register();
-$loader->addNamespace( 'DoatKolom', get_stylesheet_directory() . '/app' );
-$loader->addNamespace( 'DoatKolom\Core', get_stylesheet_directory() . '/core' );
-SettingsApi::instance();
-SettingsPublicApi::instance();
+$loader->addNamespace( 'Doatkolom\App', Doatkolom::dir('app') );
 
-if ( is_admin() ) {
-    new Upgrade;
-    new Contact;
-}
 
-$site_logo_url = Settings::instance()->get_attachment_url( 'institution_logo' );
-
-define( 'DOATKOLOM_LOGO', $site_logo_url );
-
-remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
-
-include_once get_stylesheet_directory() . '/includes/theme-support.php';
-include_once get_stylesheet_directory() . '/includes/scripts-and-styles.php';
-include_once get_stylesheet_directory() . '/includes/block-scripts.php';
-include_once get_stylesheet_directory() . '/includes/admin-menu.php';
+new Doatkolom();

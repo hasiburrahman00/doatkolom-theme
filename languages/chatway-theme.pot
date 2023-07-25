@@ -1,0 +1,486 @@
+# <!=Copyright (C) 2023 Premio
+# This file is distributed under the GNU General Public License v2 or later.=!>
+msgid ""
+msgstr ""
+"Project-Id-Version: Doatkolom Theme 0.1.3\n"
+"Report-Msgid-Bugs-To: "
+"https://wordpress.org/support/theme/chatway.app-website\n"
+"POT-Creation-Date: 2023-07-12 11:16:19+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2023-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: grunt-wp-i18n 1.0.3\n"
+
+#: 404.php:19
+msgid "Page Not Found!"
+msgstr ""
+
+#: 404.php:21
+msgid ""
+"Oops! The page you're looking for couldn't be found. Please try one of "
+"these options:"
+msgstr ""
+
+#: 404.php:30
+msgid "Sign Up For Free"
+msgstr ""
+
+#: 404.php:38
+msgid "Sign in"
+msgstr ""
+
+#: 404.php:46
+msgid "Homepage"
+msgstr ""
+
+#: app/Supports.php:40
+msgid "Header Menu"
+msgstr ""
+
+#: app/Supports.php:41
+msgid "Footer Company Menu"
+msgstr ""
+
+#: app/Supports.php:42
+msgid "Footer Resources Menu"
+msgstr ""
+
+#: app/View.php:17 app/View.php:18
+msgid "%title"
+msgstr ""
+
+#: app/View.php:64
+msgid " READ"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Home"
+msgstr ""
+
+#: footer.php:15
+msgid "visit chatway home page"
+msgstr ""
+
+#: footer.php:27
+msgid ""
+"Improve live chat communication and unlock customer satisfaction with "
+"Chatway"
+msgstr ""
+
+#: footer.php:33
+msgid "Company"
+msgstr ""
+
+#: footer.php:48
+msgid "Resources"
+msgstr ""
+
+#: footer.php:67
+msgid "Chatway. All rights reserved."
+msgstr ""
+
+#: footer.php:74
+msgid "visit chatway facebook page"
+msgstr ""
+
+#: footer.php:82
+msgid "visit chatway linkedin page"
+msgstr ""
+
+#: footer.php:90
+msgid "visit chatway twitter page"
+msgstr ""
+
+#: index.php:9
+msgid "The Chatway Blog"
+msgstr ""
+
+#: index.php:10
+msgid ""
+"Read the latest insights & stories on live chat, customer service, "
+"communication & much more"
+msgstr ""
+
+#: index.php:23
+msgid "All Blogs"
+msgstr ""
+
+#: views/search.php:16
+msgid "↩️ Press Enter"
+msgstr ""
+
+#: views/sign-up-white-btn.php:17 parts/header.php:57
+#: parts/why-choose.php:46
+msgid "Sign Up for Free"
+msgstr ""
+
+#: views/sign-up-white-btn.php:23
+msgid "NO CREDIT CARD REQUIRED"
+msgstr ""
+
+#: parts/archive-categories.php:13
+msgid "Popular:"
+msgstr ""
+
+#: parts/featured-post.php:58
+msgid "Featured"
+msgstr ""
+
+#: parts/features.php:8
+msgid "What's coming soon"
+msgstr ""
+
+#: parts/features.php:11
+msgid ""
+"Discover a range of new features and product innovations with Chatway that "
+"are designed to make your communication more efficient and effective than "
+"ever before."
+msgstr ""
+
+#: parts/footer-cta.php:30
+msgid "Enjoy Chatway for Free"
+msgstr ""
+
+#: parts/footer-cta.php:42
+msgid "All the Chatway features "
+msgstr ""
+
+#: parts/footer-cta.php:42
+msgid ""
+"We have plans to introduce pro plans in the future and give all our current "
+"users a grace period to keep using the product for free."
+msgstr ""
+
+#: parts/footer-cta.php:42
+msgid "are currently free. "
+msgstr ""
+
+#: parts/header.php:50
+msgid "Sign In"
+msgstr ""
+
+#: parts/header.php:58
+msgid "Free Sign Up"
+msgstr ""
+
+#: parts/hero-area.php:11
+msgid "Live Chat"
+msgstr ""
+
+#: parts/hero-area.php:25
+msgid "for Your Website"
+msgstr ""
+
+#: parts/hero-area.php:30
+msgid "Revolutionize the way you communicate with your customers. Introducing "
+msgstr ""
+
+#: parts/hero-area.php:30
+msgid " - The powerful messaging app for businesses"
+msgstr ""
+
+#: parts/hero-area.php:30
+msgid "Chatway"
+msgstr ""
+
+#: parts/hero-area.php:34
+msgid "Get Started for Free"
+msgstr ""
+
+#: parts/latest-posts.php:8
+msgid "Latest Articles"
+msgstr ""
+
+#: parts/related-posts.php:25
+msgid "Related Content"
+msgstr ""
+
+#: parts/why-choose.php:9
+msgid "Why Chatway is the perfect tool for your business"
+msgstr ""
+
+#: search.php:10
+msgid "Search/"
+msgstr ""
+
+#: search.php:33
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: templates/about.php:16
+msgid "The Chatway Story"
+msgstr ""
+
+#: templates/about.php:17
+msgid ""
+"Get to know the faces behind our great product and the mission that "
+"inspires us"
+msgstr ""
+
+#: templates/about.php:37
+msgid "Our Mission"
+msgstr ""
+
+#: templates/about.php:40
+msgid ""
+"At Chatway, our mission is to empower website owners in creating impactful, "
+"interactive, and efficient online experiences for their valued customers."
+msgstr ""
+
+#: templates/about.php:42
+msgid ""
+"With our wide array of website apps and plugins, seamlessly integrating "
+"them into any website becomes effortless. Enhancing user engagement, "
+"driving conversions, and ultimately helping business owners accomplish "
+"their online objectives are the core benefits they provide."
+msgstr ""
+
+#: templates/about.php:44
+msgid ""
+"Our commitment lies in ensuring that our apps and plugins are not only easy "
+"to install and utilize but also highly effective in attaining your desired "
+"outcomes. We are immensely proud of the numerous 5-star reviews we have "
+"received, yet our dedication remains unwavering in continuously enhancing "
+"the customer experience we deliver."
+msgstr ""
+
+#: templates/about.php:94
+msgid "Our People"
+msgstr ""
+
+#: templates/about.php:97
+msgid ""
+"We're a diverse and passionate team of experienced developers, designers, "
+"and digital marketers from around the world, working together to create "
+"innovative solutions that solve real-world problems for businesses."
+msgstr ""
+
+#: templates/about.php:119
+msgid "Join us"
+msgstr ""
+
+#: templates/about.php:122
+msgid ""
+"We are always looking to work with good people. Check out our open position "
+"and apply for relevant positions."
+msgstr ""
+
+#: templates/about.php:130
+msgid "Our Open Positions"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "GDPR"
+msgstr ""
+
+#: templates/home.php:22
+msgid "Increased customer satisfaction"
+msgstr ""
+
+#: templates/home.php:23
+msgid "Chatway allows you to provide prompt and "
+msgstr ""
+
+#: templates/home.php:23
+msgid "customer support, which can improve customer satisfaction and loyalty."
+msgstr ""
+
+#: templates/home.php:23
+msgid "personalized "
+msgstr ""
+
+#: templates/home.php:29
+msgid "Streamlined communication"
+msgstr ""
+
+#: templates/home.php:30
+msgid "With Chatway, your multiple agents can communicate easily "
+msgstr ""
+
+#: templates/home.php:30
+msgid ", all from a single dashboard"
+msgstr ""
+
+#: templates/home.php:30
+msgid " on chat, email, Facebook Messenger & more "
+msgstr ""
+
+#: templates/home.php:36
+msgid "Improved team collaboration"
+msgstr ""
+
+#: templates/home.php:37
+msgid "Chatway enables your team to "
+msgstr ""
+
+#: templates/home.php:37
+msgid ""
+"on customer conversations, share notes, and assign tasks, which can improve "
+"team efficiency and effectiveness."
+msgstr ""
+
+#: templates/home.php:37
+msgid "collaborate "
+msgstr ""
+
+#: templates/home.php:43
+msgid "Valuable customer insights"
+msgstr ""
+
+#: templates/home.php:44
+msgid "Chatway provides detailed customer profiles and "
+msgstr ""
+
+#: templates/home.php:44
+msgid ""
+", which can help you understand your customers' needs and preferences, and "
+"improve your overall customer experience."
+msgstr ""
+
+#: templates/home.php:44
+msgid "conversation histories"
+msgstr ""
+
+#: templates/home.php:50
+msgid "Free to use"
+msgstr ""
+
+#: templates/home.php:51
+msgid "All the Chatway features are currently available for free"
+msgstr ""
+
+#: templates/home.php:51
+msgid "No Payment Needed"
+msgstr ""
+
+#: templates/home.php:62
+msgid "Automation"
+msgstr ""
+
+#: templates/home.php:63
+msgid ""
+"Will be used to automate customer service tasks, such as answering "
+"frequently asked questions (FAQs) or providing support for basic issues"
+msgstr ""
+
+#: templates/home.php:67
+msgid "More integrations"
+msgstr ""
+
+#: templates/home.php:68
+msgid ""
+"Chatway will be integrated with other business systems, such as your CRM, "
+"help desk, or marketing automation platform."
+msgstr ""
+
+#: templates/home.php:72
+msgid "Analytics"
+msgstr ""
+
+#: templates/home.php:73
+msgid ""
+"With more detailed  insights into your customer conversations. This info "
+"will be used to improve your customer service, marketing, and sales efforts."
+msgstr ""
+
+#: templates/home.php:77
+msgid "Knowledge base"
+msgstr ""
+
+#: templates/home.php:78
+msgid ""
+"Chatway knowledge base will help customers to find answers to their "
+"questions without having to contact an agent."
+msgstr ""
+
+#: templates/home.php:82
+msgid "API"
+msgstr ""
+
+#: templates/home.php:83
+msgid ""
+"Chatway will be integrated with other applications through its API. This "
+"will help to extend the functionality and create custom solutions."
+msgstr ""
+
+#: templates/home.php:87
+msgid "Multilingual support"
+msgstr ""
+
+#: templates/home.php:88
+msgid ""
+"Chatway will be translated into multiple languages. This will help you to "
+"reach a wider audience of customers."
+msgstr ""
+
+#: templates/home.php:92
+msgid "AI writer assistant"
+msgstr ""
+
+#: templates/home.php:93
+msgid ""
+"Communicate better and respond with the coherence and clarity that your "
+"customers will appreciate."
+msgstr ""
+
+#: templates/home.php:97
+msgid "Social integrations"
+msgstr ""
+
+#: templates/home.php:98
+msgid ""
+"Expand your customer reach to your favourite social apps while centralizing "
+"your customer interactions from all channels within Chatway."
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Privacy Policy"
+msgstr ""
+
+#: templates/terms-of-service.php:14
+msgid "Terms of Service"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Doatkolom Theme"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://github.com/Premio-Apps/chatway.app-website"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Chatway website theme"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Premio"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://github.com/Premio-Apps"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "About Us"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Terms Of Service"
+msgstr ""

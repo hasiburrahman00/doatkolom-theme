@@ -1,7 +1,7 @@
 <?php
 
-namespace Doatkolom;
-
+namespace Doatkolom\App;
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /**
  * PSR4 Autoloader implementation that includes the optional
  * functionality of allowing multiple base directories for a single namespace
