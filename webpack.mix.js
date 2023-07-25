@@ -27,6 +27,7 @@ mix.browserSync({
         target: 'https://x-currency.test',
         ws: true,
     },
+    cors: false,
 });
 
 mix.alias({

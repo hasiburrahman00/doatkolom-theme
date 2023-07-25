@@ -16,3 +16,5 @@
 </head>
 
 <body <?php body_class() ?>>
+
+<h1 class="hello">Hello</h1>
