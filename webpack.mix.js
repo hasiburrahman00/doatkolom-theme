@@ -2,18 +2,32 @@ const mix = require('laravel-mix');
 const path = require('path');
 require('mix-tailwindcss');
 
-mix.options({
-    processCssUrls: false,
-});
+// transpile assets
+mix.sass('resources/scss/fonts.scss', 'assets/css');
+mix.sass('resources/scss/app.scss', 'assets/css').tailwind();
+mix.ts('resources/typescript/app.ts', 'assets/js/');
 
 /**
- * compile tailwindcss
+ * configuration
  */
-mix.sass('src/app.scss', 'dist/css/').tailwind();
-/**
- * compile typescript
- */
-mix.ts('src/app.ts', 'dist/js/');
+mix.options({
+    processCssUrls: false,
+    manifest: false,
+});
+
+mix.browserSync({
+    hot: true,
+    ui: false,
+    open: true,
+    watch: true,
+    https: true,
+    files: ['./assets/js/*.js', './assets/css/*.css'],
+    port: 8080,
+    proxy: {
+        target: 'https://x-currency.test',
+        ws: true,
+    },
+});
 
 mix.alias({
     '@': path.join(__dirname, 'src/'),

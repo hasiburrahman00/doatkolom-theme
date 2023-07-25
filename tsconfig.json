@@ -19,10 +19,10 @@
         "noUnusedParameters": true,
         "noFallthroughCasesInSwitch": true,
         "experimentalDecorators": true,
-        "baseUrl": "./src",
+        "baseUrl": "./resources/typescript",
         "paths": {
             "@/*": ["*"]
         }
     },
-    "include": ["src"]
+    "include": ["resources/typescript"]
 }

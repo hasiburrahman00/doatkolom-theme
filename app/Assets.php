@@ -8,7 +8,6 @@ class Assets {
     public function __construct()
     {
         add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'), 100);
-        add_action('enqueue_block_editor_assets', array($this, 'enqueue_admin_scripts'));
         add_filter('tiny_mce_plugins', [$this, 'disable_emojis_tinymce']);
     }
 
@@ -18,24 +17,11 @@ class Assets {
         $this->remove_frontend_assets();
     }
 
-    public function enqueue_admin_scripts()
-    {
-        $app = Doatkolom::require('build/app.asset.php');
-        $dependencies = $app['dependencies'];
-        $version = $app['version'];
-    
-        array_push( $dependencies, 'jquery' );
-
-        wp_enqueue_script('doatkolom-admin-app', Doatkolom::url('build/app.js'), $dependencies, $version, false);
-        wp_enqueue_style('doatkolom-admin-app', Doatkolom::url('build/app.css'), [], $version, false);
-    }
-
-
     private function enqueue_frontend_scripts()
     {
-        wp_enqueue_script('doatkolom-script', Doatkolom::url('dist/js/app.js'), array('jquery'), Doatkolom::version() , true);
-        wp_enqueue_style('doatkolom-fonts', Doatkolom::url('dist/lib/fonts.css'), array(), Doatkolom::version() , 'all');
-        wp_enqueue_style('doatkolom-style', Doatkolom::url('dist/css/app.css'), array('doatkolom-fonts'), Doatkolom::version() , 'all');
+        wp_enqueue_script('doatkolom-script', Doatkolom::url('assets/js/app.js'), array('jquery'), Doatkolom::version() , true);
+        wp_enqueue_style('doatkolom-fonts', Doatkolom::url('assets/css/fonts.css'), array(), Doatkolom::version() , 'all');
+        wp_enqueue_style('doatkolom-style', Doatkolom::url('assets/css/app.css'), array('doatkolom-fonts'), Doatkolom::version() , 'all');
     }
 
 
