@@ -23,7 +23,7 @@ class Doatkolom {
 
     public static function url($path = '')
     {
-        return get_template_directory_uri() . DIRECTORY_SEPARATOR . $path;
+        return get_template_directory_uri() . '/' . $path;
     }
 
     public static function dir($path = '')
