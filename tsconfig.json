@@ -3,7 +3,6 @@
         "target": "esnext",
         "module": "esnext",
         "lib": ["esnext", "dom"],
-        "useDefineForClassFields": true,
         "skipLibCheck": true,
         "types": ["jquery", "node"],
 
@@ -20,6 +19,7 @@
         "noFallthroughCasesInSwitch": true,
         "experimentalDecorators": true,
         "baseUrl": "./resources/typescript",
+        "useDefineForClassFields": false,
         "paths": {
             "@/*": ["*"]
         }

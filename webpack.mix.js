@@ -35,7 +35,7 @@ mix.browserSync({
 });
 
 mix.alias({
-    '@': path.join(__dirname, 'src/'),
+    '@': path.join(__dirname, 'resources/typescript'),
 });
 
 mix.webpackConfig({
