@@ -48,7 +48,7 @@ window.addEventListener('DOMContentLoaded', function () {
   };
   var element = document.getElementById(_inc_constants__WEBPACK_IMPORTED_MODULE_0__.WP_ADMINBAR_SELECTOR_ID);
   if (element) {
-    // initial 
+    // initial
     var initialRect = element.getBoundingClientRect();
     value = {
       visible: true,
@@ -216,7 +216,7 @@ var Header = /*#__PURE__*/function (_LitElement) {
   }, {
     key: "render",
     value: function render() {
-      return (0,lit__WEBPACK_IMPORTED_MODULE_0__.html)(_templateObject || (_templateObject = _taggedTemplateLiteral(["<style>\n                doatkolom-header {\n                    height: ", "px; \n                    width: 100%; \n                    display: inline-block;\n                }\n\n                doatkolom-header header {\n                    position: fixed;\n                    left: 0;\n                    width: 100%;\n                    z-index: 999;\n                }\n\n                ", "\n            </style>"])), this.css.height, this.wpAdminbar.visible ? "\n                    doatkolom-header header {\n                        top: ".concat(this.calcHeaderPosition(), "px;\n                    }\n                ") : "\n                    doatkolom-header header {\n                        top: 0\n                    }\n                ");
+      return (0,lit__WEBPACK_IMPORTED_MODULE_0__.html)(_templateObject || (_templateObject = _taggedTemplateLiteral(["<style>\n            doatkolom-header {\n                height: ", "px;\n                width: 100%;\n                display: inline-block;\n            }\n\n            doatkolom-header header {\n                position: fixed;\n                left: 0;\n                width: 100%;\n                z-index: 999;\n            }\n\n            ", "\n        </style>"])), this.css.height, this.wpAdminbar.visible ? "\n                    doatkolom-header header {\n                        top: ".concat(this.calcHeaderPosition(), "px;\n                    }\n                ") : "\n                    doatkolom-header header {\n                        top: 0\n                    }\n                ");
     }
   }]);
   return Header;

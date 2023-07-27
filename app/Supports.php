@@ -37,9 +37,11 @@ class Supports {
     private function add_menus()
     {
         register_nav_menus([
-            'primary' => esc_html__('Header Menu', 'doatkolom', 'doatkolom'),
-            'footer_company' => esc_html__('Footer Company Menu', 'doatkolom', 'doatkolom'),
-            'footer_resources' => esc_html__('Footer Resources Menu', 'doatkolom', 'doatkolom'),
+            'primary' => esc_html__('Header Menu','doatkolom'),
+            'company' => esc_html__('Company Menu', 'doatkolom'),
+            'products' => esc_html__('Products Menu', 'doatkolom'),
+            'supports' => esc_html__('Supports Menu', 'doatkolom'),
+            'terms' => esc_html__('Terms Menu', 'doatkolom'),
         ]);
     }
 
