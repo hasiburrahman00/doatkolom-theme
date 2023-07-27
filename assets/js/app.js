@@ -11,6 +11,7 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _events_wpAdminbarResize__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/events/wpAdminbarResize */ "./resources/typescript/events/wpAdminbarResize.ts");
 /* harmony import */ var _webComponents_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/webComponents/header */ "./resources/typescript/webComponents/header/index.ts");
+/* harmony import */ var _module_header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./module/header */ "./resources/typescript/module/header.ts");
 /**
  * events
  */
@@ -19,6 +20,13 @@ __webpack_require__.r(__webpack_exports__);
  * web components
  */
 
+/**
+ * modules
+ */
+
+jQuery(function () {
+  new _module_header__WEBPACK_IMPORTED_MODULE_2__["default"]();
+});
 
 /***/ }),
 
@@ -91,6 +99,139 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   WP_ADMINBAR_SELECTOR_ID: () => (/* binding */ WP_ADMINBAR_SELECTOR_ID)
 /* harmony export */ });
 var WP_ADMINBAR_SELECTOR_ID = 'wpadminbar';
+
+/***/ }),
+
+/***/ "./resources/typescript/module/header.ts":
+/*!***********************************************!*\
+  !*** ./resources/typescript/module/header.ts ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Header)
+/* harmony export */ });
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+var $ = window.jQuery;
+var Header = /*#__PURE__*/function () {
+  function Header() {
+    _classCallCheck(this, Header);
+    this.breakpoint = 1024;
+    // html selectors
+    this.wpadminbar = document.getElementById('wpadminbar');
+    this.header = document.getElementById('doatkolom-theme-header');
+    // jquery selectors
+    this.$body = $('body');
+    this.$header = this.$body.find('#doatkolom-theme-header');
+    this.$hamburger = this.$header.find('.breadcrumb-btn');
+    this.$line = this.$hamburger.find('#last-hamburger-line');
+    this.$overlay = $('.header-overlay');
+    this.$menu = this.$header.find('.doatkolom-nav');
+    // events
+    this.events();
+  }
+  _createClass(Header, [{
+    key: "events",
+    value: function events() {
+      var _this = this;
+      /**
+       * header sticky handler
+       */
+      if (this.header) {
+        this.sticky();
+        $(window).on('scroll', this.sticky.bind(this));
+      }
+      /**
+       * mobile menu handler
+       */
+      if (this.$header.length) {
+        this.$hamburger.on('click', function () {
+          if (_this.$body.hasClass('mobile-menu-opened')) {
+            _this.hideNavigation();
+          } else {
+            _this.showNavigation();
+          }
+        });
+        this.$overlay.on('click', this.hideNavigation.bind(this));
+        /**
+         * When Viewport is changed
+         */
+        var mql = window.matchMedia('(max-width: 1023px)');
+        var onMediaChange = function onMediaChange(event) {
+          if (!event.matches) {
+            _this.hideNavigation();
+          }
+        };
+        mql.addListener(onMediaChange);
+      }
+      /**
+       *  hash route handler
+       */
+      this.hashRouteHandler();
+    }
+  }, {
+    key: "sticky",
+    value: function sticky() {
+      var y = window.scrollY;
+      if (this.header && this.$body.hasClass('mobile-menu-opened') === false) {
+        if (y > 0) {
+          this.header.classList.add('sticky');
+        } else {
+          this.header.classList.remove('sticky');
+        }
+      }
+    }
+  }, {
+    key: "showNavigation",
+    value: function showNavigation() {
+      var self = this;
+      if (innerWidth > this.breakpoint || !self.header) return;
+      self.$line.animate({
+        x: '0',
+        width: '100%'
+      });
+      self.$overlay.fadeIn();
+      self.$header.addClass('sticky');
+      self.$body.addClass('mobile-menu-opening');
+      self.$menu.slideDown(400, function () {
+        self.$body.removeClass('mobile-menu-opening').addClass('mobile-menu-opened');
+      });
+    }
+  }, {
+    key: "hideNavigation",
+    value: function hideNavigation() {
+      var self = this;
+      self.$line.animate({
+        x: '8'
+      });
+      self.$menu.slideUp(400, function () {
+        self.$overlay.fadeOut();
+        self.$body.removeClass('mobile-menu-opened').removeClass('mobile-menu-opening');
+        self.$menu.removeAttr('style');
+        self.sticky();
+      });
+    }
+  }, {
+    key: "hashRouteHandler",
+    value: function hashRouteHandler() {
+      var self = this;
+      var btns = self.$menu.find('a');
+      btns.on('click', function (ev) {
+        ev.stopPropagation();
+        self.hideNavigation();
+      });
+    }
+  }]);
+  return Header;
+}();
+
 
 /***/ }),
 

@@ -4,8 +4,8 @@ use Doatkolom\App\NavWalker;
 ?>
 
 <doatkolom-header>
-    <header class="bg-white py-2 lg:py-5 border-b border-slate-200">
-        <div class="container mx-auto max-w-7xl px-3 sm:px-4 flex items-center justify-between">
+    <header id="doatkolom-theme-header" class="bg-white py-2">
+        <div class="px-3 sm:px-4 flex items-center justify-between">
             <a 
                 href="<?php echo Doatkolom::site_url() ?>" 
                 aria-label="doatkolom home page"
@@ -30,8 +30,8 @@ use Doatkolom\App\NavWalker;
                 wp_nav_menu([
                     'menu'            => 'primary',
                     'theme_location'  => 'primary',
-                    'menu_class'      => 'doatkolom-nav-ul inline-flex items-center gap-x-6 xl:gap-x-10',
-                    'container_class' => 'doatkolom-nav hidden lg:inline-block',
+                    'menu_class'      => 'doatkolom-nav-ul block lg:flex lg:items-center lg:gap-x-12',
+                    'container_class' => 'doatkolom-nav top-[56px] hidden left-0 bg-white absolute rounded-br-md rounded-bl-md w-full lg:rounded-br-none lg:rounded-bl-none lg:static lg:w-auto lg:bg-transparent lg:block',
                     'items_wrap'      => '<ul class="%2$s">%3$s</ul>',
                     'depth'           => 2,
                     'walker'          => new NavWalker(),
@@ -56,4 +56,5 @@ use Doatkolom\App\NavWalker;
             </div>
         </div>
     </header>
+    <div class="header-overlay fixed top-0 left-0 h-full w-full z-40 hidden"></div>
 </doatkolom-header>
