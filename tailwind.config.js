@@ -15,12 +15,23 @@ module.exports = {
         './src/**/*.ts',
     ],
     theme: {
+        container: {
+            center: true,
+            padding: '15px',
+            screens: {
+                sm: '575px',
+                md: '768px',
+                lg: '991px',
+                xl: '1280px',
+            },
+        },
         fontFamily: {
             inter: ['Inter', 'sans-serif'],
         },
         extend: {
             colors: {
                 primary: '#0073E6',
+                ['primary-dark']: '#025fbd',
                 secondary: '#1A202C',
             }
         }

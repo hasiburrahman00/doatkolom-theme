@@ -1,0 +1,5 @@
+.footer-menu-container {
+    a {
+        @apply list-none capitalize hover:text-white duration-700;
+    }
+}

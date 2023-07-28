@@ -14,7 +14,7 @@ use Doatkolom\App\NavWalker;
                 <picture>
                     <source 
                         srcset="<?php echo Doatkolom::url('assets/images/logos/doatkolom.svg') ?>"
-                        media="(max-width: 400px)"
+                        media="(max-width: 420px)"
                         width="40"
                         height="40"
                     />
