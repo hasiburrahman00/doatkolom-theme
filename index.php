@@ -4,57 +4,10 @@ View::page_title('Blog');
 
 get_header();
 View::part('home/hero');
+View::part('home/products');
+View::part('home/why-choose');
+View::part('home/community');
 
-?>
-    <main class="pt-12 pb-16">
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-       <h1 class="text-purple-600">Blog home test</h1>
-    </main>
-<?php 
 get_footer();
 
 ?>

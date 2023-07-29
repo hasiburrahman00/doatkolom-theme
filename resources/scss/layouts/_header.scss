@@ -7,6 +7,11 @@
 #doatkolom-theme-header {
     @extend %common-header;
     transition: padding 0.3s;
+    @apply bg-slate-50;
+
+    &:not(.sticky) {
+        @apply border-b border-slate-200;
+    }
 
     .doatkolom-nav-ul {
         a {
@@ -193,7 +198,6 @@
     }
 
     &:is(.sticky) {
-        background-color: #fff;
         box-shadow: 0px 8px 24px 0px #00000014;
     }
 }
@@ -240,9 +244,6 @@
 .single-help,
 .error404 {
     #doatkolom-theme-header:not(.sticky) {
-        background-color: #fff;
-        border-bottom: 1px solid #f2f2f2;
-
         .doatkolom-nav-ul {
             a {
                 color: #1a202c;

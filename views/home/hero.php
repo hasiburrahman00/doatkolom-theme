@@ -7,7 +7,7 @@ use Doatkolom\App\Icons;
     <div class="bg-banner-overlay-mobile md:bg-banner-overlay py-8 pb-16 md:py-20 lg:py-24">
         <div class="container grid lg:grid-cols-2 xl:grid-cols-[600px_1fr] items-center">
             <div class="text-center lg:text-left max-w-md lg:max-w-none mx-auto">
-                <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-secondary leading-[1.2_!important]">Grow Your Business with Our Awesome Products</h2>
+                <h1 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-secondary leading-[1.2_!important]">Grow Your Business with Our Awesome Products</h1>
                 <p class="pt-3 pb-8 lg:pb-6 max-w-md xl:max-w-none">Achieve a reliable experience and take your website to a new heights by installing our fast, powerful and secure <strong>WordPress Plugins.</strong></p>
                 
                 <div class="btn-group justify-center lg:justify-start">
