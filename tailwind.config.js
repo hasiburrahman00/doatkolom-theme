@@ -33,6 +33,14 @@ module.exports = {
                 primary: '#0073E6',
                 ['primary-dark']: '#025fbd',
                 secondary: '#1A202C',
+            },
+            backgroundImage: {
+                ['banner-pattern']: 'url(../images/home/map-pattern.png)',
+                ['banner-overlay']: 'linear-gradient(90deg, rgba(255, 255, 255, 0.87) 19.55%, rgba(255, 255, 255, 0.90) 82.04%)',
+                ['banner-overlay-mobile']: 'linear-gradient(180deg, rgba(255, 255, 255, 0.90) 19.55%, rgba(255, 255, 255, 0.90) 82.04%)'
+            },
+            backgroundSize: {
+                ['banner-size']: '400px'
             }
         }
     },

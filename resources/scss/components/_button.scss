@@ -1,0 +1,17 @@
+@layer components {
+    .btn {
+        @apply transition-colors duration-300 py-3.5 px-5 rounded-md inline-flex items-center gap-x-1 justify-center;
+
+        &.primary {
+            @apply bg-primary font-semibold text-white hover:bg-primary-dark;
+        }
+
+        &.secondary {
+            @apply bg-[#daecfe] font-semibold text-primary hover:bg-primary-dark hover:text-white;
+        }
+    }
+
+    .btn-group {
+        @apply flex flex-wrap items-center gap-x-6 gap-y-4;
+    }
+}
