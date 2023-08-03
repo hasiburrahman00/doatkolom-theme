@@ -22,7 +22,7 @@ use Doatkolom\App\NavWalker;
                         loading="lazy"
                         src="<?php echo Doatkolom::url('assets/images/logos/doatkolom-full.svg') ?>"
                         width="206"
-                        height="42px"
+                        height="42"
                     />
                 </picture>
             </a>
