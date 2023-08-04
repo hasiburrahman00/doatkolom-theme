@@ -44,6 +44,7 @@ mix.webpackConfig({
     },
     externals: {
         jquery: 'jQuery',
+        Swiper: 'Swiper'
     },
     output: {
         chunkFilename: 'dist/chunk/[name].js',

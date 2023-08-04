@@ -4,7 +4,7 @@
         "module": "esnext",
         "lib": ["esnext", "dom"],
         "skipLibCheck": true,
-        "types": ["jquery", "node"],
+        "types": ["jquery", "node", "Swiper"],
 
         /* Bundler mode */
         "moduleResolution": "node",

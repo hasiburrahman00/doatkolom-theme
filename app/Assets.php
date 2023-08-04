@@ -19,9 +19,13 @@ class Assets {
 
     private function enqueue_frontend_scripts()
     {
-        wp_enqueue_script('doatkolom-script', Doatkolom::url('assets/js/app.js'), array('jquery'), Doatkolom::version() , true);
+        //script
+        wp_enqueue_script('doatkolom-swiper', Doatkolom::url('assets/lib/js/swiper-bundle.min.js'), [], Doatkolom::version() , true);
+        wp_enqueue_script('doatkolom-app', Doatkolom::url('assets/js/app.js'), array('jquery'), Doatkolom::version() , true);
+        // style
+        wp_enqueue_style('doatkolom-swiper', Doatkolom::url('assets/lib/css/swiper-bundle.min.css'), array(), Doatkolom::version() , 'all');
         wp_enqueue_style('doatkolom-fonts', Doatkolom::url('assets/css/fonts.css'), array(), Doatkolom::version() , 'all');
-        wp_enqueue_style('doatkolom-style', Doatkolom::url('assets/css/app.css'), array('doatkolom-fonts'), Doatkolom::version() , 'all');
+        wp_enqueue_style('doatkolom-app', Doatkolom::url('assets/css/app.css'), array('doatkolom-fonts'), Doatkolom::version() , 'all');
     }
 
 

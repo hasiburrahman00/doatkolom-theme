@@ -11,7 +11,8 @@ get_header();
 View::part('home/hero');
 View::part('home/products');
 View::part('home/why-choose');
-View::part('home/community');
+View::part('common/testimonial');
+View::part('common/community');
 
 get_footer();
 ?>

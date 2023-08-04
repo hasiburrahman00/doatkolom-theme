@@ -11,7 +11,8 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _events_wpAdminbarResize__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/events/wpAdminbarResize */ "./resources/typescript/events/wpAdminbarResize.ts");
 /* harmony import */ var _webComponents_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/webComponents/header */ "./resources/typescript/webComponents/header/index.ts");
-/* harmony import */ var _module_header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./module/header */ "./resources/typescript/module/header.ts");
+/* harmony import */ var _module_header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/module/header */ "./resources/typescript/module/header.ts");
+/* harmony import */ var _module_testimonial__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/module/testimonial */ "./resources/typescript/module/testimonial.ts");
 /**
  * events
  */
@@ -24,8 +25,10 @@ __webpack_require__.r(__webpack_exports__);
  * modules
  */
 
+
 jQuery(function () {
   new _module_header__WEBPACK_IMPORTED_MODULE_2__["default"]();
+  new _module_testimonial__WEBPACK_IMPORTED_MODULE_3__["default"]();
 });
 
 /***/ }),
@@ -231,6 +234,42 @@ var Header = /*#__PURE__*/function () {
   }]);
   return Header;
 }();
+
+
+/***/ }),
+
+/***/ "./resources/typescript/module/testimonial.ts":
+/*!****************************************************!*\
+  !*** ./resources/typescript/module/testimonial.ts ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Testimonial)
+/* harmony export */ });
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var Testimonial = /*#__PURE__*/_createClass(function Testimonial() {
+  _classCallCheck(this, Testimonial);
+  new window.Swiper('.swiper', {
+    loop: true,
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    autoplay: {
+      delay: 2500
+    },
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination'
+    }
+  });
+});
 
 
 /***/ }),
