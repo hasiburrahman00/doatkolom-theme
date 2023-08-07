@@ -3,7 +3,7 @@ use Doatkolom\Doatkolom;
 use Doatkolom\App\Icons;
 ?>
 
-<section class="bg-banner-pattern bg-repeat bg-banner-size lg:bg-contain">
+<section>
     <div class="bg-banner-overlay-mobile md:bg-banner-overlay py-8 pb-16 md:py-20 lg:py-24">
         <div class="container grid lg:grid-cols-2 xl:grid-cols-[600px_1fr] items-center">
             <div class="text-center lg:text-left max-w-md lg:max-w-none mx-auto">
