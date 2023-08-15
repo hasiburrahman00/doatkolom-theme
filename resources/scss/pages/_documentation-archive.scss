@@ -1,0 +1,82 @@
+.docs-template-default {
+    .content-area {
+        @apply container mx-auto py-10 sm:py-20 md:py-24;
+    }
+
+    .wedocs-sidebar {
+        padding: 20px;
+        background-image: linear-gradient(to bottom, #d4e9ff, #ffffff);
+    }
+
+    .wedocs-single-wrap {
+        .wedocs-single-content {
+            @apply px-5 py-6 sm:py-8 md:px-10 md:py-12 bg-white;
+
+            a:not(.positive, .negative) {
+                color: #037fff;
+            }
+
+            .entry-header h1 {
+                font-size: 32px;
+                font-weight: 600;
+            }
+
+            .article-child h3 {
+                margin-top: 20px;
+                margin-bottom: 5px;
+                font-size: 24px;
+                font-weight: 600;
+            }
+
+            img {
+                height: auto !important;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .widget-title {
+        font-size: 24px;
+        border-bottom-color: #81b5e3 !important;
+    }
+
+    .doc-nav-list {
+        margin: 0;
+        @apply space-y-4;
+    }
+
+    .page_item {
+        a {
+            display: flex !important;
+
+            .wedocs-caret {
+                margin-left: auto;
+                color: #314251 !important;
+                border: 1px solid #314251 !important;
+            }
+        }
+
+        &:is(.wd-state-open, .current_page_parent) {
+            & > a {
+                background: linear-gradient(45deg, #0180ef, #0c4bad) !important;
+            }
+        }
+
+        ul.children {
+            border-left-color: #47a9ff !important;
+        }
+    }
+}
+
+.wedocs-form-action {
+    input[type='submit'] {
+        background: linear-gradient(45deg, #0180ef, #0c4bad) !important;
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        cursor: pointer;
+    }
+}

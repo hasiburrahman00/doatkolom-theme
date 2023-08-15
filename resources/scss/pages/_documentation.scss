@@ -1,0 +1,52 @@
+body:has(.wedocs-shortcode-wrap, .wedocs-single-wrap) {
+    background: linear-gradient(178deg, #e7f1fa, transparent);
+}
+
+.wedocs {
+    &-shortcode-wrap {
+        @apply container mx-auto py-10 sm:py-20 md:py-28;
+    }
+
+    &-docs-list {
+        @apply grid sm:grid-cols-2 md:grid-cols-3 gap-4 list-none;
+
+        &:before,
+        &:after {
+            display: none !important;
+        }
+    }
+
+    &-docs-single {
+        width: auto !important;
+        list-style: none;
+        background-color: #fff;
+
+        h3 {
+            padding: 12px 20px !important;
+            background: linear-gradient(45deg, #0180ef, #0c4bad);
+            color: #fff;
+        }
+
+        .inside {
+            padding: 0 !important;
+        }
+    }
+
+    &-doc-sections {
+        list-style-type: none !important;
+        margin: 0 !important;
+        padding: 0;
+
+        li {
+            @apply [&:not(:last-of-type)]:border-b border-solid border-gray-200;
+        }
+
+        a {
+            @apply inline-block px-5 py-2.5 transition-colors duration-200 hover:text-[#0c4bad];
+        }
+    }
+
+    &-doc-link {
+        @apply transition-colors duration-200 hover:text-[#0c4bad];
+    }
+}
