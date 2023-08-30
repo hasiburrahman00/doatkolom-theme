@@ -7,15 +7,11 @@
 #doatkolom-theme-header {
     @extend %common-header;
     transition: padding 0.3s;
-    @apply bg-slate-50;
-
-    &:not(.sticky) {
-        @apply border-b border-slate-200;
-    }
+    @apply bg-transparent;
 
     .doatkolom-nav-ul {
         a {
-            @apply inline-block text-sm transition-colors duration-200 ease-linear;
+            @apply inline-block text-sm transition-colors duration-200 ease-linear font-semibold;
         }
 
         .dropdown-toggle {
@@ -199,6 +195,7 @@
 
     &:is(.sticky) {
         box-shadow: 0px 8px 24px 0px #00000014;
+        background-color: #fff;
     }
 }
 

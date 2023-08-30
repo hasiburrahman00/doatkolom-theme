@@ -4,7 +4,7 @@ use Doatkolom\App\NavWalker;
 ?>
 
 <doatkolom-header>
-    <header id="doatkolom-theme-header" class="bg-white py-2">
+    <header id="doatkolom-theme-header" class="py-2">
         <div class="px-3 sm:px-4 flex items-center justify-between">
             <a 
                 href="<?php echo Doatkolom::site_url() ?>" 
@@ -21,7 +21,7 @@ use Doatkolom\App\NavWalker;
                     <img
                         loading="lazy"
                         src="<?php echo Doatkolom::url('assets/images/logos/doatkolom-full.svg') ?>"
-                        width="206"
+                        width="185"
                         height="42"
                     />
                 </picture>

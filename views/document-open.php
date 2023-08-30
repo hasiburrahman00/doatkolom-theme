@@ -12,13 +12,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     <!-- preload fonts -->
-    <link rel="preload" href="<?php echo Doatkolom::url('assets/fonts/Inter-Regular.woff2')  ?>" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="<?php echo Doatkolom::url('assets/fonts/Inter-SemiBold.woff2')  ?>" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="<?php echo Doatkolom::url('assets/fonts/Inter-Bold.woff2')  ?>" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="<?php echo Doatkolom::url('assets/fonts/Lato-Regular.woff2')  ?>" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="<?php echo Doatkolom::url('assets/fonts/Lato-Semibold.woff2')  ?>" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="<?php echo Doatkolom::url('assets/fonts/Lato-Bold.woff2')  ?>" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="<?php echo Doatkolom::url('assets/fonts/Lato-Heavy.woff2')  ?>" as="font" type="font/woff2" crossorigin>
     <!-- favicon -->
     <link rel="shortcut icon" href="<?php echo Doatkolom::url('assets/images/logos/favicon.png')  ?>" type="image/x-icon">
     <!-- theme script -->
     <?php wp_head() ?>
 </head>
 
-<body <?php body_class('font-inter text-secondary') ?>>
+<body <?php body_class('font-primary text-secondary') ?>>
