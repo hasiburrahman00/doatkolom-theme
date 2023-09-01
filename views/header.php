@@ -1,6 +1,8 @@
 <?php 
 use Doatkolom\Doatkolom;
 use Doatkolom\App\NavWalker;
+use Doatkolom\App\Icons;
+use Doatkolom\App\Helper;
 ?>
 
 <doatkolom-header>
@@ -14,9 +16,9 @@ use Doatkolom\App\NavWalker;
                 <picture>
                     <source 
                         srcset="<?php echo Doatkolom::url('assets/images/logos/doatkolom.svg') ?>"
-                        media="(max-width: 400px)"
-                        width="40"
-                        height="40"
+                        media="(max-width: 450px)"
+                        width="45"
+                        height="45"
                     />
                     <img
                         loading="lazy"
@@ -39,12 +41,21 @@ use Doatkolom\App\NavWalker;
                 ]);
             ?>
             <div class="lg:min-w-[130px] flex justify-end gap-x-5">
+                <?php if( Helper::isBlog() ): ?>
+                <doatkolom-search-input 
+                    value="<?php echo get_search_query() ?>" 
+                    action="<?php echo Doatkolom::site_url()  ?>">
+                </doatkolom-search-input>
+                <?php endif; ?>
                 <a 
-                    class="text-sm px-3 py-1.5 md:px-5 md:py-2.5 border border-slate-300 lg:border-slate-500 text-slate-700 rounded-md transition-colors duration-300 hover:bg-primary/10 hover:text-primary hover:border-primary/30" 
+                    class="inline-flex gap-1 primary-btn-bg text-white text-sm font-semibold pl-4 pr-6 py-2 rounded-lg" 
                     aria-label="visit sign in page" 
                     href="<?php echo Doatkolom::sign_in_url() ?>"
                 >
-                    Account Login
+                    <?php 
+                        Icons::user();
+                    ?>
+                    Account
                 </a>
                 <button class="breadcrumb-btn inline-block lg:hidden" aria-label="Open menu">
                     <svg xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewBox="0 0 19 14" fill="none">

@@ -88,7 +88,7 @@ export class Header extends LitElement {
             doatkolom-header {
                 height: ${this.css.height}px;
                 width: 100%;
-                display: inline-block;
+                display: block;
             }
 
             doatkolom-header header {

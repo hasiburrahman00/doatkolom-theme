@@ -11,8 +11,9 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _events_wpAdminbarResize__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/events/wpAdminbarResize */ "./resources/typescript/events/wpAdminbarResize.ts");
 /* harmony import */ var _webComponents_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/webComponents/header */ "./resources/typescript/webComponents/header/index.ts");
-/* harmony import */ var _module_header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/module/header */ "./resources/typescript/module/header.ts");
-/* harmony import */ var _module_testimonial__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/module/testimonial */ "./resources/typescript/module/testimonial.ts");
+/* harmony import */ var _webComponents_searchInput__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/webComponents/searchInput */ "./resources/typescript/webComponents/searchInput/index.ts");
+/* harmony import */ var _module_header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/module/header */ "./resources/typescript/module/header.ts");
+/* harmony import */ var _module_testimonial__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/module/testimonial */ "./resources/typescript/module/testimonial.ts");
 /**
  * events
  */
@@ -21,14 +22,15 @@ __webpack_require__.r(__webpack_exports__);
  * web components
  */
 
+
 /**
  * modules
  */
 
 
 jQuery(function () {
-  new _module_header__WEBPACK_IMPORTED_MODULE_2__["default"]();
-  new _module_testimonial__WEBPACK_IMPORTED_MODULE_3__["default"]();
+  new _module_header__WEBPACK_IMPORTED_MODULE_3__["default"]();
+  new _module_testimonial__WEBPACK_IMPORTED_MODULE_4__["default"]();
 });
 
 /***/ }),
@@ -396,7 +398,7 @@ var Header = /*#__PURE__*/function (_LitElement) {
   }, {
     key: "render",
     value: function render() {
-      return (0,lit__WEBPACK_IMPORTED_MODULE_0__.html)(_templateObject || (_templateObject = _taggedTemplateLiteral(["<style>\n            doatkolom-header {\n                height: ", "px;\n                width: 100%;\n                display: inline-block;\n            }\n\n            doatkolom-header header {\n                position: fixed;\n                left: 0;\n                width: 100%;\n                z-index: 999;\n            }\n\n            ", "\n        </style>"])), this.css.height, this.wpAdminbar.visible ? "\n                    doatkolom-header header {\n                        top: ".concat(this.calcHeaderPosition(), "px;\n                    }\n                ") : "\n                    doatkolom-header header {\n                        top: 0\n                    }\n                ");
+      return (0,lit__WEBPACK_IMPORTED_MODULE_0__.html)(_templateObject || (_templateObject = _taggedTemplateLiteral(["<style>\n            doatkolom-header {\n                height: ", "px;\n                width: 100%;\n                display: block;\n            }\n\n            doatkolom-header header {\n                position: fixed;\n                left: 0;\n                width: 100%;\n                z-index: 999;\n            }\n\n            ", "\n        </style>"])), this.css.height, this.wpAdminbar.visible ? "\n                    doatkolom-header header {\n                        top: ".concat(this.calcHeaderPosition(), "px;\n                    }\n                ") : "\n                    doatkolom-header header {\n                        top: 0\n                    }\n                ");
     }
   }]);
   return Header;
@@ -404,6 +406,95 @@ var Header = /*#__PURE__*/function (_LitElement) {
 __decorate([(0,lit_decorators_js__WEBPACK_IMPORTED_MODULE_1__.state)()], Header.prototype, "css", void 0);
 __decorate([(0,lit_decorators_js__WEBPACK_IMPORTED_MODULE_1__.state)()], Header.prototype, "wpAdminbar", void 0);
 Header = __decorate([(0,lit_decorators_js__WEBPACK_IMPORTED_MODULE_1__.customElement)('doatkolom-header')], Header);
+
+/***/ }),
+
+/***/ "./resources/typescript/webComponents/searchInput/index.ts":
+/*!*****************************************************************!*\
+  !*** ./resources/typescript/webComponents/searchInput/index.ts ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Header: () => (/* binding */ Header)
+/* harmony export */ });
+/* harmony import */ var lit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lit */ "./node_modules/lit/index.js");
+/* harmony import */ var lit_decorators_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lit/decorators.js */ "./node_modules/lit/decorators.js");
+var _templateObject, _templateObject2;
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+  var c = arguments.length,
+    r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+    d;
+  if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+  return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+var Header = /*#__PURE__*/function (_LitElement) {
+  _inherits(Header, _LitElement);
+  var _super = _createSuper(Header);
+  function Header() {
+    var _this;
+    _classCallCheck(this, Header);
+    _this = _super.call(this);
+    _this.value = '';
+    _this.action = '';
+    return _this;
+  }
+  _createClass(Header, [{
+    key: "submitForm",
+    value: function submitForm(e) {
+      var formData = new FormData(e.target);
+      var searchValue = formData.get('s');
+      if (!searchValue) {
+        e.preventDefault();
+        return;
+      }
+      if (typeof searchValue === 'string' && searchValue.trim().length === 0) {
+        e.preventDefault();
+        return;
+      }
+      if (innerWidth <= 1200) {
+        e.preventDefault();
+        return;
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return (0,lit__WEBPACK_IMPORTED_MODULE_0__.html)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n        <form  role=\"search\" method=\"get\" action=\"", "\" @submit=", ">\n            <div class=\"search-input-field\">\n                <button type=\"submit\" value=\"submit\">\n                    <svg  width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\">\n                        <g>\n                        <path d=\"M17.31 15.9L20.71 19.29C20.8993 19.4778 21.0058 19.7334 21.0058 20C21.0058 20.2666 20.8993 20.5222 20.71 20.71C20.5222 20.8993 20.2666 21.0058 20 21.0058C19.7334 21.0058 19.4778 20.8993 19.29 20.71L15.9 17.31C14.5025 18.407 12.7767 19.0022 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11C19.0022 12.7767 18.407 14.5025 17.31 15.9ZM11 5C7.68629 5 5 7.68629 5 11C5 14.3137 7.68629 17 11 17C14.3137 17 17 14.3137 17 11C17 7.68629 14.3137 5 11 5Z\" fill=\"currentColor\"/>\n                        </g>\n                    </svg>\n                </button>\n                <input \n                    value=\"", "\" \n                    placeholder=\"Search Here\" \n                    type=\"search\" \n                    name=\"s\"\n                > \n            </div>\n            <input type=\"hidden\" name=\"post_type\" value=\"post\">\n        </form>\n        "])), this.action, this.submitForm, this.value);
+    }
+  }], [{
+    key: "styles",
+    get: function get() {
+      return (0,lit__WEBPACK_IMPORTED_MODULE_0__.css)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n            .search-input-field {\n                display: flex;\n                width: 213px;\n                padding-left:14px;\n                align-items: center;\n                border: 1px solid rgba(145, 158, 171, 0.32);\n                border-radius: 8px;\n                column-gap: 8px;\n                overflow: hidden;\n                transition: border-color 0.2s ease-in-out;\n            }\n\n            .search-input-field:focus-within {\n                border-color: #517DFC;\n            }\n\n            .search-input-field:focus-within svg {\n                color: #517DFC;\n            }\n\n            input {\n                height: 38px;\n                width: 100%;\n                padding-right: 8px;\n                border:0;\n            }\n\n            input:focus, input:active, input:hover {\n                outline: none;\n            }\n\n            input::placeholder {\n                color: #919EAB;\n                font-size: 14px;\n                font-weight: 400;\n            }\n\n            button {\n                display: inline-flex;\n                padding: 0;\n                color: #ccc;\n                border: 0;\n                background-color: transparent\n            }\n\n            svg {\n                transition: color 0.2s ease-in-out;\n            }\n\n            @media (max-width: 1200px) {\n                input {\n                    display: none;\n                }\n\n                .search-input-field {\n                    width: 38px;\n                    padding-left: 0;\n                    display: flex;\n                    justify-content: center;\n                    align-items: center;\n                    height: 38px;\n                }\n            }\n        "])));
+    }
+  }]);
+  return Header;
+}(lit__WEBPACK_IMPORTED_MODULE_0__.LitElement);
+__decorate([(0,lit_decorators_js__WEBPACK_IMPORTED_MODULE_1__.property)({
+  type: String
+})], Header.prototype, "value", void 0);
+__decorate([(0,lit_decorators_js__WEBPACK_IMPORTED_MODULE_1__.property)({
+  type: String
+})], Header.prototype, "action", void 0);
+Header = __decorate([(0,lit_decorators_js__WEBPACK_IMPORTED_MODULE_1__.customElement)('doatkolom-search-input')], Header);
 
 /***/ }),
 
