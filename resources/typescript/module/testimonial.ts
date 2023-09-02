@@ -1,6 +1,6 @@
 export default class Testimonial {
     constructor() {
-        new window.Swiper('.swiper', {
+        new window.Swiper('.doatkolom-testimonial-swiper', {
             loop: true,
             slidesPerView: 'auto',
             spaceBetween: 20,
@@ -10,7 +10,7 @@ export default class Testimonial {
 
             // If we need pagination
             pagination: {
-                el: '.swiper-pagination',
+                el: '.doatkolom-testimonial-swiper__pagination',
             },
         });
     }

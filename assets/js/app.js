@@ -14,6 +14,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _webComponents_searchInput__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/webComponents/searchInput */ "./resources/typescript/webComponents/searchInput/index.ts");
 /* harmony import */ var _module_header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/module/header */ "./resources/typescript/module/header.ts");
 /* harmony import */ var _module_testimonial__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/module/testimonial */ "./resources/typescript/module/testimonial.ts");
+/* harmony import */ var _module_blogBanner__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/module/blogBanner */ "./resources/typescript/module/blogBanner.ts");
 /**
  * events
  */
@@ -28,9 +29,11 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
+
 jQuery(function () {
   new _module_header__WEBPACK_IMPORTED_MODULE_3__["default"]();
   new _module_testimonial__WEBPACK_IMPORTED_MODULE_4__["default"]();
+  new _module_blogBanner__WEBPACK_IMPORTED_MODULE_5__["default"]();
 });
 
 /***/ }),
@@ -104,6 +107,43 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   WP_ADMINBAR_SELECTOR_ID: () => (/* binding */ WP_ADMINBAR_SELECTOR_ID)
 /* harmony export */ });
 var WP_ADMINBAR_SELECTOR_ID = 'wpadminbar';
+
+/***/ }),
+
+/***/ "./resources/typescript/module/blogBanner.ts":
+/*!***************************************************!*\
+  !*** ./resources/typescript/module/blogBanner.ts ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ BlogBanner)
+/* harmony export */ });
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var $ = window.jQuery;
+var BlogBanner = /*#__PURE__*/_createClass(function BlogBanner() {
+  _classCallCheck(this, BlogBanner);
+  var $scope = $('.doatkolom-archive-category-swiper');
+  if (!$scope.length) {
+    return;
+  }
+  var activeSlide = $scope.find('.swiper-slide[data-active="true"]');
+  var index = activeSlide.data('index');
+  new window.Swiper('.doatkolom-archive-category-swiper', {
+    slidesPerView: 'auto',
+    initialSlide: index,
+    centeredSlides: true,
+    centeredSlidesBounds: true
+  });
+});
+
 
 /***/ }),
 
@@ -259,7 +299,7 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 var Testimonial = /*#__PURE__*/_createClass(function Testimonial() {
   _classCallCheck(this, Testimonial);
-  new window.Swiper('.swiper', {
+  new window.Swiper('.doatkolom-testimonial-swiper', {
     loop: true,
     slidesPerView: 'auto',
     spaceBetween: 20,
@@ -268,7 +308,7 @@ var Testimonial = /*#__PURE__*/_createClass(function Testimonial() {
     },
     // If we need pagination
     pagination: {
-      el: '.swiper-pagination'
+      el: '.doatkolom-testimonial-swiper__pagination'
     }
   });
 });
@@ -478,12 +518,12 @@ var Header = /*#__PURE__*/function (_LitElement) {
   }, {
     key: "render",
     value: function render() {
-      return (0,lit__WEBPACK_IMPORTED_MODULE_0__.html)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n        <form  role=\"search\" method=\"get\" action=\"", "\" @submit=", ">\n            <div class=\"search-input-field\">\n                <button type=\"submit\" value=\"submit\">\n                    <svg  width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\">\n                        <g>\n                        <path d=\"M17.31 15.9L20.71 19.29C20.8993 19.4778 21.0058 19.7334 21.0058 20C21.0058 20.2666 20.8993 20.5222 20.71 20.71C20.5222 20.8993 20.2666 21.0058 20 21.0058C19.7334 21.0058 19.4778 20.8993 19.29 20.71L15.9 17.31C14.5025 18.407 12.7767 19.0022 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11C19.0022 12.7767 18.407 14.5025 17.31 15.9ZM11 5C7.68629 5 5 7.68629 5 11C5 14.3137 7.68629 17 11 17C14.3137 17 17 14.3137 17 11C17 7.68629 14.3137 5 11 5Z\" fill=\"currentColor\"/>\n                        </g>\n                    </svg>\n                </button>\n                <input \n                    value=\"", "\" \n                    placeholder=\"Search Here\" \n                    type=\"search\" \n                    name=\"s\"\n                > \n            </div>\n            <input type=\"hidden\" name=\"post_type\" value=\"post\">\n        </form>\n        "])), this.action, this.submitForm, this.value);
+      return (0,lit__WEBPACK_IMPORTED_MODULE_0__.html)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n            <form\n                role=\"search\"\n                method=\"get\"\n                action=\"", "\"\n                @submit=", ">\n                <div class=\"search-input-field\">\n                    <button type=\"submit\" value=\"submit\">\n                        <svg\n                            width=\"24\"\n                            height=\"24\"\n                            viewBox=\"0 0 24 24\"\n                            fill=\"none\">\n                            <g>\n                                <path\n                                    d=\"M17.31 15.9L20.71 19.29C20.8993 19.4778 21.0058 19.7334 21.0058 20C21.0058 20.2666 20.8993 20.5222 20.71 20.71C20.5222 20.8993 20.2666 21.0058 20 21.0058C19.7334 21.0058 19.4778 20.8993 19.29 20.71L15.9 17.31C14.5025 18.407 12.7767 19.0022 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11C19.0022 12.7767 18.407 14.5025 17.31 15.9ZM11 5C7.68629 5 5 7.68629 5 11C5 14.3137 7.68629 17 11 17C14.3137 17 17 14.3137 17 11C17 7.68629 14.3137 5 11 5Z\"\n                                    fill=\"currentColor\" />\n                            </g>\n                        </svg>\n                    </button>\n                    <input\n                        value=\"", "\"\n                        placeholder=\"Search Here\"\n                        type=\"search\"\n                        name=\"s\" />\n                </div>\n                <input type=\"hidden\" name=\"post_type\" value=\"post\" />\n            </form>\n        "])), this.action, this.submitForm, this.value);
     }
   }], [{
     key: "styles",
     get: function get() {
-      return (0,lit__WEBPACK_IMPORTED_MODULE_0__.css)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n            .search-input-field {\n                display: flex;\n                width: 213px;\n                padding-left:14px;\n                align-items: center;\n                border: 1px solid rgba(145, 158, 171, 0.32);\n                border-radius: 8px;\n                column-gap: 8px;\n                overflow: hidden;\n                transition: border-color 0.2s ease-in-out;\n            }\n\n            .search-input-field:focus-within {\n                border-color: #517DFC;\n            }\n\n            .search-input-field:focus-within svg {\n                color: #517DFC;\n            }\n\n            input {\n                height: 38px;\n                width: 100%;\n                padding-right: 8px;\n                border:0;\n            }\n\n            input:focus, input:active, input:hover {\n                outline: none;\n            }\n\n            input::placeholder {\n                color: #919EAB;\n                font-size: 14px;\n                font-weight: 400;\n            }\n\n            button {\n                display: inline-flex;\n                padding: 0;\n                color: #ccc;\n                border: 0;\n                background-color: transparent\n            }\n\n            svg {\n                transition: color 0.2s ease-in-out;\n            }\n\n            @media (max-width: 1200px) {\n                input {\n                    display: none;\n                }\n\n                .search-input-field {\n                    width: 38px;\n                    padding-left: 0;\n                    display: flex;\n                    justify-content: center;\n                    align-items: center;\n                    height: 38px;\n                }\n            }\n        "])));
+      return (0,lit__WEBPACK_IMPORTED_MODULE_0__.css)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n            .search-input-field {\n                display: flex;\n                width: 213px;\n                padding-left: 14px;\n                align-items: center;\n                border: 1px solid rgba(145, 158, 171, 0.32);\n                border-radius: 8px;\n                column-gap: 8px;\n                overflow: hidden;\n                transition: border-color 0.2s ease-in-out;\n            }\n\n            .search-input-field:focus-within {\n                border-color: #517dfc;\n            }\n\n            .search-input-field:focus-within svg {\n                color: #517dfc;\n            }\n\n            input {\n                height: 38px;\n                width: 100%;\n                padding-right: 8px;\n                border: 0;\n            }\n\n            input:focus,\n            input:active,\n            input:hover {\n                outline: none;\n            }\n\n            input::placeholder {\n                color: #919eab;\n                font-size: 14px;\n                font-weight: 400;\n            }\n\n            button {\n                display: inline-flex;\n                padding: 0;\n                color: #ccc;\n                border: 0;\n                background-color: transparent;\n            }\n\n            svg {\n                transition: color 0.2s ease-in-out;\n            }\n\n            @media (max-width: 1200px) {\n                input {\n                    display: none;\n                }\n\n                .search-input-field {\n                    width: 38px;\n                    padding-left: 0;\n                    display: flex;\n                    justify-content: center;\n                    align-items: center;\n                    height: 38px;\n                }\n            }\n        "])));
     }
   }]);
   return Header;

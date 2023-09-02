@@ -12,7 +12,10 @@ import '@/webComponents/searchInput';
  */
 import Header from '@/module/header';
 import Testimonial from '@/module/testimonial';
+import BlogBanner from '@/module/blogBanner';
+
 jQuery(() => {
     new Header();
     new Testimonial();
+    new BlogBanner();
 });

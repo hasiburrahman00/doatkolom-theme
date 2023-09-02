@@ -53,7 +53,7 @@ $data = array(
 
 
 <div class="bg-slate-50 py-4 md:py-8 px-3 sm:px-0">
- <div class="swiper">
+ <div class="swiper doatkolom-testimonial-swiper">
   <div class="swiper-wrapper py-14">
       <?php foreach( $data as $item ): ?>
         <div class="swiper-slide max-w-sm lg:max-w-md h-auto">
@@ -82,6 +82,6 @@ $data = array(
       <?php endforeach; ?>
     </div>
     <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
+    <div class="swiper-pagination doatkolom-testimonial-swiper__pagination"></div>
  </div>
 </div>
