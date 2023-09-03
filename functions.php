@@ -3,6 +3,7 @@ namespace Doatkolom;
 use Doatkolom\App\AutoLoader;
 use Doatkolom\App\Supports;
 use Doatkolom\App\Assets;
+use Doatkolom\App\PostAdditional;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
@@ -39,13 +40,10 @@ class Doatkolom {
     public function after_setup_theme() {
         new Supports();
         new Assets();
+        new PostAdditional();
     }
 
     public static function sign_in_url() {
-        return '#';
-    }
-
-    public static function sign_up_url() {
         return '#';
     }
 }

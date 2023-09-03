@@ -9,6 +9,13 @@ class Assets {
     {
         add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'), 100);
         add_filter('tiny_mce_plugins', [$this, 'disable_emojis_tinymce']);
+        add_action('enqueue_block_editor_assets', [$this, 'enqueue_editor_scripts']);
+    }
+
+    public function enqueue_editor_scripts() {
+        $dependencies = Doatkolom::require('build/app.asset.php');
+        array_push( $dependencies['dependencies'], 'jquery' );
+        wp_enqueue_script('doatkolom-editor', Doatkolom::url('build/app.js'), $dependencies['dependencies'] , $dependencies['version'] , true);
     }
 
     public function enqueue_scripts()
