@@ -1,14 +1,28 @@
 <?php 
 use Doatkolom\App\View;
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+// body class
 
+if( have_posts() ) {
+	add_filter( 'body_class', function( $classes ) {
+		return array_merge( $classes, ['bg-[#F6F6F8] has-white-header'] );
+	} );
+} else {
+	add_filter( 'body_class', function( $classes ) {
+		return array_merge( $classes, ['has-white-header'] );
+	} );
+}
+
+// header and page title
 View::page_title('Search');
 get_header();
-?>
-    <main class="pt-10 pb-10 md:pb-16">
-        <h1>Search page </h1>
-    </main>
-<?php 
-get_footer();
 
+// content
+if( have_posts() ) {
+	View::part('blog/archive-banner');
+}
+View::part('blog/search');
+View::part('common/community');
+
+// footer
+get_footer();
 ?>

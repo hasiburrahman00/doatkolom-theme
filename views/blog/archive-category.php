@@ -1,9 +1,16 @@
 <?php 
     if (!defined('ABSPATH')) exit;
 
-     // show categories
-     $limit = 20; // false | number
-     $category_list = get_the_category();
+    // show categories
+    $limit = 20; // false | number
+    
+    $category_list = $categories = get_categories([
+        'hide_empty' => true,
+        'exclude' => [1],
+        'orderby' => 'name',
+        'order' => 'ASC',
+    ]);
+
      $current_cat = get_query_var('cat');
 
      // is All category active

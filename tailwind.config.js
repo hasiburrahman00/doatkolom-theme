@@ -36,11 +36,15 @@ module.exports = {
             },
             backgroundImage: {
                 ['banner-pattern']: 'url(../images/home/map-pattern.png)',
+                ['post-pattern']: 'url(../images/common/bg-pattern.png)',
                 ['banner-overlay']: 'linear-gradient(90deg, rgba(255, 255, 255, 0.87) 19.55%, rgba(255, 255, 255, 0.90) 82.04%)',
                 ['banner-overlay-mobile']: 'linear-gradient(180deg, rgba(255, 255, 255, 0.90) 19.55%, rgba(255, 255, 255, 0.90) 82.04%)'
             },
             backgroundSize: {
                 ['banner-size']: '400px'
+            },
+            boxShadow: {
+                base: '0px 20px 40px -4px rgba(145, 158, 171, 0.12)'
             }
         }
     },

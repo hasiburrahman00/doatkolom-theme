@@ -48,7 +48,7 @@ use Doatkolom\App\Helper;
                 </doatkolom-search-input>
                 <?php endif; ?>
                 <a 
-                    class="inline-flex gap-1 primary-btn-bg text-white text-sm font-semibold pl-4 pr-6 py-2 rounded-lg" 
+                    class="inline-flex gap-1 primary-btn-bg text-white text-sm font-semibold pl-4 pr-6 py-2 rounded-lg transition-opacity duration-200 hover:opacity-95" 
                     aria-label="visit sign in page" 
                     href="<?php echo Doatkolom::sign_in_url() ?>"
                 >
