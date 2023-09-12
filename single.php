@@ -11,9 +11,9 @@ get_header();
 
 View::part('blog/single-banner');
 ?>
-<main class="pt-14 pb-20">
-    <div class="container px-10">
-        <div class="grid grid-cols-[1fr_365px] gap-10">
+<main class="pt-10 pb-16 md:pt-14 md:pb-20">
+    <div class="container lg:px-16">
+        <div class="grid md:grid-cols-[1fr_365px] gap-10">
             <div>
                 <?php the_content() ?>
             </div>
