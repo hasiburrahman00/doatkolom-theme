@@ -47,7 +47,7 @@
                     endwhile;
                 ?>
             </div>
-            <div class="flex justify-end pt-8">
+            <div class="flex justify-center md:justify-end pt-12 md:pt-8">
                 <?php 
                    View::part('blog/pagination');
                 ?>
