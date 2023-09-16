@@ -64,10 +64,3 @@ $loader->addNamespace( 'Doatkolom\App', Doatkolom::dir('app') );
 
 
 new Doatkolom();
-
-add_filter( 'tocb_content', function( string $content, array $headings ) {
-
-    error_log(print_r($headings, true));
-
-    return "DoatKolom Theme Table of Content";
-}, 10, 2);
