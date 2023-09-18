@@ -21,7 +21,7 @@
      }
 ?>
 <?php if( count($category_list) > 0 ): ?>
-    <div class="swiper doatkolom-archive-category-swiper overflow-hidden pt-2 md:pt-6 w-full">
+    <div class="swiper doatkolom-archive-category-swiper overflow-hidden pt-4 md:pt-6 w-full">
         <div class="swiper-wrapper">
             <div 
                 class="swiper-slide"

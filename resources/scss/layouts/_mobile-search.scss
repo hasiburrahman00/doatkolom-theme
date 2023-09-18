@@ -1,0 +1,23 @@
+.mobile-search {
+    @apply fixed top-0 left-0 bg-black/90 w-full h-full flex items-center justify-center z-[99999] px-4;
+
+    form {
+        @apply w-full mx-auto max-w-[500px];
+    }
+
+    &-input-field {
+        @apply flex items-center bg-white rounded-full pr-4 min-w-[300px] w-full max-w-[500px] shadow-md overflow-hidden;
+
+        input {
+            @apply w-full py-4 pl-5 pr-2 focus:outline-none;
+        }
+    }
+
+    h2 {
+        @apply text-white text-center text-base mt-2.5;
+    }
+
+    .close-mobile-search {
+        @apply absolute top-0 right-0 mt-4 mr-4 text-white/80 w-10 h-10 border-2 border-white/80 rounded-full flex items-center justify-center;
+    }
+}

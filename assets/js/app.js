@@ -527,6 +527,7 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
 };
 
 
+var $ = window.jQuery;
 var Header = /*#__PURE__*/function (_LitElement) {
   _inherits(Header, _LitElement);
   var _super = _createSuper(Header);
@@ -536,6 +537,7 @@ var Header = /*#__PURE__*/function (_LitElement) {
     _this = _super.call(this);
     _this.value = '';
     _this.action = '';
+    _this.events();
     return _this;
   }
   _createClass(Header, [{
@@ -551,20 +553,39 @@ var Header = /*#__PURE__*/function (_LitElement) {
         e.preventDefault();
         return;
       }
-      if (innerWidth <= 1200) {
-        e.preventDefault();
-        return;
-      }
+    }
+  }, {
+    key: "events",
+    value: function events() {
+      $(document).on('click', '.close-mobile-search', function () {
+        $('.mobile-search').remove();
+      });
+    }
+  }, {
+    key: "mobileSearchMarkup",
+    value: function mobileSearchMarkup() {
+      return "\n            <div class=\"mobile-search\">\n                <button class=\"close-mobile-search\">\n                    <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 20 20\" fill=\"none\">\n                        <path d=\"M15 5L5 15\" stroke=\"currentColor\" stroke-width=\"1.67\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n                        <path d=\"M5 5L15 15\" stroke=\"currentColor\" stroke-width=\"1.67\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n                    </svg>\n                </button>\n                <form\n                    role=\"search\"\n                    method=\"get\"\n                    action=\"".concat(this.action, "\"\n                    @submit=").concat(this.submitForm, "\n                >\n                    <div class=\"mobile-search-input-field\">\n                        <input\n                            value=\"").concat(this.value, "\"\n                            placeholder=\"Search Here\"\n                            type=\"search\"\n                            name=\"s\" \n                        />\n                        <button type=\"submit\" value=\"submit\">\n                            <svg\n                                width=\"24\"\n                                height=\"24\"\n                                viewBox=\"0 0 24 24\"\n                                fill=\"none\">\n                                <g>\n                                    <path\n                                        d=\"M17.31 15.9L20.71 19.29C20.8993 19.4778 21.0058 19.7334 21.0058 20C21.0058 20.2666 20.8993 20.5222 20.71 20.71C20.5222 20.8993 20.2666 21.0058 20 21.0058C19.7334 21.0058 19.4778 20.8993 19.29 20.71L15.9 17.31C14.5025 18.407 12.7767 19.0022 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11C19.0022 12.7767 18.407 14.5025 17.31 15.9ZM11 5C7.68629 5 5 7.68629 5 11C5 14.3137 7.68629 17 11 17C14.3137 17 17 14.3137 17 11C17 7.68629 14.3137 5 11 5Z\"\n                                        fill=\"currentColor\" />\n                                </g>\n                            </svg>\n                        </button> \n                    </div>\n                    <h2>Press enter to search</h2>\n                    <input type=\"hidden\" name=\"post_type\" value=\"post\" />\n                </form>\n            </div>\n        ");
+    }
+  }, {
+    key: "openMobileSearch",
+    value: function openMobileSearch() {
+      if (innerWidth > 1200) return;
+      var body = document.querySelector('body');
+      if (!body) return;
+      var mobileSearch = body.querySelector('.mobile-search');
+      if (mobileSearch) return;
+      var mobileSearchMarkup = this.mobileSearchMarkup();
+      body.insertAdjacentHTML('beforeend', mobileSearchMarkup);
     }
   }, {
     key: "render",
     value: function render() {
-      return (0,lit__WEBPACK_IMPORTED_MODULE_0__.html)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n            <form\n                role=\"search\"\n                method=\"get\"\n                action=\"", "\"\n                @submit=", ">\n                <div class=\"search-input-field\">\n                    <button type=\"submit\" value=\"submit\">\n                        <svg\n                            width=\"24\"\n                            height=\"24\"\n                            viewBox=\"0 0 24 24\"\n                            fill=\"none\">\n                            <g>\n                                <path\n                                    d=\"M17.31 15.9L20.71 19.29C20.8993 19.4778 21.0058 19.7334 21.0058 20C21.0058 20.2666 20.8993 20.5222 20.71 20.71C20.5222 20.8993 20.2666 21.0058 20 21.0058C19.7334 21.0058 19.4778 20.8993 19.29 20.71L15.9 17.31C14.5025 18.407 12.7767 19.0022 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11C19.0022 12.7767 18.407 14.5025 17.31 15.9ZM11 5C7.68629 5 5 7.68629 5 11C5 14.3137 7.68629 17 11 17C14.3137 17 17 14.3137 17 11C17 7.68629 14.3137 5 11 5Z\"\n                                    fill=\"currentColor\" />\n                            </g>\n                        </svg>\n                    </button>\n                    <input\n                        value=\"", "\"\n                        placeholder=\"Search Here\"\n                        type=\"search\"\n                        name=\"s\" />\n                </div>\n                <input type=\"hidden\" name=\"post_type\" value=\"post\" />\n            </form>\n        "])), this.action, this.submitForm, this.value);
+      return (0,lit__WEBPACK_IMPORTED_MODULE_0__.html)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n            <form\n                role=\"search\"\n                method=\"get\"\n                @click=", "\n                action=\"", "\"\n                @submit=", ">\n                <div class=\"search-input-field\">\n                    <button type=\"submit\" value=\"submit\">\n                        <svg\n                            width=\"24\"\n                            height=\"24\"\n                            viewBox=\"0 0 24 24\"\n                            fill=\"none\">\n                            <g>\n                                <path\n                                    d=\"M17.31 15.9L20.71 19.29C20.8993 19.4778 21.0058 19.7334 21.0058 20C21.0058 20.2666 20.8993 20.5222 20.71 20.71C20.5222 20.8993 20.2666 21.0058 20 21.0058C19.7334 21.0058 19.4778 20.8993 19.29 20.71L15.9 17.31C14.5025 18.407 12.7767 19.0022 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11C19.0022 12.7767 18.407 14.5025 17.31 15.9ZM11 5C7.68629 5 5 7.68629 5 11C5 14.3137 7.68629 17 11 17C14.3137 17 17 14.3137 17 11C17 7.68629 14.3137 5 11 5Z\"\n                                    fill=\"currentColor\" />\n                            </g>\n                        </svg>\n                    </button>\n                    <input\n                        value=\"", "\"\n                        placeholder=\"Search Here\"\n                        type=\"search\"\n                        name=\"s\" />\n                </div>\n                <input type=\"hidden\" name=\"post_type\" value=\"post\" />\n            </form>\n        "])), this.openMobileSearch, this.action, this.submitForm, this.value);
     }
   }], [{
     key: "styles",
     get: function get() {
-      return (0,lit__WEBPACK_IMPORTED_MODULE_0__.css)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n            .search-input-field {\n                display: flex;\n                width: 213px;\n                padding-left: 14px;\n                align-items: center;\n                border: 1px solid rgba(145, 158, 171, 0.32);\n                border-radius: 8px;\n                column-gap: 8px;\n                overflow: hidden;\n                transition: border-color 0.2s ease-in-out;\n            }\n\n            .search-input-field:focus-within {\n                border-color: #517dfc;\n            }\n\n            .search-input-field:focus-within svg {\n                color: #517dfc;\n            }\n\n            input {\n                height: 38px;\n                width: 100%;\n                padding-right: 8px;\n                border: 0;\n            }\n\n            input:focus,\n            input:active,\n            input:hover {\n                outline: none;\n            }\n\n            input::placeholder {\n                color: #919eab;\n                font-size: 14px;\n                font-weight: 400;\n            }\n\n            button {\n                display: inline-flex;\n                padding: 0;\n                color: #ccc;\n                border: 0;\n                background-color: transparent;\n            }\n\n            svg {\n                transition: color 0.2s ease-in-out;\n            }\n\n            @media (max-width: 1200px) {\n                input {\n                    display: none;\n                }\n\n                .search-input-field {\n                    width: 38px;\n                    padding-left: 0;\n                    display: flex;\n                    justify-content: center;\n                    align-items: center;\n                    height: 38px;\n                }\n            }\n        "])));
+      return (0,lit__WEBPACK_IMPORTED_MODULE_0__.css)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n            .search-input-field {\n                display: flex;\n                width: 213px;\n                padding-left: 14px;\n                align-items: center;\n                border: 1px solid rgba(145, 158, 171, 0.32);\n                border-radius: 8px;\n                column-gap: 8px;\n                overflow: hidden;\n                transition: border-color 0.2s ease-in-out;\n            }\n\n            .search-input-field:focus-within {\n                border-color: #517dfc;\n            }\n\n            .search-input-field:focus-within svg {\n                color: #517dfc;\n            }\n\n            input {\n                height: 38px;\n                width: 100%;\n                padding-right: 8px;\n                border: 0;\n            }\n\n            input:focus,\n            input:active,\n            input:hover {\n                outline: none;\n            }\n\n            input::placeholder {\n                color: #919eab;\n                font-size: 14px;\n                font-weight: 400;\n            }\n\n            button {\n                display: inline-flex;\n                padding: 0;\n                color: #ccc;\n                border: 0;\n                background-color: transparent;\n            }\n\n            svg {\n                transition: color 0.2s ease-in-out;\n            }\n\n            @media (max-width: 1200px) {\n                input {\n                    display: none;\n                }\n\n                .search-input-field {\n                    width: 38px;\n                    padding-left: 0;\n                    display: flex;\n                    justify-content: center;\n                    align-items: center;\n                    height: 38px;\n                    pointer-events: none;\n                }\n\n                button {\n                    pointer-events: none;\n                }\n            }\n        "])));
     }
   }]);
   return Header;
