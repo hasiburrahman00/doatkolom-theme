@@ -1,0 +1,53 @@
+.tocb {
+    position: sticky;
+    top: 120px;
+
+    .title {
+        @apply text-secondary font-semibold text-xl uppercase pb-4;
+
+        + .tocb-items {
+            @apply py-4 bg-white;
+            @include media-breakpoint-up(md) {
+                max-height: 70vh;
+                overflow-y: auto;
+
+                &::-webkit-scrollbar {
+                    width: 2px;
+                }
+
+                &::-webkit-scrollbar-track {
+                    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background-color: darkgrey;
+                    outline: 1px solid darkgray;
+                }
+            }
+        }
+    }
+
+    li {
+        @apply text-gray-600;
+
+        a {
+            @apply hover:text-primary text-base sm:text-sm py-2 block px-3 rounded-md;
+
+            &.active {
+                @apply text-primary;
+            }
+
+            &.has-children {
+                @apply flex items-center gap-x-1 font-bold;
+
+                svg {
+                    @apply w-2.5 h-2.5 min-w-[10px] min-h-[10px];
+                }
+            }
+        }
+    }
+
+    .tocb-items .tocb-items {
+        @apply pl-4;
+    }
+}

@@ -13,9 +13,11 @@ import '@/webComponents/searchInput';
 import Header from '@/module/header';
 import Testimonial from '@/module/testimonial';
 import BlogBanner from '@/module/blogBanner';
+import TOCB from '@/module/tocb';
 
 jQuery(() => {
     new Header();
     new Testimonial();
     new BlogBanner();
+    new TOCB();
 });
