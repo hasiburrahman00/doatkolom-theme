@@ -5,8 +5,10 @@ use Doatkolom\App\Icons;
 
 <section class="py-16 md:py-24 bg-[#0c131a]">
     <div class="container">
-        <span class="px-4 py-2 rouned-md border-l-4 border-primary font-semibold text-primary bg-primary/10 text-sm inline-block">WORDPRESS PLUGINS</span>
-        <h2 class="text-2xl sm:text-3xl font-bold mb-6 mt-3 text-white">Amazing Must Have Products for Your Website</h2>
+        <div class="container space-y-6 md:space-y-8">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white leading-[1.25_!important]">Amazing Must Have <br/><span class="text-primary">Plugins</span> for Your Website</h2>
+            <h5 class="text-base md:text-lg font-extrabold text-white ps-6 border-primary border-l-4 uppercase">SECURE and optimized</h5>
+        </div>
         <!-- products -->
         <div class="grid md:grid-cols-2 gap-6 mt-12">
             <div class="bg-gradient-to-r from-primary/10  flex flex-col justify-between py-8 px-4 sm:p-8 rounded-md text-white transition-colors duration-300 border border-primary/10 hover:border-primary/10">
