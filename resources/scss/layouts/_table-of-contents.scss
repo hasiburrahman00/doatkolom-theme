@@ -47,7 +47,23 @@
         }
     }
 
-    .tocb-items .tocb-items {
+    .depth-0 {
+        @apply pl-2;
+    }
+
+    .depth-1 {
         @apply pl-4;
+    }
+
+    .depth-2 {
+        @apply pl-8;
+    }
+
+    .depth-3 {
+        @apply pl-12;
+    }
+
+    .depth-4 {
+        @apply pl-16;
     }
 }

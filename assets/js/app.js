@@ -336,19 +336,177 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _classPrivateFieldInitSpec(obj, privateMap, value) { _checkPrivateRedeclaration(obj, privateMap); privateMap.set(obj, value); }
+function _checkPrivateRedeclaration(obj, privateCollection) { if (privateCollection.has(obj)) { throw new TypeError("Cannot initialize the same private elements twice on an object"); } }
+function _classPrivateFieldGet(receiver, privateMap) { var descriptor = _classExtractFieldDescriptor(receiver, privateMap, "get"); return _classApplyDescriptorGet(receiver, descriptor); }
+function _classApplyDescriptorGet(receiver, descriptor) { if (descriptor.get) { return descriptor.get.call(receiver); } return descriptor.value; }
+function _classPrivateFieldSet(receiver, privateMap, value) { var descriptor = _classExtractFieldDescriptor(receiver, privateMap, "set"); _classApplyDescriptorSet(receiver, descriptor, value); return value; }
+function _classExtractFieldDescriptor(receiver, privateMap, action) { if (!privateMap.has(receiver)) { throw new TypeError("attempted to " + action + " private field on non-instance"); } return privateMap.get(receiver); }
+function _classApplyDescriptorSet(receiver, descriptor, value) { if (descriptor.set) { descriptor.set.call(receiver, value); } else { if (!descriptor.writable) { throw new TypeError("attempted to set read only private field"); } descriptor.value = value; } }
 var $ = window.jQuery;
+var _hasStatusTimeoutId = /*#__PURE__*/new WeakMap();
 var TOCB = /*#__PURE__*/function () {
   function TOCB() {
     _classCallCheck(this, TOCB);
-    if ($('body').hasClass('single') && $('.tocb').length > 0) {
+    _classPrivateFieldInitSpec(this, _hasStatusTimeoutId, {
+      writable: true,
+      value: void 0
+    });
+    /**
+     * if url has valid has then scroll to it
+     */
+    this.hashStatus = 'empty';
+    _classPrivateFieldSet(this, _hasStatusTimeoutId, null);
+    this.tocHeadingsId = [];
+    this.$content = $('.doatkolom-post-content');
+    this.$toc = $('.tocb');
+    if (this.$content && this.$content.length && this.$toc && this.$toc.length) {
       this.init();
     }
   }
   _createClass(TOCB, [{
     key: "init",
     value: function init() {
-      // const $content = $('.doatkolom-post-content');
-      $('.tocb-items').first().find('li a').first().addClass('active');
+      this.getElements();
+      this.updateHashStatus();
+      this.events();
+    }
+  }, {
+    key: "getElements",
+    value: function getElements() {
+      var _this$$toc,
+        _this = this;
+      var $tocHeadings = (_this$$toc = this.$toc) === null || _this$$toc === void 0 ? void 0 : _this$$toc.find('a');
+      if ($tocHeadings && $tocHeadings.length) {
+        $tocHeadings.each(function (_index, element) {
+          var $element = $(element);
+          var href = $element.attr('href');
+          if (href) {
+            _this.tocHeadingsId.push(href);
+          }
+        });
+      }
+    }
+  }, {
+    key: "updateHashStatus",
+    value: function updateHashStatus() {
+      var hash = window.location.hash;
+      if (hash && this.tocHeadingsId.includes(hash)) {
+        this.hashStatus = 'pending';
+      }
+    }
+  }, {
+    key: "activeHeading",
+    value: function activeHeading() {
+      var _this2 = this;
+      var hashId = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+      var smooth = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+      if (hashId) {
+        var _this$$toc2;
+        var $heading = (_this$$toc2 = this.$toc) === null || _this$$toc2 === void 0 ? void 0 : _this$$toc2.find("a[href=\"".concat(hashId, "\"]"));
+        if ($heading && $heading.length) {
+          var _this$$toc3, _this$$content;
+          (_this$$toc3 = this.$toc) === null || _this$$toc3 === void 0 ? void 0 : _this$$toc3.find('a').removeClass('active');
+          $heading.addClass('active');
+          if (!smooth) return;
+          (_this$$content = this.$content) === null || _this$$content === void 0 || (_this$$content = _this$$content.find(hashId)[0]) === null || _this$$content === void 0 ? void 0 : _this$$content.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+          });
+          if (_classPrivateFieldGet(this, _hasStatusTimeoutId)) clearTimeout(_classPrivateFieldGet(this, _hasStatusTimeoutId));
+          _classPrivateFieldSet(this, _hasStatusTimeoutId, setTimeout(function () {
+            _this2.hashStatus = 'completed';
+          }, 1000));
+        }
+      }
+    }
+  }, {
+    key: "clickEventHadlder",
+    value: function clickEventHadlder(event) {
+      event.preventDefault();
+      var $element = $(event.currentTarget);
+      var href = $element.attr('href');
+      if (href) {
+        window.history.replaceState(null, '', href);
+        this.updateHashStatus();
+        this.activeHeading(href);
+      }
+    }
+  }, {
+    key: "isVisible",
+    value: function isVisible($element) {
+      if ($element && $element.length) {
+        var _$element$offset;
+        var elementTop = ((_$element$offset = $element.offset()) === null || _$element$offset === void 0 ? void 0 : _$element$offset.top) || 0;
+        var elementBottom = elementTop + ($element.outerHeight() || 0);
+        var viewportTop = $(window).scrollTop();
+        var viewportBottom = viewportTop + $(window).height();
+        return elementBottom > viewportTop && elementTop < viewportBottom;
+      }
+      return false;
+    }
+  }, {
+    key: "scrollEventHadlder",
+    value: function scrollEventHadlder() {
+      var _this3 = this;
+      if (this.hashStatus !== 'pending') {
+        var _this$$toc4;
+        var isAnyVisible = false;
+        var rectList = {};
+        var hasActiveClass = (_this$$toc4 = this.$toc) === null || _this$$toc4 === void 0 ? void 0 : _this$$toc4.find('a.active').length;
+        this.tocHeadingsId.forEach(function (hashId) {
+          var _this3$$content;
+          var $heading = (_this3$$content = _this3.$content) === null || _this3$$content === void 0 ? void 0 : _this3$$content.find(hashId);
+          if ($heading && $heading.length) {
+            var _$heading$;
+            var isVisible = _this3.isVisible($heading);
+            rectList[hashId] = (_$heading$ = $heading[0]) === null || _$heading$ === void 0 ? void 0 : _$heading$.getBoundingClientRect();
+            if (isVisible) {
+              _this3.activeHeading(hashId, false);
+              isAnyVisible = true;
+            }
+          }
+        });
+        if (!isAnyVisible && !hasActiveClass) {
+          var keys = Object.keys(rectList);
+          var lastVisibleHeadingId;
+          keys.forEach(function (hashId) {
+            var rect = rectList[hashId];
+            if (rect.top <= 0) {
+              lastVisibleHeadingId = hashId;
+            }
+          });
+          if (lastVisibleHeadingId) {
+            setTimeout(function () {
+              _this3.activeHeading(lastVisibleHeadingId);
+            }, 300);
+            isAnyVisible = true;
+          }
+        }
+      }
+    }
+  }, {
+    key: "events",
+    value: function events() {
+      var _this4 = this,
+        _this$$toc5;
+      /**
+       * on initial page load if url has valid hash then scroll to it
+       */
+      if (this.hashStatus === 'pending') {
+        setTimeout(function () {
+          _this4.activeHeading(window.location.hash);
+        }, 300);
+      }
+      /**
+       * on click update url hash without adding new history
+       */
+      (_this$$toc5 = this.$toc) === null || _this$$toc5 === void 0 ? void 0 : _this$$toc5.on('click', 'a', this.clickEventHadlder.bind(this));
+      /**
+       * on scroll update active heading
+       */
+      this.scrollEventHadlder();
+      $(window).on('scroll', this.scrollEventHadlder.bind(this));
     }
   }]);
   return TOCB;
