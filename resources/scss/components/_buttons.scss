@@ -1,0 +1,5 @@
+@layer components {
+    .btn {
+        @apply capitalize py-4 px-5 rounded-lg flex items-center justify-center font-semibold transition-opacity duration-200 hover:opacity-95;
+    }
+}

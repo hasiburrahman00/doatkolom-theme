@@ -9,7 +9,7 @@ use Doatkolom\App\Icons;
             <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">DoatKolom Community</h2>
             <p class="text-[#C2C2C2] max-w-sm lg:max-w-none pt-2 pb-6">Ask questions and keep yourself up-to-date from the community </p>
             <a 
-                class="btn bg-primary/10 text-primary font-semibold hover:bg-primary/20 px-5 py-3 rounded-md inline-block"
+                class="btn text-white shadow-btn bg-primary max-w-xs"
                 href="https://www.facebook.com/groups/4339907419448960"
                 target="_blank"
                 aria-label="join doatkolom facebook community"
@@ -24,7 +24,7 @@ use Doatkolom\App\Icons;
                 width="400"
                 height="223"
                 loading="lazy" 
-                src="<?php echo esc_url( Doatkolom::url('assets/images/home/community.webp') ) ?>" 
+                src="<?php echo esc_url( Doatkolom::url('assets/images/common/community.webp') ) ?>" 
                 alt="doatkolom community"
             >
         </picture>

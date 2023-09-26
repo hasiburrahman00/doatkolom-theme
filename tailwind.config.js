@@ -31,21 +31,30 @@ module.exports = {
         extend: {
             colors: {
                 primary: '#0073E6',
-                ['primary-dark']: '#025fbd',
+                'primary-dark': '#025fbd',
                 secondary: '#1A202C',
             },
             backgroundImage: {
-                ['banner-pattern']: 'url(../images/home/map-pattern.png)',
-                ['post-pattern']: 'url(../images/common/bg-pattern.png)',
-                ['banner-overlay']: 'linear-gradient(90deg, rgba(255, 255, 255, 0.87) 19.55%, rgba(255, 255, 255, 0.90) 82.04%)',
-                ['banner-overlay-mobile']: 'linear-gradient(180deg, rgba(255, 255, 255, 0.90) 19.55%, rgba(255, 255, 255, 0.90) 82.04%)'
+                'post-pattern': 'url(../images/common/bg-pattern.png)',
+                banner: 'url(../images/x-currency/hero-area.webp)',
+                primary: ' linear-gradient(180deg, #517DFC 0%, #0A42C6 100%)',
+                'home-banner': 'url(../images/home/hero-gradient.webp)',
             },
             backgroundSize: {
                 ['banner-size']: '400px'
             },
             boxShadow: {
-                base: '0px 20px 40px -4px rgba(145, 158, 171, 0.12)'
-            }
+                base: '0px 20px 40px -4px rgba(145, 158, 171, 0.12)',
+                btn: '0px 1px 0px 0px #092E97',
+                community: '0px 1px 0px 0px #092E97',
+                screenshot: '0px 16.38722px 38.23685px -3.32865px rgba(40, 45, 62, 0.16)',
+                card: '8px 24px 40px 8px rgba(0, 0, 0, 0.08)',
+                'core-value': '0px 8px 24px 0px rgba(0, 0, 0, 0.08)',
+                employee: '0px 20px 40px -4px rgba(145, 158, 171, 0.12)',
+            },
+            dropShadow: {
+                'counter': '0px 8px 24px rgba(0, 0, 0, 0.08)'
+            },
         }
     },
     plugins: [],
