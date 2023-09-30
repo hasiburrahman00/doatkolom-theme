@@ -10,6 +10,7 @@ get_header();
 
 View::part('home/hero');
 View::part('home/products');
+view::part('home/support');
 View::part('home/why-choose');
 View::part('common/testimonial');
 View::part('common/community');

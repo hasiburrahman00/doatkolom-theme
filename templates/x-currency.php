@@ -10,6 +10,7 @@ get_header();
 
 View::part('x-currency/hero');
 
+
 View::part('common/community');
 get_footer();
 ?>
