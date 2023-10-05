@@ -1,6 +1,5 @@
 <?php
-
-use Doatkolom\Doatkolom;
+    use Doatkolom\Doatkolom;
 ?>
 
 <section class="bg-home-banner bg-cover">

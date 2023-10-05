@@ -694,9 +694,6 @@ video {
 .min-w-\[42px\] {
   min-width: 42px;
 }
-.max-w-6xl {
-  max-width: 72rem;
-}
 .max-w-\[200px\] {
   max-width: 200px;
 }
@@ -2263,6 +2260,11 @@ body:has(.wedocs-shortcode-wrap, .wedocs-single-wrap) {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.hover\:text-\[\#25D366\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(37 211 102 / var(--tw-text-opacity));
+}
+
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
@@ -2621,10 +2623,6 @@ body:has(.wedocs-shortcode-wrap, .wedocs-single-wrap) {
     line-height: 1.75rem;
   }
 
-  .md\:leading-\[57px\] {
-    line-height: 57px;
-  }
-
   .md\:text-\[\#637381\] {
     --tw-text-opacity: 1;
     color: rgb(99 115 129 / var(--tw-text-opacity));
@@ -2753,35 +2751,12 @@ body:has(.wedocs-shortcode-wrap, .wedocs-single-wrap) {
     padding-right: 4rem;
   }
 
-  .lg\:py-44 {
-    padding-top: 11rem;
-    padding-bottom: 11rem;
-  }
-
-  .lg\:py-40 {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-  }
-
-  .lg\:py-36 {
-    padding-top: 9rem;
-    padding-bottom: 9rem;
-  }
-
   .lg\:pb-10 {
     padding-bottom: 2.5rem;
   }
 
   .lg\:pb-36 {
     padding-bottom: 9rem;
-  }
-
-  .lg\:pt-28 {
-    padding-top: 7rem;
-  }
-
-  .lg\:pt-20 {
-    padding-top: 5rem;
   }
 
   .lg\:pt-24 {
@@ -2806,10 +2781,6 @@ body:has(.wedocs-shortcode-wrap, .wedocs-single-wrap) {
   .lg\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
-  }
-
-  .lg\:leading-\[76px\] {
-    line-height: 76px;
   }
 }
 

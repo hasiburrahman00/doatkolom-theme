@@ -1,0 +1,18 @@
+{
+    "name": "doatkolom/theme",
+    "description": "A WordPress theme for doatkolom site",
+    "autoload": {
+        "psr-4": {
+            "Doatkolom\\App\\": "app/",
+            "SocialLinks\\Page\\": "vendor/social-links/social-links/src/Page"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "7.4"
+        }
+    },
+    "require": {
+        "social-links/social-links": "^1.15"
+    }
+}
