@@ -1,0 +1,38 @@
+@layer layouts {
+    .tab-btn {
+        @apply border-transparent border-b-2 cursor-pointer transition duration-200;
+    }
+
+    .currency-tab {
+        @apply flex border border-transparent gap-4 py-4 px-3 md:px-6 opacity-60;
+    }
+
+    .currency-tab.active {
+        @apply bg-white rounded-3xl border-[#2BB083] border opacity-100;
+    }
+}
+
+.tab_content,
+.switcher_content,
+.currency_content {
+    display: none;
+    animation: doatkolom_moving 2.4s ease-out;
+}
+
+.tab_content.active,
+.switcher_content.active,
+.currency_content.active {
+    display: block;
+}
+
+@keyframes doatkolom_moving {
+    from {
+        // transform: translateX(100px);
+        opacity: 0.3;
+    }
+
+    to {
+        // transform: translateX(0);
+        opacity: 1;
+    }
+}

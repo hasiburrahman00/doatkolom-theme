@@ -1,16 +1,16 @@
-<?php 
+<?php
 /*
  * Template Name: Privacy Policy
  * 
  */
 use Doatkolom\App\View;
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-View::page_title('Privacy Policy');
+if (!defined('ABSPATH'))
+    exit; // Exit if accessed directly
+
+View::page_title('Privacy Policy | Doatkolom');
 get_header();
-?>
-<main class="py-12 md:py-16">
-    <h1>privacy policy</h1>
-</main>
-<?php 
+
+view::part('privacy-policy/policies');
+
 get_footer();

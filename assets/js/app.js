@@ -16,6 +16,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _module_testimonial__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/module/testimonial */ "./resources/typescript/module/testimonial.ts");
 /* harmony import */ var _module_blogBanner__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/module/blogBanner */ "./resources/typescript/module/blogBanner.ts");
 /* harmony import */ var _module_tocb__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/module/tocb */ "./resources/typescript/module/tocb.ts");
+/* harmony import */ var _module_tab_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/module/tab.js */ "./resources/typescript/module/tab.js");
+/* harmony import */ var _module_tab_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_module_tab_js__WEBPACK_IMPORTED_MODULE_7__);
 /**
  * events
  */
@@ -28,6 +30,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * modules
  */
+
 
 
 
@@ -124,7 +127,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ BlogBanner)
 /* harmony export */ });
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
@@ -161,7 +164,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Header)
 /* harmony export */ });
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
@@ -294,7 +297,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Testimonial)
 /* harmony export */ });
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
@@ -330,7 +333,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ TOCB)
 /* harmony export */ });
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
@@ -406,10 +409,10 @@ var TOCB = /*#__PURE__*/function () {
         var $heading = (_this$$toc2 = this.$toc) === null || _this$$toc2 === void 0 ? void 0 : _this$$toc2.find("a[href=\"".concat(hashId, "\"]"));
         if ($heading && $heading.length) {
           var _this$$toc3, _this$$content;
-          (_this$$toc3 = this.$toc) === null || _this$$toc3 === void 0 ? void 0 : _this$$toc3.find('a').removeClass('active');
+          (_this$$toc3 = this.$toc) === null || _this$$toc3 === void 0 || _this$$toc3.find('a').removeClass('active');
           $heading.addClass('active');
           if (!smooth) return;
-          (_this$$content = this.$content) === null || _this$$content === void 0 || (_this$$content = _this$$content.find(hashId)[0]) === null || _this$$content === void 0 ? void 0 : _this$$content.scrollIntoView({
+          (_this$$content = this.$content) === null || _this$$content === void 0 || (_this$$content = _this$$content.find(hashId)[0]) === null || _this$$content === void 0 || _this$$content.scrollIntoView({
             behavior: 'smooth',
             block: 'center'
           });
@@ -501,7 +504,7 @@ var TOCB = /*#__PURE__*/function () {
       /**
        * on click update url hash without adding new history
        */
-      (_this$$toc5 = this.$toc) === null || _this$$toc5 === void 0 ? void 0 : _this$$toc5.on('click', 'a', this.clickEventHadlder.bind(this));
+      (_this$$toc5 = this.$toc) === null || _this$$toc5 === void 0 || _this$$toc5.on('click', 'a', this.clickEventHadlder.bind(this));
       /**
        * on scroll update active heading
        */
@@ -544,7 +547,7 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
   var c = arguments.length,
     r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
@@ -646,6 +649,7 @@ __decorate([(0,lit_decorators_js__WEBPACK_IMPORTED_MODULE_1__.state)()], Header.
 __decorate([(0,lit_decorators_js__WEBPACK_IMPORTED_MODULE_1__.state)()], Header.prototype, "wpAdminbar", void 0);
 Header = __decorate([(0,lit_decorators_js__WEBPACK_IMPORTED_MODULE_1__.customElement)('doatkolom-header')], Header);
 
+
 /***/ }),
 
 /***/ "./resources/typescript/webComponents/searchInput/index.ts":
@@ -675,7 +679,7 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
   var c = arguments.length,
     r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
@@ -755,6 +759,122 @@ __decorate([(0,lit_decorators_js__WEBPACK_IMPORTED_MODULE_1__.property)({
   type: String
 })], Header.prototype, "action", void 0);
 Header = __decorate([(0,lit_decorators_js__WEBPACK_IMPORTED_MODULE_1__.customElement)('doatkolom-search-input')], Header);
+
+
+/***/ }),
+
+/***/ "./resources/typescript/module/tab.js":
+/*!********************************************!*\
+  !*** ./resources/typescript/module/tab.js ***!
+  \********************************************/
+/***/ (() => {
+
+var tabs = document.querySelectorAll('.tab_btn');
+var tab_contents = document.querySelectorAll('.tab_content');
+var tabs_sm = document.querySelectorAll('.tab_btn_sm');
+var switcher_tabs = document.querySelectorAll('.switcher_tab');
+var switcher_tabs_sm = document.querySelectorAll('.switcher_tab_sm');
+var switcher_content = document.querySelectorAll('.switcher_content');
+var currency_tabs = document.querySelectorAll('.currency-tab');
+var currency_content = document.querySelectorAll('.currency_content');
+
+// tabs for desktop/tablet screen -> specefic price section 
+tabs.forEach(function (tab, index) {
+  tab.addEventListener('click', function () {
+    tabs.forEach(function (tab) {
+      tab.classList.remove('active');
+    });
+    tab.classList.add('active');
+    tab_contents.forEach(function (content) {
+      content.classList.remove('active');
+    });
+    tab_contents[index].classList.add('active');
+  });
+});
+
+// tabs for small screen -> specefic price section
+tabs_sm.forEach(function (tab, index) {
+  tab.addEventListener('click', function () {
+    tabs_sm.forEach(function (tab) {
+      tab.classList.remove('active');
+    });
+    tab.classList.add('active');
+    tab_contents.forEach(function (content) {
+      content.classList.remove('active');
+    });
+    tab_contents[index].classList.add('active');
+  });
+});
+// readymade switcher tamplate: 
+switcher_tabs.forEach(function (tab, index) {
+  console.log(index);
+  tab.addEventListener('click', function () {
+    switcher_tabs.forEach(function (tab) {
+      tab.classList.remove('active');
+    });
+    tab.classList.add('active');
+    switcher_content.forEach(function (content) {
+      content.classList.remove('active');
+    });
+    switcher_content[index].classList.add('active');
+  });
+});
+
+// readymade switcher tamplate for mobile : 
+switcher_tabs_sm.forEach(function (tab, index) {
+  console.log(index);
+  tab.addEventListener('click', function () {
+    switcher_tabs_sm.forEach(function (tab) {
+      tab.classList.remove('active');
+    });
+    tab.classList.add('active');
+    switcher_content.forEach(function (content) {
+      content.classList.remove('active');
+    });
+    switcher_content[index].classList.add('active');
+  });
+});
+
+// unlimited currency section tabs 
+currency_tabs.forEach(function (tab, index) {
+  console.log(index);
+  tab.addEventListener('click', function () {
+    currency_tabs.forEach(function (tab) {
+      tab.classList.remove('active');
+    });
+    tab.classList.add('active');
+    currency_content.forEach(function (content) {
+      content.classList.remove('active');
+    });
+    currency_content[index].classList.add('active');
+  });
+});
+
+/***/ }),
+
+/***/ "./resources/scss/fonts.scss":
+/*!***********************************!*\
+  !*** ./resources/scss/fonts.scss ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./resources/scss/app.scss":
+/*!*********************************!*\
+  !*** ./resources/scss/app.scss ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
 
 /***/ }),
 
@@ -17970,32 +18090,6 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
 /***/ }),
 
-/***/ "./resources/scss/fonts.scss":
-/*!***********************************!*\
-  !*** ./resources/scss/fonts.scss ***!
-  \***********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./resources/scss/app.scss":
-/*!*********************************!*\
-  !*** ./resources/scss/app.scss ***!
-  \*********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
 /***/ "./node_modules/@lit/reactive-element/development/css-tag.js":
 /*!*******************************************************************!*\
   !*** ./node_modules/@lit/reactive-element/development/css-tag.js ***!
@@ -19056,7 +19150,7 @@ class ReactiveElement
          * Name of currently reflecting property
          */
         this.__reflectingProperty = null;
-        this._initialize();
+        this.__initialize();
     }
     /**
      * Adds an initializer function to the class that is called during instance
@@ -19339,10 +19433,8 @@ class ReactiveElement
     /**
      * Internal only override point for customizing work done when elements
      * are constructed.
-     *
-     * @internal
      */
-    _initialize() {
+    __initialize() {
         var _a;
         this.__updatePromise = new Promise((res) => (this.enableUpdating = res));
         this._$changedProperties = new Map();
@@ -19911,7 +20003,7 @@ if (DEV_MODE) {
 }
 // IMPORTANT: do not change the property name or the assignment expression.
 // This line will be used in regexes to search for ReactiveElement usage.
-((_d = global.reactiveElementVersions) !== null && _d !== void 0 ? _d : (global.reactiveElementVersions = [])).push('1.6.2');
+((_d = global.reactiveElementVersions) !== null && _d !== void 0 ? _d : (global.reactiveElementVersions = [])).push('1.6.3');
 if (DEV_MODE && global.reactiveElementVersions.length > 1) {
     issueWarning('multiple-versions', `Multiple versions of Lit loaded. Loading multiple versions ` +
         `is not recommended.`);
@@ -20202,7 +20294,7 @@ const _$LE = {
 };
 // IMPORTANT: do not change the property name or the assignment expression.
 // This line will be used in regexes to search for LitElement usage.
-((_c = globalThis.litElementVersions) !== null && _c !== void 0 ? _c : (globalThis.litElementVersions = [])).push('3.3.2');
+((_c = globalThis.litElementVersions) !== null && _c !== void 0 ? _c : (globalThis.litElementVersions = [])).push('3.3.3');
 if (DEV_MODE && globalThis.litElementVersions.length > 1) {
     issueWarning('multiple-versions', `Multiple versions of Lit loaded. Loading multiple versions ` +
         `is not recommended.`);
@@ -21666,7 +21758,7 @@ const polyfillSupport = DEV_MODE
 polyfillSupport === null || polyfillSupport === void 0 ? void 0 : polyfillSupport(Template, ChildPart);
 // IMPORTANT: do not change the property name or the assignment expression.
 // This line will be used in regexes to search for lit-html usage.
-((_d = global.litHtmlVersions) !== null && _d !== void 0 ? _d : (global.litHtmlVersions = [])).push('2.7.5');
+((_d = global.litHtmlVersions) !== null && _d !== void 0 ? _d : (global.litHtmlVersions = [])).push('2.8.0');
 if (DEV_MODE && global.litHtmlVersions.length > 1) {
     issueWarning('multiple-versions', `Multiple versions of Lit loaded. ` +
         `Loading multiple versions is not recommended.`);
