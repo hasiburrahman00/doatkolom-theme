@@ -1,0 +1,22 @@
+{
+    "name": "doatkolom/theme",
+    "description": "A WordPress theme for doatkolom site",
+    "scripts": {
+        "build": [
+            "composer --no-plugins --no-interaction install --no-scripts --no-dev"
+        ]
+    },
+    "autoload": {
+        "psr-4": {
+            "Doatkolom\\App\\": "app/"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "7.4"
+        }
+    },
+    "require": {
+        "social-links/social-links": "^1.15"
+    }
+}

@@ -1,12 +1,12 @@
 <?php 
 namespace Doatkolom;
-use Doatkolom\App\AutoLoader;
 use Doatkolom\App\Supports;
 use Doatkolom\App\Assets;
 use Doatkolom\App\PostAdditional;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
+require_once 'vendor/autoload.php';
 class Doatkolom {
     public function __construct() {
         add_action( 'after_setup_theme', array( $this, 'after_setup_theme' ) );
@@ -47,20 +47,5 @@ class Doatkolom {
         return '#';
     }
 }
-
-/*
- * Set up our auto loading class and mapping our namespace to the app directory.
- *
- * The autoloader follows PSR4 autoloading standards so, provided StudlyCaps are used for class, file, and directory
- * names, any class placed within the app directory will be autoloaded.
- *
- * i.e; If a class named SomeClass is stored in app/SomeDir/SomeClass.php, there is no need to include/require that file
- * as the autoloader will handle that for you.
- */
-require Doatkolom::dir('app/AutoLoader.php');
-$loader = new AutoLoader();
-$loader->register();
-$loader->addNamespace( 'Doatkolom\App', Doatkolom::dir('app') );
-
 
 new Doatkolom();

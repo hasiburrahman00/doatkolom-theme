@@ -1,0 +1,79 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "9d5f1cb8921685757c468f3be4b6f295",
+    "packages": [
+        {
+            "name": "social-links/social-links",
+            "version": "v1.15.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oscarotero/social-links.git",
+                "reference": "c6c02ba0dc16f83448ed1c8fc8d01d0c4ec96d27"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oscarotero/social-links/zipball/c6c02ba0dc16f83448ed1c8fc8d01d0c4ec96d27",
+                "reference": "c6c02ba0dc16f83448ed1c8fc8d01d0c4ec96d27",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SocialLinks\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oscar Otero",
+                    "email": "oom@oscarotero.com",
+                    "homepage": "http://oscarotero.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP library to generate share buttons",
+            "homepage": "https://github.com/oscarotero/social-links",
+            "keywords": [
+                "buttons",
+                "facebook",
+                "links",
+                "opengraph",
+                "share",
+                "social",
+                "twitter",
+                "twittercards"
+            ],
+            "support": {
+                "email": "oom@oscarotero.com",
+                "issues": "https://github.com/oscarotero/social-links/issues",
+                "source": "https://github.com/oscarotero/social-links/tree/master"
+            },
+            "time": "2020-06-02T11:55:19+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "platform-overrides": {
+        "php": "7.4"
+    },
+    "plugin-api-version": "2.3.0"
+}

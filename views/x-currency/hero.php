@@ -1,5 +1,4 @@
 <?php
-
 use Doatkolom\Doatkolom;
 use Doatkolom\App\Icons;
 ?>
